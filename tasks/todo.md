@@ -24,11 +24,11 @@
 ### Task 2: Build Supabase Client & Dual-Mode Data Access Service (`dataService.js`)
 **Description:** Create the unified data service that handles CRUD for profile, clients, invoices, bills, and follow-ups. If user is logged into Supabase, it syncs with PostgreSQL; otherwise, it persists to `localStorage` with zero crash risk.
 **Acceptance criteria:**
-- [ ] `src/lib/supabaseClient.js` safely initializes with or without `.env` keys.
-- [ ] `src/lib/dataService.js` provides `getProfile()`, `getInvoices()`, `createInvoice()`, `markPaid()`, `getBills()`, `saveBill()`, and `logFollowUp()`.
-- [ ] State mutations update both memory/localStorage and Supabase if connected.
+- [x] `src/lib/supabaseClient.js` safely initializes with or without `.env` keys.
+- [x] `src/lib/dataService.js` provides `getProfile()`, `getInvoices()`, `createInvoice()`, `markPaid()`, `getBills()`, `saveBill()`, and `logFollowUp()`.
+- [x] State mutations update both memory/localStorage and Supabase if connected.
 **Verification:**
-- [ ] Script test: Data service loads and performs CRUD without throwing errors.
+- [x] Script test: Data service loads and performs CRUD without throwing errors.
 **Dependencies:** Task 1
 **Files likely touched:**
 - `src/lib/supabaseClient.js`
