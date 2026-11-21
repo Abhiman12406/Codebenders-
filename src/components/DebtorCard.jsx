@@ -5,11 +5,9 @@ import {
   Split, 
   Calendar, 
   Clock, 
-  AlertCircle,
-  FileText,
-  User,
-  Zap
+  AlertCircle
 } from 'lucide-react';
+import { getDaysDiff } from '../lib/dateUtils.js';
 
 export default function DebtorCard({
   invoice,
@@ -19,14 +17,7 @@ export default function DebtorCard({
   onMarkPaid,
   onSplitPayment,
 }) {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  const dueDate = new Date(invoice.due_date);
-  dueDate.setHours(0, 0, 0, 0);
-
-  const diffTime = today - dueDate;
-  const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
+  const diffDays = getDaysDiff(invoice.due_date);
 
   const isPaid = invoice.status === 'paid';
   const isOverdue = !isPaid && diffDays > 0;

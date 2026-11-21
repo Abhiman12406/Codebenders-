@@ -4,10 +4,6 @@ import {
   Plus, 
   Trash2, 
   FileText, 
-  Calendar, 
-  User, 
-  DollarSign, 
-  Sparkles,
   Phone
 } from 'lucide-react';
 

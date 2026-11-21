@@ -4,7 +4,6 @@ import {
   AlertTriangle, 
   Plus, 
   Flame, 
-  Sparkles, 
   Cloud, 
   Laptop,
   Layers

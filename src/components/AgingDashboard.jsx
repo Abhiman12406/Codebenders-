@@ -5,12 +5,10 @@ import {
   AlertCircle, 
   Clock, 
   TrendingUp, 
-  Filter, 
   Search,
-  CheckCircle,
-  HelpCircle,
-  ArrowUpRight
+  CheckCircle
 } from 'lucide-react';
+import { getDaysDiff } from '../lib/dateUtils.js';
 
 export default function AgingDashboard({
   invoices = [],
@@ -42,9 +40,6 @@ export default function AgingDashboard({
     cohorts,
     filteredInvoices,
   } = useMemo(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
     let owed = 0;
     let critical = 0;
     let overdueNum = 0;
@@ -68,9 +63,7 @@ export default function AgingDashboard({
 
       owed += amt;
 
-      const dueDate = new Date(inv.due_date);
-      dueDate.setHours(0, 0, 0, 0);
-      const diffDays = Math.round((today - dueDate) / (1000 * 60 * 60 * 24));
+      const diffDays = getDaysDiff(inv.due_date);
 
       // Overdue stats
       if (diffDays > 0) {

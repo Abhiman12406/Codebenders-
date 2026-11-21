@@ -12,6 +12,7 @@ import {
   ShieldAlert,
   Calendar
 } from 'lucide-react';
+import { getDaysDiff } from '../lib/dateUtils.js';
 
 export default function WhatsAppModal({
   isOpen,
@@ -30,13 +31,7 @@ export default function WhatsAppModal({
   const { diffDays, defaultCadence } = useMemo(() => {
     if (!invoice?.due_date) return { diffDays: 0, defaultCadence: 'friendly' };
 
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    const dueDate = new Date(invoice.due_date);
-    dueDate.setHours(0, 0, 0, 0);
-
-    const diff = Math.round((today - dueDate) / (1000 * 60 * 60 * 24));
+    const diff = getDaysDiff(invoice.due_date);
 
     let cadence = 'friendly';
     if (diff > 14) {
@@ -94,7 +89,7 @@ export default function WhatsAppModal({
   if (!isOpen || !invoice) return null;
 
   // Clean phone number for wa.me (digits only)
-  const cleanPhone = phoneNumber.replace(/[^0-9]/g, '');
+  const cleanPhone = (phoneNumber || '').replace(/[^0-9]/g, '');
 
   // Formatted wa.me URL
   const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(customText)}`;

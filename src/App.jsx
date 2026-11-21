@@ -93,9 +93,12 @@ export default function App() {
         )
       );
 
-      // Immediately increment cash balance
+      // Immediately increment and persist cash balance
       const amt = Number(invoice.amount) || 0;
-      setCashBalance((prev) => prev + amt);
+      const newCash = cashBalance + amt;
+      setCashBalance(newCash);
+      await dataService.updateProfile({ starting_cash: newCash });
+      
       showToast(`🎉 Marked ${invoice.invoice_number} as paid! +$${amt.toLocaleString()} added to cash balance.`);
     } catch (err) {
       console.error('Failed to mark invoice as paid:', err);
@@ -106,6 +109,7 @@ export default function App() {
   const handleSplitPayment = async (invoice) => {
     try {
       const halfAmount = Math.round((Number(invoice.amount) / 2) * 100) / 100;
+      const part2Amount = Number((Number(invoice.amount) - halfAmount).toFixed(2));
       const today = new Date();
       
       const due1 = today.toISOString().split('T')[0];
@@ -128,7 +132,7 @@ export default function App() {
         client_phone: invoice.client_phone,
         invoice_number: `${invoice.invoice_number}-B`,
         project_title: `${invoice.project_title} (Part 2/2 - 50%)`,
-        amount: halfAmount,
+        amount: part2Amount,
         issue_date: due1,
         due_date: due2,
         status: 'sent',
@@ -140,7 +144,7 @@ export default function App() {
         [newPart2, ...prev.map((inv) => (inv.id === invoice.id ? updatedPart1 : inv))]
       );
 
-      showToast(`✂️ Split ${invoice.invoice_number} into two 50% installments ($${halfAmount.toLocaleString()} each).`);
+      showToast(`✂️ Split ${invoice.invoice_number} into two 50% installments ($${halfAmount.toLocaleString()} & $${part2Amount.toLocaleString()}).`);
     } catch (err) {
       console.error('Failed to split invoice payment:', err);
     }
