@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Navbar from './components/Navbar.jsx';
+import AgingDashboard from './components/AgingDashboard.jsx';
 import { dataService } from './lib/dataService.js';
 import mockDesignerData from './data/mockDesignerData.js';
 
@@ -14,15 +15,20 @@ export default function App() {
   const [isCloudSynced, setIsCloudSynced] = useState(false);
   const [isBadDayActive, setIsBadDayActive] = useState(false);
 
-  // Modals state (wired up in tasks 5 & 6)
+  // Modals state
   const [isInvoiceModalOpen, setIsInvoiceModalOpen] = useState(false);
   const [selectedInvoiceForWhatsApp, setSelectedInvoiceForWhatsApp] = useState(null);
+  const [toastMessage, setToastMessage] = useState(null);
+
+  const showToast = (message) => {
+    setToastMessage(message);
+    setTimeout(() => setToastMessage(null), 4000);
+  };
 
   // Initialize and load seed data
   useEffect(() => {
     async function loadData() {
       try {
-        // Seed default dataset if none exists in storage
         await dataService.seedInitialData(mockDesignerData);
 
         const [prof, cls, invs, bls, fus, user] = await Promise.all([
@@ -73,6 +79,75 @@ export default function App() {
     setIsInvoiceModalOpen(true);
   };
 
+  // Direct action: Mark as Paid
+  const handleMarkAsPaid = async (invoice) => {
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      await dataService.markPaid(invoice.id, today);
+      
+      setInvoices((prev) =>
+        prev.map((inv) =>
+          inv.id === invoice.id ? { ...inv, status: 'paid', paid_date: today } : inv
+        )
+      );
+
+      // Immediately increment cash balance
+      const amt = Number(invoice.amount) || 0;
+      setCashBalance((prev) => prev + amt);
+      showToast(`🎉 Marked ${invoice.invoice_number} as paid! +$${amt.toLocaleString()} added to cash balance.`);
+    } catch (err) {
+      console.error('Failed to mark invoice as paid:', err);
+    }
+  };
+
+  // Direct action: Split Payment (Offer 50/50 plan)
+  const handleSplitPayment = async (invoice) => {
+    try {
+      const halfAmount = Math.round((Number(invoice.amount) / 2) * 100) / 100;
+      const today = new Date();
+      
+      const due1 = today.toISOString().split('T')[0];
+      const due2Date = new Date();
+      due2Date.setDate(due2Date.getDate() + 15);
+      const due2 = due2Date.toISOString().split('T')[0];
+
+      // Update Part 1
+      const updatedPart1 = await dataService.updateInvoice(invoice.id, {
+        amount: halfAmount,
+        project_title: `${invoice.project_title} (Part 1/2 - 50%)`,
+        due_date: due1,
+        notes: `Split payment agreement: 50% due immediately (${due1}).`,
+      });
+
+      // Create Part 2
+      const newPart2 = await dataService.createInvoice({
+        client_id: invoice.client_id,
+        client_name: invoice.client_name,
+        client_phone: invoice.client_phone,
+        invoice_number: `${invoice.invoice_number}-B`,
+        project_title: `${invoice.project_title} (Part 2/2 - 50%)`,
+        amount: halfAmount,
+        issue_date: due1,
+        due_date: due2,
+        status: 'sent',
+        items: invoice.items || [],
+        notes: `Split payment agreement: 50% remaining due on ${due2}.`,
+      });
+
+      setInvoices((prev) =>
+        [newPart2, ...prev.map((inv) => (inv.id === invoice.id ? updatedPart1 : inv))]
+      );
+
+      showToast(`✂️ Split ${invoice.invoice_number} into two 50% installments ($${halfAmount.toLocaleString()} each).`);
+    } catch (err) {
+      console.error('Failed to split invoice payment:', err);
+    }
+  };
+
+  const handleChaseWhatsApp = (invoice) => {
+    setSelectedInvoiceForWhatsApp(invoice);
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-400">
@@ -84,6 +159,19 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col selection:bg-indigo-500 selection:text-white">
+      {/* Toast Notification */}
+      {toastMessage && (
+        <div className="fixed bottom-6 right-6 z-50 bg-slate-900 border border-indigo-500/50 text-slate-100 px-4 py-3 rounded-2xl shadow-2xl shadow-indigo-950/80 flex items-center gap-3 animate-in fade-in slide-in-from-bottom-3">
+          <span className="text-sm font-medium">{toastMessage}</span>
+          <button
+            onClick={() => setToastMessage(null)}
+            className="text-slate-400 hover:text-white text-xs ml-2"
+          >
+            ✕
+          </button>
+        </div>
+      )}
+
       {/* Global Navbar */}
       <Navbar
         profile={profile}
@@ -97,7 +185,8 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
+        
         {/* Bad Day Alert Banner if active */}
         {isBadDayActive && (
           <div className="bg-rose-950/40 border border-rose-500/40 rounded-2xl p-4 text-rose-200 flex items-center justify-between gap-4 shadow-lg shadow-rose-950/50 animate-in fade-in slide-in-from-top-2">
@@ -119,10 +208,16 @@ export default function App() {
           </div>
         )}
 
-        {/* Placeholder container for Task 5 and Task 6 */}
-        <div className="text-slate-500 text-center py-12 border border-dashed border-slate-800 rounded-2xl">
-          <p className="text-sm font-medium">Phase 2: Invoicing & Accounts Receivable in progress...</p>
-        </div>
+        {/* Task 5: Aging AR Dashboard */}
+        <AgingDashboard
+          invoices={invoices}
+          clients={clients}
+          currency={profile?.currency || '$'}
+          onChaseWhatsApp={handleChaseWhatsApp}
+          onMarkPaid={handleMarkAsPaid}
+          onSplitPayment={handleSplitPayment}
+        />
+
       </main>
     </div>
   );
