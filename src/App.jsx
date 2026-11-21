@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Navbar from './components/Navbar.jsx';
 import AgingDashboard from './components/AgingDashboard.jsx';
+import InvoiceModal from './components/InvoiceModal.jsx';
+import WhatsAppModal from './components/WhatsAppModal.jsx';
 import { dataService } from './lib/dataService.js';
 import mockDesignerData from './data/mockDesignerData.js';
 
@@ -148,6 +150,48 @@ export default function App() {
     setSelectedInvoiceForWhatsApp(invoice);
   };
 
+  // Save newly created invoice
+  const handleSaveInvoice = async (invoiceData) => {
+    try {
+      let clientId = invoiceData.client_id;
+
+      // If user typed a new client name
+      if (!clientId && invoiceData.client_name) {
+        const newClient = await dataService.saveClient({
+          name: invoiceData.client_name,
+          company: invoiceData.client_company || invoiceData.client_name,
+          phone: invoiceData.client_phone,
+          payment_behavior: 'reliable',
+          avg_delay_days: 3,
+        });
+        clientId = newClient.id;
+        setClients((prev) => [newClient, ...prev]);
+      }
+
+      const created = await dataService.createInvoice({
+        ...invoiceData,
+        client_id: clientId,
+      });
+
+      setInvoices((prev) => [created, ...prev]);
+      showToast(`✨ Created invoice ${created.invoice_number} for $${created.amount.toLocaleString()}!`);
+    } catch (err) {
+      console.error('Failed to create invoice:', err);
+      showToast('❌ Failed to create invoice. Please try again.');
+    }
+  };
+
+  // Log follow up
+  const handleLogFollowUp = async (followUpData) => {
+    try {
+      const logged = await dataService.logFollowUp(followUpData);
+      setFollowUps((prev) => [logged, ...prev]);
+      showToast(`🚀 WhatsApp follow-up opened & logged in studio history!`);
+    } catch (err) {
+      console.error('Failed to log follow-up:', err);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-950 flex flex-col items-center justify-center text-slate-400">
@@ -219,6 +263,29 @@ export default function App() {
         />
 
       </main>
+
+      {/* Task 6: Invoice Creation Modal */}
+      <InvoiceModal
+        isOpen={isInvoiceModalOpen}
+        onClose={() => setIsInvoiceModalOpen(false)}
+        clients={clients}
+        currency={profile?.currency || '$'}
+        onSaveInvoice={handleSaveInvoice}
+      />
+
+      {/* Task 6: Assisted WhatsApp Follow-Up Modal */}
+      <WhatsAppModal
+        isOpen={Boolean(selectedInvoiceForWhatsApp)}
+        onClose={() => setSelectedInvoiceForWhatsApp(null)}
+        invoice={selectedInvoiceForWhatsApp}
+        client={
+          selectedInvoiceForWhatsApp
+            ? clients.find((c) => c.id === selectedInvoiceForWhatsApp.client_id)
+            : null
+        }
+        currency={profile?.currency || '$'}
+        onLogFollowUp={handleLogFollowUp}
+      />
     </div>
   );
 }
