@@ -60,9 +60,9 @@ Phase 5: Auth & Deployment Polish
 *Checkpoint: Core Invoicing — Invoices can be created, marked paid, and WhatsApp cadences launch. (COMPLETED)*
 
 ### Phase 3: 30–90 Day Cash Forecasting & "What-If" Simulation
-- [ ] **Task 7:** Build Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart
-- [ ] **Task 8:** Build Interactive "What-If" Scenario Sliders & Deficit Warning System
-*Checkpoint: Predictive Intelligence — Sliders dynamically update the 90-day curve and flag cash deficits.*
+- [x] **Task 7:** Build Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart
+- [x] **Task 8:** Build Interactive "What-If" Scenario Sliders & Deficit Warning System
+*Checkpoint: Predictive Intelligence — Sliders dynamically update the 90-day curve and flag cash deficits. (COMPLETED)*
 
 ### Phase 4: Emergency Triage & Low-Friction Data Ingestion
 - [ ] **Task 9:** Build "🚨 Simulate Bad Day" Multi-Default Crisis Protocol Modal

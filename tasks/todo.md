@@ -121,12 +121,12 @@
 ### Task 7: Build Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart
 **Description:** Build the rolling 30, 60, and 90-day cash projection engine that combines invoice inflows (adjusted by client payment behavior) against upcoming fixed and recurring expenses, rendered on an interactive SVG chart with safe buffer line and deficit zones.
 **Acceptance criteria:**
-- [ ] Calculates rolling daily cash balance for 30, 60, and 90-day horizons.
-- [ ] Interactive SVG chart shows historical trend + forecasted curve.
-- [ ] Highlights safe cash buffer line ($1,500) and paints deficit areas in warning red.
-- [ ] Hover tooltips reveal daily cash breakdown (expected inflows vs bills due).
+- [x] Calculates rolling daily cash balance for 30, 60, and 90-day horizons.
+- [x] Interactive SVG chart shows historical trend + forecasted curve.
+- [x] Highlights safe cash buffer line ($1,500) and paints deficit areas in warning red.
+- [x] Hover tooltips reveal daily cash breakdown (expected inflows vs bills due).
 **Verification:**
-- [ ] Verify cash projection changes when toggle is switched between 30, 60, and 90 days.
+- [x] Verify cash projection changes when toggle is switched between 30, 60, and 90 days.
 **Dependencies:** Task 5
 **Files likely touched:**
 - `src/components/CashForecastChart.jsx`
@@ -138,11 +138,11 @@
 ### Task 8: Build Interactive "What-If" Scenario Sliders & Deficit Warning System
 **Description:** Build the scenario planning controls allowing the designer to simulate "Key Client Pays 15 Days Late", "New Studio Hardware Purchase ($1,200 CapEx)", and custom delay sliders, immediately recalibrating the forecast curve and surfacing clear next actions.
 **Acceptance criteria:**
-- [ ] Interactive slider: "Key Client (Acme Studio - $3,500) pays +N days late" (0 to 45 days).
-- [ ] CapEx toggle: "Simulate purchasing M4 MacBook ($1,800) on Day 14".
-- [ ] Live warning banner triggers if cash balance drops below buffer: *"⚠️ Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today."*
+- [x] Interactive slider: "Key Client (Acme Studio - $3,500) pays +N days late" (0 to 45 days).
+- [x] CapEx toggle: "Simulate purchasing M4 MacBook ($1,800) on Day 14".
+- [x] Live warning banner triggers if cash balance drops below buffer: *"⚠️ Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today."*
 **Verification:**
-- [ ] Dragging the slider past Day 15 visually causes the cash curve to dip and displays the deficit alert.
+- [x] Dragging the slider past Day 15 visually causes the cash curve to dip and displays the deficit alert.
 **Dependencies:** Task 7
 **Files likely touched:**
 - `src/components/WhatIfSimulator.jsx`
@@ -152,9 +152,9 @@
 ---
 
 ## Checkpoint: Predictive Cash & Scenario Simulation
-- [ ] Cash forecast renders accurately across 30, 60, 90 days
-- [ ] What-If sliders update the chart in real time without lag
-- [ ] Actionable alert displays specific next step to resolve the deficit
+- [x] Cash forecast renders accurately across 30, 60, 90 days
+- [x] What-If sliders update the chart in real time without lag
+- [x] Actionable alert displays specific next step to resolve the deficit
 
 ---
 
