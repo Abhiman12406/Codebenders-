@@ -54,10 +54,10 @@ Phase 5: Auth & Deployment Polish
 *Checkpoint: Foundation — `npm run build` succeeds, data service reads/writes locally and via Supabase. (COMPLETED)*
 
 ### Phase 2: Invoicing & Accounts Receivable Workflows
-- [ ] **Task 4:** Build Global Navbar, Studio Header & Cash Runway Badge
-- [ ] **Task 5:** Build "Who Owes Me, How Much, Since When?" Aging AR Dashboard
-- [ ] **Task 6:** Build Invoicing Engine & Assisted WhatsApp Follow-up Modal
-*Checkpoint: Core Invoicing — Invoices can be created, marked paid, and WhatsApp cadences launch.*
+- [x] **Task 4:** Build Global Navbar, Studio Header & Cash Runway Badge
+- [x] **Task 5:** Build "Who Owes Me, How Much, Since When?" Aging AR Dashboard
+- [x] **Task 6:** Build Invoicing Engine & Assisted WhatsApp Follow-up Modal
+*Checkpoint: Core Invoicing — Invoices can be created, marked paid, and WhatsApp cadences launch. (COMPLETED)*
 
 ### Phase 3: 30–90 Day Cash Forecasting & "What-If" Simulation
 - [ ] **Task 7:** Build Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart

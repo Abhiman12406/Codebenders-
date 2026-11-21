@@ -64,11 +64,11 @@
 ### Task 4: Build Global Navbar, Studio Header & Cash Runway Badge
 **Description:** Create the navigation header showing studio branding, current cash balance, calculated runway in days (e.g. "48 Days Safe"), mode badge ("Cloud Synced" vs "Guest Demo"), and the prominent "🚨 Simulate Bad Day" trigger.
 **Acceptance criteria:**
-- [ ] Displays studio name, cash balance, and dynamic runway health indicator.
-- [ ] Includes "New Invoice" CTA and "Simulate Bad Day" quick toggle.
-- [ ] Responsive on desktop, tablet, and mobile.
+- [x] Displays studio name, cash balance, and dynamic runway health indicator.
+- [x] Includes "New Invoice" CTA and "Simulate Bad Day" quick toggle.
+- [x] Responsive on desktop, tablet, and mobile.
 **Verification:**
-- [ ] Visual check of navbar render and responsive collapse.
+- [x] Visual check of navbar render and responsive collapse.
 **Dependencies:** Task 1, 3
 **Files likely touched:**
 - `src/components/Navbar.jsx`
@@ -80,11 +80,11 @@
 ### Task 5: Build "Who Owes Me, How Much, Since When?" Aging AR Dashboard
 **Description:** Build the accounts receivable aging dashboard with top-line summary cards (Total Owed, Critical Overdue, Average DSO) and 4 interactive aging cohorts (Current 0-15d, Grace 16-30d, Overdue 31-60d, Severe 60d+), with direct action triggers on each debtor card.
 **Acceptance criteria:**
-- [ ] Directly answers "Who owes me, how much, and since when?".
-- [ ] Debtor cards display client name, project title, amount, days overdue, and client reliability tag.
-- [ ] Direct action buttons on each card: "Chase on WhatsApp", "Mark as Paid", "Split Payment".
+- [x] Directly answers "Who owes me, how much, and since when?".
+- [x] Debtor cards display client name, project title, amount, days overdue, and client reliability tag.
+- [x] Direct action buttons on each card: "Chase on WhatsApp", "Mark as Paid", "Split Payment".
 **Verification:**
-- [ ] Manual check: Marking an invoice as paid immediately updates AR total and removes it from overdue cohort.
+- [x] Manual check: Marking an invoice as paid immediately updates AR total and removes it from overdue cohort.
 **Dependencies:** Task 4
 **Files likely touched:**
 - `src/components/AgingDashboard.jsx`
@@ -96,11 +96,11 @@
 ### Task 6: Build Invoicing Engine & Assisted WhatsApp Follow-up Modal
 **Description:** Build the invoice creation modal and the assisted WhatsApp follow-up generator featuring 4 pre-drafted emotional cadences (Friendly, Due Today, Firm, Urgent) and 1-click `wa.me` launch.
 **Acceptance criteria:**
-- [ ] Invoice creation modal with project name, client selection/creation, amount, due date, and line items.
-- [ ] Assisted follow-up modal generates custom WhatsApp message based on days overdue.
-- [ ] "Send via WhatsApp" button opens `https://wa.me/{phone}?text={encoded}` with copy-to-clipboard fallback.
+- [x] Invoice creation modal with project name, client selection/creation, amount, due date, and line items.
+- [x] Assisted follow-up modal generates custom WhatsApp message based on days overdue.
+- [x] "Send via WhatsApp" button opens `https://wa.me/{phone}?text={encoded}` with copy-to-clipboard fallback.
 **Verification:**
-- [ ] Verify `wa.me` URL encodes message and opens WhatsApp Web/app correctly.
+- [x] Verify `wa.me` URL encodes message and opens WhatsApp Web/app correctly.
 **Dependencies:** Task 5
 **Files likely touched:**
 - `src/components/InvoiceModal.jsx`
@@ -110,9 +110,9 @@
 ---
 
 ## Checkpoint: Core Invoicing Workflows
-- [ ] Invoice creation flow works end-to-end
-- [ ] Invoices reflect in Aging Dashboard immediately
-- [ ] Assisted WhatsApp follow-ups generate realistic text and working deep links
+- [x] Invoice creation flow works end-to-end
+- [x] Invoices reflect in Aging Dashboard immediately
+- [x] Assisted WhatsApp follow-ups generate realistic text and working deep links
 
 ---
 
