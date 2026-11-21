@@ -40,11 +40,11 @@
 ### Task 3: Assemble Rich Freelance Designer Dataset (`mockDesignerData.js`)
 **Description:** Create authentic seed data reflecting a realistic solo freelance designer / creative consultant: 5 active clients, 7 invoices across current/overdue buckets, and realistic monthly studio expenses (Adobe CC, Figma, Co-working rent, 3D render farm).
 **Acceptance criteria:**
-- [ ] 5 diverse clients (Acme Studios, Horizon Tech, Bloom Botanicals, Nova Fintech, Local Artisan).
-- [ ] Invoices covering: Current (0–15d), Due Today, Overdue (12 days, 34 days, 62 days).
-- [ ] Fixed and flexible bills with assigned due days.
+- [x] 5 diverse clients (Acme Studios, Horizon Tech, Bloom Botanicals, Nova Fintech, Local Artisan).
+- [x] Invoices covering: Current (0–15d), Due Today, Overdue (12 days, 34 days, 62 days).
+- [x] Fixed and flexible bills with assigned due days.
 **Verification:**
-- [ ] Import test verifies data shape matches database schema types.
+- [x] Import test verifies data shape matches database schema types.
 **Dependencies:** Task 2
 **Files likely touched:**
 - `src/data/mockDesignerData.js`
@@ -53,9 +53,9 @@
 ---
 
 ## Checkpoint: Foundation
-- [ ] All foundational configs in place
-- [ ] `npm run build` passes
-- [ ] Data service reads and writes properly
+- [x] All foundational configs in place
+- [x] `npm run build` passes
+- [x] Data service reads and writes properly
 
 ---
 
