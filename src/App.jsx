@@ -3,6 +3,9 @@ import Navbar from './components/Navbar.jsx';
 import AgingDashboard from './components/AgingDashboard.jsx';
 import InvoiceModal from './components/InvoiceModal.jsx';
 import WhatsAppModal from './components/WhatsAppModal.jsx';
+import CashForecastChart from './components/CashForecastChart.jsx';
+import WhatIfSimulator from './components/WhatIfSimulator.jsx';
+import { calculateCashForecast, DEFAULT_SCENARIOS } from './lib/forecastEngine.js';
 import { dataService } from './lib/dataService.js';
 import mockDesignerData from './data/mockDesignerData.js';
 
@@ -16,6 +19,10 @@ export default function App() {
   const [cashBalance, setCashBalance] = useState(4850);
   const [isCloudSynced, setIsCloudSynced] = useState(false);
   const [isBadDayActive, setIsBadDayActive] = useState(false);
+
+  // Phase 3: Forecast & What-If Scenarios State
+  const [horizonDays, setHorizonDays] = useState(30);
+  const [scenarios, setScenarios] = useState(DEFAULT_SCENARIOS);
 
   // Modals state
   const [isInvoiceModalOpen, setIsInvoiceModalOpen] = useState(false);
@@ -75,6 +82,26 @@ export default function App() {
 
   const handleToggleBadDay = () => {
     setIsBadDayActive((prev) => !prev);
+  };
+
+  // Phase 3: Dynamic 30-90 Day Cash Forecasting Engine calculation
+  const forecastData = useMemo(() => {
+    return calculateCashForecast({
+      cashBalance,
+      invoices,
+      bills,
+      clients,
+      horizonDays,
+      scenarios: {
+        ...scenarios,
+        badDayActive: isBadDayActive,
+      },
+      safetyBuffer: profile?.safety_buffer || 1500,
+    });
+  }, [cashBalance, invoices, bills, clients, horizonDays, scenarios, isBadDayActive, profile]);
+
+  const handleResetScenarios = () => {
+    setScenarios(DEFAULT_SCENARIOS);
   };
 
   const handleOpenNewInvoice = () => {
@@ -255,6 +282,25 @@ export default function App() {
             </button>
           </div>
         )}
+
+        {/* Task 8: Interactive "What-If" Scenario Simulator & Deficit Warning System */}
+        <WhatIfSimulator
+          scenarios={scenarios}
+          onScenarioChange={setScenarios}
+          onResetScenarios={handleResetScenarios}
+          deficitInfo={forecastData.deficitInfo}
+          safetyBuffer={profile?.safety_buffer || 1500}
+          currency={profile?.currency || '$'}
+          onChaseInvoice={handleChaseWhatsApp}
+        />
+
+        {/* Task 7: Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart */}
+        <CashForecastChart
+          forecastData={forecastData}
+          horizonDays={horizonDays}
+          onHorizonChange={setHorizonDays}
+          currency={profile?.currency || '$'}
+        />
 
         {/* Task 5: Aging AR Dashboard */}
         <AgingDashboard
