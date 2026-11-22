@@ -1,93 +1,98 @@
-# Implementation Plan: StudioFlow — The One-Person Back Office
+# Technical Implementation Plan: StudioFlow Fullstack Operations Cockpit
 
-## Overview
-StudioFlow is an intelligent, live-deployable web application tailored for freelance designers and creative consultants (1–5 person teams) that replaces notebooks and informal WhatsApp tracking with an automated working back office. It connects invoice creation to payment tracking with pre-drafted WhatsApp reminders, visualizes an accounts receivable aging dashboard ("Who owes me, how much, and since when?"), models dynamic 30–90 day cash forecasting, provides interactive "what-if" scenario sliders, and executes a dedicated "Bad Day" multi-default liquidity triage protocol. It features a Dual-Mode data architecture powered by Supabase Auth & PostgreSQL with a zero-friction local guest fallback for judging presentations.
-
-## Architecture Decisions
-1. **Dual-Mode Data Architecture:** The app seamlessly runs in **Cloud Mode** (when Supabase credentials exist and user logs in) or **Guest Demo Mode** (zero setup, pre-loaded with realistic designer data, persisted to `localStorage`). Hackathon judges never hit authentication walls or broken views.
-2. **Interactive SVG Visualizations:** Cash forecasting is rendered using clean, responsive SVG coordinate mapping rather than bloated external charting engines, ensuring 60fps responsiveness during real-time "what-if" slider drags.
-3. **Behavioral Lag vs Due-Date Forecasting:** Forecasts calculate expected cash inflows using each client's historical payment lag ($DueDate + \Delta_{delay}$) rather than nominal due dates, curing the "structural optimism" failure of legacy accounting apps.
-4. **Assisted, Never Autonomous Communication:** Follow-ups are pre-drafted across 4 contextual cadences (friendly, due-today, firm, urgent) with 1-click WhatsApp deep links (`https://wa.me/{phone}?text=...`), giving the owner 100% human-in-the-loop control.
+**Spec Reference:** `docs/spec/one-person-backoffice-fullstack-spec.md`  
+**Goal:** Deliver a working fullstack back office with a dedicated Node.js Express backend API, interactive Client Pay Portal, and a focused, zero-fluff Operational Cockpit for freelance designers and solo business owners.
 
 ---
 
-## Dependency Graph
+## 1. Architectural Strategy & Slicing
+
+The system is decomposed into 5 progressive, independently testable phases:
 
 ```
-Phase 1: Project Setup & Dual-Mode Foundations
-  │
-  ├── Tailwind & Vite Build Pipeline (Task 1)
-  ├── Supabase Client & Data Service Layer (Task 2)
-  └── Rich Mock Designer Dataset (Task 3)
-        │
-Phase 2: Invoicing & Aging AR Engine
-  │
-  ├── Global Navbar & Studio Runway Health Badge (Task 4)
-  ├── "Who Owes Me" Aging AR Dashboard & Debtor Cards (Task 5)
-  └── Invoicing Engine & Assisted WhatsApp Follow-up Modal (Task 6)
-        │
-Phase 3: 30–90 Day Cash Forecasting & "What-If" Simulator
-  │
-  ├── Dynamic 30-90 Day Cash Forecasting Engine & Visual Curve (Task 7)
-  └── Interactive "What-If" Scenario Simulator & Shortfall Alerter (Task 8)
-        │
-Phase 4: Emergency Triage & Low-Friction Ingestion
-  │
-  ├── "🚨 Simulate Bad Day" Multi-Default Crisis Protocol (Task 9)
-  ├── Natural Language Quick Ingestion Bar & Preset Templates (Task 10)
-  └── Studio Outflows & Fixed/Flexible Bills Manager (Task 11)
-        │
-Phase 5: Auth & Deployment Polish
-  │
-  ├── Supabase Auth Modal & Guest Switcher (Task 12)
-  └── Production Build Verification & Deployment Docs (Task 13)
+Phase 1: Backend API Server & Persistence Layer
+  │ (Express REST API, JSON Store + Supabase sync, routes for invoices, portal, forecast, triage)
+  ▼
+Phase 2: Fullstack Wireup & Development Tooling
+  │ (Vite proxy configuration, concurrent dev scripts, frontend API client with resilient fallback)
+  ▼
+Phase 3: Interactive Client Pay Portal & Settlement Engine
+  │ (Client-facing invoice view, instant simulated payment, printable PDF layout, extension requests)
+  ▼
+Phase 4: Operational Cockpit Refactor (Purging Landing Page Fluff)
+  │ (Strip 3D galaxy canvas, marquee, dogma accordions; assemble high-density operational cockpit)
+  ▼
+Phase 5: Automated Verification & Production Readiness
+  │ (API test script, end-to-end user journey verification, zero-warning production build)
 ```
 
 ---
 
-## Task List
+## 2. Implementation Phases & Checkpoints
 
-### Phase 1: Foundation & Data Layer
-- [x] **Task 1:** Initialize Vite React App, Tailwind CSS, and Verification Pipeline
-- [x] **Task 2:** Build Supabase Client & Dual-Mode Data Access Service (`dataService.js`)
-- [x] **Task 3:** Assemble Rich Freelance Designer Dataset (`mockDesignerData.js`)
-*Checkpoint: Foundation — `npm run build` succeeds, data service reads/writes locally and via Supabase. (COMPLETED)*
+### Phase 1: Backend API Server & Persistence Layer
+- **Goal:** Complete the Node.js Express API server on port 3001 serving all business logic endpoints.
+- **Components:**
+  - `server/index.js`: Express app initialization, CORS, JSON parsing, error handler.
+  - `server/routes/invoices.js`: Invoices list, AR aging cohorts, invoice creation, payment settlement, 50/50 split.
+  - `server/routes/portal.js`: Public-facing client invoice endpoints (`GET /api/portal/:id`, `POST /api/portal/:id/pay`, `POST /api/portal/:id/extension`).
+  - `server/routes/forecast.js`: Dynamic 30–90 day cash forecasting endpoint.
+  - `server/routes/triage.js`: "Bad Day" multi-default liquidity deficit and 3-tier action plan endpoint.
+  - `server/routes/outflows.js`: Recurring bills ledger & flexible expense toggles.
+  - `server/routes/profile.js`: Cash balance, safety buffer, profile settings, and demo data reset.
+  - `server/routes/ai.js`: Server-side natural language invoice parsing.
+- **Verification Checkpoint 1:** Standalone server boots via `node server/index.js`, responds to `GET /api/health`, and automated test script validates all endpoints with code 0.
 
-### Phase 2: Invoicing & Accounts Receivable Workflows
-- [x] **Task 4:** Build Global Navbar, Studio Header & Cash Runway Badge
-- [x] **Task 5:** Build "Who Owes Me, How Much, Since When?" Aging AR Dashboard
-- [x] **Task 6:** Build Invoicing Engine & Assisted WhatsApp Follow-up Modal
-*Checkpoint: Core Invoicing — Invoices can be created, marked paid, and WhatsApp cadences launch. (COMPLETED)*
+### Phase 2: Fullstack Wireup & Development Tooling
+- **Goal:** Connect the Vite React frontend to the Express backend with unified tooling.
+- **Components:**
+  - `vite.config.js`: Configure development proxy (`/api` -> `http://localhost:3001`).
+  - `package.json`: Add concurrent dev runner (`"dev": "concurrently -n \"API,WEB\" -c \"cyan,magenta\" \"node server/index.js\" \"vite\""`).
+  - `src/lib/api.js`: Unified HTTP client for all backend endpoints.
+  - `src/lib/dataService.js`: Hybrid data service directing reads and writes through `/api` with seamless fallback to localStorage.
+- **Verification Checkpoint 2:** Running `npm run dev` boots both servers, and frontend successfully loads profile and invoice data from the backend.
 
-### Phase 3: 30–90 Day Cash Forecasting & "What-If" Simulation
-- [x] **Task 7:** Build Dynamic 30–90 Day Cash Flow Engine & Interactive SVG Chart
-- [x] **Task 8:** Build Interactive "What-If" Scenario Sliders & Deficit Warning System
-*Checkpoint: Predictive Intelligence — Sliders dynamically update the 90-day curve and flag cash deficits. (COMPLETED)*
+### Phase 3: Interactive Client Pay Portal & Settlement Engine
+- **Goal:** Provide a client-facing invoice portal that solves the "money arrives late" bottleneck.
+- **Components:**
+  - `src/components/ClientPortalModal.jsx`: Client invoice view with studio branding, project deliverables, line items, and issue/due dates.
+  - **Instant Payment Simulator:** "Pay Now" button with Card / UPI / ACH simulation that calls `POST /api/portal/:id/pay`, transitions invoice status to `paid`, and immediately credits studio cash reserves.
+  - **Printable PDF Layout:** CSS `@media print` styling allowing 1-click clean invoice printing or saving as PDF.
+  - **Extension Request:** "Request 7-day Extension" button that updates invoice due date and logs reason.
+- **Verification Checkpoint 3:** Clicking "View as Client" on an overdue invoice opens the portal, clicking "Pay Now" settles the invoice, and the top navbar cash balance reflects the new funds immediately.
 
-### Phase 4: Emergency Triage & Low-Friction Data Ingestion
-- [ ] **Task 9:** Build "🚨 Simulate Bad Day" Multi-Default Crisis Protocol Modal
-- [ ] **Task 10:** Build Natural Language Quick Ingestion Bar & Design Service Presets
-- [ ] **Task 11:** Build Studio Outflows & Bills Manager (Figma, Adobe, Studio Rent)
-*Checkpoint: Operational Completeness — End-to-end back office handles bad days and rapid entry.*
+### Phase 4: Operational Cockpit Refactor (Purging Landing Page Fluff)
+- **Goal:** Eliminate cosmetic landing page elements and replace with a focused, high-density operations cockpit.
+- **Deletions / Removals:**
+  - Remove imports and JSX for `OrbitalGalaxyBackground`, `InfiniteMarquee`, `HorizontalAccordions`, `ArtCraftPrinciples`, `HeroWordmark`, and `RightScrollRuler`.
+- **New / Refactored Sections in `src/App.jsx`:**
+  - **Studio Telemetry Header:** Cash balance, calculated runway (days), buffer health, backend status (`🟢 API Connected (Port 3001)`), "New Invoice" CTA, and "🚨 Bad Day Crisis" trigger.
+  - **Prescriptive Action Queue:** Prominent banner surfacing immediate actions (e.g. *"⚠️ Cash Deficit Alert: -$420 on Dec 9. Action: Chase Acme or pause flexible subscriptions"*).
+  - **Quick Inflow Bar:** Plain language command execution + 1-click design service presets.
+  - **Accounts Receivable Aging Radar:** Visual debtor cards with direct triggers:
+    - "View Client Portal / Pay Link"
+    - "Chase on WhatsApp" (4 pre-drafted emotional cadences)
+    - "Mark Paid"
+    - "Split 50/50"
+  - **Cash Horizon Radar:** Rolling 30/60/90-day curve with interactive What-If sliders.
+  - **Committed Outflows Ledger:** Fixed bills and flexible expense deferral controls.
+- **Verification Checkpoint 4:** Visual inspection confirms zero marketing fluff; all screen real estate is dedicated to daily operational workflows.
 
-### Phase 5: Authentication & Production Deployment
-- [ ] **Task 12:** Build Supabase Auth Modal & Demo Mode Switcher
-- [ ] **Task 13:** Final Styling Polish, Production Build (`npm run build`), and Deployment Guide
-*Checkpoint: Hackathon & Live Production Ready — Zero errors, deployable to Vercel/Netlify.*
+### Phase 5: Automated Verification & Production Readiness
+- **Goal:** Rigorous test execution, error-free production build, and updated documentation.
+- **Components:**
+  - `server/test-api.js`: Complete integration test script verifying all backend endpoints.
+  - `npm run build`: Production bundle compilation with zero errors.
+  - `README.md`: Updated setup guide and hackathon judge evaluation walkthrough.
+- **Verification Checkpoint 5:** `npm test` / API test suite passes 100%, `npm run build` succeeds, and app runs cleanly in preview.
 
 ---
 
-## Risks and Mitigations
+## 3. Risks & Mitigations
 
 | Risk | Impact | Mitigation |
 | :--- | :--- | :--- |
-| **Missing Supabase Keys during Judge Demo** | High | Dual-mode data service detects missing credentials and transparently boots into Guest Demo mode with rich local data. |
-| **WhatsApp Desktop Deep Link Restrictions** | Med | Generates standard `wa.me` links with fallback "Copy Drafted Message" button for email/Slack. |
-| **Forecasting Glitches on Irregular Incomes** | Med | Applies behavioral lag adjustments ($DueDate + \Delta$) and separates fixed retainers from milestone deliverables. |
-| **Over-complicated UI for Non-Financial Users** | High | Adheres to "3-second rule": big metrics, plain language labels, single-action buttons, zero accounting jargon. |
-
----
-
-## Open Questions & Next Steps
-- Human reviewed and approved intent in `docs/intent/one-person-backoffice.md`.
-- Next action: Execute Phase 1 tasks starting with Task 1.
+| **Port Conflicts during judging** | Medium | Backend defaults to 3001, falls back to `process.env.PORT`. Vite proxy dynamically targets backend. |
+| **Missing external database keys** | High | Backend includes self-contained file persistence (`server/data/db.json`) initialized with rich seed data; works 100% offline. |
+| **Broken imports after deleting landing page components** | Medium | Systematically check and remove all unused imports in `src/App.jsx`. |
+| **State desynchronization between portal payment and cockpit** | Medium | Backend returns updated studio cash balance on `POST /api/portal/:id/pay`; cockpit state refreshes seamlessly. |

@@ -17,11 +17,11 @@ export default function AgingDashboard({
   onChaseWhatsApp,
   onMarkPaid,
   onSplitPayment,
+  onViewAsClient,
 }) {
-  const [activeTab, setActiveTab] = useState('all'); // 'all', 'current', 'grace', 'overdue', 'severe', 'paid'
+  const [activeTab, setActiveTab] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Client map by ID for instant O(1) lookup
   const clientMap = useMemo(() => {
     const map = new Map();
     clients.forEach((c) => {
@@ -65,7 +65,6 @@ export default function AgingDashboard({
 
       const diffDays = getDaysDiff(inv.due_date);
 
-      // Overdue stats
       if (diffDays > 0) {
         overdueNum += 1;
         totalDelaySum += diffDays;
@@ -78,10 +77,8 @@ export default function AgingDashboard({
       } else if (diffDays >= 16) {
         overdueCohort.push({ ...inv, diffDays });
       } else if (diffDays >= 0) {
-        // Due today or 1-15 days overdue (Grace window)
         graceCohort.push({ ...inv, diffDays });
       } else {
-        // Future due (diffDays < 0)
         currentCohort.push({ ...inv, diffDays });
       }
     });
@@ -96,7 +93,6 @@ export default function AgingDashboard({
       paid: paidCohort,
     };
 
-    // Filter by active tab & search
     let list = [];
     if (activeTab === 'all') {
       list = [...currentCohort, ...graceCohort, ...overdueCohort, ...severeCohort];
@@ -127,30 +123,31 @@ export default function AgingDashboard({
   }, [invoices, activeTab, searchQuery]);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-[#3a3a3f] pb-5">
         <div>
-          <div className="flex items-center gap-2">
-            <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
-              Who Owes Me, How Much, Since When?
-            </h2>
+          <div className="micro-cap text-[#5a5a5f] font-bold mb-2">
+            <span>Aging Radar // Net 15 / Net 30</span>
           </div>
-          <p className="text-xs sm:text-sm text-slate-400 mt-1">
-            Real-time accounts receivable aging cohorts and one-tap payment chase triggers.
+          <h2 className="display-lg text-white">
+            Accounts Receivable Radar
+          </h2>
+          <p className="text-sm text-[#f0f0fa] mt-1">
+            Real-time aging cohorts, client risk tracking, and one-click payment follow-up.
           </p>
         </div>
 
         {/* Search Bar */}
-        <div className="relative w-full md:w-64">
-          <Search className="absolute left-3 top-2.5 w-4 h-4 text-slate-400" />
+        <div className="relative w-full md:w-80">
+          <Search className="absolute left-3.5 top-3 w-4 h-4 text-[#5a5a5f]" />
           <input
             type="text"
-            placeholder="Search client, project..."
+            placeholder="Search client, project, or invoice..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 bg-slate-900 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="w-full pl-10 pr-3 py-2 bg-black border border-[#3a3a3f] focus:border-white rounded-[4px] text-xs text-white placeholder:text-[#5a5a5f] focus:outline-none transition"
           />
         </div>
       </div>
@@ -159,85 +156,82 @@ export default function AgingDashboard({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         
         {/* Total Owed */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider">Total Owed (AR)</span>
-            <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-400">
-              <DollarSign className="w-4 h-4" />
+        <div className="card-spacex p-5 bg-[#0a0a0a]">
+          <div className="flex items-center justify-between text-[#5a5a5f] mb-2">
+            <span className="text-xs uppercase font-bold text-[#5a5a5f]">Total Outstanding</span>
+            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-white">
+              <DollarSign className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-white tracking-tight">
+          <div className="text-2xl sm:text-3xl font-bold text-white tabular-nums tracking-[-0.42px]">
             {currency}{totalOwed.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </div>
-          <div className="text-xs text-slate-400 mt-1.5 flex items-center gap-1">
-            <span className="text-slate-300 font-medium">
-              {invoices.filter((i) => i.status !== 'paid').length} active invoices
-            </span>
-            <span>across {clients.length} clients</span>
+          <div className="text-xs text-[#5a5a5f] mt-1.5">
+            {invoices.filter((i) => i.status !== 'paid').length} active invoices across {clients.length} clients
           </div>
         </div>
 
         {/* Critical Overdue */}
-        <div className="bg-slate-900/90 border border-rose-950/60 rounded-2xl p-5 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider text-rose-300">Critical Overdue</span>
-            <div className="p-2 rounded-xl bg-rose-500/10 text-rose-400">
-              <AlertCircle className="w-4 h-4" />
+        <div className="card-spacex p-5 bg-[#0a0a0a] border-[#ef4444]">
+          <div className="flex items-center justify-between text-[#ef4444] mb-2">
+            <span className="text-xs uppercase font-bold text-[#ef4444]">Critical Overdue</span>
+            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#ef4444] flex items-center justify-center text-[#ef4444]">
+              <AlertCircle className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-rose-400 tracking-tight">
+          <div className="text-2xl sm:text-3xl font-bold text-[#ef4444] tabular-nums tracking-[-0.42px]">
             {currency}{criticalOverdueAmount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
           </div>
-          <div className="text-xs text-rose-300/80 mt-1.5">
+          <div className="text-xs text-[#ef4444] mt-1.5">
             {cohorts.severe.length} invoice(s) past 60+ days
           </div>
         </div>
 
         {/* Overdue Count */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider">Requiring Chase</span>
-            <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400">
-              <Clock className="w-4 h-4" />
+        <div className="card-spacex p-5 bg-[#0a0a0a]">
+          <div className="flex items-center justify-between text-[#5a5a5f] mb-2">
+            <span className="text-xs uppercase font-bold text-[#f59e0b]">Requiring Follow-up</span>
+            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-[#f59e0b]">
+              <Clock className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-amber-400 tracking-tight">
+          <div className="text-2xl sm:text-3xl font-bold text-[#f59e0b] tabular-nums tracking-[-0.42px]">
             {overdueCount} Invoices
           </div>
-          <div className="text-xs text-slate-400 mt-1.5">
-            Past due date, immediate action recommended
+          <div className="text-xs text-[#5a5a5f] mt-1.5">
+            Immediate follow-up recommended
           </div>
         </div>
 
         {/* Average DSO / Collection Lag */}
-        <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 shadow-sm">
-          <div className="flex items-center justify-between text-slate-400 mb-2">
-            <span className="text-xs font-semibold uppercase tracking-wider">Average DSO</span>
-            <div className="p-2 rounded-xl bg-sky-500/10 text-sky-400">
-              <TrendingUp className="w-4 h-4" />
+        <div className="card-spacex p-5 bg-[#0a0a0a]">
+          <div className="flex items-center justify-between text-[#5a5a5f] mb-2">
+            <span className="text-xs uppercase font-bold text-[#5a5a5f]">Average DSO</span>
+            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-white">
+              <TrendingUp className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div className="text-2xl font-extrabold text-white tracking-tight">
+          <div className="text-2xl sm:text-3xl font-bold text-white tabular-nums tracking-[-0.42px]">
             {avgDSO} Days
           </div>
-          <div className="text-xs text-slate-400 mt-1.5">
-            Avg payment turnaround for design clients
+          <div className="text-xs text-[#5a5a5f] mt-1.5">
+            Historical collection turnaround
           </div>
         </div>
 
       </div>
 
-      {/* Cohort Tabs */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
+      {/* Cohort Tabs: SpaceX Ghost Outlined Pill Selectors */}
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[#3a3a3f] pb-4">
+        <div className="flex flex-wrap items-center gap-2">
           
           <button
             type="button"
             onClick={() => setActiveTab('all')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition ${
               activeTab === 'all'
-                ? 'bg-indigo-600 text-white shadow-sm'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#f0f0fa] border border-[#3a3a3f] hover:border-white'
             }`}
           >
             All Active ({cohorts.current.length + cohorts.grace.length + cohorts.overdue.length + cohorts.severe.length})
@@ -246,13 +240,12 @@ export default function AgingDashboard({
           <button
             type="button"
             onClick={() => setActiveTab('current')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition flex items-center gap-1.5 ${
               activeTab === 'current'
-                ? 'bg-slate-800 text-white border border-slate-700'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#f0f0fa] border border-[#3a3a3f] hover:border-white'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
             <span>Current (0–15d)</span>
             <span className="text-[11px] opacity-75">({cohorts.current.length})</span>
           </button>
@@ -260,27 +253,25 @@ export default function AgingDashboard({
           <button
             type="button"
             onClick={() => setActiveTab('grace')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition flex items-center gap-1.5 ${
               activeTab === 'grace'
-                ? 'bg-slate-800 text-white border border-slate-700'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#f0f0fa] border border-[#3a3a3f] hover:border-white'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-indigo-400"></span>
-            <span>Grace / Due (16–30d)</span>
+            <span>Grace (16–30d)</span>
             <span className="text-[11px] opacity-75">({cohorts.grace.length})</span>
           </button>
 
           <button
             type="button"
             onClick={() => setActiveTab('overdue')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition flex items-center gap-1.5 ${
               activeTab === 'overdue'
-                ? 'bg-amber-950/60 text-amber-300 border border-amber-800'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#f59e0b] border border-[#3a3a3f] hover:border-[#f59e0b]'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-amber-400"></span>
             <span>Overdue (31–60d)</span>
             <span className="text-[11px] opacity-75">({cohorts.overdue.length})</span>
           </button>
@@ -288,13 +279,12 @@ export default function AgingDashboard({
           <button
             type="button"
             onClick={() => setActiveTab('severe')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition flex items-center gap-1.5 ${
               activeTab === 'severe'
-                ? 'bg-rose-950/60 text-rose-300 border border-rose-800'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#ef4444] border border-[#3a3a3f] hover:border-[#ef4444]'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-rose-400"></span>
             <span>Severe (60d+)</span>
             <span className="text-[11px] opacity-75">({cohorts.severe.length})</span>
           </button>
@@ -302,28 +292,26 @@ export default function AgingDashboard({
           <button
             type="button"
             onClick={() => setActiveTab('paid')}
-            className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 ${
+            className={`px-3.5 py-1.5 rounded-[32px] text-xs font-bold transition flex items-center gap-1.5 ${
               activeTab === 'paid'
-                ? 'bg-emerald-950/60 text-emerald-300 border border-emerald-800'
-                : 'bg-slate-900 text-slate-400 hover:text-slate-200'
+                ? 'bg-white text-black'
+                : 'bg-black text-[#5a5a5f] border border-[#3a3a3f] hover:border-white'
             }`}
           >
-            <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span>Settled / Paid</span>
+            <span>Settled</span>
             <span className="text-[11px] opacity-75">({cohorts.paid.length})</span>
           </button>
 
         </div>
 
-        {/* Tab Status Subtext */}
-        <div className="text-xs text-slate-400 hidden sm:block">
+        <div className="text-xs text-[#5a5a5f] hidden sm:block">
           Showing {filteredInvoices.length} invoices
         </div>
       </div>
 
-      {/* Invoices List / Grid */}
+      {/* Invoices Grid */}
       {filteredInvoices.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {filteredInvoices.map((inv) => {
             const client = clientMap.get(inv.client_id) || clientMap.get(inv.client_name?.toLowerCase());
             return (
@@ -335,20 +323,21 @@ export default function AgingDashboard({
                 onChaseWhatsApp={onChaseWhatsApp}
                 onMarkPaid={onMarkPaid}
                 onSplitPayment={onSplitPayment}
+                onViewAsClient={onViewAsClient}
               />
             );
           })}
         </div>
       ) : (
-        <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl py-14 text-center px-4">
-          <div className="w-12 h-12 rounded-2xl bg-slate-800/80 text-emerald-400 mx-auto flex items-center justify-center mb-3">
+        <div className="card-spacex py-16 text-center px-4 bg-[#0a0a0a]">
+          <div className="w-12 h-12 rounded-[4px] bg-black border border-[#3a3a3f] text-white mx-auto flex items-center justify-center mb-3">
             <CheckCircle className="w-6 h-6" />
           </div>
-          <h3 className="text-base font-semibold text-white">No invoices in this cohort</h3>
-          <p className="text-xs text-slate-400 max-w-sm mx-auto mt-1">
+          <h3 className="button-cap text-white text-base">No invoices in this cohort</h3>
+          <p className="text-xs text-[#5a5a5f] max-w-sm mx-auto mt-1">
             {searchQuery
-              ? `No invoices matched "${searchQuery}". Clear your search query.`
-              : 'All invoices in this cohort have been settled or none currently match.'}
+              ? `No invoices matched "${searchQuery}".`
+              : 'All invoices in this cohort are fully settled or none are currently scheduled.'}
           </p>
         </div>
       )}

@@ -1,0 +1,819 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/App.jsx",
+      "type": "file",
+      "name": "App.jsx",
+      "filePath": "src/App.jsx",
+      "summary": "Main application container orchestrating StudioFlow views, modals, notifications, and Supabase auth state.",
+      "tags": [
+        "entry-point",
+        "component",
+        "dashboard",
+        "react"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/App.jsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.jsx",
+      "lineRange": [
+        35,
+        915
+      ],
+      "summary": "Function App in App.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ArtCraftPrinciples.jsx",
+      "type": "file",
+      "name": "ArtCraftPrinciples.jsx",
+      "filePath": "src/components/ArtCraftPrinciples.jsx",
+      "summary": "Design philosophy showcase illustrating craft principles through interactive cards.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "function",
+      "name": "ArtCraftPrinciples",
+      "filePath": "src/components/ArtCraftPrinciples.jsx",
+      "lineRange": [
+        28,
+        94
+      ],
+      "summary": "Function ArtCraftPrinciples in ArtCraftPrinciples.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/BadDayTriageModal.jsx",
+      "type": "file",
+      "name": "BadDayTriageModal.jsx",
+      "filePath": "src/components/BadDayTriageModal.jsx",
+      "summary": "Emergency financial triage modal prioritizing essential operational expenses when cash is low.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "function",
+      "name": "BadDayTriageModal",
+      "filePath": "src/components/BadDayTriageModal.jsx",
+      "lineRange": [
+        9,
+        186
+      ],
+      "summary": "Function BadDayTriageModal in BadDayTriageModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/FeedbackCarousel.jsx",
+      "type": "file",
+      "name": "FeedbackCarousel.jsx",
+      "filePath": "src/components/FeedbackCarousel.jsx",
+      "summary": "Interactive client feedback and review carousel showcasing studio testimonials.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "function",
+      "name": "FeedbackCarousel",
+      "filePath": "src/components/FeedbackCarousel.jsx",
+      "lineRange": [
+        31,
+        132
+      ],
+      "summary": "Function FeedbackCarousel in FeedbackCarousel.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/HorizontalAccordions.jsx",
+      "type": "file",
+      "name": "HorizontalAccordions.jsx",
+      "filePath": "src/components/HorizontalAccordions.jsx",
+      "summary": "Horizontal sliding accordion component displaying workflow details and feature highlights.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "function",
+      "name": "HorizontalAccordions",
+      "filePath": "src/components/HorizontalAccordions.jsx",
+      "lineRange": [
+        47,
+        120
+      ],
+      "summary": "Function HorizontalAccordions in HorizontalAccordions.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/InfiniteMarquee.jsx",
+      "type": "file",
+      "name": "InfiniteMarquee.jsx",
+      "filePath": "src/components/InfiniteMarquee.jsx",
+      "summary": "Smooth continuous scrolling marquee presenting studio capabilities and client logos.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "function",
+      "name": "InfiniteMarquee",
+      "filePath": "src/components/InfiniteMarquee.jsx",
+      "lineRange": [
+        22,
+        51
+      ],
+      "summary": "Function InfiniteMarquee in InfiniteMarquee.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/InvoiceModal.jsx",
+      "type": "file",
+      "name": "InvoiceModal.jsx",
+      "filePath": "src/components/InvoiceModal.jsx",
+      "summary": "Modal dialog for creating and editing client invoices with line items and due dates.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "function",
+      "name": "InvoiceModal",
+      "filePath": "src/components/InvoiceModal.jsx",
+      "lineRange": [
+        10,
+        417
+      ],
+      "summary": "Function InvoiceModal in InvoiceModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/Navbar.jsx",
+      "type": "file",
+      "name": "Navbar.jsx",
+      "filePath": "src/components/Navbar.jsx",
+      "summary": "Top navigation header displaying branding, active server connection status badge, and quick actions.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/Navbar.jsx:Navbar",
+      "type": "function",
+      "name": "Navbar",
+      "filePath": "src/components/Navbar.jsx",
+      "lineRange": [
+        10,
+        182
+      ],
+      "summary": "Function Navbar in Navbar.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/OutflowsManager.jsx",
+      "type": "file",
+      "name": "OutflowsManager.jsx",
+      "filePath": "src/components/OutflowsManager.jsx",
+      "summary": "Recurring and one-off expense manager tracking studio operational cost outflows.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "function",
+      "name": "OutflowsManager",
+      "filePath": "src/components/OutflowsManager.jsx",
+      "lineRange": [
+        13,
+        171
+      ],
+      "summary": "Function OutflowsManager in OutflowsManager.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/QuickInputBar.jsx",
+      "type": "file",
+      "name": "QuickInputBar.jsx",
+      "filePath": "src/components/QuickInputBar.jsx",
+      "summary": "Natural-language command input bar converting plain English sentences into draft invoices.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "function",
+      "name": "QuickInputBar",
+      "filePath": "src/components/QuickInputBar.jsx",
+      "lineRange": [
+        11,
+        163
+      ],
+      "summary": "Function QuickInputBar in QuickInputBar.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ScrubTextReveal.jsx",
+      "type": "file",
+      "name": "ScrubTextReveal.jsx",
+      "filePath": "src/components/ScrubTextReveal.jsx",
+      "summary": "Interactive scroll-driven text scrub reveal animation highlighting studio manifesto text.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "function",
+      "name": "ScrubTextReveal",
+      "filePath": "src/components/ScrubTextReveal.jsx",
+      "lineRange": [
+        7,
+        65
+      ],
+      "summary": "Function ScrubTextReveal in ScrubTextReveal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/WhatIfSimulator.jsx",
+      "type": "file",
+      "name": "WhatIfSimulator.jsx",
+      "filePath": "src/components/WhatIfSimulator.jsx",
+      "summary": "What-If financial scenario simulator modeling invoice payment delays and revenue impacts.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "function",
+      "name": "WhatIfSimulator",
+      "filePath": "src/components/WhatIfSimulator.jsx",
+      "lineRange": [
+        14,
+        307
+      ],
+      "summary": "Function WhatIfSimulator in WhatIfSimulator.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/nlpParser.js",
+      "type": "file",
+      "name": "nlpParser.js",
+      "filePath": "src/lib/nlpParser.js",
+      "summary": "Client-side natural language text parser extracting client names, amounts, and dates into structured invoices.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseDueDate",
+      "type": "function",
+      "name": "parseDueDate",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "Function parseDueDate in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseClientAndProject",
+      "type": "function",
+      "name": "parseClientAndProject",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        45,
+        59
+      ],
+      "summary": "Function parseClientAndProject in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "function",
+      "name": "parseInvoiceText",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        61,
+        71
+      ],
+      "summary": "Function parseInvoiceText in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/main.jsx",
+      "type": "file",
+      "name": "main.jsx",
+      "filePath": "src/main.jsx",
+      "summary": "React application root entry point mounting App into the DOM root.",
+      "tags": [
+        "entry-point",
+        "react",
+        "bootstrap"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/AgingDashboard.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ArtCraftPrinciples.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/AuthModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/BadDayTriageModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/CashForecastChart.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ClientPortalModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/FeedbackCarousel.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/HorizontalAccordions.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/InfiniteMarquee.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/InvoiceModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/Navbar.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/OutflowsManager.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/QuickInputBar.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ScrubTextReveal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/WhatIfSimulator.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/WhatsAppModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ArtCraftPrinciples.jsx",
+      "target": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ArtCraftPrinciples.jsx",
+      "target": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/BadDayTriageModal.jsx",
+      "target": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/BadDayTriageModal.jsx",
+      "target": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/FeedbackCarousel.jsx",
+      "target": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/FeedbackCarousel.jsx",
+      "target": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/HorizontalAccordions.jsx",
+      "target": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HorizontalAccordions.jsx",
+      "target": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/InfiniteMarquee.jsx",
+      "target": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/InfiniteMarquee.jsx",
+      "target": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/InvoiceModal.jsx",
+      "target": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/InvoiceModal.jsx",
+      "target": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/Navbar.jsx",
+      "target": "function:src/components/Navbar.jsx:Navbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/Navbar.jsx",
+      "target": "function:src/components/Navbar.jsx:Navbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/OutflowsManager.jsx",
+      "target": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/OutflowsManager.jsx",
+      "target": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "file:src/lib/nlpParser.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ScrubTextReveal.jsx",
+      "target": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ScrubTextReveal.jsx",
+      "target": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/WhatIfSimulator.jsx",
+      "target": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/WhatIfSimulator.jsx",
+      "target": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseDueDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseClientAndProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/App.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

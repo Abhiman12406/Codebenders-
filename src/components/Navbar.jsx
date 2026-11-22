@@ -4,9 +4,7 @@ import {
   AlertTriangle, 
   Plus, 
   Flame, 
-  Cloud, 
-  Laptop,
-  Layers
+  Activity
 } from 'lucide-react';
 
 export default function Navbar({
@@ -18,146 +16,166 @@ export default function Navbar({
   isBadDayActive = false,
   onToggleBadDay,
   onOpenNewInvoice,
+  onOpenAuth,
+  onSignOut,
 }) {
   const currency = profile?.currency || '$';
-  const businessName = profile?.business_name || 'Aura Design Studio';
-  const ownerName = profile?.owner_name || 'Alex Morgan';
 
-  // Determine runway health status
+  // Determine runway status (clean high-contrast indicator)
   const getRunwayBadge = () => {
     if (runwayDays <= 14 || cashBalance < safetyBuffer) {
       return {
         label: `${runwayDays}d Critical`,
-        color: 'bg-rose-500/15 text-rose-400 border-rose-500/30',
-        dot: 'bg-rose-500',
-        icon: AlertTriangle,
+        classes: 'border-[#ef4444] text-[#ef4444]',
+        dot: 'bg-[#ef4444]',
       };
     }
     if (runwayDays <= 30) {
       return {
         label: `${runwayDays}d Tight`,
-        color: 'bg-amber-500/15 text-amber-400 border-amber-500/30',
-        dot: 'bg-amber-500',
-        icon: AlertTriangle,
+        classes: 'border-[#f59e0b] text-[#f59e0b]',
+        dot: 'bg-[#f59e0b]',
       };
     }
     return {
-      label: `${runwayDays}d Safe`,
-      color: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/30',
-      dot: 'bg-emerald-500',
-      icon: ShieldCheck,
+      label: `${runwayDays}d Runway`,
+      classes: 'border-[#3a3a3f] text-white',
+      dot: 'bg-white',
     };
   };
 
   const runway = getRunwayBadge();
-  const RunwayIcon = runway.icon;
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 gap-2 sm:gap-4">
+    <header className="sticky top-0 left-0 z-50 w-full border-b border-[#3a3a3f] bg-black/90 backdrop-blur-md select-none transition-colors">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-16 sm:h-20 px-4 sm:px-6 lg:px-8">
+        
+        {/* Left: SpaceX Wordmark & Navigation Links */}
+        <div className="flex items-center gap-8 sm:gap-10">
           
-          {/* Left: Branding & Studio Identity */}
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-violet-600 to-pink-500 p-[1px] shadow-lg shadow-indigo-500/20 shrink-0">
-              <div className="h-full w-full bg-slate-950 rounded-[11px] flex items-center justify-center">
-                <Layers className="h-5 w-5 text-indigo-400" />
-              </div>
+          {/* Logo Wordmark (Uppercase D-DIN-Bold signature) */}
+          <a 
+            href="#overview" 
+            className="flex items-center gap-3 group transition-opacity hover:opacity-80"
+          >
+            <div className="flex flex-col">
+              <span className="font-display font-bold text-lg sm:text-xl text-white tracking-[2px] uppercase leading-none">
+                STUDIOFLOW
+              </span>
+              <span className="text-[10px] uppercase tracking-[1.2px] text-[#5a5a5f] mt-1 font-sans">
+                Cash Runway Radar
+              </span>
             </div>
-            <div className="min-w-0">
-              <div className="flex items-center gap-2">
-                <span className="font-bold text-white text-base tracking-tight truncate">
-                  StudioFlow
-                </span>
-                <span className="hidden md:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-800 text-slate-400 border border-slate-700/60">
-                  v0.1
-                </span>
-              </div>
-              <p className="text-xs text-slate-400 truncate">
-                {businessName} <span className="hidden sm:inline text-slate-600">•</span> <span className="hidden sm:inline text-slate-500">{ownerName}</span>
-              </p>
-            </div>
+          </a>
+
+          {/* Nav Items (Uppercase micro-cap with positive tracking) */}
+          <nav className="hidden lg:flex items-center gap-7 text-xs font-bold uppercase tracking-[1.17px] text-[#f0f0fa]">
+            <a
+              href="#overview"
+              className="hover:text-white transition-colors py-1"
+            >
+              Overview
+            </a>
+            <a
+              href="#interactive-suite"
+              className="hover:text-white transition-colors py-1"
+            >
+              Command
+            </a>
+            <a
+              href="#aging"
+              className="hover:text-white transition-colors py-1"
+            >
+              Receivables
+            </a>
+            <a
+              href="#forecast"
+              className="hover:text-white transition-colors py-1"
+            >
+              Cash Horizon
+            </a>
+            <a
+              href="#outflows"
+              className="hover:text-white transition-colors py-1"
+            >
+              Outflows
+            </a>
+          </nav>
+        </div>
+
+        {/* Right Utility Bar */}
+        <div className="flex items-center gap-2.5 sm:gap-4">
+          
+          {/* Cloud Sync State */}
+          <div className="hidden md:flex items-center gap-2 text-xs text-[#5a5a5f]">
+            {isCloudSynced ? (
+              <span className="flex items-center gap-1.5 text-white">
+                <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" /> Cloud Synced
+              </span>
+            ) : (
+              <span className="flex items-center gap-1.5 text-[#5a5a5f]">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#5a5a5f] inline-block" /> Local Mode
+              </span>
+            )}
+            <button
+              type="button"
+              onClick={isCloudSynced ? onSignOut : onOpenAuth}
+              className="text-[11px] uppercase tracking-[0.96px] text-[#f0f0fa] hover:text-white hover:underline ml-1"
+            >
+              [{isCloudSynced ? 'Sign out' : 'Connect'}]
+            </button>
           </div>
 
-          {/* Center / Right: Cash Runway & Health Metrics */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            
-            {/* Mode Indicator: Cloud vs Guest */}
+          {/* Reserves Readout */}
+          <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
+            <div className="text-right">
+              <div className="text-[9px] uppercase tracking-[1.17px] text-[#5a5a5f] font-bold leading-none">
+                Reserves
+              </div>
+              <div className="font-bold text-xs sm:text-sm text-white tabular-nums tracking-[0.96px] leading-snug">
+                {currency}{Number(cashBalance).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+              </div>
+            </div>
+
+            {/* Dynamic Runway Health Tag */}
             <div 
-              className={`hidden md:flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${
-                isCloudSynced 
-                  ? 'bg-emerald-950/40 text-emerald-300 border-emerald-800/60'
-                  : 'bg-slate-900 text-slate-300 border-slate-800'
-              }`}
-              title={isCloudSynced ? 'Connected to Supabase PostgreSQL' : 'Guest Demo: Persisting in browser localStorage'}
+              className={`text-[10px] font-bold uppercase tracking-[0.96px] px-2 py-0.5 rounded-[32px] border flex items-center gap-1.5 ${runway.classes}`}
+              title={`Safety Buffer: ${currency}${safetyBuffer.toLocaleString()}`}
             >
-              {isCloudSynced ? (
-                <>
-                  <Cloud className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Cloud Synced</span>
-                </>
-              ) : (
-                <>
-                  <Laptop className="w-3.5 h-3.5 text-amber-400" />
-                  <span>Guest Demo</span>
-                </>
-              )}
+              <span className={`w-1.5 h-1.5 rounded-full ${runway.dot}`} />
+              <span className="hidden xs:inline">{runway.label}</span>
             </div>
-
-            {/* Cash Balance + Runway Health Pill */}
-            <div className="flex items-center bg-slate-900 border border-slate-800 rounded-xl p-1 sm:p-1.5 shadow-inner">
-              <div className="px-2 sm:px-3 text-left">
-                <div className="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">
-                  Cash Balance
-                </div>
-                <div className="text-xs sm:text-sm font-bold text-white tracking-tight">
-                  {currency}{Number(cashBalance).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                </div>
-              </div>
-
-              {/* Dynamic Runway Health Badge */}
-              <div 
-                className={`flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-semibold border ${runway.color} transition-all`}
-                title={`Buffer: ${currency}${safetyBuffer.toLocaleString()}. Based on recurring monthly studio overhead.`}
-              >
-                <RunwayIcon className="w-3.5 h-3.5 shrink-0" />
-                <span>{runway.label}</span>
-              </div>
-            </div>
-
-            {/* Quick Action: Simulate Bad Day */}
-            <button
-              onClick={onToggleBadDay}
-              type="button"
-              className={`relative inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl text-xs font-medium transition-all border ${
-                isBadDayActive
-                  ? 'bg-rose-600 text-white border-rose-500 shadow-lg shadow-rose-900/50 animate-pulse'
-                  : 'bg-rose-950/30 text-rose-300 border-rose-900/60 hover:bg-rose-900/40 hover:border-rose-700'
-              }`}
-              title="Crisis Simulation: 5 customers delay payments at once. Triggers automated liquidity triage."
-            >
-              <Flame className="w-3.5 h-3.5 text-rose-400" />
-              <span className="hidden sm:inline">
-                {isBadDayActive ? 'Crisis Active' : 'Simulate Bad Day'}
-              </span>
-              <span className="sm:hidden">
-                {isBadDayActive ? 'Crisis' : 'Bad Day'}
-              </span>
-            </button>
-
-            {/* CTA: New Invoice */}
-            <button
-              onClick={onOpenNewInvoice}
-              type="button"
-              className="inline-flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition shadow-lg shadow-indigo-600/25 border border-indigo-500/50"
-            >
-              <Plus className="w-4 h-4" />
-              <span className="hidden xs:inline">New Invoice</span>
-            </button>
-
           </div>
+
+          {/* Bad Day Crisis Simulator Toggle Button */}
+          <button
+            onClick={onToggleBadDay}
+            type="button"
+            className={`px-3 py-1.5 rounded-[32px] text-xs font-bold uppercase tracking-[0.96px] flex items-center gap-1.5 transition-all ${
+              isBadDayActive
+                ? 'bg-white text-black border border-white'
+                : 'text-white border border-[#3a3a3f] hover:border-white'
+            }`}
+            title="Crisis Stress-Test: Simulates multi-client default to test liquidity."
+          >
+            <Flame className="w-3.5 h-3.5 shrink-0" />
+            <span className="hidden sm:inline">
+              {isBadDayActive ? 'Crisis Active' : 'Bad Day Test'}
+            </span>
+          </button>
+
+          {/* SpaceX Ghost Outlined Pill CTA */}
+          <button
+            onClick={onOpenNewInvoice}
+            type="button"
+            className="button-ghost-on-dark whitespace-nowrap text-xs sm:text-[13px] py-2 sm:py-2.5 px-3.5 sm:px-5"
+          >
+            <Plus className="w-3.5 h-3.5" />
+            <span>Create Invoice</span>
+          </button>
 
         </div>
+
       </div>
     </header>
   );

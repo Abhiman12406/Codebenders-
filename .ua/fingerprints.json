@@ -1,0 +1,2853 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "2a8d7d0f01cdbe77e486186ba4ea60cb001620fc",
+  "generatedAt": "2026-11-22T06:22:42.382Z",
+  "files": {
+    ".codebenders/scratch/body-array.json": {
+      "filePath": ".codebenders/scratch/body-array.json",
+      "contentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    ".codebenders/scratch/body-negamount-named.json": {
+      "filePath": ".codebenders/scratch/body-negamount-named.json",
+      "contentHash": "519677fbae690b7ca2d03667966a70f3319a54c5b2a2c971b29035a757b438bb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    ".codebenders/scratch/body-negative.json": {
+      "filePath": ".codebenders/scratch/body-negative.json",
+      "contentHash": "9920e03203ec87b2b7a2d1a8748b4ec535bd92b13db6cc3ee062620d20507310",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    ".codebenders/state.json": {
+      "filePath": ".codebenders/state.json",
+      "contentHash": "a563c903c7e7ceb6df254b1b6a0665afbb516f8587e3c4dd07e2eef08d3c1e99",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": false
+    },
+    ".env.example": {
+      "filePath": ".env.example",
+      "contentHash": "5eca1c6caf6ad599c0809b7f8e02435faf47d003e89862d4a28d5b490b4dd0c7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "694a2d721e41c385f3db492838c23299826df5ba9809e3b0721aac70021e196a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 66,
+      "hasStructuralAnalysis": false
+    },
+    "DESIGN-spacex.md": {
+      "filePath": "DESIGN-spacex.md",
+      "contentHash": "edf77e927ca68c384490f446055101f40573e8c00c44ec2d24a5717220ecae7a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 364,
+      "hasStructuralAnalysis": false
+    },
+    "DESIGN-stripe.md": {
+      "filePath": "DESIGN-stripe.md",
+      "contentHash": "645efe1e1a04ce04548e1f8d70c7231f8b4e1f627c83146e70e48778937f56bf",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 488,
+      "hasStructuralAnalysis": false
+    },
+    "EXAMPLES.md": {
+      "filePath": "EXAMPLES.md",
+      "contentHash": "9bc0ba934077a0514bab0fc7a4ffad37ecd40bfddf57f29d0b8cef5e5b3d1f28",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 523,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "d3b33b2f3bb062780421ed3f3ab513fa1005071ad6eeaa0fa7bdb9b2f59c09c2",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 148,
+      "hasStructuralAnalysis": false
+    },
+    "docs/ideas/studioflow-operations-cockpit.md": {
+      "filePath": "docs/ideas/studioflow-operations-cockpit.md",
+      "contentHash": "b36e0bbd3e6496e7ebdaf25f8348c8dd292f9b3a7c9b311082107fb6ce73e538",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 67,
+      "hasStructuralAnalysis": false
+    },
+    "docs/intent/one-person-backoffice.md": {
+      "filePath": "docs/intent/one-person-backoffice.md",
+      "contentHash": "8940ec069028e0c68d0c2aef3608bd517ec8efb3e4add8bbc7f1f24af5edbbb6",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": false
+    },
+    "docs/spec/one-person-backoffice-fullstack-spec.md": {
+      "filePath": "docs/spec/one-person-backoffice-fullstack-spec.md",
+      "contentHash": "8e573577733108356acd3465330afb47720b89af986f0e577d59dd75c5635be7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 269,
+      "hasStructuralAnalysis": false
+    },
+    "docs/spec/one-person-backoffice-spec.md": {
+      "filePath": "docs/spec/one-person-backoffice-spec.md",
+      "contentHash": "cb0f57d56734a5fe3e783ea707f0185a194bda52e3e380b964acc8848b83329b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 246,
+      "hasStructuralAnalysis": false
+    },
+    "index.html": {
+      "filePath": "index.html",
+      "contentHash": "f0532225b046d22c01bc11f3ad3640a0e51d80adf78003e8da362fb485297bbe",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": false
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "47986e6acd1e4d0916eb366c653d85b2691a2f822cf28ce60bd861c628d93aaa",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 32,
+      "hasStructuralAnalysis": false
+    },
+    "postcss.config.js": {
+      "filePath": "postcss.config.js",
+      "contentHash": "e32657baf631d7c5f4dc67b4b2ee0ec8e7d5b3c41860e09cddce7c0377cd80bc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 7,
+      "hasStructuralAnalysis": true
+    },
+    "references/index.html": {
+      "filePath": "references/index.html",
+      "contentHash": "eb202937333b9115cde201add1bbfc921c7bc573df8074d7a18f4de9060e8319",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 21,
+      "hasStructuralAnalysis": false
+    },
+    "scratch/artcraft.html": {
+      "filePath": "scratch/artcraft.html",
+      "contentHash": "4cf1558d09084141acd8bba9a1adebc81c6f9a7f26875d9fe46f7128b1259713",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "scratch/download_chunks.py": {
+      "filePath": "scratch/download_chunks.py",
+      "contentHash": "7ee0d1d5c76fc689bbdaca31a641cc751074e7c93e5cf1cf4b4ede71897297ca",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/extract_hero_comp.py": {
+      "filePath": "scratch/extract_hero_comp.py",
+      "contentHash": "9d8d1e30313cdeedab1283d29315e737034c8db2a39a567381c0cff8cfa48e5c",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/extract_ruler.py": {
+      "filePath": "scratch/extract_ruler.py",
+      "contentHash": "a18493da0862302d66ea0ef83438edfdf0ac58ce8454728cd39e567d26fa4813",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_base_doc.py": {
+      "filePath": "scratch/find_base_doc.py",
+      "contentHash": "0ba6c420bd8b8064e396c3e0873e3b1b034e0cb57565ae8cf0b04dd7f0490850",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_hero_ruler.py": {
+      "filePath": "scratch/find_hero_ruler.py",
+      "contentHash": "3d31ae8fb6d9c7e83124bad6c3e1202003c06c70f05f61e14ff62da3df1ad4af",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_herowordmark.py": {
+      "filePath": "scratch/find_herowordmark.py",
+      "contentHash": "170123e880cb79e29358bf9c12b49c0878ef290c45809d8352a379ccd4697522",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_ishero.py": {
+      "filePath": "scratch/find_ishero.py",
+      "contentHash": "d0de583b099bea437c8ff7855ce5f52ac257a8ca5d4f48ecb0dffa22f82ce081",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_ruler.py": {
+      "filePath": "scratch/find_ruler.py",
+      "contentHash": "55e1dafabe583e7053c2b19225ba50faf91cac3c70006d7f460f0d5f1d8ba124",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/find_wordmark_init.py": {
+      "filePath": "scratch/find_wordmark_init.py",
+      "contentHash": "4adef6a5ad71f4e5d844a9225cfcf4a6558b4d4db065c3810eb9e5c21a2efc0b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/hero_wordmark_component.js": {
+      "filePath": "scratch/hero_wordmark_component.js",
+      "contentHash": "32ec454f3766b3800f54d0feb82e9ccf2ca673c3c4c3d883d56182c7a7c91190",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/inspect_artcraft.py": {
+      "filePath": "scratch/inspect_artcraft.py",
+      "contentHash": "583583293254a3761a3bddb97243ba5948b3563a5ed825fe554037b656ebecf4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        },
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 29,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/parse_artcraft_html.py": {
+      "filePath": "scratch/parse_artcraft_html.py",
+      "contentHash": "cfe9431f016a97f7c5be2cc78a60ef5cab70446f168ac76a0d176e34d1d02e73",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "re",
+          "specifiers": [
+            "re"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/print_hero_jsx.py": {
+      "filePath": "scratch/print_hero_jsx.py",
+      "contentHash": "2b0e5426adaaf3cb20602421949b2bc2613097600ab2e014faf33b0ade3d10a5",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "urllib.request",
+          "specifiers": [
+            "urllib.request"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/query_scrollbar.py": {
+      "filePath": "scratch/query_scrollbar.py",
+      "contentHash": "1757f37e5374f82ae07dee3b418a71100b8e8906f020a2ac5878b76fc9f133a4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "subprocess",
+          "specifiers": [
+            "subprocess"
+          ]
+        },
+        {
+          "source": "json",
+          "specifiers": [
+            "json"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/ruler_chunk.js": {
+      "filePath": "scratch/ruler_chunk.js",
+      "contentHash": "2f4a5482db89e16214565daa8c28f7fa0b79cfb0eb6401830a1d29cb74c6cbfc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "scratch/ruler_raw.js": {
+      "filePath": "scratch/ruler_raw.js",
+      "contentHash": "82a8c25a64ed5e2325e6c08ee1c699d58a668291625a1db2d41a62e834acece1",
+      "functions": [
+        {
+          "name": "W",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "H",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "v",
+          "params": [
+            "e",
+            "t",
+            "r"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "s",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "a",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "c",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "u",
+          "params": [],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": true
+    },
+    "server/data/db.json": {
+      "filePath": "server/data/db.json",
+      "contentHash": "62cb9aa3d9171d9106e11988d3d234ad559d86df87ac9e7fac3c585a78cb0e86",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 750,
+      "hasStructuralAnalysis": false
+    },
+    "server/engine/forecast.js": {
+      "filePath": "server/engine/forecast.js",
+      "contentHash": "6f3de38a039a7f7ed762bf9ed5490ad1d8527c5961625e7028739ee682b4427e",
+      "functions": [
+        {
+          "name": "calculateCashForecast",
+          "params": [],
+          "exported": true,
+          "lineCount": 218
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "DEFAULT_SCENARIOS",
+        "calculateCashForecast"
+      ],
+      "totalLines": 229,
+      "hasStructuralAnalysis": true
+    },
+    "server/engine/nlp.js": {
+      "filePath": "server/engine/nlp.js",
+      "contentHash": "e8aae0dd4c6e651526fced5498b08c6bc6ac884efa1d0641e7d2a86388feb48d",
+      "functions": [
+        {
+          "name": "parseInvoicePrompt",
+          "params": [
+            "prompt"
+          ],
+          "exported": true,
+          "lineCount": 120
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "parseInvoicePrompt"
+      ],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "server/index.js": {
+      "filePath": "server/index.js",
+      "contentHash": "5eef94d46c1cb4e289b4e6e1e7e85c3e16750441e96280a1d08d977d6a403241",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "cors",
+          "specifiers": [
+            "cors"
+          ]
+        },
+        {
+          "source": "node:url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        },
+        {
+          "source": "node:path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "./routes/invoices.js",
+          "specifiers": [
+            "invoicesRouter"
+          ]
+        },
+        {
+          "source": "./routes/portal.js",
+          "specifiers": [
+            "portalRouter"
+          ]
+        },
+        {
+          "source": "./routes/forecast.js",
+          "specifiers": [
+            "forecastRouter"
+          ]
+        },
+        {
+          "source": "./routes/triage.js",
+          "specifiers": [
+            "triageRouter"
+          ]
+        },
+        {
+          "source": "./routes/outflows.js",
+          "specifiers": [
+            "outflowsRouter"
+          ]
+        },
+        {
+          "source": "./routes/profile.js",
+          "specifiers": [
+            "profileRouter"
+          ]
+        },
+        {
+          "source": "./routes/ai.js",
+          "specifiers": [
+            "aiRouter"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 42,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/ai.js": {
+      "filePath": "server/routes/ai.js",
+      "contentHash": "f4f159b9f9725a118429dd0ae3a55aa3ee1b123bf864f9b9ca38f049b5cd1700",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        },
+        {
+          "source": "../engine/nlp.js",
+          "specifiers": [
+            "parseInvoicePrompt"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/forecast.js": {
+      "filePath": "server/routes/forecast.js",
+      "contentHash": "ff8f411a7100b3e65aa00a9b6d9a20ff4fba3cfb0b9e4334b4b69e0f87f11a31",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        },
+        {
+          "source": "../engine/forecast.js",
+          "specifiers": [
+            "calculateCashForecast",
+            "DEFAULT_SCENARIOS"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 33,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/invoices.js": {
+      "filePath": "server/routes/invoices.js",
+      "contentHash": "3cf8cb2d5632544f697672ef9cc6c21947dda8304a9174c220aaeca8cb1813dd",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "isValidAmount",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/outflows.js": {
+      "filePath": "server/routes/outflows.js",
+      "contentHash": "2154b8d17cd2d9f1e1c70594a07459aae4884f8acefdf0f82585d413663d5673",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "isValidAmount",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/portal.js": {
+      "filePath": "server/routes/portal.js",
+      "contentHash": "d87702d8176cf617af01c6200d30cf74174b0f40a461562bebc0dafd1f3d63c3",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/profile.js": {
+      "filePath": "server/routes/profile.js",
+      "contentHash": "894d6b94cc2d19a9a6ccf2c8ca70cb3f263997a189b05c8f13a8cd5783f563c6",
+      "functions": [
+        {
+          "name": "sendError",
+          "params": [
+            "res",
+            "code",
+            "message"
+          ],
+          "exported": false,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "server/routes/triage.js": {
+      "filePath": "server/routes/triage.js",
+      "contentHash": "41a2aa6c9daf4ffa938f6ab303e5919bb9128d2dedb47cf1a2c4e40f175eff24",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "express",
+          "specifiers": [
+            "express"
+          ]
+        },
+        {
+          "source": "../store.js",
+          "specifiers": [
+            "store"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "server/store.js": {
+      "filePath": "server/store.js",
+      "contentHash": "f86a3577176a20c2afc3b984edda51bebd2e21fc11cccf736f6b56c96d21eb82",
+      "functions": [
+        {
+          "name": "getRelativeDate",
+          "params": [
+            "offsetDays"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "getInitialSeed",
+          "params": [],
+          "exported": false,
+          "lineCount": 274
+        }
+      ],
+      "classes": [
+        {
+          "name": "Store",
+          "methods": [
+            "constructor",
+            "init",
+            "save",
+            "reset",
+            "getProfile",
+            "updateProfile",
+            "getClients",
+            "getClientById",
+            "createClient",
+            "getInvoices",
+            "getInvoiceById",
+            "createInvoice",
+            "updateInvoice",
+            "deleteInvoice",
+            "markInvoicePaid",
+            "getBills",
+            "saveBill",
+            "deleteBill",
+            "getFollowUps",
+            "logFollowUp",
+            "getTransactions"
+          ],
+          "properties": [],
+          "exported": false,
+          "lineCount": 213
+        }
+      ],
+      "imports": [
+        {
+          "source": "fs",
+          "specifiers": [
+            "fs"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        },
+        {
+          "source": "url",
+          "specifiers": [
+            "fileURLToPath"
+          ]
+        }
+      ],
+      "exports": [
+        "store"
+      ],
+      "totalLines": 507,
+      "hasStructuralAnalysis": true
+    },
+    "server/test-api.js": {
+      "filePath": "server/test-api.js",
+      "contentHash": "2a8831d3d15b9c8171784521bb74e03a3565edbca2717c90eaeae1de3b7e94c1",
+      "functions": [
+        {
+          "name": "call",
+          "params": [
+            "method",
+            "path",
+            "body"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "check",
+          "params": [
+            "name",
+            "fn"
+          ],
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "node:assert/strict",
+          "specifiers": [
+            "assert"
+          ]
+        },
+        {
+          "source": "./index.js",
+          "specifiers": [
+            "app"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "src/App.jsx": {
+      "filePath": "src/App.jsx",
+      "contentHash": "98713487387934ec4f4692d4525c31daa7986be671ec9c8455e175d734b6c1db",
+      "functions": [
+        {
+          "name": "App",
+          "params": [],
+          "exported": true,
+          "lineCount": 881
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "./components/Navbar.jsx",
+          "specifiers": [
+            "Navbar"
+          ]
+        },
+        {
+          "source": "./components/AgingDashboard.jsx",
+          "specifiers": [
+            "AgingDashboard"
+          ]
+        },
+        {
+          "source": "./components/InvoiceModal.jsx",
+          "specifiers": [
+            "InvoiceModal"
+          ]
+        },
+        {
+          "source": "./components/WhatsAppModal.jsx",
+          "specifiers": [
+            "WhatsAppModal"
+          ]
+        },
+        {
+          "source": "./components/ClientPortalModal.jsx",
+          "specifiers": [
+            "ClientPortalModal"
+          ]
+        },
+        {
+          "source": "./components/CashForecastChart.jsx",
+          "specifiers": [
+            "CashForecastChart"
+          ]
+        },
+        {
+          "source": "./components/WhatIfSimulator.jsx",
+          "specifiers": [
+            "WhatIfSimulator"
+          ]
+        },
+        {
+          "source": "./components/BadDayTriageModal.jsx",
+          "specifiers": [
+            "BadDayTriageModal"
+          ]
+        },
+        {
+          "source": "./components/AuthModal.jsx",
+          "specifiers": [
+            "AuthModal"
+          ]
+        },
+        {
+          "source": "./components/QuickInputBar.jsx",
+          "specifiers": [
+            "QuickInputBar"
+          ]
+        },
+        {
+          "source": "./components/OutflowsManager.jsx",
+          "specifiers": [
+            "OutflowsManager"
+          ]
+        },
+        {
+          "source": "./components/InfiniteMarquee.jsx",
+          "specifiers": [
+            "InfiniteMarquee"
+          ]
+        },
+        {
+          "source": "./components/ScrubTextReveal.jsx",
+          "specifiers": [
+            "ScrubTextReveal"
+          ]
+        },
+        {
+          "source": "./components/HorizontalAccordions.jsx",
+          "specifiers": [
+            "HorizontalAccordions"
+          ]
+        },
+        {
+          "source": "./components/FeedbackCarousel.jsx",
+          "specifiers": [
+            "FeedbackCarousel"
+          ]
+        },
+        {
+          "source": "./components/ArtCraftPrinciples.jsx",
+          "specifiers": [
+            "ArtCraftPrinciples"
+          ]
+        },
+        {
+          "source": "./lib/forecastEngine.js",
+          "specifiers": [
+            "calculateCashForecast",
+            "DEFAULT_SCENARIOS"
+          ]
+        },
+        {
+          "source": "./lib/dataService.js",
+          "specifiers": [
+            "dataService"
+          ]
+        },
+        {
+          "source": "./lib/supabaseClient.js",
+          "specifiers": [
+            "supabase"
+          ]
+        },
+        {
+          "source": "./lib/api.js",
+          "specifiers": [
+            "getHealth"
+          ]
+        },
+        {
+          "source": "./data/mockDesignerData.js",
+          "specifiers": [
+            "mockDesignerData"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Plus",
+            "ArrowDown",
+            "AlertTriangle",
+            "Activity",
+            "Flame",
+            "X",
+            "ShieldCheck",
+            "Send"
+          ]
+        }
+      ],
+      "exports": [
+        "App"
+      ],
+      "totalLines": 916,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/AgingDashboard.jsx": {
+      "filePath": "src/components/AgingDashboard.jsx",
+      "contentHash": "97125ac84e775fcad5b3c522f275e53ad7cc30bf3ffa1674fb3e9600e37133af",
+      "functions": [
+        {
+          "name": "AgingDashboard",
+          "params": [],
+          "exported": true,
+          "lineCount": 335
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useMemo"
+          ]
+        },
+        {
+          "source": "./DebtorCard.jsx",
+          "specifiers": [
+            "DebtorCard"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "DollarSign",
+            "AlertCircle",
+            "Clock",
+            "TrendingUp",
+            "Search",
+            "CheckCircle"
+          ]
+        },
+        {
+          "source": "../lib/dateUtils.js",
+          "specifiers": [
+            "getDaysDiff"
+          ]
+        }
+      ],
+      "exports": [
+        "AgingDashboard"
+      ],
+      "totalLines": 348,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ArtCraftPrinciples.jsx": {
+      "filePath": "src/components/ArtCraftPrinciples.jsx",
+      "contentHash": "dd67700c0060e50539b997b26e5b45880e4f5df658675fb1b99c0560bf2107e4",
+      "functions": [
+        {
+          "name": "ArtCraftPrinciples",
+          "params": [],
+          "exported": true,
+          "lineCount": 67
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ShieldCheck",
+            "Database",
+            "Cpu"
+          ]
+        }
+      ],
+      "exports": [
+        "ArtCraftPrinciples"
+      ],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/AuthModal.jsx": {
+      "filePath": "src/components/AuthModal.jsx",
+      "contentHash": "0b3f0ad967aa0e58dba14cb32e40f77bef1f815839472301c94110b280f40c25",
+      "functions": [
+        {
+          "name": "AuthModal",
+          "params": [],
+          "exported": true,
+          "lineCount": 148
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "Cloud",
+            "Terminal"
+          ]
+        },
+        {
+          "source": "../lib/supabaseClient.js",
+          "specifiers": [
+            "supabase",
+            "isSupabaseConfigured"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthModal"
+      ],
+      "totalLines": 153,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/BadDayTriageModal.jsx": {
+      "filePath": "src/components/BadDayTriageModal.jsx",
+      "contentHash": "4744ac46584bd13a7e12a909d46544636ed55d231329539a4b4bfd39b17bd641",
+      "functions": [
+        {
+          "name": "toAmount",
+          "params": [
+            "item"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "formatDollars",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "BadDayTriageModal",
+          "params": [],
+          "exported": true,
+          "lineCount": 178
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "Flame",
+            "ShieldAlert",
+            "Split",
+            "MessageSquare",
+            "Pause"
+          ]
+        }
+      ],
+      "exports": [
+        "BadDayTriageModal"
+      ],
+      "totalLines": 187,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/CashForecastChart.jsx": {
+      "filePath": "src/components/CashForecastChart.jsx",
+      "contentHash": "5bda60e95f603f02bee3c63727253521d5ad447b1af5668ee13f95414062c540",
+      "functions": [
+        {
+          "name": "CashForecastChart",
+          "params": [],
+          "exported": true,
+          "lineCount": 627
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useMemo",
+            "useRef"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "TrendingUp",
+            "TrendingDown",
+            "ShieldCheck",
+            "AlertTriangle",
+            "Calendar",
+            "ArrowUpRight",
+            "ArrowDownRight",
+            "Activity",
+            "LineChart"
+          ]
+        },
+        {
+          "source": "../lib/forecastEngine.js",
+          "specifiers": [
+            "formatShortDate"
+          ]
+        }
+      ],
+      "exports": [
+        "CashForecastChart"
+      ],
+      "totalLines": 642,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ClientPortalModal.jsx": {
+      "filePath": "src/components/ClientPortalModal.jsx",
+      "contentHash": "330daf454c5aeda38ae1826cdf8bee35d594abbc1f839eda87a48ae3726990c2",
+      "functions": [
+        {
+          "name": "formatDate",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "formatMoney",
+          "params": [
+            "value"
+          ],
+          "exported": false,
+          "lineCount": 2
+        },
+        {
+          "name": "ClientPortalModal",
+          "params": [],
+          "exported": true,
+          "lineCount": 205
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "FileText",
+            "Calendar",
+            "CheckCircle2",
+            "CreditCard",
+            "Printer",
+            "ShieldCheck"
+          ]
+        },
+        {
+          "source": "../lib/dateUtils.js",
+          "specifiers": [
+            "getDaysDiff"
+          ]
+        }
+      ],
+      "exports": [
+        "ClientPortalModal"
+      ],
+      "totalLines": 228,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/DebtorCard.jsx": {
+      "filePath": "src/components/DebtorCard.jsx",
+      "contentHash": "744f05dad7143f49175e8cba1357bc2b4b7eeec800e1676539f1279d1e79761d",
+      "functions": [
+        {
+          "name": "DebtorCard",
+          "params": [],
+          "exported": true,
+          "lineCount": 224
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "MessageSquare",
+            "CheckCircle2",
+            "Split",
+            "Calendar",
+            "Clock",
+            "AlertCircle"
+          ]
+        },
+        {
+          "source": "../lib/dateUtils.js",
+          "specifiers": [
+            "getDaysDiff"
+          ]
+        }
+      ],
+      "exports": [
+        "DebtorCard"
+      ],
+      "totalLines": 236,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/FeedbackCarousel.jsx": {
+      "filePath": "src/components/FeedbackCarousel.jsx",
+      "contentHash": "fe14a09f0e57229349303238036212f5cff99d8fffa511618b979b360fe3dc60",
+      "functions": [
+        {
+          "name": "FeedbackCarousel",
+          "params": [],
+          "exported": true,
+          "lineCount": 102
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ChevronLeft",
+            "ChevronRight",
+            "Star"
+          ]
+        }
+      ],
+      "exports": [
+        "FeedbackCarousel"
+      ],
+      "totalLines": 133,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/HeroWordmark.jsx": {
+      "filePath": "src/components/HeroWordmark.jsx",
+      "contentHash": "35ee9d0000696a076a623a7c79a5febbd82436752f412865bb67361d52819d27",
+      "functions": [
+        {
+          "name": "clamp01",
+          "params": [
+            "val"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "easeInOutCubic",
+          "params": [
+            "t"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "HeroWordmark",
+          "params": [],
+          "exported": true,
+          "lineCount": 265
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        }
+      ],
+      "exports": [
+        "HeroWordmark"
+      ],
+      "totalLines": 300,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/HorizontalAccordions.jsx": {
+      "filePath": "src/components/HorizontalAccordions.jsx",
+      "contentHash": "0273dbc46a23d6e74978cdcc424a77cda530c3f728a18084f0ea9b5e93142c5e",
+      "functions": [
+        {
+          "name": "HorizontalAccordions",
+          "params": [],
+          "exported": true,
+          "lineCount": 74
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "TrendingUp",
+            "Users",
+            "Flame",
+            "Send",
+            "ArrowUpRight"
+          ]
+        }
+      ],
+      "exports": [
+        "HorizontalAccordions"
+      ],
+      "totalLines": 121,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/InfiniteMarquee.jsx": {
+      "filePath": "src/components/InfiniteMarquee.jsx",
+      "contentHash": "555fbccde1a636aef0e23355604dc10d6b5933d8cfd2160fd41970d9eb0ca95a",
+      "functions": [
+        {
+          "name": "InfiniteMarquee",
+          "params": [],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Building2",
+            "CreditCard",
+            "Globe2",
+            "ShieldCheck",
+            "Zap",
+            "Layers",
+            "Database"
+          ]
+        }
+      ],
+      "exports": [
+        "InfiniteMarquee"
+      ],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/InvoiceModal.jsx": {
+      "filePath": "src/components/InvoiceModal.jsx",
+      "contentHash": "7c6b11138779f292e55e2c48fb8d73ae7554324cd942033976178dde31fbc576",
+      "functions": [
+        {
+          "name": "InvoiceModal",
+          "params": [],
+          "exported": true,
+          "lineCount": 408
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "Plus",
+            "Trash2",
+            "FileText",
+            "Phone"
+          ]
+        }
+      ],
+      "exports": [
+        "InvoiceModal"
+      ],
+      "totalLines": 418,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/Navbar.jsx": {
+      "filePath": "src/components/Navbar.jsx",
+      "contentHash": "3592c08d2bfcfbe81c00eca2d5475549b0a25184d24c2864e62d7f78cda785e8",
+      "functions": [
+        {
+          "name": "Navbar",
+          "params": [],
+          "exported": true,
+          "lineCount": 173
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "ShieldCheck",
+            "AlertTriangle",
+            "Plus",
+            "Flame",
+            "Activity"
+          ]
+        }
+      ],
+      "exports": [
+        "Navbar"
+      ],
+      "totalLines": 183,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/OrbitalGalaxyBackground.jsx": {
+      "filePath": "src/components/OrbitalGalaxyBackground.jsx",
+      "contentHash": "bf605efeb22e2e7954f813fc23b511fee0e10ea641fdd7357b08452bad2287de",
+      "functions": [
+        {
+          "name": "OrbitalGalaxyBackground",
+          "params": [],
+          "exported": true,
+          "lineCount": 296
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useRef"
+          ]
+        }
+      ],
+      "exports": [
+        "OrbitalGalaxyBackground"
+      ],
+      "totalLines": 312,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/OutflowsManager.jsx": {
+      "filePath": "src/components/OutflowsManager.jsx",
+      "contentHash": "810f706930ccb43a91c6ba0c008fe65d975a26775b62b8d4b19ba1fd124ae02f",
+      "functions": [
+        {
+          "name": "OutflowsManager",
+          "params": [],
+          "exported": true,
+          "lineCount": 159
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "CreditCard",
+            "Plus",
+            "Trash2",
+            "CheckCircle2"
+          ]
+        }
+      ],
+      "exports": [
+        "OutflowsManager"
+      ],
+      "totalLines": 172,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/QuickInputBar.jsx": {
+      "filePath": "src/components/QuickInputBar.jsx",
+      "contentHash": "81ca79c4c40e3f070e1cd743e32369483f811bd2aa6483cf2fc754f7fe17cb2e",
+      "functions": [
+        {
+          "name": "QuickInputBar",
+          "params": [],
+          "exported": true,
+          "lineCount": 153
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "../lib/nlpParser.js",
+          "specifiers": [
+            "parseInvoiceText"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Terminal",
+            "ArrowRight",
+            "Check",
+            "FileText",
+            "Sparkles"
+          ]
+        }
+      ],
+      "exports": [
+        "QuickInputBar"
+      ],
+      "totalLines": 164,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/RightScrollRuler.jsx": {
+      "filePath": "src/components/RightScrollRuler.jsx",
+      "contentHash": "4809f5a129876797869446038c9e52546d6c78f9a3bb73674c88e977a10a6672",
+      "functions": [
+        {
+          "name": "RightScrollRuler",
+          "params": [],
+          "exported": true,
+          "lineCount": 383
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState",
+            "useEffect",
+            "useRef",
+            "useCallback"
+          ]
+        }
+      ],
+      "exports": [
+        "RightScrollRuler"
+      ],
+      "totalLines": 399,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/ScrubTextReveal.jsx": {
+      "filePath": "src/components/ScrubTextReveal.jsx",
+      "contentHash": "768fb13b2ec75094c9e53b5be1b191055ce3be2332930bf5c2652053712282cf",
+      "functions": [
+        {
+          "name": "ScrubTextReveal",
+          "params": [],
+          "exported": true,
+          "lineCount": 59
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useRef",
+            "useEffect"
+          ]
+        },
+        {
+          "source": "gsap",
+          "specifiers": [
+            "gsap"
+          ]
+        },
+        {
+          "source": "gsap/ScrollTrigger",
+          "specifiers": [
+            "ScrollTrigger"
+          ]
+        }
+      ],
+      "exports": [
+        "ScrubTextReveal"
+      ],
+      "totalLines": 66,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/WhatIfSimulator.jsx": {
+      "filePath": "src/components/WhatIfSimulator.jsx",
+      "contentHash": "a46c6b8a705d7dd15a65b00d5161754629e87eba06b918f57a05407e062b8528",
+      "functions": [
+        {
+          "name": "WhatIfSimulator",
+          "params": [],
+          "exported": true,
+          "lineCount": 294
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "Sliders",
+            "RotateCcw",
+            "AlertTriangle",
+            "ShieldCheck",
+            "Laptop",
+            "Clock",
+            "MessageSquare",
+            "Zap",
+            "ArrowRight"
+          ]
+        }
+      ],
+      "exports": [
+        "WhatIfSimulator"
+      ],
+      "totalLines": 308,
+      "hasStructuralAnalysis": true
+    },
+    "src/components/WhatsAppModal.jsx": {
+      "filePath": "src/components/WhatsAppModal.jsx",
+      "contentHash": "97aeb1e3fcc30f64f713e6355ae7b4018dbde6bfd66d89e798f21f0efbaef676",
+      "functions": [
+        {
+          "name": "WhatsAppModal",
+          "params": [],
+          "exported": true,
+          "lineCount": 238
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "lucide-react",
+          "specifiers": [
+            "X",
+            "MessageSquare",
+            "Send",
+            "Copy",
+            "Check",
+            "Calendar",
+            "Clock",
+            "ShieldAlert"
+          ]
+        },
+        {
+          "source": "../lib/dateUtils.js",
+          "specifiers": [
+            "getDaysDiff"
+          ]
+        }
+      ],
+      "exports": [
+        "WhatsAppModal"
+      ],
+      "totalLines": 252,
+      "hasStructuralAnalysis": true
+    },
+    "src/data/mockDesignerData.js": {
+      "filePath": "src/data/mockDesignerData.js",
+      "contentHash": "ed09fafc6ac80c421cf88dcebb9766056e01cc83da590407b3e65563d0179d56",
+      "functions": [
+        {
+          "name": "getRelativeDate",
+          "params": [
+            "offsetDays"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "createMockDesignerData",
+          "params": [],
+          "exported": true,
+          "lineCount": 291
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "createMockDesignerData",
+        "mockDesignerData"
+      ],
+      "totalLines": 302,
+      "hasStructuralAnalysis": true
+    },
+    "src/index.css": {
+      "filePath": "src/index.css",
+      "contentHash": "375b18e75c4a8b03545f4f7ad26d038987c74155d6edeabac6db078419169f03",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 314,
+      "hasStructuralAnalysis": false
+    },
+    "src/lib/api.js": {
+      "filePath": "src/lib/api.js",
+      "contentHash": "7354f744ea80a3ebdd7a85b13a78ba99ebd10f9827663afc216fdbac7c04e87c",
+      "functions": [
+        {
+          "name": "request",
+          "params": [
+            "method",
+            "path",
+            "body"
+          ],
+          "exported": false,
+          "lineCount": 18
+        },
+        {
+          "name": "getHealth",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "getInvoices",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "getInvoice",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "createInvoice",
+          "params": [
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "updateInvoice",
+          "params": [
+            "id",
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "deleteInvoice",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "payInvoice",
+          "params": [
+            "id",
+            "paid_date"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "getForecast",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "getTriage",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "getBills",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "createBill",
+          "params": [
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "updateBill",
+          "params": [
+            "id",
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "deleteBill",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "getProfile",
+          "params": [],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "updateProfile",
+          "params": [
+            "data"
+          ],
+          "exported": true,
+          "lineCount": 1
+        },
+        {
+          "name": "parseNlp",
+          "params": [
+            "prompt"
+          ],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "getHealth",
+        "getInvoices",
+        "getInvoice",
+        "createInvoice",
+        "updateInvoice",
+        "deleteInvoice",
+        "payInvoice",
+        "getForecast",
+        "getTriage",
+        "getBills",
+        "createBill",
+        "updateBill",
+        "deleteBill",
+        "getProfile",
+        "updateProfile",
+        "parseNlp"
+      ],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/dataService.js": {
+      "filePath": "src/lib/dataService.js",
+      "contentHash": "44e90b35faf37f75f3ee15b27cd1b1c16e3b8b312d686fbbb2bd8a4c952083db",
+      "functions": [
+        {
+          "name": "generateId",
+          "params": [],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "isNetworkError",
+          "params": [
+            "err"
+          ],
+          "exported": false,
+          "lineCount": 1
+        },
+        {
+          "name": "replaceCachedInvoice",
+          "params": [
+            "id",
+            "record"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "getActiveUser",
+          "params": [],
+          "exported": true,
+          "lineCount": 10
+        },
+        {
+          "name": "getProfile",
+          "params": [],
+          "exported": true,
+          "lineCount": 29
+        },
+        {
+          "name": "updateProfile",
+          "params": [
+            "updates"
+          ],
+          "exported": true,
+          "lineCount": 32
+        },
+        {
+          "name": "getClients",
+          "params": [],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "saveClient",
+          "params": [
+            "client"
+          ],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "getInvoices",
+          "params": [],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "createInvoice",
+          "params": [
+            "invoice"
+          ],
+          "exported": true,
+          "lineCount": 36
+        },
+        {
+          "name": "updateInvoice",
+          "params": [
+            "id",
+            "updates"
+          ],
+          "exported": true,
+          "lineCount": 44
+        },
+        {
+          "name": "deleteInvoice",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "markPaid",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "getBills",
+          "params": [],
+          "exported": true,
+          "lineCount": 28
+        },
+        {
+          "name": "saveBill",
+          "params": [
+            "bill"
+          ],
+          "exported": true,
+          "lineCount": 44
+        },
+        {
+          "name": "deleteBill",
+          "params": [
+            "id"
+          ],
+          "exported": true,
+          "lineCount": 27
+        },
+        {
+          "name": "getFollowUps",
+          "params": [],
+          "exported": true,
+          "lineCount": 20
+        },
+        {
+          "name": "logFollowUp",
+          "params": [
+            "followUp"
+          ],
+          "exported": true,
+          "lineCount": 25
+        },
+        {
+          "name": "seedInitialData",
+          "params": [],
+          "exported": true,
+          "lineCount": 13
+        },
+        {
+          "name": "resetDemoData",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./supabaseClient.js",
+          "specifiers": [
+            "supabase",
+            "isSupabaseConfigured"
+          ]
+        },
+        {
+          "source": "./api.js",
+          "specifiers": [
+            "* as api"
+          ]
+        }
+      ],
+      "exports": [
+        "DEFAULT_PROFILE",
+        "getActiveUser",
+        "getProfile",
+        "updateProfile",
+        "getClients",
+        "saveClient",
+        "getInvoices",
+        "createInvoice",
+        "updateInvoice",
+        "deleteInvoice",
+        "markPaid",
+        "getBills",
+        "saveBill",
+        "deleteBill",
+        "getFollowUps",
+        "logFollowUp",
+        "seedInitialData",
+        "resetDemoData",
+        "dataService"
+      ],
+      "totalLines": 568,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/dateUtils.js": {
+      "filePath": "src/lib/dateUtils.js",
+      "contentHash": "059cb87fd1c2c1b6f21696ab1afd8bab57dffe23bfe8f90db7216b3e043eda0b",
+      "functions": [
+        {
+          "name": "parseLocalDate",
+          "params": [
+            "dateStr"
+          ],
+          "exported": true,
+          "lineCount": 14
+        },
+        {
+          "name": "getDaysDiff",
+          "params": [
+            "targetDateStr"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "parseLocalDate",
+        "getDaysDiff"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/forecastEngine.js": {
+      "filePath": "src/lib/forecastEngine.js",
+      "contentHash": "6e05cfc0aa8c20df3b463656355140f22d1f1e74f3ba54d07df45ba897c08d3b",
+      "functions": [
+        {
+          "name": "formatDateISO",
+          "params": [
+            "date"
+          ],
+          "exported": true,
+          "lineCount": 6
+        },
+        {
+          "name": "formatShortDate",
+          "params": [
+            "date"
+          ],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "calculateCashForecast",
+          "params": [],
+          "exported": true,
+          "lineCount": 308
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./dateUtils.js",
+          "specifiers": [
+            "parseLocalDate",
+            "getDaysDiff"
+          ]
+        }
+      ],
+      "exports": [
+        "DEFAULT_SCENARIOS",
+        "formatDateISO",
+        "formatShortDate",
+        "calculateCashForecast"
+      ],
+      "totalLines": 358,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/nlpParser.js": {
+      "filePath": "src/lib/nlpParser.js",
+      "contentHash": "c625da09fed950ffb793ee638f07b73070d0de243dd39ee5bb70c27a8e2242f3",
+      "functions": [
+        {
+          "name": "formatDate",
+          "params": [
+            "d"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "addDays",
+          "params": [
+            "base",
+            "n"
+          ],
+          "exported": false,
+          "lineCount": 3
+        },
+        {
+          "name": "nextWeekday",
+          "params": [
+            "today",
+            "dow"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "parseAmount",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "parseDueDate",
+          "params": [
+            "text",
+            "today"
+          ],
+          "exported": false,
+          "lineCount": 10
+        },
+        {
+          "name": "parseClientAndProject",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 15
+        },
+        {
+          "name": "parseInvoiceText",
+          "params": [
+            "text"
+          ],
+          "exported": true,
+          "lineCount": 11
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "parseInvoiceText"
+      ],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "src/lib/supabaseClient.js": {
+      "filePath": "src/lib/supabaseClient.js",
+      "contentHash": "50351a67cf1544fe9346946bff0802c39cfa842738df2f0248b24fb6357f496e",
+      "functions": [
+        {
+          "name": "getEnvVar",
+          "params": [
+            "key"
+          ],
+          "exported": false,
+          "lineCount": 9
+        },
+        {
+          "name": "isSupabaseConfigured",
+          "params": [],
+          "exported": true,
+          "lineCount": 9
+        },
+        {
+          "name": "getSupabaseClient",
+          "params": [],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@supabase/supabase-js",
+          "specifiers": [
+            "createClient"
+          ]
+        }
+      ],
+      "exports": [
+        "isSupabaseConfigured",
+        "getSupabaseClient",
+        "supabase"
+      ],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    },
+    "src/main.jsx": {
+      "filePath": "src/main.jsx",
+      "contentHash": "cac5ad762514c7db1355aaabe99b0495ebe4a31fcbc89c153b352dc882cc94ea",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "react-dom/client",
+          "specifiers": [
+            "ReactDOM"
+          ]
+        },
+        {
+          "source": "./App.jsx",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "./index.css",
+          "specifiers": []
+        }
+      ],
+      "exports": [],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "supabase_schema.sql": {
+      "filePath": "supabase_schema.sql",
+      "contentHash": "d615d0b362d3dcebfc1319bb12bcb63021251d0389663192035d89a4ddad90cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 89,
+      "hasStructuralAnalysis": false
+    },
+    "tailwind.config.js": {
+      "filePath": "tailwind.config.js",
+      "contentHash": "7328e470eca38c5f826bb7acb61c873b56411a7cb5c78dde950b082d8f004245",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 94,
+      "hasStructuralAnalysis": true
+    },
+    "tasks/plan.md": {
+      "filePath": "tasks/plan.md",
+      "contentHash": "bf97241b6f41d0ba203c9c908063918399e7f1787f2f363457b18c69ed148a19",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "tasks/todo.md": {
+      "filePath": "tasks/todo.md",
+      "contentHash": "30d41e59a34edf6e0a0d7bed4f24ecf73b54aca841a6b0e0b0a1db80aa3a359d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 81,
+      "hasStructuralAnalysis": false
+    },
+    "test-dataService.js": {
+      "filePath": "test-dataService.js",
+      "contentHash": "ad7ca8821d2b46268a5e107406ff9e05076861f65acb2f89e315f1e9db5def68",
+      "functions": [
+        {
+          "name": "runTests",
+          "params": [],
+          "exported": false,
+          "lineCount": 111
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./src/lib/dataService.js",
+          "specifiers": [
+            "dataService",
+            "DEFAULT_PROFILE",
+            "getProfile",
+            "updateProfile",
+            "getClients",
+            "saveClient",
+            "getInvoices",
+            "createInvoice",
+            "updateInvoice",
+            "markPaid",
+            "deleteInvoice",
+            "getBills",
+            "saveBill",
+            "deleteBill",
+            "getFollowUps",
+            "logFollowUp",
+            "resetDemoData"
+          ]
+        },
+        {
+          "source": "./src/lib/supabaseClient.js",
+          "specifiers": [
+            "isSupabaseConfigured"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": true
+    },
+    "test-mockData.js": {
+      "filePath": "test-mockData.js",
+      "contentHash": "c955fa737abbfa006a79ff06ac6778636e9594cf0e441fefdbeba2dc54b51db0",
+      "functions": [
+        {
+          "name": "runMockDataTest",
+          "params": [],
+          "exported": false,
+          "lineCount": 85
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./src/data/mockDesignerData.js",
+          "specifiers": [
+            "mockDesignerData",
+            "createMockDesignerData"
+          ]
+        },
+        {
+          "source": "./src/lib/dataService.js",
+          "specifiers": [
+            "dataService",
+            "resetDemoData",
+            "getProfile",
+            "getClients",
+            "getInvoices",
+            "getBills",
+            "getFollowUps"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "test_e2e_phase3.js": {
+      "filePath": "test_e2e_phase3.js",
+      "contentHash": "7a8c9f100556b46eed01ffe1d29b293d923897146e6744684af3fac85dc16ada",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./src/lib/forecastEngine.js",
+          "specifiers": [
+            "calculateCashForecast",
+            "DEFAULT_SCENARIOS"
+          ]
+        },
+        {
+          "source": "./src/data/mockDesignerData.js",
+          "specifiers": [
+            "mockDesignerData"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 89,
+      "hasStructuralAnalysis": true
+    },
+    "test_forecastEngine.js": {
+      "filePath": "test_forecastEngine.js",
+      "contentHash": "c9aa81c9fe5bfb9ab8108a8bf545b693de203f1f0cad90acdd58ab387b919365",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./src/lib/forecastEngine.js",
+          "specifiers": [
+            "calculateCashForecast"
+          ]
+        },
+        {
+          "source": "./src/data/mockDesignerData.js",
+          "specifiers": [
+            "mockDesignerData"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 53,
+      "hasStructuralAnalysis": true
+    },
+    "vite.config.js": {
+      "filePath": "vite.config.js",
+      "contentHash": "79d73c75b9123cb89bb21099ee42d0e6f9c9f475d188df835bb7eeb7b9a2c850",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "vite",
+          "specifiers": [
+            "defineConfig"
+          ]
+        },
+        {
+          "source": "@vitejs/plugin-react",
+          "specifiers": [
+            "react"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 16,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

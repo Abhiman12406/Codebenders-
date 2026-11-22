@@ -1,4 +1,5 @@
 import { supabase, isSupabaseConfigured } from './supabaseClient.js';
+import * as api from './api.js';
 
 // Safe in-memory fallback for SSR/Node environments where localStorage is not present
 const memoryStore = {};
@@ -55,6 +56,17 @@ const generateId = () => {
   return 'id_' + Math.random().toString(36).slice(2, 11) + '_' + Date.now().toString(36);
 };
 
+// fetch() rejects with a TypeError only when the server is unreachable.
+// HTTP 4xx/5xx responses are thrown as Error with .status and must propagate.
+const isNetworkError = (err) => err instanceof TypeError;
+
+const replaceCachedInvoice = (id, record) => {
+  storage.set(
+    STORAGE_KEYS.INVOICES,
+    storage.get(STORAGE_KEYS.INVOICES, []).map((inv) => (inv.id === id ? record : inv)),
+  );
+};
+
 export const DEFAULT_PROFILE = {
   id: 'guest_profile',
   business_name: 'Aura Design Studio',
@@ -83,6 +95,14 @@ export async function getActiveUser() {
 // 1. Profile CRUD
 // ==========================================
 export async function getProfile() {
+  try {
+    const profile = await api.getProfile();
+    storage.set(STORAGE_KEYS.PROFILE, profile);
+    return profile;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const user = await getActiveUser();
   if (user && supabase) {
     try {
@@ -112,6 +132,14 @@ export async function updateProfile(updates) {
     starting_cash: updates.starting_cash !== undefined ? Number(updates.starting_cash) : current.starting_cash,
     safety_buffer: updates.safety_buffer !== undefined ? Number(updates.safety_buffer) : current.safety_buffer,
   };
+
+  try {
+    const saved = await api.updateProfile(updated);
+    storage.set(STORAGE_KEYS.PROFILE, saved);
+    return saved;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
 
   storage.set(STORAGE_KEYS.PROFILE, updated);
 
@@ -186,6 +214,14 @@ export async function saveClient(client) {
 // 3. Invoices CRUD
 // ==========================================
 export async function getInvoices() {
+  try {
+    const invoices = await api.getInvoices();
+    storage.set(STORAGE_KEYS.INVOICES, invoices);
+    return invoices;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const user = await getActiveUser();
   if (user && supabase) {
     try {
@@ -218,6 +254,14 @@ export async function createInvoice(invoice) {
     items: invoice.items || [],
   };
 
+  try {
+    const saved = await api.createInvoice(newInvoice);
+    storage.set(STORAGE_KEYS.INVOICES, [saved, ...invoices]);
+    return saved;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const updatedInvoices = [newInvoice, ...invoices];
   storage.set(STORAGE_KEYS.INVOICES, updatedInvoices);
 
@@ -236,6 +280,14 @@ export async function createInvoice(invoice) {
 }
 
 export async function updateInvoice(id, updates) {
+  try {
+    const saved = await api.updateInvoice(id, updates);
+    replaceCachedInvoice(id, saved);
+    return saved;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const invoices = await getInvoices();
   let updatedRecord = null;
 
@@ -273,6 +325,14 @@ export async function updateInvoice(id, updates) {
 }
 
 export async function deleteInvoice(id) {
+  try {
+    await api.deleteInvoice(id);
+    storage.set(STORAGE_KEYS.INVOICES, storage.get(STORAGE_KEYS.INVOICES, []).filter((inv) => inv.id !== id));
+    return true;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const invoices = await getInvoices();
   const filtered = invoices.filter((inv) => inv.id !== id);
   storage.set(STORAGE_KEYS.INVOICES, filtered);
@@ -293,6 +353,14 @@ export async function deleteInvoice(id) {
 }
 
 export async function markPaid(id, paidDate = new Date().toISOString().split('T')[0]) {
+  try {
+    const saved = await api.payInvoice(id, paidDate);
+    replaceCachedInvoice(id, saved);
+    return saved;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   return updateInvoice(id, {
     status: 'paid',
     paid_date: paidDate,
@@ -303,6 +371,14 @@ export async function markPaid(id, paidDate = new Date().toISOString().split('T'
 // 4. Bills / Outflows CRUD
 // ==========================================
 export async function getBills() {
+  try {
+    const bills = await api.getBills();
+    storage.set(STORAGE_KEYS.BILLS, bills);
+    return bills;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const user = await getActiveUser();
   if (user && supabase) {
     try {
@@ -335,6 +411,18 @@ export async function saveBill(bill) {
     created_at: bill.created_at || new Date().toISOString(),
   };
 
+  try {
+    const saved = bill.id
+      ? await api.updateBill(billData.id, billData)
+      : await api.createBill(billData);
+    storage.set(STORAGE_KEYS.BILLS, bills.some((b) => b.id === saved.id)
+      ? bills.map((b) => (b.id === saved.id ? saved : b))
+      : [...bills, saved]);
+    return saved;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const existingIndex = bills.findIndex((b) => b.id === billData.id);
   const updatedBills = existingIndex >= 0
     ? bills.map((b, i) => (i === existingIndex ? billData : b))
@@ -357,6 +445,14 @@ export async function saveBill(bill) {
 }
 
 export async function deleteBill(id) {
+  try {
+    await api.deleteBill(id);
+    storage.set(STORAGE_KEYS.BILLS, storage.get(STORAGE_KEYS.BILLS, []).filter((b) => b.id !== id));
+    return true;
+  } catch (err) {
+    if (!isNetworkError(err)) throw err;
+  }
+
   const bills = await getBills();
   const filtered = bills.filter((b) => b.id !== id);
   storage.set(STORAGE_KEYS.BILLS, filtered);

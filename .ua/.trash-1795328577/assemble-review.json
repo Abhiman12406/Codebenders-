@@ -1,0 +1,13 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 0,
+  "complexityRemapped": 0,
+  "notes": [
+    "3 tested_by edges dropped cleanly (orphan endpoints / self-references).",
+    "All import map edges are fully accounted for.",
+    "Node ID normalization and typing are 100% compliant."
+  ]
+}

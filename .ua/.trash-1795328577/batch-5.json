@@ -1,0 +1,1271 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/AuthModal.jsx",
+      "type": "file",
+      "name": "AuthModal.jsx",
+      "filePath": "src/components/AuthModal.jsx",
+      "summary": "Supabase authentication modal handling email login, signup, and session persistence.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "function",
+      "name": "AuthModal",
+      "filePath": "src/components/AuthModal.jsx",
+      "lineRange": [
+        5,
+        152
+      ],
+      "summary": "Function AuthModal in AuthModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/api.js",
+      "type": "file",
+      "name": "api.js",
+      "filePath": "src/lib/api.js",
+      "summary": "Client-side HTTP client wrapper providing methods for invoices, outflows, forecasts, and AI parsing.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        3,
+        20
+      ],
+      "summary": "Function request in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getHealth",
+      "type": "function",
+      "name": "getHealth",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "Function getHealth in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getInvoices",
+      "type": "function",
+      "name": "getInvoices",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Function getInvoices in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getInvoice",
+      "type": "function",
+      "name": "getInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Function getInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:createInvoice",
+      "type": "function",
+      "name": "createInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "Function createInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateInvoice",
+      "type": "function",
+      "name": "updateInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Function updateInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:deleteInvoice",
+      "type": "function",
+      "name": "deleteInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Function deleteInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:payInvoice",
+      "type": "function",
+      "name": "payInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        29,
+        30
+      ],
+      "summary": "Function payInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getForecast",
+      "type": "function",
+      "name": "getForecast",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        32,
+        32
+      ],
+      "summary": "Function getForecast in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getTriage",
+      "type": "function",
+      "name": "getTriage",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Function getTriage in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getBills",
+      "type": "function",
+      "name": "getBills",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Function getBills in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:createBill",
+      "type": "function",
+      "name": "createBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        36,
+        36
+      ],
+      "summary": "Function createBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateBill",
+      "type": "function",
+      "name": "updateBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        37,
+        37
+      ],
+      "summary": "Function updateBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:deleteBill",
+      "type": "function",
+      "name": "deleteBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "Function deleteBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getProfile",
+      "type": "function",
+      "name": "getProfile",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        40,
+        40
+      ],
+      "summary": "Function getProfile in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        41,
+        41
+      ],
+      "summary": "Function updateProfile in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:parseNlp",
+      "type": "function",
+      "name": "parseNlp",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        43,
+        43
+      ],
+      "summary": "Function parseNlp in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/dataService.js",
+      "type": "file",
+      "name": "dataService.js",
+      "filePath": "src/lib/dataService.js",
+      "summary": "Offline-first unified data layer coordinating API, Supabase, and localStorage synchronization.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getActiveUser",
+      "type": "function",
+      "name": "getActiveUser",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        83,
+        92
+      ],
+      "summary": "Function getActiveUser in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getProfile",
+      "type": "function",
+      "name": "getProfile",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        97,
+        125
+      ],
+      "summary": "Function getProfile in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        127,
+        158
+      ],
+      "summary": "Function updateProfile in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getClients",
+      "type": "function",
+      "name": "getClients",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        163,
+        182
+      ],
+      "summary": "Function getClients in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:saveClient",
+      "type": "function",
+      "name": "saveClient",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        184,
+        211
+      ],
+      "summary": "Function saveClient in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getInvoices",
+      "type": "function",
+      "name": "getInvoices",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        216,
+        243
+      ],
+      "summary": "Function getInvoices in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:createInvoice",
+      "type": "function",
+      "name": "createInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        245,
+        280
+      ],
+      "summary": "Function createInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:updateInvoice",
+      "type": "function",
+      "name": "updateInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        282,
+        325
+      ],
+      "summary": "Function updateInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "function",
+      "name": "deleteInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        327,
+        353
+      ],
+      "summary": "Function deleteInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:markPaid",
+      "type": "function",
+      "name": "markPaid",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        355,
+        368
+      ],
+      "summary": "Function markPaid in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getBills",
+      "type": "function",
+      "name": "getBills",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        373,
+        400
+      ],
+      "summary": "Function getBills in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:saveBill",
+      "type": "function",
+      "name": "saveBill",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        402,
+        445
+      ],
+      "summary": "Function saveBill in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:deleteBill",
+      "type": "function",
+      "name": "deleteBill",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        447,
+        473
+      ],
+      "summary": "Function deleteBill in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getFollowUps",
+      "type": "function",
+      "name": "getFollowUps",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        478,
+        497
+      ],
+      "summary": "Function getFollowUps in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:logFollowUp",
+      "type": "function",
+      "name": "logFollowUp",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        499,
+        523
+      ],
+      "summary": "Function logFollowUp in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:seedInitialData",
+      "type": "function",
+      "name": "seedInitialData",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        528,
+        540
+      ],
+      "summary": "Function seedInitialData in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:resetDemoData",
+      "type": "function",
+      "name": "resetDemoData",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        542,
+        544
+      ],
+      "summary": "Function resetDemoData in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/supabaseClient.js",
+      "type": "file",
+      "name": "supabaseClient.js",
+      "filePath": "src/lib/supabaseClient.js",
+      "summary": "Supabase client initializer configuring authentication and PostgreSQL database connection.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "function",
+      "name": "isSupabaseConfigured",
+      "filePath": "src/lib/supabaseClient.js",
+      "lineRange": [
+        16,
+        24
+      ],
+      "summary": "Function isSupabaseConfigured in supabaseClient.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "function",
+      "name": "getSupabaseClient",
+      "filePath": "src/lib/supabaseClient.js",
+      "lineRange": [
+        28,
+        44
+      ],
+      "summary": "Function getSupabaseClient in supabaseClient.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:test-dataService.js",
+      "type": "file",
+      "name": "test-dataService.js",
+      "filePath": "test-dataService.js",
+      "summary": "Source code file test-dataService.js providing functionality for code.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:test-dataService.js:runTests",
+      "type": "function",
+      "name": "runTests",
+      "filePath": "test-dataService.js",
+      "lineRange": [
+        22,
+        132
+      ],
+      "summary": "Function runTests in test-dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoices",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:payInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:payInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getTriage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getTriage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getBills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getBills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:parseNlp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:parseNlp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getActiveUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getActiveUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getClients",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getClients",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getInvoices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getInvoices",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:createInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:createInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:markPaid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:markPaid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getBills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getBills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getFollowUps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getFollowUps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:logFollowUp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:logFollowUp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:seedInitialData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:seedInitialData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:resetDemoData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:resetDemoData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "file:src/lib/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "function:test-dataService.js:runTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    }
+  ]
+}

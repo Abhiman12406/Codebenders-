@@ -1,0 +1,62 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": "src/components/CashForecastChart.jsx",
+      "language": "javascript",
+      "sizeLines": 641,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/data/mockDesignerData.js",
+      "language": "javascript",
+      "sizeLines": 301,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/forecastEngine.js",
+      "language": "javascript",
+      "sizeLines": 357,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test-mockData.js",
+      "language": "javascript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test_e2e_phase3.js",
+      "language": "javascript",
+      "sizeLines": 88,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test_forecastEngine.js",
+      "language": "javascript",
+      "sizeLines": 52,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/components/CashForecastChart.jsx": [
+      "src/lib/forecastEngine.js"
+    ],
+    "src/data/mockDesignerData.js": [],
+    "src/lib/forecastEngine.js": [
+      "src/lib/dateUtils.js"
+    ],
+    "test-mockData.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/dataService.js"
+    ],
+    "test_e2e_phase3.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/forecastEngine.js"
+    ],
+    "test_forecastEngine.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/forecastEngine.js"
+    ]
+  }
+}

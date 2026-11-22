@@ -1,0 +1,334 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/CashForecastChart.jsx",
+      "type": "file",
+      "name": "CashForecastChart.jsx",
+      "filePath": "src/components/CashForecastChart.jsx",
+      "summary": "Interactive cash projection chart rendering future cash balance curves over 30 to 90 days.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "function",
+      "name": "CashForecastChart",
+      "filePath": "src/components/CashForecastChart.jsx",
+      "lineRange": [
+        15,
+        641
+      ],
+      "summary": "Function CashForecastChart in CashForecastChart.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/data/mockDesignerData.js",
+      "type": "file",
+      "name": "mockDesignerData.js",
+      "filePath": "src/data/mockDesignerData.js",
+      "summary": "Default seed data providing sample freelance invoices, debtors, profile information, and expenses.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "function",
+      "name": "createMockDesignerData",
+      "filePath": "src/data/mockDesignerData.js",
+      "lineRange": [
+        8,
+        298
+      ],
+      "summary": "Function createMockDesignerData in mockDesignerData.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/forecastEngine.js",
+      "type": "file",
+      "name": "forecastEngine.js",
+      "filePath": "src/lib/forecastEngine.js",
+      "summary": "Client-side financial forecast algorithm calculating projected cash trajectories from invoices and outflows.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "function",
+      "name": "formatDateISO",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Function formatDateISO in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "function",
+      "name": "formatShortDate",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Function formatShortDate in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "function",
+      "name": "calculateCashForecast",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        50,
+        357
+      ],
+      "summary": "Function calculateCashForecast in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:test-mockData.js",
+      "type": "file",
+      "name": "test-mockData.js",
+      "filePath": "test-mockData.js",
+      "summary": "Source code file test-mockData.js providing functionality for code.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:test-mockData.js:runMockDataTest",
+      "type": "function",
+      "name": "runMockDataTest",
+      "filePath": "test-mockData.js",
+      "lineRange": [
+        5,
+        89
+      ],
+      "summary": "Function runMockDataTest in test-mockData.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:test_e2e_phase3.js",
+      "type": "file",
+      "name": "test_e2e_phase3.js",
+      "filePath": "test_e2e_phase3.js",
+      "summary": "End-to-end test suite verifying Phase 3 features including triage, NLP parsing, and outflows.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:test_forecastEngine.js",
+      "type": "file",
+      "name": "test_forecastEngine.js",
+      "filePath": "test_forecastEngine.js",
+      "summary": "Unit test suite validating client forecast engine calculations and edge conditions.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/mockDesignerData.js",
+      "target": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/data/mockDesignerData.js",
+      "target": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "function:test-mockData.js:runMockDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_e2e_phase3.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_e2e_phase3.js",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:test_e2e_phase3.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:test_forecastEngine.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_forecastEngine.js",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "file:test_forecastEngine.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

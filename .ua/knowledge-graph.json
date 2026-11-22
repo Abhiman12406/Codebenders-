@@ -1,0 +1,4084 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "studioflow",
+    "languages": [
+      "config",
+      "css",
+      "html",
+      "javascript",
+      "json",
+      "markdown",
+      "python",
+      "sql"
+    ],
+    "frameworks": [
+      "React",
+      "Vite",
+      "Express",
+      "Tailwind CSS",
+      "Supabase",
+      "GSAP"
+    ],
+    "description": "StudioFlow is an offline-first cash-flow and receivables tool for freelance designers featuring AR aging, What-If cash forecasting, crisis triage, and natural-language draft invoicing.",
+    "analyzedAt": "2026-11-22T06:22:19.635Z",
+    "gitCommitHash": "2a8d7d0f01cdbe77e486186ba4ea60cb001620fc"
+  },
+  "nodes": [
+    {
+      "id": "file:src/App.jsx",
+      "type": "file",
+      "name": "App.jsx",
+      "filePath": "src/App.jsx",
+      "summary": "Main application container orchestrating StudioFlow views, modals, notifications, and Supabase auth state.",
+      "tags": [
+        "entry-point",
+        "component",
+        "dashboard",
+        "react"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/App.jsx:App",
+      "type": "function",
+      "name": "App",
+      "filePath": "src/App.jsx",
+      "lineRange": [
+        35,
+        915
+      ],
+      "summary": "Function App in App.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ArtCraftPrinciples.jsx",
+      "type": "file",
+      "name": "ArtCraftPrinciples.jsx",
+      "filePath": "src/components/ArtCraftPrinciples.jsx",
+      "summary": "Design philosophy showcase illustrating craft principles through interactive cards.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "function",
+      "name": "ArtCraftPrinciples",
+      "filePath": "src/components/ArtCraftPrinciples.jsx",
+      "lineRange": [
+        28,
+        94
+      ],
+      "summary": "Function ArtCraftPrinciples in ArtCraftPrinciples.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/BadDayTriageModal.jsx",
+      "type": "file",
+      "name": "BadDayTriageModal.jsx",
+      "filePath": "src/components/BadDayTriageModal.jsx",
+      "summary": "Emergency financial triage modal prioritizing essential operational expenses when cash is low.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "function",
+      "name": "BadDayTriageModal",
+      "filePath": "src/components/BadDayTriageModal.jsx",
+      "lineRange": [
+        9,
+        186
+      ],
+      "summary": "Function BadDayTriageModal in BadDayTriageModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/FeedbackCarousel.jsx",
+      "type": "file",
+      "name": "FeedbackCarousel.jsx",
+      "filePath": "src/components/FeedbackCarousel.jsx",
+      "summary": "Interactive client feedback and review carousel showcasing studio testimonials.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "function",
+      "name": "FeedbackCarousel",
+      "filePath": "src/components/FeedbackCarousel.jsx",
+      "lineRange": [
+        31,
+        132
+      ],
+      "summary": "Function FeedbackCarousel in FeedbackCarousel.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/HorizontalAccordions.jsx",
+      "type": "file",
+      "name": "HorizontalAccordions.jsx",
+      "filePath": "src/components/HorizontalAccordions.jsx",
+      "summary": "Horizontal sliding accordion component displaying workflow details and feature highlights.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "function",
+      "name": "HorizontalAccordions",
+      "filePath": "src/components/HorizontalAccordions.jsx",
+      "lineRange": [
+        47,
+        120
+      ],
+      "summary": "Function HorizontalAccordions in HorizontalAccordions.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/InfiniteMarquee.jsx",
+      "type": "file",
+      "name": "InfiniteMarquee.jsx",
+      "filePath": "src/components/InfiniteMarquee.jsx",
+      "summary": "Smooth continuous scrolling marquee presenting studio capabilities and client logos.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "function",
+      "name": "InfiniteMarquee",
+      "filePath": "src/components/InfiniteMarquee.jsx",
+      "lineRange": [
+        22,
+        51
+      ],
+      "summary": "Function InfiniteMarquee in InfiniteMarquee.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/InvoiceModal.jsx",
+      "type": "file",
+      "name": "InvoiceModal.jsx",
+      "filePath": "src/components/InvoiceModal.jsx",
+      "summary": "Modal dialog for creating and editing client invoices with line items and due dates.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "function",
+      "name": "InvoiceModal",
+      "filePath": "src/components/InvoiceModal.jsx",
+      "lineRange": [
+        10,
+        417
+      ],
+      "summary": "Function InvoiceModal in InvoiceModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/Navbar.jsx",
+      "type": "file",
+      "name": "Navbar.jsx",
+      "filePath": "src/components/Navbar.jsx",
+      "summary": "Top navigation header displaying branding, active server connection status badge, and quick actions.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/Navbar.jsx:Navbar",
+      "type": "function",
+      "name": "Navbar",
+      "filePath": "src/components/Navbar.jsx",
+      "lineRange": [
+        10,
+        182
+      ],
+      "summary": "Function Navbar in Navbar.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/OutflowsManager.jsx",
+      "type": "file",
+      "name": "OutflowsManager.jsx",
+      "filePath": "src/components/OutflowsManager.jsx",
+      "summary": "Recurring and one-off expense manager tracking studio operational cost outflows.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "function",
+      "name": "OutflowsManager",
+      "filePath": "src/components/OutflowsManager.jsx",
+      "lineRange": [
+        13,
+        171
+      ],
+      "summary": "Function OutflowsManager in OutflowsManager.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/QuickInputBar.jsx",
+      "type": "file",
+      "name": "QuickInputBar.jsx",
+      "filePath": "src/components/QuickInputBar.jsx",
+      "summary": "Natural-language command input bar converting plain English sentences into draft invoices.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "function",
+      "name": "QuickInputBar",
+      "filePath": "src/components/QuickInputBar.jsx",
+      "lineRange": [
+        11,
+        163
+      ],
+      "summary": "Function QuickInputBar in QuickInputBar.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ScrubTextReveal.jsx",
+      "type": "file",
+      "name": "ScrubTextReveal.jsx",
+      "filePath": "src/components/ScrubTextReveal.jsx",
+      "summary": "Interactive scroll-driven text scrub reveal animation highlighting studio manifesto text.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "function",
+      "name": "ScrubTextReveal",
+      "filePath": "src/components/ScrubTextReveal.jsx",
+      "lineRange": [
+        7,
+        65
+      ],
+      "summary": "Function ScrubTextReveal in ScrubTextReveal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/WhatIfSimulator.jsx",
+      "type": "file",
+      "name": "WhatIfSimulator.jsx",
+      "filePath": "src/components/WhatIfSimulator.jsx",
+      "summary": "What-If financial scenario simulator modeling invoice payment delays and revenue impacts.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "function",
+      "name": "WhatIfSimulator",
+      "filePath": "src/components/WhatIfSimulator.jsx",
+      "lineRange": [
+        14,
+        307
+      ],
+      "summary": "Function WhatIfSimulator in WhatIfSimulator.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/nlpParser.js",
+      "type": "file",
+      "name": "nlpParser.js",
+      "filePath": "src/lib/nlpParser.js",
+      "summary": "Client-side natural language text parser extracting client names, amounts, and dates into structured invoices.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseDueDate",
+      "type": "function",
+      "name": "parseDueDate",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        30,
+        39
+      ],
+      "summary": "Function parseDueDate in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseClientAndProject",
+      "type": "function",
+      "name": "parseClientAndProject",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        45,
+        59
+      ],
+      "summary": "Function parseClientAndProject in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "function",
+      "name": "parseInvoiceText",
+      "filePath": "src/lib/nlpParser.js",
+      "lineRange": [
+        61,
+        71
+      ],
+      "summary": "Function parseInvoiceText in nlpParser.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/main.jsx",
+      "type": "file",
+      "name": "main.jsx",
+      "filePath": "src/main.jsx",
+      "summary": "React application root entry point mounting App into the DOM root.",
+      "tags": [
+        "entry-point",
+        "react",
+        "bootstrap"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/engine/forecast.js",
+      "type": "file",
+      "name": "forecast.js",
+      "filePath": "server/engine/forecast.js",
+      "summary": "Backend cash forecast engine projecting daily cash balances across configurable day horizons.",
+      "tags": [
+        "engine",
+        "algorithm",
+        "calculation",
+        "backend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "function",
+      "name": "calculateCashForecast",
+      "filePath": "server/engine/forecast.js",
+      "lineRange": [
+        11,
+        228
+      ],
+      "summary": "Function calculateCashForecast in forecast.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/engine/nlp.js",
+      "type": "file",
+      "name": "nlp.js",
+      "filePath": "server/engine/nlp.js",
+      "summary": "Backend natural language processing engine parsing conversational invoice prompts into invoice records.",
+      "tags": [
+        "engine",
+        "algorithm",
+        "calculation",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "function",
+      "name": "parseInvoicePrompt",
+      "filePath": "server/engine/nlp.js",
+      "lineRange": [
+        1,
+        120
+      ],
+      "summary": "Function parseInvoicePrompt in nlp.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/index.js",
+      "type": "file",
+      "name": "index.js",
+      "filePath": "server/index.js",
+      "summary": "Express API server entry point mounting routes, CORS middleware, and starting HTTP listener on port 3001.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/ai.js",
+      "type": "file",
+      "name": "ai.js",
+      "filePath": "server/routes/ai.js",
+      "summary": "Express router module handling HTTP endpoints for ai.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/forecast.js",
+      "type": "file",
+      "name": "forecast.js",
+      "filePath": "server/routes/forecast.js",
+      "summary": "Express router module handling HTTP endpoints for forecast.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/invoices.js",
+      "type": "file",
+      "name": "invoices.js",
+      "filePath": "server/routes/invoices.js",
+      "summary": "Express router module handling HTTP endpoints for invoices.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/outflows.js",
+      "type": "file",
+      "name": "outflows.js",
+      "filePath": "server/routes/outflows.js",
+      "summary": "Express router module handling HTTP endpoints for outflows.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/portal.js",
+      "type": "file",
+      "name": "portal.js",
+      "filePath": "server/routes/portal.js",
+      "summary": "Express router module handling HTTP endpoints for portal.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/profile.js",
+      "type": "file",
+      "name": "profile.js",
+      "filePath": "server/routes/profile.js",
+      "summary": "Express router module handling HTTP endpoints for profile.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/triage.js",
+      "type": "file",
+      "name": "triage.js",
+      "filePath": "server/routes/triage.js",
+      "summary": "Express router module handling HTTP endpoints for triage.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/store.js",
+      "type": "file",
+      "name": "store.js",
+      "filePath": "server/store.js",
+      "summary": "JSON file-based persistence manager reading and updating server/data/db.json with auto-seeding.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server/store.js:getInitialSeed",
+      "type": "function",
+      "name": "getInitialSeed",
+      "filePath": "server/store.js",
+      "lineRange": [
+        16,
+        289
+      ],
+      "summary": "Function getInitialSeed in store.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:server/store.js:Store",
+      "type": "class",
+      "name": "Store",
+      "filePath": "server/store.js",
+      "lineRange": [
+        291,
+        503
+      ],
+      "summary": "Class Store encapsulated in store.js.",
+      "tags": [
+        "class",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/test-api.js",
+      "type": "file",
+      "name": "test-api.js",
+      "filePath": "server/test-api.js",
+      "summary": "Backend integration test script running 8 verification checks against the Express API.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/test-api.js:call",
+      "type": "function",
+      "name": "call",
+      "filePath": "server/test-api.js",
+      "lineRange": [
+        9,
+        23
+      ],
+      "summary": "Function call in test-api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/CashForecastChart.jsx",
+      "type": "file",
+      "name": "CashForecastChart.jsx",
+      "filePath": "src/components/CashForecastChart.jsx",
+      "summary": "Interactive cash projection chart rendering future cash balance curves over 30 to 90 days.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "function",
+      "name": "CashForecastChart",
+      "filePath": "src/components/CashForecastChart.jsx",
+      "lineRange": [
+        15,
+        641
+      ],
+      "summary": "Function CashForecastChart in CashForecastChart.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/data/mockDesignerData.js",
+      "type": "file",
+      "name": "mockDesignerData.js",
+      "filePath": "src/data/mockDesignerData.js",
+      "summary": "Default seed data providing sample freelance invoices, debtors, profile information, and expenses.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "function",
+      "name": "createMockDesignerData",
+      "filePath": "src/data/mockDesignerData.js",
+      "lineRange": [
+        8,
+        298
+      ],
+      "summary": "Function createMockDesignerData in mockDesignerData.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/forecastEngine.js",
+      "type": "file",
+      "name": "forecastEngine.js",
+      "filePath": "src/lib/forecastEngine.js",
+      "summary": "Client-side financial forecast algorithm calculating projected cash trajectories from invoices and outflows.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "function",
+      "name": "formatDateISO",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        22,
+        27
+      ],
+      "summary": "Function formatDateISO in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "function",
+      "name": "formatShortDate",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        32,
+        34
+      ],
+      "summary": "Function formatShortDate in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "function",
+      "name": "calculateCashForecast",
+      "filePath": "src/lib/forecastEngine.js",
+      "lineRange": [
+        50,
+        357
+      ],
+      "summary": "Function calculateCashForecast in forecastEngine.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:test-mockData.js",
+      "type": "file",
+      "name": "test-mockData.js",
+      "filePath": "test-mockData.js",
+      "summary": "Source code file test-mockData.js providing functionality for code.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:test-mockData.js:runMockDataTest",
+      "type": "function",
+      "name": "runMockDataTest",
+      "filePath": "test-mockData.js",
+      "lineRange": [
+        5,
+        89
+      ],
+      "summary": "Function runMockDataTest in test-mockData.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:test_e2e_phase3.js",
+      "type": "file",
+      "name": "test_e2e_phase3.js",
+      "filePath": "test_e2e_phase3.js",
+      "summary": "End-to-end test suite verifying Phase 3 features including triage, NLP parsing, and outflows.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:test_forecastEngine.js",
+      "type": "file",
+      "name": "test_forecastEngine.js",
+      "filePath": "test_forecastEngine.js",
+      "summary": "Unit test suite validating client forecast engine calculations and edge conditions.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:src/components/AgingDashboard.jsx",
+      "type": "file",
+      "name": "AgingDashboard.jsx",
+      "filePath": "src/components/AgingDashboard.jsx",
+      "summary": "Receivables aging breakdown dashboard categorizing outstanding invoices into chronological risk tiers.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "function",
+      "name": "AgingDashboard",
+      "filePath": "src/components/AgingDashboard.jsx",
+      "lineRange": [
+        13,
+        347
+      ],
+      "summary": "Function AgingDashboard in AgingDashboard.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ClientPortalModal.jsx",
+      "type": "file",
+      "name": "ClientPortalModal.jsx",
+      "filePath": "src/components/ClientPortalModal.jsx",
+      "summary": "Client invoice payment simulation portal allowing clients to view and settle outstanding bills.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "function",
+      "name": "ClientPortalModal",
+      "filePath": "src/components/ClientPortalModal.jsx",
+      "lineRange": [
+        23,
+        227
+      ],
+      "summary": "Function ClientPortalModal in ClientPortalModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/DebtorCard.jsx",
+      "type": "file",
+      "name": "DebtorCard.jsx",
+      "filePath": "src/components/DebtorCard.jsx",
+      "summary": "Client debtor card displaying overdue amounts, status badge, and WhatsApp follow-up action.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "function",
+      "name": "DebtorCard",
+      "filePath": "src/components/DebtorCard.jsx",
+      "lineRange": [
+        12,
+        235
+      ],
+      "summary": "Function DebtorCard in DebtorCard.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/WhatsAppModal.jsx",
+      "type": "file",
+      "name": "WhatsAppModal.jsx",
+      "filePath": "src/components/WhatsAppModal.jsx",
+      "summary": "WhatsApp template editor and message generator for polite debtor payment reminders.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "function",
+      "name": "WhatsAppModal",
+      "filePath": "src/components/WhatsAppModal.jsx",
+      "lineRange": [
+        14,
+        251
+      ],
+      "summary": "Function WhatsAppModal in WhatsAppModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/dateUtils.js",
+      "type": "file",
+      "name": "dateUtils.js",
+      "filePath": "src/lib/dateUtils.js",
+      "summary": "Source code file dateUtils.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "function",
+      "name": "parseLocalDate",
+      "filePath": "src/lib/dateUtils.js",
+      "lineRange": [
+        10,
+        23
+      ],
+      "summary": "Function parseLocalDate in dateUtils.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "function",
+      "name": "getDaysDiff",
+      "filePath": "src/lib/dateUtils.js",
+      "lineRange": [
+        31,
+        42
+      ],
+      "summary": "Function getDaysDiff in dateUtils.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/components/AuthModal.jsx",
+      "type": "file",
+      "name": "AuthModal.jsx",
+      "filePath": "src/components/AuthModal.jsx",
+      "summary": "Supabase authentication modal handling email login, signup, and session persistence.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "function",
+      "name": "AuthModal",
+      "filePath": "src/components/AuthModal.jsx",
+      "lineRange": [
+        5,
+        152
+      ],
+      "summary": "Function AuthModal in AuthModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/api.js",
+      "type": "file",
+      "name": "api.js",
+      "filePath": "src/lib/api.js",
+      "summary": "Client-side HTTP client wrapper providing methods for invoices, outflows, forecasts, and AI parsing.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:request",
+      "type": "function",
+      "name": "request",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        3,
+        20
+      ],
+      "summary": "Function request in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getHealth",
+      "type": "function",
+      "name": "getHealth",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        22,
+        22
+      ],
+      "summary": "Function getHealth in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getInvoices",
+      "type": "function",
+      "name": "getInvoices",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        24,
+        24
+      ],
+      "summary": "Function getInvoices in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getInvoice",
+      "type": "function",
+      "name": "getInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        25,
+        25
+      ],
+      "summary": "Function getInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:createInvoice",
+      "type": "function",
+      "name": "createInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        26,
+        26
+      ],
+      "summary": "Function createInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateInvoice",
+      "type": "function",
+      "name": "updateInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        27,
+        27
+      ],
+      "summary": "Function updateInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:deleteInvoice",
+      "type": "function",
+      "name": "deleteInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        28,
+        28
+      ],
+      "summary": "Function deleteInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:payInvoice",
+      "type": "function",
+      "name": "payInvoice",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        29,
+        30
+      ],
+      "summary": "Function payInvoice in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getForecast",
+      "type": "function",
+      "name": "getForecast",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        32,
+        32
+      ],
+      "summary": "Function getForecast in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getTriage",
+      "type": "function",
+      "name": "getTriage",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        33,
+        33
+      ],
+      "summary": "Function getTriage in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getBills",
+      "type": "function",
+      "name": "getBills",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        35,
+        35
+      ],
+      "summary": "Function getBills in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:createBill",
+      "type": "function",
+      "name": "createBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        36,
+        36
+      ],
+      "summary": "Function createBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateBill",
+      "type": "function",
+      "name": "updateBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        37,
+        37
+      ],
+      "summary": "Function updateBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:deleteBill",
+      "type": "function",
+      "name": "deleteBill",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        38,
+        38
+      ],
+      "summary": "Function deleteBill in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:getProfile",
+      "type": "function",
+      "name": "getProfile",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        40,
+        40
+      ],
+      "summary": "Function getProfile in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        41,
+        41
+      ],
+      "summary": "Function updateProfile in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/api.js:parseNlp",
+      "type": "function",
+      "name": "parseNlp",
+      "filePath": "src/lib/api.js",
+      "lineRange": [
+        43,
+        43
+      ],
+      "summary": "Function parseNlp in api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/dataService.js",
+      "type": "file",
+      "name": "dataService.js",
+      "filePath": "src/lib/dataService.js",
+      "summary": "Offline-first unified data layer coordinating API, Supabase, and localStorage synchronization.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getActiveUser",
+      "type": "function",
+      "name": "getActiveUser",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        83,
+        92
+      ],
+      "summary": "Function getActiveUser in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getProfile",
+      "type": "function",
+      "name": "getProfile",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        97,
+        125
+      ],
+      "summary": "Function getProfile in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:updateProfile",
+      "type": "function",
+      "name": "updateProfile",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        127,
+        158
+      ],
+      "summary": "Function updateProfile in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getClients",
+      "type": "function",
+      "name": "getClients",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        163,
+        182
+      ],
+      "summary": "Function getClients in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:saveClient",
+      "type": "function",
+      "name": "saveClient",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        184,
+        211
+      ],
+      "summary": "Function saveClient in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getInvoices",
+      "type": "function",
+      "name": "getInvoices",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        216,
+        243
+      ],
+      "summary": "Function getInvoices in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:createInvoice",
+      "type": "function",
+      "name": "createInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        245,
+        280
+      ],
+      "summary": "Function createInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:updateInvoice",
+      "type": "function",
+      "name": "updateInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        282,
+        325
+      ],
+      "summary": "Function updateInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "function",
+      "name": "deleteInvoice",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        327,
+        353
+      ],
+      "summary": "Function deleteInvoice in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:markPaid",
+      "type": "function",
+      "name": "markPaid",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        355,
+        368
+      ],
+      "summary": "Function markPaid in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getBills",
+      "type": "function",
+      "name": "getBills",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        373,
+        400
+      ],
+      "summary": "Function getBills in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:saveBill",
+      "type": "function",
+      "name": "saveBill",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        402,
+        445
+      ],
+      "summary": "Function saveBill in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:deleteBill",
+      "type": "function",
+      "name": "deleteBill",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        447,
+        473
+      ],
+      "summary": "Function deleteBill in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:getFollowUps",
+      "type": "function",
+      "name": "getFollowUps",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        478,
+        497
+      ],
+      "summary": "Function getFollowUps in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:logFollowUp",
+      "type": "function",
+      "name": "logFollowUp",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        499,
+        523
+      ],
+      "summary": "Function logFollowUp in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:src/lib/dataService.js:seedInitialData",
+      "type": "function",
+      "name": "seedInitialData",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        528,
+        540
+      ],
+      "summary": "Function seedInitialData in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dataService.js:resetDemoData",
+      "type": "function",
+      "name": "resetDemoData",
+      "filePath": "src/lib/dataService.js",
+      "lineRange": [
+        542,
+        544
+      ],
+      "summary": "Function resetDemoData in dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:src/lib/supabaseClient.js",
+      "type": "file",
+      "name": "supabaseClient.js",
+      "filePath": "src/lib/supabaseClient.js",
+      "summary": "Supabase client initializer configuring authentication and PostgreSQL database connection.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "function",
+      "name": "isSupabaseConfigured",
+      "filePath": "src/lib/supabaseClient.js",
+      "lineRange": [
+        16,
+        24
+      ],
+      "summary": "Function isSupabaseConfigured in supabaseClient.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "function",
+      "name": "getSupabaseClient",
+      "filePath": "src/lib/supabaseClient.js",
+      "lineRange": [
+        28,
+        44
+      ],
+      "summary": "Function getSupabaseClient in supabaseClient.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:test-dataService.js",
+      "type": "file",
+      "name": "test-dataService.js",
+      "filePath": "test-dataService.js",
+      "summary": "Source code file test-dataService.js providing functionality for code.",
+      "tags": [
+        "test",
+        "validation",
+        "quality"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:test-dataService.js:runTests",
+      "type": "function",
+      "name": "runTests",
+      "filePath": "test-dataService.js",
+      "lineRange": [
+        22,
+        132
+      ],
+      "summary": "Function runTests in test-dataService.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:.codebenders/scratch/body-array.json",
+      "type": "config",
+      "name": "body-array.json",
+      "filePath": ".codebenders/scratch/body-array.json",
+      "summary": "JSON configuration and data file for body-array.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codebenders/scratch/body-negamount-named.json",
+      "type": "config",
+      "name": "body-negamount-named.json",
+      "filePath": ".codebenders/scratch/body-negamount-named.json",
+      "summary": "JSON configuration and data file for body-negamount-named.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codebenders/scratch/body-negative.json",
+      "type": "config",
+      "name": "body-negative.json",
+      "filePath": ".codebenders/scratch/body-negative.json",
+      "summary": "JSON configuration and data file for body-negative.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": ".env.example",
+      "summary": "Source code file .env.example providing functionality for config.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Markdown documentation detailing AGENTS.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:DESIGN-spacex.md",
+      "type": "document",
+      "name": "DESIGN-spacex.md",
+      "filePath": "DESIGN-spacex.md",
+      "summary": "Markdown documentation detailing DESIGN spacex.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:DESIGN-stripe.md",
+      "type": "document",
+      "name": "DESIGN-stripe.md",
+      "filePath": "DESIGN-stripe.md",
+      "summary": "Markdown documentation detailing DESIGN stripe.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:EXAMPLES.md",
+      "type": "document",
+      "name": "EXAMPLES.md",
+      "filePath": "EXAMPLES.md",
+      "summary": "Markdown documentation detailing EXAMPLES.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Primary project documentation detailing StudioFlow architecture, setup instructions, and API endpoints.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Single-page application HTML entry shell loading fonts and Vite bundle.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Node.js package manifest specifying dependencies, scripts, and project metadata.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:supabase_schema.sql",
+      "type": "table",
+      "name": "supabase_schema.sql",
+      "filePath": "supabase_schema.sql",
+      "summary": "Source code file supabase_schema.sql providing functionality for data.",
+      "tags": [
+        "utility",
+        "module",
+        "data"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:.codebenders/state.json",
+      "type": "config",
+      "name": "state.json",
+      "filePath": ".codebenders/state.json",
+      "summary": "JSON configuration and data file for state.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/ideas/studioflow-operations-cockpit.md",
+      "type": "document",
+      "name": "studioflow-operations-cockpit.md",
+      "filePath": "docs/ideas/studioflow-operations-cockpit.md",
+      "summary": "Markdown documentation detailing studioflow operations cockpit.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/intent/one-person-backoffice.md",
+      "type": "document",
+      "name": "one-person-backoffice.md",
+      "filePath": "docs/intent/one-person-backoffice.md",
+      "summary": "Markdown documentation detailing one person backoffice.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/spec/one-person-backoffice-fullstack-spec.md",
+      "type": "document",
+      "name": "one-person-backoffice-fullstack-spec.md",
+      "filePath": "docs/spec/one-person-backoffice-fullstack-spec.md",
+      "summary": "Markdown documentation detailing one person backoffice fullstack spec.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/spec/one-person-backoffice-spec.md",
+      "type": "document",
+      "name": "one-person-backoffice-spec.md",
+      "filePath": "docs/spec/one-person-backoffice-spec.md",
+      "summary": "Markdown documentation detailing one person backoffice spec.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:postcss.config.js",
+      "type": "config",
+      "name": "postcss.config.js",
+      "filePath": "postcss.config.js",
+      "summary": "Source code file postcss.config.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "references/index.html",
+      "summary": "Source code file index.html providing functionality for markup.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/artcraft.html",
+      "type": "file",
+      "name": "artcraft.html",
+      "filePath": "scratch/artcraft.html",
+      "summary": "Source code file artcraft.html providing functionality for markup.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/download_chunks.py",
+      "type": "file",
+      "name": "download_chunks.py",
+      "filePath": "scratch/download_chunks.py",
+      "summary": "Source code file download_chunks.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/extract_hero_comp.py",
+      "type": "file",
+      "name": "extract_hero_comp.py",
+      "filePath": "scratch/extract_hero_comp.py",
+      "summary": "Source code file extract_hero_comp.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/extract_ruler.py",
+      "type": "file",
+      "name": "extract_ruler.py",
+      "filePath": "scratch/extract_ruler.py",
+      "summary": "Source code file extract_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_base_doc.py",
+      "type": "file",
+      "name": "find_base_doc.py",
+      "filePath": "scratch/find_base_doc.py",
+      "summary": "Source code file find_base_doc.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_hero_ruler.py",
+      "type": "file",
+      "name": "find_hero_ruler.py",
+      "filePath": "scratch/find_hero_ruler.py",
+      "summary": "Source code file find_hero_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_herowordmark.py",
+      "type": "file",
+      "name": "find_herowordmark.py",
+      "filePath": "scratch/find_herowordmark.py",
+      "summary": "Source code file find_herowordmark.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_ishero.py",
+      "type": "file",
+      "name": "find_ishero.py",
+      "filePath": "scratch/find_ishero.py",
+      "summary": "Source code file find_ishero.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_ruler.py",
+      "type": "file",
+      "name": "find_ruler.py",
+      "filePath": "scratch/find_ruler.py",
+      "summary": "Source code file find_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_wordmark_init.py",
+      "type": "file",
+      "name": "find_wordmark_init.py",
+      "filePath": "scratch/find_wordmark_init.py",
+      "summary": "Source code file find_wordmark_init.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/hero_wordmark_component.js",
+      "type": "file",
+      "name": "hero_wordmark_component.js",
+      "filePath": "scratch/hero_wordmark_component.js",
+      "summary": "Source code file hero_wordmark_component.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/inspect_artcraft.py",
+      "type": "file",
+      "name": "inspect_artcraft.py",
+      "filePath": "scratch/inspect_artcraft.py",
+      "summary": "Source code file inspect_artcraft.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/parse_artcraft_html.py",
+      "type": "file",
+      "name": "parse_artcraft_html.py",
+      "filePath": "scratch/parse_artcraft_html.py",
+      "summary": "Source code file parse_artcraft_html.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/print_hero_jsx.py",
+      "type": "file",
+      "name": "print_hero_jsx.py",
+      "filePath": "scratch/print_hero_jsx.py",
+      "summary": "Source code file print_hero_jsx.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/query_scrollbar.py",
+      "type": "file",
+      "name": "query_scrollbar.py",
+      "filePath": "scratch/query_scrollbar.py",
+      "summary": "Source code file query_scrollbar.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/ruler_chunk.js",
+      "type": "file",
+      "name": "ruler_chunk.js",
+      "filePath": "scratch/ruler_chunk.js",
+      "summary": "Source code file ruler_chunk.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/ruler_raw.js",
+      "type": "file",
+      "name": "ruler_raw.js",
+      "filePath": "scratch/ruler_raw.js",
+      "summary": "Source code file ruler_raw.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:server/data/db.json",
+      "type": "config",
+      "name": "db.json",
+      "filePath": "server/data/db.json",
+      "summary": "JSON configuration and data file for db.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/HeroWordmark.jsx",
+      "type": "file",
+      "name": "HeroWordmark.jsx",
+      "filePath": "src/components/HeroWordmark.jsx",
+      "summary": "Animated typographic brand wordmark and hero visual header component.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "function",
+      "name": "HeroWordmark",
+      "filePath": "src/components/HeroWordmark.jsx",
+      "lineRange": [
+        36,
+        300
+      ],
+      "summary": "Function HeroWordmark in HeroWordmark.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "type": "file",
+      "name": "OrbitalGalaxyBackground.jsx",
+      "filePath": "src/components/OrbitalGalaxyBackground.jsx",
+      "summary": "Canvas-based particle galaxy background providing ambient visual depth.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "function",
+      "name": "OrbitalGalaxyBackground",
+      "filePath": "src/components/OrbitalGalaxyBackground.jsx",
+      "lineRange": [
+        16,
+        311
+      ],
+      "summary": "Function OrbitalGalaxyBackground in OrbitalGalaxyBackground.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/RightScrollRuler.jsx",
+      "type": "file",
+      "name": "RightScrollRuler.jsx",
+      "filePath": "src/components/RightScrollRuler.jsx",
+      "summary": "Custom vertical scroll ruler and page position indicator with visual tick marks.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "function",
+      "name": "RightScrollRuler",
+      "filePath": "src/components/RightScrollRuler.jsx",
+      "lineRange": [
+        16,
+        398
+      ],
+      "summary": "Function RightScrollRuler in RightScrollRuler.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "Global styles and Tailwind CSS directives, typography, and utility styling.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:tailwind.config.js",
+      "type": "config",
+      "name": "tailwind.config.js",
+      "filePath": "tailwind.config.js",
+      "summary": "Tailwind CSS design token configuration defining custom theme colors, spacing, and animations.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:tasks/plan.md",
+      "type": "document",
+      "name": "plan.md",
+      "filePath": "tasks/plan.md",
+      "summary": "Markdown documentation detailing plan.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:tasks/todo.md",
+      "type": "document",
+      "name": "todo.md",
+      "filePath": "tasks/todo.md",
+      "summary": "Markdown documentation detailing todo.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:vite.config.js",
+      "type": "config",
+      "name": "vite.config.js",
+      "filePath": "vite.config.js",
+      "summary": "Vite bundler configuration setting up React plugin and backend API proxying.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "function:src/App.jsx:App",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/AgingDashboard.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ArtCraftPrinciples.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/AuthModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/BadDayTriageModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/CashForecastChart.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ClientPortalModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/FeedbackCarousel.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/HorizontalAccordions.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/InfiniteMarquee.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/InvoiceModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/Navbar.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/OutflowsManager.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/QuickInputBar.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/ScrubTextReveal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/WhatIfSimulator.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/components/WhatsAppModal.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/App.jsx",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ArtCraftPrinciples.jsx",
+      "target": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ArtCraftPrinciples.jsx",
+      "target": "function:src/components/ArtCraftPrinciples.jsx:ArtCraftPrinciples",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/BadDayTriageModal.jsx",
+      "target": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/BadDayTriageModal.jsx",
+      "target": "function:src/components/BadDayTriageModal.jsx:BadDayTriageModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/FeedbackCarousel.jsx",
+      "target": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/FeedbackCarousel.jsx",
+      "target": "function:src/components/FeedbackCarousel.jsx:FeedbackCarousel",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/HorizontalAccordions.jsx",
+      "target": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HorizontalAccordions.jsx",
+      "target": "function:src/components/HorizontalAccordions.jsx:HorizontalAccordions",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/InfiniteMarquee.jsx",
+      "target": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/InfiniteMarquee.jsx",
+      "target": "function:src/components/InfiniteMarquee.jsx:InfiniteMarquee",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/InvoiceModal.jsx",
+      "target": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/InvoiceModal.jsx",
+      "target": "function:src/components/InvoiceModal.jsx:InvoiceModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/Navbar.jsx",
+      "target": "function:src/components/Navbar.jsx:Navbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/Navbar.jsx",
+      "target": "function:src/components/Navbar.jsx:Navbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/OutflowsManager.jsx",
+      "target": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/OutflowsManager.jsx",
+      "target": "function:src/components/OutflowsManager.jsx:OutflowsManager",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "function:src/components/QuickInputBar.jsx:QuickInputBar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/QuickInputBar.jsx",
+      "target": "file:src/lib/nlpParser.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ScrubTextReveal.jsx",
+      "target": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ScrubTextReveal.jsx",
+      "target": "function:src/components/ScrubTextReveal.jsx:ScrubTextReveal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/WhatIfSimulator.jsx",
+      "target": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/WhatIfSimulator.jsx",
+      "target": "function:src/components/WhatIfSimulator.jsx:WhatIfSimulator",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseDueDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseClientAndProject",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/nlpParser.js",
+      "target": "function:src/lib/nlpParser.js:parseInvoiceText",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/App.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/main.jsx",
+      "target": "file:src/index.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/engine/forecast.js",
+      "target": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/engine/forecast.js",
+      "target": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/engine/nlp.js",
+      "target": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/engine/nlp.js",
+      "target": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/ai.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/forecast.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/invoices.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/outflows.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/portal.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/profile.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/triage.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/ai.js",
+      "target": "file:server/engine/nlp.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/ai.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/forecast.js",
+      "target": "file:server/engine/forecast.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/forecast.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/invoices.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/outflows.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/portal.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/profile.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/triage.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/store.js",
+      "target": "function:server/store.js:getInitialSeed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/store.js",
+      "target": "class:server/store.js:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/test-api.js",
+      "target": "function:server/test-api.js:call",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/test-api.js",
+      "target": "file:server/index.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "function:src/components/CashForecastChart.jsx:CashForecastChart",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/CashForecastChart.jsx",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/data/mockDesignerData.js",
+      "target": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/data/mockDesignerData.js",
+      "target": "function:src/data/mockDesignerData.js:createMockDesignerData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatDateISO",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:formatShortDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "function:src/lib/forecastEngine.js:calculateCashForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/forecastEngine.js",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "function:test-mockData.js:runMockDataTest",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-mockData.js",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_e2e_phase3.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_e2e_phase3.js",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_forecastEngine.js",
+      "target": "file:src/data/mockDesignerData.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test_forecastEngine.js",
+      "target": "file:src/lib/forecastEngine.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "file:src/components/DebtorCard.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "function:src/components/AuthModal.jsx:AuthModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/AuthModal.jsx",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:request",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getHealth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getHealth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoices",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:payInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:payInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getTriage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getTriage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getBills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getBills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:createBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:deleteBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:getProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:updateProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:parseNlp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/api.js",
+      "target": "function:src/lib/api.js:parseNlp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getActiveUser",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getActiveUser",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateProfile",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateProfile",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getClients",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getClients",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getInvoices",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getInvoices",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:createInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:createInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:updateInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteInvoice",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:markPaid",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:markPaid",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getBills",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getBills",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:saveBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteBill",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:deleteBill",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getFollowUps",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:getFollowUps",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:logFollowUp",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:logFollowUp",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:seedInitialData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:seedInitialData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:resetDemoData",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "function:src/lib/dataService.js:resetDemoData",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "file:src/lib/api.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/dataService.js",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:isSupabaseConfigured",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/supabaseClient.js",
+      "target": "function:src/lib/supabaseClient.js:getSupabaseClient",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "function:test-dataService.js:runTests",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "file:src/lib/dataService.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:test-dataService.js",
+      "target": "file:src/lib/supabaseClient.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:src/App.jsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:server/index.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "file:src/components/HeroWordmark.jsx",
+      "target": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HeroWordmark.jsx",
+      "target": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "target": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "target": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/RightScrollRuler.jsx",
+      "target": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/RightScrollRuler.jsx",
+      "target": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:tailwind.config.js",
+      "target": "file:src/index.css",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:vite.config.js",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:frontend-ui",
+      "name": "Frontend UI Components",
+      "description": "React UI components, modals, visual effects, and main application layouts.",
+      "nodeIds": [
+        "file:src/App.jsx",
+        "file:src/components/ArtCraftPrinciples.jsx",
+        "file:src/components/BadDayTriageModal.jsx",
+        "file:src/components/FeedbackCarousel.jsx",
+        "file:src/components/HorizontalAccordions.jsx",
+        "file:src/components/InfiniteMarquee.jsx",
+        "file:src/components/InvoiceModal.jsx",
+        "file:src/components/Navbar.jsx",
+        "file:src/components/OutflowsManager.jsx",
+        "file:src/components/QuickInputBar.jsx",
+        "file:src/components/ScrubTextReveal.jsx",
+        "file:src/components/WhatIfSimulator.jsx",
+        "file:src/main.jsx",
+        "file:src/components/CashForecastChart.jsx",
+        "file:src/components/AgingDashboard.jsx",
+        "file:src/components/ClientPortalModal.jsx",
+        "file:src/components/DebtorCard.jsx",
+        "file:src/components/WhatsAppModal.jsx",
+        "file:src/components/AuthModal.jsx",
+        "file:index.html",
+        "file:src/components/HeroWordmark.jsx",
+        "file:src/components/OrbitalGalaxyBackground.jsx",
+        "file:src/components/RightScrollRuler.jsx",
+        "file:src/index.css"
+      ]
+    },
+    {
+      "id": "layer:frontend-services",
+      "name": "Client Services & State",
+      "description": "Offline-first data sync service, API client wrappers, client-side forecast math, and seed data.",
+      "nodeIds": [
+        "file:src/lib/nlpParser.js",
+        "file:src/data/mockDesignerData.js",
+        "file:src/lib/forecastEngine.js",
+        "file:src/lib/dateUtils.js",
+        "file:src/lib/api.js",
+        "file:src/lib/dataService.js",
+        "file:src/lib/supabaseClient.js"
+      ]
+    },
+    {
+      "id": "layer:backend-api",
+      "name": "Backend API & Storage",
+      "description": "Express server entry point, modular route handlers, and local JSON database persistence.",
+      "nodeIds": [
+        "file:server/index.js",
+        "file:server/routes/ai.js",
+        "file:server/routes/forecast.js",
+        "file:server/routes/invoices.js",
+        "file:server/routes/outflows.js",
+        "file:server/routes/portal.js",
+        "file:server/routes/profile.js",
+        "file:server/routes/triage.js",
+        "file:server/store.js",
+        "config:server/data/db.json"
+      ]
+    },
+    {
+      "id": "layer:business-engines",
+      "name": "Financial & NLP Engines",
+      "description": "Core domain calculation engines for cash flow forecasting and natural language draft invoice parsing.",
+      "nodeIds": [
+        "file:server/engine/forecast.js",
+        "file:server/engine/nlp.js"
+      ]
+    },
+    {
+      "id": "layer:testing-qa",
+      "name": "Testing & Verification",
+      "description": "Automated test suites covering API endpoints, calculation algorithms, and end-to-end user flows.",
+      "nodeIds": [
+        "file:server/test-api.js",
+        "file:test-mockData.js",
+        "file:test_e2e_phase3.js",
+        "file:test_forecastEngine.js",
+        "file:test-dataService.js",
+        "file:scratch/artcraft.html",
+        "file:scratch/download_chunks.py",
+        "file:scratch/extract_hero_comp.py",
+        "file:scratch/extract_ruler.py",
+        "file:scratch/find_base_doc.py",
+        "file:scratch/find_hero_ruler.py",
+        "file:scratch/find_herowordmark.py",
+        "file:scratch/find_ishero.py",
+        "file:scratch/find_ruler.py",
+        "file:scratch/find_wordmark_init.py",
+        "file:scratch/hero_wordmark_component.js",
+        "file:scratch/inspect_artcraft.py",
+        "file:scratch/parse_artcraft_html.py",
+        "file:scratch/print_hero_jsx.py",
+        "file:scratch/query_scrollbar.py",
+        "file:scratch/ruler_chunk.js",
+        "file:scratch/ruler_raw.js"
+      ]
+    },
+    {
+      "id": "layer:config-tooling",
+      "name": "Configuration & Build Tooling",
+      "description": "Vite build config, Tailwind styling, package manifests, and environment settings.",
+      "nodeIds": [
+        "config:.codebenders/scratch/body-array.json",
+        "config:.codebenders/scratch/body-negamount-named.json",
+        "config:.codebenders/scratch/body-negative.json",
+        "config:.env.example",
+        "config:package.json",
+        "table:supabase_schema.sql",
+        "config:.codebenders/state.json",
+        "config:postcss.config.js",
+        "config:tailwind.config.js",
+        "config:vite.config.js"
+      ]
+    },
+    {
+      "id": "layer:documentation-specs",
+      "name": "Documentation & Product Specs",
+      "description": "Architecture specifications, product requirements, design guidelines, and task plans.",
+      "nodeIds": [
+        "document:AGENTS.md",
+        "document:DESIGN-spacex.md",
+        "document:DESIGN-stripe.md",
+        "document:EXAMPLES.md",
+        "document:README.md",
+        "document:docs/ideas/studioflow-operations-cockpit.md",
+        "document:docs/intent/one-person-backoffice.md",
+        "document:docs/spec/one-person-backoffice-fullstack-spec.md",
+        "document:docs/spec/one-person-backoffice-spec.md",
+        "file:references/index.html",
+        "document:tasks/plan.md",
+        "document:tasks/todo.md"
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "title": "Project Architecture & Vision",
+      "description": "Start with StudioFlow's README and manifest to understand the single-designer financial back-office concept and architecture.",
+      "nodeIds": [
+        "document:README.md",
+        "config:package.json"
+      ]
+    },
+    {
+      "order": 2,
+      "title": "Frontend Boot & Orchestration",
+      "description": "Explore how Vite boots the React application and mounts App.jsx, which coordinates state, views, and notifications.",
+      "nodeIds": [
+        "file:src/main.jsx",
+        "file:src/App.jsx"
+      ]
+    },
+    {
+      "order": 3,
+      "title": "Receivables Aging & WhatsApp Reminders",
+      "description": "Discover the accounts receivable aging bucket tiers and client follow-up reminder generator.",
+      "nodeIds": [
+        "file:src/components/AgingDashboard.jsx",
+        "file:src/components/DebtorCard.jsx",
+        "file:src/components/WhatsAppModal.jsx"
+      ]
+    },
+    {
+      "order": 4,
+      "title": "Cash Forecasting & What-If Simulation",
+      "description": "Understand the financial trajectory forecasting engine and interactive sliders modeling payment delay scenarios.",
+      "nodeIds": [
+        "file:src/components/CashForecastChart.jsx",
+        "file:src/components/WhatIfSimulator.jsx",
+        "file:src/lib/forecastEngine.js"
+      ]
+    },
+    {
+      "order": 5,
+      "title": "Crisis Triage & Outflows Management",
+      "description": "Inspect the Bad Day crisis triage modal and outgoing studio expense manager.",
+      "nodeIds": [
+        "file:src/components/BadDayTriageModal.jsx",
+        "file:src/components/OutflowsManager.jsx"
+      ]
+    },
+    {
+      "order": 6,
+      "title": "Invoicing & NLP Parsing",
+      "description": "Examine invoice authoring and the natural language command parser converting text into draft invoices.",
+      "nodeIds": [
+        "file:src/components/InvoiceModal.jsx",
+        "file:src/components/QuickInputBar.jsx",
+        "file:src/lib/nlpParser.js"
+      ]
+    },
+    {
+      "order": 7,
+      "title": "Offline-First Data Synchronization",
+      "description": "Review the unified data layer gracefully falling back across Express API, Supabase cloud, and localStorage.",
+      "nodeIds": [
+        "file:src/lib/dataService.js",
+        "file:src/lib/api.js",
+        "file:src/lib/supabaseClient.js",
+        "file:src/components/AuthModal.jsx"
+      ]
+    },
+    {
+      "order": 8,
+      "title": "Backend Express Server & Storage",
+      "description": "Inspect the Express 5 backend server mounting API routes and persisting state to server/data/db.json.",
+      "nodeIds": [
+        "file:server/index.js",
+        "file:server/store.js",
+        "file:server/routes/invoices.js",
+        "file:server/routes/forecast.js"
+      ]
+    },
+    {
+      "order": 9,
+      "title": "Server Calculation Engines",
+      "description": "Explore the server-side cash forecast math and regex-based invoice natural language parsing.",
+      "nodeIds": [
+        "file:server/engine/forecast.js",
+        "file:server/engine/nlp.js"
+      ]
+    },
+    {
+      "order": 10,
+      "title": "Verification & Automated Testing",
+      "description": "See the backend integration tests and client verification suites guaranteeing correctness.",
+      "nodeIds": [
+        "file:server/test-api.js",
+        "file:test_forecastEngine.js",
+        "file:test_e2e_phase3.js"
+      ]
+    }
+  ]
+}

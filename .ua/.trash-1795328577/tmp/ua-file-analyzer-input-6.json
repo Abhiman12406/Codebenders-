@@ -1,0 +1,28 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": ".codebenders/scratch/body-array.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codebenders/scratch/body-negamount-named.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codebenders/scratch/body-negative.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    ".codebenders/scratch/body-array.json": [],
+    ".codebenders/scratch/body-negamount-named.json": [],
+    ".codebenders/scratch/body-negative.json": []
+  }
+}

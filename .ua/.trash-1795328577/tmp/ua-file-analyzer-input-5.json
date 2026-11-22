@@ -1,0 +1,50 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": "src/components/AuthModal.jsx",
+      "language": "javascript",
+      "sizeLines": 152,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/api.js",
+      "language": "javascript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/dataService.js",
+      "language": "javascript",
+      "sizeLines": 567,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/supabaseClient.js",
+      "language": "javascript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test-dataService.js",
+      "language": "javascript",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/components/AuthModal.jsx": [
+      "src/lib/supabaseClient.js"
+    ],
+    "src/lib/api.js": [],
+    "src/lib/dataService.js": [
+      "src/lib/api.js",
+      "src/lib/supabaseClient.js"
+    ],
+    "src/lib/supabaseClient.js": [],
+    "test-dataService.js": [
+      "src/lib/dataService.js",
+      "src/lib/supabaseClient.js"
+    ]
+  }
+}

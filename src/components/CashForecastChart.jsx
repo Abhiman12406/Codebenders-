@@ -7,7 +7,8 @@ import {
   Calendar, 
   ArrowUpRight, 
   ArrowDownRight,
-  Info
+  Activity,
+  LineChart
 } from 'lucide-react';
 import { formatShortDate } from '../lib/forecastEngine.js';
 
@@ -16,7 +17,6 @@ export default function CashForecastChart({
   horizonDays = 30,
   onHorizonChange,
   currency = '$',
-  onSelectActionInvoice,
 }) {
   const [hoveredPoint, setHoveredPoint] = useState(null);
   const svgRef = useRef(null);
@@ -32,7 +32,7 @@ export default function CashForecastChart({
   // Dimensions for SVG viewBox
   const width = 960;
   const height = 340;
-  const padding = { top: 30, right: 35, bottom: 45, left: 65 };
+  const padding = { top: 30, right: 35, bottom: 45, left: 75 };
   const chartW = width - padding.left - padding.right;
   const chartH = height - padding.top - padding.bottom;
 
@@ -43,11 +43,9 @@ export default function CashForecastChart({
     let min = Math.min(0, ...allPoints.map((p) => p.cashBalance));
     let max = Math.max(safetyBuffer + 2000, ...allPoints.map((p) => p.cashBalance));
 
-    // Add 15% breathing room
     min = Math.floor(min / 1000) * 1000 - (min < 0 ? 500 : 0);
     max = Math.ceil((max * 1.12) / 1000) * 1000;
 
-    // Generate 5 grid ticks
     const step = (max - min) / 4;
     const ticks = [];
     for (let i = 0; i <= 4; i++) {
@@ -57,9 +55,8 @@ export default function CashForecastChart({
     return { minY: min, maxY: max, yGridTicks: ticks };
   }, [allPoints, safetyBuffer]);
 
-  // Coordinate mapping functions
   const totalDaysSpan = useMemo(() => {
-    if (!allPoints.length) return 44; // -14 to 30
+    if (!allPoints.length) return 44;
     const firstDay = allPoints[0].day;
     const lastDay = allPoints[allPoints.length - 1].day;
     return lastDay - firstDay;
@@ -78,7 +75,6 @@ export default function CashForecastChart({
     return padding.top + chartH - fraction * chartH;
   };
 
-  // Generate SVG path strings
   const {
     historicalPath,
     forecastPath,
@@ -94,7 +90,6 @@ export default function CashForecastChart({
     const histPts = allPoints.filter((p) => p.day <= 0);
     const forePts = allPoints.filter((p) => p.day >= 0);
 
-    // Build historical line
     let histStr = '';
     histPts.forEach((p, idx) => {
       const x = getX(p.day);
@@ -102,7 +97,6 @@ export default function CashForecastChart({
       histStr += idx === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
     });
 
-    // Build forecast curve (smooth quadratic bezier or segmented)
     let foreStr = '';
     forePts.forEach((p, idx) => {
       const x = getX(p.day);
@@ -118,7 +112,6 @@ export default function CashForecastChart({
       }
     });
 
-    // Build area fill path for forecast
     let areaStr = foreStr;
     if (forePts.length) {
       const lastX = getX(forePts[forePts.length - 1].day);
@@ -137,13 +130,11 @@ export default function CashForecastChart({
     };
   }, [allPoints, minY, maxY, safetyBuffer, chartW, chartH]);
 
-  // Handle interactive hover across chart
   const handleMouseMove = (e) => {
     if (!svgRef.current || !allPoints.length) return;
     const rect = svgRef.current.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
 
-    // Convert mouseX to day
     const svgMouseX = (mouseX / rect.width) * width;
     if (svgMouseX < padding.left || svgMouseX > width - padding.right) {
       setHoveredPoint(null);
@@ -153,7 +144,6 @@ export default function CashForecastChart({
     const relativeFraction = (svgMouseX - padding.left) / chartW;
     const targetDay = Math.round(minDay + relativeFraction * totalDaysSpan);
 
-    // Find closest point
     let closest = allPoints[0];
     let minDiff = Math.abs(allPoints[0].day - targetDay);
 
@@ -173,107 +163,107 @@ export default function CashForecastChart({
   };
 
   return (
-    <div className="bg-slate-900/90 border border-slate-800 rounded-2xl p-4 sm:p-6 shadow-xl relative backdrop-blur-sm">
+    <div className="card-spacex p-6 sm:p-8 space-y-6 bg-[#0a0a0a]">
       {/* Chart Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-slate-800/80">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#3a3a3f]">
         <div>
-          <div className="flex items-center gap-2.5">
-            <h2 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-indigo-400" />
-              Rolling Cash Forecast
+          <div className="flex items-center gap-3">
+            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-white">
+              <LineChart className="w-3.5 h-3.5" />
+            </div>
+            <h2 className="button-cap text-white text-base">
+              ROLLING CASH HORIZON
             </h2>
-            <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
-              Client-Lag Adjusted
+            <span className="micro-cap text-white border border-[#3a3a3f] px-2.5 py-0.5 rounded-[32px] bg-black">
+              LAG ADJUSTED
             </span>
           </div>
-          <p className="text-xs text-slate-400 mt-0.5">
-            14-day historical trend combined with upcoming invoices vs committed studio overhead
+          <p className="micro-cap text-[#5a5a5f] mt-1.5">
+            14-day trailing actuals projected forward against client historical payment patterns
           </p>
         </div>
 
-        {/* Horizon Toggle Pills */}
-        <div className="flex items-center gap-2 bg-slate-950/70 p-1 rounded-xl border border-slate-800/80 self-start sm:self-auto">
+        {/* Horizon Toggle Tabs (SpaceX ghost pill group) */}
+        <div className="flex items-center border border-[#3a3a3f] bg-black rounded-[32px] p-1 self-start sm:self-auto">
           {[30, 60, 90].map((days) => (
             <button
               key={days}
               onClick={() => onHorizonChange && onHorizonChange(days)}
-              className={`text-xs font-semibold px-3 py-1.5 rounded-lg transition-all ${
+              className={`px-4 py-1.5 text-xs font-bold uppercase tracking-[1.17px] rounded-[32px] transition-all ${
                 horizonDays === days
-                  ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/50'
+                  ? 'bg-white text-black'
+                  : 'text-[#5a5a5f] hover:text-white'
               }`}
             >
-              {days} Days
+              {days} DAYS
             </button>
           ))}
         </div>
       </div>
 
-      {/* Top Stat Badges */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 py-4">
+      {/* Top Metric Cards */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {/* Starting Cash */}
-        <div className="bg-slate-950/40 border border-slate-800/60 rounded-xl p-3">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Starting Balance</p>
-          <p className="text-base sm:text-lg font-bold text-white mt-0.5">
+        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4">
+          <p className="micro-cap text-[#5a5a5f] font-bold">STARTING BALANCE</p>
+          <p className="text-xl sm:text-2xl font-bold text-white mt-1.5 tabular-nums tracking-[1.2px]">
             {currency}{Number(summary.startingCash || 0).toLocaleString()}
           </p>
-          <span className="text-[10px] text-slate-500 flex items-center gap-1 mt-0.5">
+          <span className="micro-cap text-[#5a5a5f] block mt-1">
             Day 0 (Today)
           </span>
         </div>
 
         {/* Ending Cash Projection */}
-        <div className="bg-slate-950/40 border border-slate-800/60 rounded-xl p-3">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">
-            {horizonDays}d Projected End
+        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4">
+          <p className="micro-cap text-[#5a5a5f] font-bold">
+            {horizonDays}D PROJECTED END
           </p>
-          <p className={`text-base sm:text-lg font-bold mt-0.5 ${
-            (summary.endingCash || 0) >= (summary.startingCash || 0) ? 'text-emerald-400' : 'text-rose-400'
-          }`}>
+          <p className="text-xl sm:text-2xl font-bold text-white mt-1.5 tabular-nums tracking-[1.2px]">
             {currency}{Number(summary.endingCash || 0).toLocaleString()}
           </p>
-          <span className="text-[10px] text-slate-500 flex items-center gap-1 mt-0.5">
-            {summary.netChange >= 0 ? '+' : ''}{currency}{Number(summary.netChange || 0).toLocaleString()} net
+          <span className="micro-cap text-[#5a5a5f] block mt-1">
+            {summary.netChange >= 0 ? '+' : ''}{currency}{Number(summary.netChange || 0).toLocaleString()} net delta
           </span>
         </div>
 
         {/* Lowest Cash Dip */}
-        <div className="bg-slate-950/40 border border-slate-800/60 rounded-xl p-3">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Lowest Cash Point</p>
-          <p className={`text-base sm:text-lg font-bold mt-0.5 ${
-            deficitInfo.isBelowBuffer ? 'text-rose-400' : 'text-amber-400'
+        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4">
+          <p className="micro-cap text-[#5a5a5f] font-bold">LOWEST CASH DIP</p>
+          <p className={`text-xl sm:text-2xl font-bold mt-1.5 tabular-nums tracking-[1.2px] ${
+            deficitInfo.isBelowBuffer ? 'text-[#ef4444]' : 'text-white'
           }`}>
             {currency}{Number(summary.lowestCashPoint || 0).toLocaleString()}
           </p>
-          <span className="text-[10px] text-slate-500 flex items-center gap-1 mt-0.5">
-            Day {summary.lowestCashDay || 0} ({formatShortDate(new Date(Date.now() + (summary.lowestCashDay || 0) * 86400000))})
+          <span className="micro-cap text-[#5a5a5f] block mt-1">
+            Day {summary.lowestCashDay || 0} · {formatShortDate(new Date(Date.now() + (summary.lowestCashDay || 0) * 86400000))}
           </span>
         </div>
 
         {/* Safety Buffer Indicator */}
-        <div className="bg-slate-950/40 border border-slate-800/60 rounded-xl p-3">
-          <p className="text-[11px] font-medium text-slate-400 uppercase tracking-wider">Safe Runway Buffer</p>
-          <div className="flex items-center gap-1.5 mt-0.5">
+        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4">
+          <p className="micro-cap text-[#5a5a5f] font-bold">SAFETY BUFFER</p>
+          <div className="flex items-center gap-2 mt-1.5">
             {deficitInfo.isBelowBuffer ? (
-              <span className="text-xs sm:text-sm font-bold text-rose-400 flex items-center gap-1">
-                <AlertTriangle className="w-3.5 h-3.5 text-rose-400 shrink-0" />
-                -${deficitInfo.maxShortfall} Shortfall
+              <span className="button-cap text-xs text-[#ef4444] flex items-center gap-1.5">
+                <AlertTriangle className="w-3.5 h-3.5 text-[#ef4444] shrink-0" />
+                -${deficitInfo.maxShortfall} DEFICIT
               </span>
             ) : (
-              <span className="text-xs sm:text-sm font-bold text-emerald-400 flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                {currency}{safetyBuffer.toLocaleString()} Maintained
+              <span className="button-cap text-xs text-white flex items-center gap-1.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-white shrink-0" />
+                {currency}{safetyBuffer.toLocaleString()} SECURE
               </span>
             )}
           </div>
-          <span className="text-[10px] text-slate-500 mt-0.5 block truncate">
-            {deficitInfo.isBelowBuffer ? `Dip on Day ${deficitInfo.firstDeficitDay}` : 'Protected against shocks'}
+          <span className="micro-cap text-[#5a5a5f] mt-1 block truncate">
+            {deficitInfo.isBelowBuffer ? `Dip on Day ${deficitInfo.firstDeficitDay}` : 'Reserve protected'}
           </span>
         </div>
       </div>
 
       {/* SVG Forecast Chart Canvas */}
-      <div className="relative w-full overflow-hidden select-none">
+      <div className="relative w-full overflow-hidden select-none bg-black border border-[#3a3a3f] rounded-[4px] p-4">
         <svg
           ref={svgRef}
           viewBox={`0 0 ${width} ${height}`}
@@ -282,30 +272,18 @@ export default function CashForecastChart({
           onMouseLeave={handleMouseLeave}
         >
           <defs>
-            {/* Cash Area Gradient */}
-            <linearGradient id="cashAreaGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#6366f1" stopOpacity="0.3" />
-              <stop offset="60%" stopColor="#6366f1" stopOpacity="0.08" />
-              <stop offset="100%" stopColor="#6366f1" stopOpacity="0.0" />
+            {/* SpaceX Monochrome Area Gradient */}
+            <linearGradient id="spacexCashGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ffffff" stopOpacity="0.12" />
+              <stop offset="60%" stopColor="#ffffff" stopOpacity="0.02" />
+              <stop offset="100%" stopColor="#ffffff" stopOpacity="0.0" />
             </linearGradient>
 
-            {/* Deficit Zone Danger Pattern / Fill */}
-            <linearGradient id="deficitGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.03" />
-              <stop offset="100%" stopColor="#ef4444" stopOpacity="0.18" />
+            {/* Deficit Zone Pattern */}
+            <linearGradient id="spacexDeficitGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#ef4444" stopOpacity="0.08" />
+              <stop offset="100%" stopColor="#ef4444" stopOpacity="0.25" />
             </linearGradient>
-
-            {/* Below Buffer Shading */}
-            <linearGradient id="bufferDipGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.08" />
-              <stop offset="100%" stopColor="#ef4444" stopOpacity="0.15" />
-            </linearGradient>
-
-            {/* Glow Filter for forecast line */}
-            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-              <feGaussianBlur stdDeviation="3" result="blur" />
-              <feComposite in="SourceGraphic" in2="blur" operator="over" />
-            </filter>
           </defs>
 
           {/* Background Grid Lines & Y-Axis Labels */}
@@ -318,18 +296,18 @@ export default function CashForecastChart({
                   y1={y}
                   x2={width - padding.right}
                   y2={y}
-                  stroke="#334155"
+                  stroke="#3a3a3f"
                   strokeWidth="1"
                   strokeDasharray="2 4"
-                  strokeOpacity="0.45"
                 />
                 <text
-                  x={padding.left - 10}
-                  y={y + 4}
-                  fill="#94a3b8"
-                  fontSize="10"
+                  x={padding.left - 12}
+                  y={y + 3.5}
+                  fill="#5a5a5f"
+                  fontSize="9.5"
                   textAnchor="end"
-                  fontFamily="sans-serif"
+                  fontFamily="'D-DIN', sans-serif"
+                  letterSpacing="0.96px"
                 >
                   {val >= 0 ? `${currency}${val.toLocaleString()}` : `-${currency}${Math.abs(val).toLocaleString()}`}
                 </text>
@@ -344,18 +322,9 @@ export default function CashForecastChart({
               y={zeroY}
               width={chartW}
               height={getY(minY) - zeroY}
-              fill="url(#deficitGradient)"
+              fill="url(#spacexDeficitGradient)"
             />
           )}
-
-          {/* Buffer Zone (< $1,500) */}
-          <rect
-            x={padding.left}
-            y={bufferY}
-            width={chartW}
-            height={Math.max(0, zeroY - bufferY)}
-            fill="url(#bufferDipGradient)"
-          />
 
           {/* Safe Cash Buffer Line ($1,500) */}
           <line
@@ -363,35 +332,34 @@ export default function CashForecastChart({
             y1={bufferY}
             x2={width - padding.right}
             y2={bufferY}
-            stroke="#f59e0b"
-            strokeWidth="1.5"
-            strokeDasharray="5 5"
-            strokeOpacity="0.85"
+            stroke="#ffffff"
+            strokeWidth="1"
+            strokeDasharray="4 4"
+            strokeOpacity="0.5"
           />
           {/* Buffer Label Badge */}
-          <g transform={`translate(${width - padding.right - 145}, ${bufferY - 10})`}>
+          <g transform={`translate(${width - padding.right - 150}, ${bufferY - 10})`}>
             <rect
-              width="145"
-              height="18"
-              rx="4"
-              fill="#1e1b4b"
-              stroke="#f59e0b"
-              strokeWidth="0.75"
-              fillOpacity="0.9"
+              width="150"
+              height="16"
+              rx="2"
+              fill="#000000"
+              stroke="#3a3a3f"
+              strokeWidth="1"
             />
             <text
               x="6"
-              y="12"
-              fill="#fbbf24"
-              fontSize="9"
-              fontWeight="bold"
-              fontFamily="sans-serif"
+              y="11"
+              fill="#ffffff"
+              fontSize="8.5"
+              fontFamily="'D-DIN', sans-serif"
+              letterSpacing="0.96px"
             >
-              🛡️ Safe Buffer ({currency}{safetyBuffer.toLocaleString()})
+              BUFFER: {currency}{safetyBuffer.toLocaleString()}
             </text>
           </g>
 
-          {/* Zero Insolvency Line ($0) if present */}
+          {/* Zero Line ($0) if present */}
           {minY < 0 && (
             <>
               <line
@@ -401,17 +369,16 @@ export default function CashForecastChart({
                 y2={zeroY}
                 stroke="#ef4444"
                 strokeWidth="1.5"
-                strokeOpacity="0.8"
               />
               <text
                 x={padding.left + 8}
                 y={zeroY - 4}
-                fill="#f87171"
+                fill="#ef4444"
                 fontSize="9"
-                fontWeight="bold"
-                fontFamily="sans-serif"
+                fontFamily="'D-DIN', sans-serif"
+                letterSpacing="0.96px"
               >
-                🚨 Insolvency ($0 Baseline)
+                Insolvency ($0 baseline)
               </text>
             </>
           )}
@@ -422,48 +389,48 @@ export default function CashForecastChart({
             y1={padding.top}
             x2={todayX}
             y2={padding.top + chartH}
-            stroke="#6366f1"
-            strokeWidth="1.5"
-            strokeDasharray="3 3"
+            stroke="#ffffff"
+            strokeWidth="1"
+            strokeDasharray="2 3"
             strokeOpacity="0.6"
           />
           <text
             x={todayX}
             y={padding.top - 8}
-            fill="#818cf8"
-            fontSize="10"
-            fontWeight="bold"
+            fill="#ffffff"
+            fontSize="9.5"
             textAnchor="middle"
-            fontFamily="sans-serif"
+            fontFamily="'D-DIN', sans-serif"
+            letterSpacing="0.96px"
+            fontWeight="700"
           >
             Today (Day 0)
           </text>
 
           {/* Forecast Area Fill */}
-          <path d={areaPath} fill="url(#cashAreaGradient)" />
+          <path d={areaPath} fill="url(#spacexCashGradient)" />
 
           {/* Historical Actuals Line (-14d to 0) */}
           <path
             d={historicalPath}
             fill="none"
-            stroke="#64748b"
+            stroke="#5a5a5f"
             strokeWidth="2"
-            strokeDasharray="4 3"
+            strokeDasharray="3 3"
             strokeLinecap="round"
           />
 
-          {/* Forward Forecast Curve (0 to horizonDays) */}
+          {/* Forward Forecast Curve (0 to horizonDays) in Pure Stark White */}
           <path
             d={forecastPath}
             fill="none"
-            stroke="#6366f1"
-            strokeWidth="3"
+            stroke="#ffffff"
+            strokeWidth="2.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            filter="url(#glow)"
           />
 
-          {/* Event Dots on Key Days (Inflows, Outflows, Deficit dips) */}
+          {/* Event Dots on Key Days */}
           {dailyPoints.map((pt) => {
             if (pt.day === 0) {
               return (
@@ -472,8 +439,8 @@ export default function CashForecastChart({
                   cx={getX(pt.day)}
                   cy={getY(pt.cashBalance)}
                   r="4.5"
-                  fill="#818cf8"
-                  stroke="#1e1b4b"
+                  fill="#000000"
+                  stroke="#ffffff"
                   strokeWidth="2"
                 />
               );
@@ -486,17 +453,17 @@ export default function CashForecastChart({
             if (hasInflow || hasOutflow || isDip) {
               const x = getX(pt.day);
               const y = getY(pt.cashBalance);
-              const color = isDip ? '#ef4444' : hasInflow ? '#10b981' : '#f43f5e';
+              const color = isDip ? '#ef4444' : '#ffffff';
 
               return (
                 <circle
                   key={pt.day}
                   cx={x}
                   cy={y}
-                  r={isDip ? 5 : 4}
+                  r={isDip ? 5 : 3.5}
                   fill={color}
-                  stroke="#0f172a"
-                  strokeWidth="2"
+                  stroke="#000000"
+                  strokeWidth="1.5"
                   className="transition-all hover:r-6 cursor-pointer"
                 />
               );
@@ -505,8 +472,7 @@ export default function CashForecastChart({
           })}
 
           {/* X-Axis Ticks (Dates / Days) */}
-          {allPoints.map((pt, i) => {
-            // Pick ticks every 7-10 days
+          {allPoints.map((pt) => {
             const interval = horizonDays === 90 ? 15 : horizonDays === 60 ? 10 : 5;
             if (pt.day % interval === 0 || pt.day === 0) {
               const x = getX(pt.day);
@@ -516,30 +482,31 @@ export default function CashForecastChart({
                     x1={x}
                     y1={padding.top + chartH}
                     x2={x}
-                    y2={padding.top + chartH + 5}
-                    stroke="#475569"
+                    y2={padding.top + chartH + 4}
+                    stroke="#3a3a3f"
                     strokeWidth="1"
                   />
                   <text
                     x={x}
-                    y={padding.top + chartH + 18}
-                    fill={pt.day === 0 ? '#a5b4fc' : '#64748b'}
+                    y={padding.top + chartH + 16}
+                    fill={pt.day === 0 ? '#ffffff' : '#5a5a5f'}
                     fontSize="9"
-                    fontWeight={pt.day === 0 ? 'bold' : 'normal'}
+                    fontFamily="'D-DIN', sans-serif"
+                    letterSpacing="0.96px"
+                    fontWeight={pt.day === 0 ? '700' : '400'}
                     textAnchor="middle"
-                    fontFamily="sans-serif"
                   >
-                    {pt.day === 0 ? 'Today' : `D+${pt.day}`}
+                    {pt.day === 0 ? 'TODAY' : `+${pt.day}D`}
                   </text>
                   <text
                     x={x}
-                    y={padding.top + chartH + 30}
-                    fill="#475569"
+                    y={padding.top + chartH + 28}
+                    fill="#3a3a3f"
                     fontSize="8"
+                    fontFamily="'D-DIN', sans-serif"
                     textAnchor="middle"
-                    fontFamily="sans-serif"
                   >
-                    {formatShortDate(pt.date)}
+                    {formatShortDate(pt.date).toUpperCase()}
                   </text>
                 </g>
               );
@@ -555,17 +522,18 @@ export default function CashForecastChart({
                 y1={padding.top}
                 x2={getX(hoveredPoint.day)}
                 y2={padding.top + chartH}
-                stroke="#a5b4fc"
+                stroke="#ffffff"
                 strokeWidth="1"
                 strokeDasharray="2 2"
+                strokeOpacity="0.8"
               />
               <circle
                 cx={getX(hoveredPoint.day)}
                 cy={getY(hoveredPoint.cashBalance)}
-                r="6"
+                r="5"
                 fill="#ffffff"
-                stroke="#6366f1"
-                strokeWidth="3"
+                stroke="#000000"
+                strokeWidth="2"
               />
             </g>
           )}
@@ -583,23 +551,23 @@ export default function CashForecastChart({
               top: '15px',
             }}
           >
-            <div className="bg-slate-900/95 border border-indigo-500/40 rounded-xl p-3.5 shadow-2xl backdrop-blur-md min-w-[210px] text-xs space-y-2">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-1.5 gap-2">
-                <span className="font-bold text-white flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-indigo-400" />
-                  {hoveredPoint.day === 0 ? 'Today' : `Day ${hoveredPoint.day}`} ({formatShortDate(hoveredPoint.date)})
+            <div className="bg-[#0a0a0a] border border-white rounded-[4px] p-4 min-w-[220px] text-xs space-y-2.5">
+              <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-2 gap-2">
+                <span className="button-cap text-white flex items-center gap-1.5">
+                  <Calendar className="w-3.5 h-3.5 text-white" />
+                  {hoveredPoint.day === 0 ? 'Today' : `Day +${hoveredPoint.day}`} ({formatShortDate(hoveredPoint.date)})
                 </span>
                 {hoveredPoint.isBelowBuffer && (
-                  <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-500/20 text-rose-300 border border-rose-500/30">
-                    Deficit Dip
+                  <span className="px-2 py-0.5 rounded-[32px] text-[10px] font-bold uppercase bg-black text-[#ef4444] border border-[#ef4444]">
+                    Deficit
                   </span>
                 )}
               </div>
 
               <div>
-                <p className="text-[10px] uppercase font-semibold text-slate-400">Projected Balance</p>
-                <p className={`text-base font-extrabold ${
-                  hoveredPoint.cashBalance < safetyBuffer ? 'text-rose-400' : 'text-emerald-400'
+                <p className="micro-cap text-[#5a5a5f] font-bold">PROJECTED BALANCE</p>
+                <p className={`text-lg font-bold tabular-nums tracking-[1.2px] ${
+                  hoveredPoint.cashBalance < safetyBuffer ? 'text-[#ef4444]' : 'text-white'
                 }`}>
                   {currency}{Number(hoveredPoint.cashBalance).toLocaleString()}
                 </p>
@@ -607,16 +575,16 @@ export default function CashForecastChart({
 
               {/* Inflow Events breakdown */}
               {hoveredPoint.inflows > 0 && (
-                <div className="border-t border-slate-800/80 pt-1.5 space-y-1">
-                  <div className="flex items-center justify-between text-emerald-400 font-semibold text-[11px]">
+                <div className="border-t border-[#3a3a3f] pt-2 space-y-1">
+                  <div className="flex items-center justify-between text-white font-bold text-[11px] uppercase tracking-[0.96px]">
                     <span className="flex items-center gap-1">
-                      <ArrowDownRight className="w-3 h-3 text-emerald-400" /> Expected Inflow:
+                      <ArrowDownRight className="w-3 h-3 text-white" /> Inflow:
                     </span>
-                    <span>+{currency}{Number(hoveredPoint.inflows).toLocaleString()}</span>
+                    <span className="tabular-nums">+{currency}{Number(hoveredPoint.inflows).toLocaleString()}</span>
                   </div>
                   {hoveredPoint.inflowItems?.map((item, idx) => (
-                    <p key={idx} className="text-[10px] text-slate-300 pl-4 truncate">
-                      • {item.client_name}: +{currency}{Number(item.amount).toLocaleString()}
+                    <p key={idx} className="text-[11px] text-[#f0f0fa] pl-3 truncate tracking-[0.32px]">
+                      {item.client_name}: +{currency}{Number(item.amount).toLocaleString()}
                     </p>
                   ))}
                 </div>
@@ -624,16 +592,16 @@ export default function CashForecastChart({
 
               {/* Outflow Events breakdown */}
               {hoveredPoint.outflows > 0 && (
-                <div className="border-t border-slate-800/80 pt-1.5 space-y-1">
-                  <div className="flex items-center justify-between text-rose-400 font-semibold text-[11px]">
+                <div className="border-t border-[#3a3a3f] pt-2 space-y-1">
+                  <div className="flex items-center justify-between text-[#f59e0b] font-bold text-[11px] uppercase tracking-[0.96px]">
                     <span className="flex items-center gap-1">
-                      <ArrowUpRight className="w-3 h-3 text-rose-400" /> Scheduled Outflow:
+                      <ArrowUpRight className="w-3 h-3 text-[#f59e0b]" /> Outflow:
                     </span>
-                    <span>-{currency}{Number(hoveredPoint.outflows).toLocaleString()}</span>
+                    <span className="tabular-nums">-{currency}{Number(hoveredPoint.outflows).toLocaleString()}</span>
                   </div>
                   {hoveredPoint.outflowItems?.map((item, idx) => (
-                    <p key={idx} className="text-[10px] text-slate-300 pl-4 truncate">
-                      • {item.name}: -{currency}{Number(item.amount).toLocaleString()}
+                    <p key={idx} className="text-[11px] text-[#5a5a5f] pl-3 truncate tracking-[0.32px]">
+                      {item.name}: -{currency}{Number(item.amount).toLocaleString()}
                     </p>
                   ))}
                 </div>
@@ -644,32 +612,28 @@ export default function CashForecastChart({
       </div>
 
       {/* Legend & Guide Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400">
-        <div className="flex items-center flex-wrap gap-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-[#3a3a3f] micro-cap text-[#5a5a5f]">
+        <div className="flex items-center flex-wrap gap-5">
           <span className="flex items-center gap-1.5">
-            <span className="w-3 h-0.5 bg-slate-400 border-b border-dashed border-slate-400 inline-block"></span>
-            Past 14d Actuals
+            <span className="w-3 h-0.5 bg-[#5a5a5f] border-b border-dashed border-[#5a5a5f] inline-block" />
+            14d Trailing Actuals
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-3 h-0.5 bg-indigo-500 inline-block"></span>
-            Forecast Trajectory
+          <span className="flex items-center gap-1.5 text-white">
+            <span className="w-3 h-0.5 bg-white inline-block" />
+            Cash Horizon Trajectory
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block"></span>
-            Invoice Inflow
+          <span className="flex items-center gap-1.5 text-white">
+            <span className="w-2 h-2 rounded-full bg-white inline-block" />
+            Invoice Inflows
           </span>
-          <span className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-500 inline-block"></span>
-            Scheduled Outflow
-          </span>
-          <span className="flex items-center gap-1.5 text-amber-400">
-            <span className="w-3 h-0.5 bg-amber-500 border-b border-dashed border-amber-500 inline-block"></span>
-            Safety Buffer (${safetyBuffer.toLocaleString()})
+          <span className="flex items-center gap-1.5 text-[#5a5a5f]">
+            <span className="w-3 h-0.5 bg-white border-b border-dashed border-white inline-block" />
+            Safety Buffer ({currency}{safetyBuffer.toLocaleString()})
           </span>
         </div>
 
-        <div className="text-[10px] text-slate-500 italic">
-          💡 Hover over curve to inspect daily cash breakdowns
+        <div className="text-[11px] text-[#5a5a5f]">
+          Hover over curve for daily inspection
         </div>
       </div>
     </div>

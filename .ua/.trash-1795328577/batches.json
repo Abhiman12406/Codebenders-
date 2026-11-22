@@ -1,0 +1,1213 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "louvain",
+  "totalFiles": 87,
+  "totalBatches": 9,
+  "exportsByPath": {
+    "postcss.config.js": [],
+    "scratch/download_chunks.py": [],
+    "scratch/extract_hero_comp.py": [],
+    "scratch/extract_ruler.py": [],
+    "scratch/find_base_doc.py": [],
+    "scratch/find_hero_ruler.py": [],
+    "scratch/find_herowordmark.py": [],
+    "scratch/find_ishero.py": [],
+    "scratch/find_ruler.py": [],
+    "scratch/find_wordmark_init.py": [],
+    "scratch/hero_wordmark_component.js": [],
+    "scratch/inspect_artcraft.py": [],
+    "scratch/parse_artcraft_html.py": [],
+    "scratch/print_hero_jsx.py": [],
+    "scratch/query_scrollbar.py": [],
+    "scratch/ruler_chunk.js": [],
+    "scratch/ruler_raw.js": [],
+    "server/engine/forecast.js": [
+      "DEFAULT_SCENARIOS",
+      "calculateCashForecast"
+    ],
+    "server/engine/nlp.js": [
+      "parseInvoicePrompt"
+    ],
+    "server/index.js": [],
+    "server/routes/ai.js": [],
+    "server/routes/forecast.js": [],
+    "server/routes/invoices.js": [],
+    "server/routes/outflows.js": [],
+    "server/routes/portal.js": [],
+    "server/routes/profile.js": [],
+    "server/routes/triage.js": [],
+    "server/store.js": [
+      "store"
+    ],
+    "server/test-api.js": [],
+    "src/App.jsx": [
+      "App"
+    ],
+    "src/components/AgingDashboard.jsx": [
+      "AgingDashboard"
+    ],
+    "src/components/ArtCraftPrinciples.jsx": [
+      "ArtCraftPrinciples"
+    ],
+    "src/components/AuthModal.jsx": [
+      "AuthModal"
+    ],
+    "src/components/BadDayTriageModal.jsx": [
+      "BadDayTriageModal"
+    ],
+    "src/components/CashForecastChart.jsx": [
+      "CashForecastChart"
+    ],
+    "src/components/ClientPortalModal.jsx": [
+      "ClientPortalModal"
+    ],
+    "src/components/DebtorCard.jsx": [
+      "DebtorCard"
+    ],
+    "src/components/FeedbackCarousel.jsx": [
+      "FeedbackCarousel"
+    ],
+    "src/components/HeroWordmark.jsx": [
+      "HeroWordmark"
+    ],
+    "src/components/HorizontalAccordions.jsx": [
+      "HorizontalAccordions"
+    ],
+    "src/components/InfiniteMarquee.jsx": [
+      "InfiniteMarquee"
+    ],
+    "src/components/InvoiceModal.jsx": [
+      "InvoiceModal"
+    ],
+    "src/components/Navbar.jsx": [
+      "Navbar"
+    ],
+    "src/components/OrbitalGalaxyBackground.jsx": [
+      "OrbitalGalaxyBackground"
+    ],
+    "src/components/OutflowsManager.jsx": [
+      "OutflowsManager"
+    ],
+    "src/components/QuickInputBar.jsx": [
+      "QuickInputBar"
+    ],
+    "src/components/RightScrollRuler.jsx": [
+      "RightScrollRuler"
+    ],
+    "src/components/ScrubTextReveal.jsx": [
+      "ScrubTextReveal"
+    ],
+    "src/components/WhatIfSimulator.jsx": [
+      "WhatIfSimulator"
+    ],
+    "src/components/WhatsAppModal.jsx": [
+      "WhatsAppModal"
+    ],
+    "src/data/mockDesignerData.js": [
+      "createMockDesignerData",
+      "mockDesignerData"
+    ],
+    "src/lib/api.js": [
+      "getHealth",
+      "getInvoices",
+      "getInvoice",
+      "createInvoice",
+      "updateInvoice",
+      "deleteInvoice",
+      "payInvoice",
+      "getForecast",
+      "getTriage",
+      "getBills",
+      "createBill",
+      "updateBill",
+      "deleteBill",
+      "getProfile",
+      "updateProfile",
+      "parseNlp"
+    ],
+    "src/lib/dataService.js": [
+      "DEFAULT_PROFILE",
+      "getActiveUser",
+      "getProfile",
+      "updateProfile",
+      "getClients",
+      "saveClient",
+      "getInvoices",
+      "createInvoice",
+      "updateInvoice",
+      "deleteInvoice",
+      "markPaid",
+      "getBills",
+      "saveBill",
+      "deleteBill",
+      "getFollowUps",
+      "logFollowUp",
+      "seedInitialData",
+      "resetDemoData",
+      "dataService"
+    ],
+    "src/lib/dateUtils.js": [
+      "parseLocalDate",
+      "getDaysDiff"
+    ],
+    "src/lib/forecastEngine.js": [
+      "DEFAULT_SCENARIOS",
+      "formatDateISO",
+      "formatShortDate",
+      "calculateCashForecast"
+    ],
+    "src/lib/nlpParser.js": [
+      "parseInvoiceText"
+    ],
+    "src/lib/supabaseClient.js": [
+      "isSupabaseConfigured",
+      "getSupabaseClient",
+      "supabase"
+    ],
+    "src/main.jsx": [],
+    "tailwind.config.js": [],
+    "test-dataService.js": [],
+    "test-mockData.js": [],
+    "test_e2e_phase3.js": [],
+    "test_forecastEngine.js": [],
+    "vite.config.js": []
+  },
+  "batches": [
+    {
+      "batchIndex": 1,
+      "files": [
+        {
+          "path": "src/App.jsx",
+          "language": "javascript",
+          "sizeLines": 915,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ArtCraftPrinciples.jsx",
+          "language": "javascript",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/BadDayTriageModal.jsx",
+          "language": "javascript",
+          "sizeLines": 186,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/FeedbackCarousel.jsx",
+          "language": "javascript",
+          "sizeLines": 132,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/HorizontalAccordions.jsx",
+          "language": "javascript",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/InfiniteMarquee.jsx",
+          "language": "javascript",
+          "sizeLines": 51,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/InvoiceModal.jsx",
+          "language": "javascript",
+          "sizeLines": 417,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/Navbar.jsx",
+          "language": "javascript",
+          "sizeLines": 182,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/OutflowsManager.jsx",
+          "language": "javascript",
+          "sizeLines": 171,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/QuickInputBar.jsx",
+          "language": "javascript",
+          "sizeLines": 163,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ScrubTextReveal.jsx",
+          "language": "javascript",
+          "sizeLines": 65,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/WhatIfSimulator.jsx",
+          "language": "javascript",
+          "sizeLines": 307,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/nlpParser.js",
+          "language": "javascript",
+          "sizeLines": 73,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/main.jsx",
+          "language": "javascript",
+          "sizeLines": 10,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/App.jsx": [
+          "src/components/AgingDashboard.jsx",
+          "src/components/ArtCraftPrinciples.jsx",
+          "src/components/AuthModal.jsx",
+          "src/components/BadDayTriageModal.jsx",
+          "src/components/CashForecastChart.jsx",
+          "src/components/ClientPortalModal.jsx",
+          "src/components/FeedbackCarousel.jsx",
+          "src/components/HorizontalAccordions.jsx",
+          "src/components/InfiniteMarquee.jsx",
+          "src/components/InvoiceModal.jsx",
+          "src/components/Navbar.jsx",
+          "src/components/OutflowsManager.jsx",
+          "src/components/QuickInputBar.jsx",
+          "src/components/ScrubTextReveal.jsx",
+          "src/components/WhatIfSimulator.jsx",
+          "src/components/WhatsAppModal.jsx",
+          "src/data/mockDesignerData.js",
+          "src/lib/api.js",
+          "src/lib/dataService.js",
+          "src/lib/forecastEngine.js",
+          "src/lib/supabaseClient.js"
+        ],
+        "src/components/ArtCraftPrinciples.jsx": [],
+        "src/components/BadDayTriageModal.jsx": [],
+        "src/components/FeedbackCarousel.jsx": [],
+        "src/components/HorizontalAccordions.jsx": [],
+        "src/components/InfiniteMarquee.jsx": [],
+        "src/components/InvoiceModal.jsx": [],
+        "src/components/Navbar.jsx": [],
+        "src/components/OutflowsManager.jsx": [],
+        "src/components/QuickInputBar.jsx": [
+          "src/lib/nlpParser.js"
+        ],
+        "src/components/ScrubTextReveal.jsx": [],
+        "src/components/WhatIfSimulator.jsx": [],
+        "src/lib/nlpParser.js": [],
+        "src/main.jsx": [
+          "src/App.jsx",
+          "src/index.css"
+        ]
+      },
+      "neighborMap": {
+        "src/App.jsx": [
+          {
+            "path": "src/components/AgingDashboard.jsx",
+            "batchIndex": 4,
+            "symbols": [
+              "AgingDashboard"
+            ]
+          },
+          {
+            "path": "src/components/AuthModal.jsx",
+            "batchIndex": 5,
+            "symbols": [
+              "AuthModal"
+            ]
+          },
+          {
+            "path": "src/components/CashForecastChart.jsx",
+            "batchIndex": 3,
+            "symbols": [
+              "CashForecastChart"
+            ]
+          },
+          {
+            "path": "src/components/ClientPortalModal.jsx",
+            "batchIndex": 4,
+            "symbols": [
+              "ClientPortalModal"
+            ]
+          },
+          {
+            "path": "src/components/WhatsAppModal.jsx",
+            "batchIndex": 4,
+            "symbols": [
+              "WhatsAppModal"
+            ]
+          },
+          {
+            "path": "src/data/mockDesignerData.js",
+            "batchIndex": 3,
+            "symbols": [
+              "createMockDesignerData",
+              "mockDesignerData"
+            ]
+          },
+          {
+            "path": "src/lib/api.js",
+            "batchIndex": 5,
+            "symbols": [
+              "getHealth",
+              "getInvoices",
+              "getInvoice",
+              "createInvoice",
+              "updateInvoice",
+              "deleteInvoice",
+              "payInvoice",
+              "getForecast",
+              "getTriage",
+              "getBills",
+              "createBill",
+              "updateBill",
+              "deleteBill",
+              "getProfile",
+              "updateProfile",
+              "parseNlp"
+            ]
+          },
+          {
+            "path": "src/lib/dataService.js",
+            "batchIndex": 5,
+            "symbols": [
+              "DEFAULT_PROFILE",
+              "getActiveUser",
+              "getProfile",
+              "updateProfile",
+              "getClients",
+              "saveClient",
+              "getInvoices",
+              "createInvoice",
+              "updateInvoice",
+              "deleteInvoice",
+              "markPaid",
+              "getBills",
+              "saveBill",
+              "deleteBill",
+              "getFollowUps",
+              "logFollowUp",
+              "seedInitialData",
+              "resetDemoData",
+              "dataService"
+            ]
+          },
+          {
+            "path": "src/lib/forecastEngine.js",
+            "batchIndex": 3,
+            "symbols": [
+              "DEFAULT_SCENARIOS",
+              "formatDateISO",
+              "formatShortDate",
+              "calculateCashForecast"
+            ]
+          },
+          {
+            "path": "src/lib/supabaseClient.js",
+            "batchIndex": 5,
+            "symbols": [
+              "isSupabaseConfigured",
+              "getSupabaseClient",
+              "supabase"
+            ]
+          }
+        ],
+        "src/main.jsx": [
+          {
+            "path": "src/index.css",
+            "batchIndex": 9,
+            "symbols": []
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 2,
+      "files": [
+        {
+          "path": "server/engine/forecast.js",
+          "language": "javascript",
+          "sizeLines": 228,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/engine/nlp.js",
+          "language": "javascript",
+          "sizeLines": 120,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/index.js",
+          "language": "javascript",
+          "sizeLines": 41,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/ai.js",
+          "language": "javascript",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/forecast.js",
+          "language": "javascript",
+          "sizeLines": 32,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/invoices.js",
+          "language": "javascript",
+          "sizeLines": 44,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/outflows.js",
+          "language": "javascript",
+          "sizeLines": 40,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/portal.js",
+          "language": "javascript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/profile.js",
+          "language": "javascript",
+          "sizeLines": 22,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/routes/triage.js",
+          "language": "javascript",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/store.js",
+          "language": "javascript",
+          "sizeLines": 506,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/test-api.js",
+          "language": "javascript",
+          "sizeLines": 110,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "server/engine/forecast.js": [],
+        "server/engine/nlp.js": [],
+        "server/index.js": [
+          "server/routes/ai.js",
+          "server/routes/forecast.js",
+          "server/routes/invoices.js",
+          "server/routes/outflows.js",
+          "server/routes/portal.js",
+          "server/routes/profile.js",
+          "server/routes/triage.js"
+        ],
+        "server/routes/ai.js": [
+          "server/engine/nlp.js",
+          "server/store.js"
+        ],
+        "server/routes/forecast.js": [
+          "server/engine/forecast.js",
+          "server/store.js"
+        ],
+        "server/routes/invoices.js": [
+          "server/store.js"
+        ],
+        "server/routes/outflows.js": [
+          "server/store.js"
+        ],
+        "server/routes/portal.js": [
+          "server/store.js"
+        ],
+        "server/routes/profile.js": [
+          "server/store.js"
+        ],
+        "server/routes/triage.js": [
+          "server/store.js"
+        ],
+        "server/store.js": [],
+        "server/test-api.js": [
+          "server/index.js"
+        ]
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 3,
+      "files": [
+        {
+          "path": "src/components/CashForecastChart.jsx",
+          "language": "javascript",
+          "sizeLines": 641,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/data/mockDesignerData.js",
+          "language": "javascript",
+          "sizeLines": 301,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/forecastEngine.js",
+          "language": "javascript",
+          "sizeLines": 357,
+          "fileCategory": "code"
+        },
+        {
+          "path": "test-mockData.js",
+          "language": "javascript",
+          "sizeLines": 94,
+          "fileCategory": "code"
+        },
+        {
+          "path": "test_e2e_phase3.js",
+          "language": "javascript",
+          "sizeLines": 88,
+          "fileCategory": "code"
+        },
+        {
+          "path": "test_forecastEngine.js",
+          "language": "javascript",
+          "sizeLines": 52,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/CashForecastChart.jsx": [
+          "src/lib/forecastEngine.js"
+        ],
+        "src/data/mockDesignerData.js": [],
+        "src/lib/forecastEngine.js": [
+          "src/lib/dateUtils.js"
+        ],
+        "test-mockData.js": [
+          "src/data/mockDesignerData.js",
+          "src/lib/dataService.js"
+        ],
+        "test_e2e_phase3.js": [
+          "src/data/mockDesignerData.js",
+          "src/lib/forecastEngine.js"
+        ],
+        "test_forecastEngine.js": [
+          "src/data/mockDesignerData.js",
+          "src/lib/forecastEngine.js"
+        ]
+      },
+      "neighborMap": {
+        "src/components/CashForecastChart.jsx": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/data/mockDesignerData.js": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/lib/forecastEngine.js": [
+          {
+            "path": "src/lib/dateUtils.js",
+            "batchIndex": 4,
+            "symbols": [
+              "parseLocalDate",
+              "getDaysDiff"
+            ]
+          },
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "test-mockData.js": [
+          {
+            "path": "src/lib/dataService.js",
+            "batchIndex": 5,
+            "symbols": [
+              "DEFAULT_PROFILE",
+              "getActiveUser",
+              "getProfile",
+              "updateProfile",
+              "getClients",
+              "saveClient",
+              "getInvoices",
+              "createInvoice",
+              "updateInvoice",
+              "deleteInvoice",
+              "markPaid",
+              "getBills",
+              "saveBill",
+              "deleteBill",
+              "getFollowUps",
+              "logFollowUp",
+              "seedInitialData",
+              "resetDemoData",
+              "dataService"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 4,
+      "files": [
+        {
+          "path": "src/components/AgingDashboard.jsx",
+          "language": "javascript",
+          "sizeLines": 347,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/ClientPortalModal.jsx",
+          "language": "javascript",
+          "sizeLines": 227,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/DebtorCard.jsx",
+          "language": "javascript",
+          "sizeLines": 235,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/WhatsAppModal.jsx",
+          "language": "javascript",
+          "sizeLines": 251,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/dateUtils.js",
+          "language": "javascript",
+          "sizeLines": 42,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/AgingDashboard.jsx": [
+          "src/components/DebtorCard.jsx",
+          "src/lib/dateUtils.js"
+        ],
+        "src/components/ClientPortalModal.jsx": [
+          "src/lib/dateUtils.js"
+        ],
+        "src/components/DebtorCard.jsx": [
+          "src/lib/dateUtils.js"
+        ],
+        "src/components/WhatsAppModal.jsx": [
+          "src/lib/dateUtils.js"
+        ],
+        "src/lib/dateUtils.js": []
+      },
+      "neighborMap": {
+        "src/components/AgingDashboard.jsx": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/components/ClientPortalModal.jsx": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/components/WhatsAppModal.jsx": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/lib/dateUtils.js": [
+          {
+            "path": "src/lib/forecastEngine.js",
+            "batchIndex": 3,
+            "symbols": [
+              "DEFAULT_SCENARIOS",
+              "formatDateISO",
+              "formatShortDate",
+              "calculateCashForecast"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 5,
+      "files": [
+        {
+          "path": "src/components/AuthModal.jsx",
+          "language": "javascript",
+          "sizeLines": 152,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/api.js",
+          "language": "javascript",
+          "sizeLines": 43,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/dataService.js",
+          "language": "javascript",
+          "sizeLines": 567,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/lib/supabaseClient.js",
+          "language": "javascript",
+          "sizeLines": 47,
+          "fileCategory": "code"
+        },
+        {
+          "path": "test-dataService.js",
+          "language": "javascript",
+          "sizeLines": 137,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/AuthModal.jsx": [
+          "src/lib/supabaseClient.js"
+        ],
+        "src/lib/api.js": [],
+        "src/lib/dataService.js": [
+          "src/lib/api.js",
+          "src/lib/supabaseClient.js"
+        ],
+        "src/lib/supabaseClient.js": [],
+        "test-dataService.js": [
+          "src/lib/dataService.js",
+          "src/lib/supabaseClient.js"
+        ]
+      },
+      "neighborMap": {
+        "src/components/AuthModal.jsx": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/lib/api.js": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ],
+        "src/lib/dataService.js": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          },
+          {
+            "path": "test-mockData.js",
+            "batchIndex": 3,
+            "symbols": []
+          }
+        ],
+        "src/lib/supabaseClient.js": [
+          {
+            "path": "src/App.jsx",
+            "batchIndex": 1,
+            "symbols": [
+              "App"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "batchIndex": 6,
+      "files": [
+        {
+          "path": ".codebenders/scratch/body-array.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".codebenders/scratch/body-negamount-named.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        },
+        {
+          "path": ".codebenders/scratch/body-negative.json",
+          "language": "json",
+          "sizeLines": 0,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".codebenders/scratch/body-array.json": [],
+        ".codebenders/scratch/body-negamount-named.json": [],
+        ".codebenders/scratch/body-negative.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 7,
+      "files": [
+        {
+          "path": ".env.example",
+          "language": "config",
+          "sizeLines": 8,
+          "fileCategory": "config"
+        },
+        {
+          "path": "AGENTS.md",
+          "language": "markdown",
+          "sizeLines": 65,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "DESIGN-spacex.md",
+          "language": "markdown",
+          "sizeLines": 363,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "DESIGN-stripe.md",
+          "language": "markdown",
+          "sizeLines": 487,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "EXAMPLES.md",
+          "language": "markdown",
+          "sizeLines": 522,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "README.md",
+          "language": "markdown",
+          "sizeLines": 147,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "index.html",
+          "language": "html",
+          "sizeLines": 16,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "package.json",
+          "language": "json",
+          "sizeLines": 31,
+          "fileCategory": "config"
+        },
+        {
+          "path": "supabase_schema.sql",
+          "language": "sql",
+          "sizeLines": 88,
+          "fileCategory": "data"
+        }
+      ],
+      "batchImportData": {
+        ".env.example": [],
+        "AGENTS.md": [],
+        "DESIGN-spacex.md": [],
+        "DESIGN-stripe.md": [],
+        "EXAMPLES.md": [],
+        "README.md": [],
+        "index.html": [],
+        "package.json": [],
+        "supabase_schema.sql": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 8,
+      "files": [
+        {
+          "path": ".codebenders/state.json",
+          "language": "json",
+          "sizeLines": 6,
+          "fileCategory": "config"
+        },
+        {
+          "path": "docs/ideas/studioflow-operations-cockpit.md",
+          "language": "markdown",
+          "sizeLines": 66,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/intent/one-person-backoffice.md",
+          "language": "markdown",
+          "sizeLines": 23,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/spec/one-person-backoffice-fullstack-spec.md",
+          "language": "markdown",
+          "sizeLines": 268,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "docs/spec/one-person-backoffice-spec.md",
+          "language": "markdown",
+          "sizeLines": 245,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "postcss.config.js",
+          "language": "javascript",
+          "sizeLines": 6,
+          "fileCategory": "code"
+        },
+        {
+          "path": "references/index.html",
+          "language": "html",
+          "sizeLines": 20,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "scratch/artcraft.html",
+          "language": "html",
+          "sizeLines": 0,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "scratch/download_chunks.py",
+          "language": "python",
+          "sizeLines": 23,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/extract_hero_comp.py",
+          "language": "python",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/extract_ruler.py",
+          "language": "python",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_base_doc.py",
+          "language": "python",
+          "sizeLines": 19,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_hero_ruler.py",
+          "language": "python",
+          "sizeLines": 16,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_herowordmark.py",
+          "language": "python",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_ishero.py",
+          "language": "python",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_ruler.py",
+          "language": "python",
+          "sizeLines": 18,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/find_wordmark_init.py",
+          "language": "python",
+          "sizeLines": 12,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/hero_wordmark_component.js",
+          "language": "javascript",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/inspect_artcraft.py",
+          "language": "python",
+          "sizeLines": 28,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/parse_artcraft_html.py",
+          "language": "python",
+          "sizeLines": 17,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/print_hero_jsx.py",
+          "language": "python",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/query_scrollbar.py",
+          "language": "python",
+          "sizeLines": 9,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/ruler_chunk.js",
+          "language": "javascript",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "scratch/ruler_raw.js",
+          "language": "javascript",
+          "sizeLines": 0,
+          "fileCategory": "code"
+        },
+        {
+          "path": "server/data/db.json",
+          "language": "json",
+          "sizeLines": 749,
+          "fileCategory": "config"
+        }
+      ],
+      "batchImportData": {
+        ".codebenders/state.json": [],
+        "docs/ideas/studioflow-operations-cockpit.md": [],
+        "docs/intent/one-person-backoffice.md": [],
+        "docs/spec/one-person-backoffice-fullstack-spec.md": [],
+        "docs/spec/one-person-backoffice-spec.md": [],
+        "postcss.config.js": [],
+        "references/index.html": [],
+        "scratch/artcraft.html": [],
+        "scratch/download_chunks.py": [],
+        "scratch/extract_hero_comp.py": [],
+        "scratch/extract_ruler.py": [],
+        "scratch/find_base_doc.py": [],
+        "scratch/find_hero_ruler.py": [],
+        "scratch/find_herowordmark.py": [],
+        "scratch/find_ishero.py": [],
+        "scratch/find_ruler.py": [],
+        "scratch/find_wordmark_init.py": [],
+        "scratch/hero_wordmark_component.js": [],
+        "scratch/inspect_artcraft.py": [],
+        "scratch/parse_artcraft_html.py": [],
+        "scratch/print_hero_jsx.py": [],
+        "scratch/query_scrollbar.py": [],
+        "scratch/ruler_chunk.js": [],
+        "scratch/ruler_raw.js": [],
+        "server/data/db.json": []
+      },
+      "neighborMap": {}
+    },
+    {
+      "batchIndex": 9,
+      "files": [
+        {
+          "path": "src/components/HeroWordmark.jsx",
+          "language": "javascript",
+          "sizeLines": 299,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/OrbitalGalaxyBackground.jsx",
+          "language": "javascript",
+          "sizeLines": 311,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/components/RightScrollRuler.jsx",
+          "language": "javascript",
+          "sizeLines": 398,
+          "fileCategory": "code"
+        },
+        {
+          "path": "src/index.css",
+          "language": "css",
+          "sizeLines": 313,
+          "fileCategory": "markup"
+        },
+        {
+          "path": "tailwind.config.js",
+          "language": "javascript",
+          "sizeLines": 93,
+          "fileCategory": "code"
+        },
+        {
+          "path": "tasks/plan.md",
+          "language": "markdown",
+          "sizeLines": 98,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "tasks/todo.md",
+          "language": "markdown",
+          "sizeLines": 80,
+          "fileCategory": "docs"
+        },
+        {
+          "path": "vite.config.js",
+          "language": "javascript",
+          "sizeLines": 15,
+          "fileCategory": "code"
+        }
+      ],
+      "batchImportData": {
+        "src/components/HeroWordmark.jsx": [],
+        "src/components/OrbitalGalaxyBackground.jsx": [],
+        "src/components/RightScrollRuler.jsx": [],
+        "src/index.css": [],
+        "tailwind.config.js": [],
+        "tasks/plan.md": [],
+        "tasks/todo.md": [],
+        "vite.config.js": []
+      },
+      "neighborMap": {
+        "src/index.css": [
+          {
+            "path": "src/main.jsx",
+            "batchIndex": 1,
+            "symbols": []
+          }
+        ]
+      }
+    }
+  ]
+}

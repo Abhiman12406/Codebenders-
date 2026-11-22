@@ -1,0 +1,182 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": ".codebenders/state.json",
+      "language": "json",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "docs/ideas/studioflow-operations-cockpit.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/intent/one-person-backoffice.md",
+      "language": "markdown",
+      "sizeLines": 23,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/spec/one-person-backoffice-fullstack-spec.md",
+      "language": "markdown",
+      "sizeLines": 268,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "docs/spec/one-person-backoffice-spec.md",
+      "language": "markdown",
+      "sizeLines": 245,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "sizeLines": 6,
+      "fileCategory": "code"
+    },
+    {
+      "path": "references/index.html",
+      "language": "html",
+      "sizeLines": 20,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "scratch/artcraft.html",
+      "language": "html",
+      "sizeLines": 0,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "scratch/download_chunks.py",
+      "language": "python",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/extract_hero_comp.py",
+      "language": "python",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/extract_ruler.py",
+      "language": "python",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_base_doc.py",
+      "language": "python",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_hero_ruler.py",
+      "language": "python",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_herowordmark.py",
+      "language": "python",
+      "sizeLines": 15,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_ishero.py",
+      "language": "python",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_ruler.py",
+      "language": "python",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/find_wordmark_init.py",
+      "language": "python",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/hero_wordmark_component.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/inspect_artcraft.py",
+      "language": "python",
+      "sizeLines": 28,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/parse_artcraft_html.py",
+      "language": "python",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/print_hero_jsx.py",
+      "language": "python",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/query_scrollbar.py",
+      "language": "python",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/ruler_chunk.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "scratch/ruler_raw.js",
+      "language": "javascript",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/data/db.json",
+      "language": "json",
+      "sizeLines": 749,
+      "fileCategory": "config"
+    }
+  ],
+  "batchImportData": {
+    ".codebenders/state.json": [],
+    "docs/ideas/studioflow-operations-cockpit.md": [],
+    "docs/intent/one-person-backoffice.md": [],
+    "docs/spec/one-person-backoffice-fullstack-spec.md": [],
+    "docs/spec/one-person-backoffice-spec.md": [],
+    "postcss.config.js": [],
+    "references/index.html": [],
+    "scratch/artcraft.html": [],
+    "scratch/download_chunks.py": [],
+    "scratch/extract_hero_comp.py": [],
+    "scratch/extract_ruler.py": [],
+    "scratch/find_base_doc.py": [],
+    "scratch/find_hero_ruler.py": [],
+    "scratch/find_herowordmark.py": [],
+    "scratch/find_ishero.py": [],
+    "scratch/find_ruler.py": [],
+    "scratch/find_wordmark_init.py": [],
+    "scratch/hero_wordmark_component.js": [],
+    "scratch/inspect_artcraft.py": [],
+    "scratch/parse_artcraft_html.py": [],
+    "scratch/print_hero_jsx.py": [],
+    "scratch/query_scrollbar.py": [],
+    "scratch/ruler_chunk.js": [],
+    "scratch/ruler_raw.js": [],
+    "server/data/db.json": []
+  }
+}

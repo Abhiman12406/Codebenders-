@@ -1,0 +1,795 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 8,
+  "filesSkipped": [
+    "index.html"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 8,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 8
+    }
+  },
+  "results": [
+    {
+      "path": ".env.example",
+      "language": "config",
+      "fileCategory": "config",
+      "totalLines": 8,
+      "nonEmptyLines": 8,
+      "definitions": [
+        {
+          "name": "VITE_SUPABASE_URL",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 7,
+          "endLine": 7
+        },
+        {
+          "name": "VITE_SUPABASE_ANON_KEY",
+          "kind": "variable",
+          "fields": [],
+          "startLine": 8,
+          "endLine": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 2
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 65,
+      "nonEmptyLines": 44,
+      "sections": [
+        {
+          "heading": "CLAUDE.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Think Before Coding",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "2. Simplicity First",
+          "level": 2,
+          "line": 17
+        },
+        {
+          "heading": "3. Surgical Changes",
+          "level": 2,
+          "line": 29
+        },
+        {
+          "heading": "4. Goal-Driven Execution",
+          "level": 2,
+          "line": 45
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "DESIGN-spacex.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 363,
+      "nonEmptyLines": 297,
+      "sections": [
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 151
+        },
+        {
+          "heading": "Colors",
+          "level": 2,
+          "line": 168
+        },
+        {
+          "heading": "Brand & Accent",
+          "level": 3,
+          "line": 172
+        },
+        {
+          "heading": "Surface",
+          "level": 3,
+          "line": 175
+        },
+        {
+          "heading": "Text",
+          "level": 3,
+          "line": 183
+        },
+        {
+          "heading": "Link",
+          "level": 3,
+          "line": 189
+        },
+        {
+          "heading": "Typography",
+          "level": 2,
+          "line": 193
+        },
+        {
+          "heading": "Font Family",
+          "level": 3,
+          "line": 195
+        },
+        {
+          "heading": "Hierarchy",
+          "level": 3,
+          "line": 203
+        },
+        {
+          "heading": "Principles",
+          "level": 3,
+          "line": 216
+        },
+        {
+          "heading": "Note on Font Substitutes",
+          "level": 3,
+          "line": 222
+        },
+        {
+          "heading": "Layout",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "Spacing System",
+          "level": 3,
+          "line": 227
+        },
+        {
+          "heading": "Grid & Container",
+          "level": 3,
+          "line": 232
+        },
+        {
+          "heading": "Whitespace Philosophy",
+          "level": 3,
+          "line": 237
+        },
+        {
+          "heading": "Elevation & Depth",
+          "level": 2,
+          "line": 240
+        },
+        {
+          "heading": "Decorative Depth",
+          "level": 3,
+          "line": 249
+        },
+        {
+          "heading": "Shapes",
+          "level": 2,
+          "line": 252
+        },
+        {
+          "heading": "Border Radius Scale",
+          "level": 3,
+          "line": 254
+        },
+        {
+          "heading": "Photography Geometry",
+          "level": 3,
+          "line": 264
+        },
+        {
+          "heading": "Components",
+          "level": 2,
+          "line": 267
+        },
+        {
+          "heading": "Buttons",
+          "level": 3,
+          "line": 269
+        },
+        {
+          "heading": "Cards & Containers",
+          "level": 3,
+          "line": 280
+        },
+        {
+          "heading": "Inputs & Forms",
+          "level": 3,
+          "line": 288
+        },
+        {
+          "heading": "Navigation",
+          "level": 3,
+          "line": 293
+        },
+        {
+          "heading": "Signature Components",
+          "level": 3,
+          "line": 298
+        },
+        {
+          "heading": "Do's and Don'ts",
+          "level": 2,
+          "line": 313
+        },
+        {
+          "heading": "Do",
+          "level": 3,
+          "line": 315
+        },
+        {
+          "heading": "Don't",
+          "level": 3,
+          "line": 322
+        },
+        {
+          "heading": "Responsive Behavior",
+          "level": 2,
+          "line": 329
+        },
+        {
+          "heading": "Breakpoints",
+          "level": 3,
+          "line": 331
+        },
+        {
+          "heading": "Touch Targets",
+          "level": 3,
+          "line": 342
+        },
+        {
+          "heading": "Collapsing Strategy",
+          "level": 3,
+          "line": 346
+        },
+        {
+          "heading": "Image Behavior",
+          "level": 3,
+          "line": 352
+        },
+        {
+          "heading": "Iteration Guide",
+          "level": 2,
+          "line": 355
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 35
+      }
+    },
+    {
+      "path": "DESIGN-stripe.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 487,
+      "nonEmptyLines": 418,
+      "sections": [
+        {
+          "heading": "Overview",
+          "level": 2,
+          "line": 246
+        },
+        {
+          "heading": "Colors",
+          "level": 2,
+          "line": 263
+        },
+        {
+          "heading": "Brand & Accent",
+          "level": 3,
+          "line": 267
+        },
+        {
+          "heading": "Surface",
+          "level": 3,
+          "line": 278
+        },
+        {
+          "heading": "Text",
+          "level": 3,
+          "line": 285
+        },
+        {
+          "heading": "Semantic",
+          "level": 3,
+          "line": 292
+        },
+        {
+          "heading": "Typography",
+          "level": 2,
+          "line": 295
+        },
+        {
+          "heading": "Font Family",
+          "level": 3,
+          "line": 297
+        },
+        {
+          "heading": "Hierarchy",
+          "level": 3,
+          "line": 303
+        },
+        {
+          "heading": "Principles",
+          "level": 3,
+          "line": 323
+        },
+        {
+          "heading": "Note on Font Substitutes",
+          "level": 3,
+          "line": 329
+        },
+        {
+          "heading": "Layout",
+          "level": 2,
+          "line": 332
+        },
+        {
+          "heading": "Spacing System",
+          "level": 3,
+          "line": 334
+        },
+        {
+          "heading": "Grid & Container",
+          "level": 3,
+          "line": 340
+        },
+        {
+          "heading": "Whitespace Philosophy",
+          "level": 3,
+          "line": 345
+        },
+        {
+          "heading": "Elevation & Depth",
+          "level": 2,
+          "line": 348
+        },
+        {
+          "heading": "Decorative Depth",
+          "level": 3,
+          "line": 357
+        },
+        {
+          "heading": "Shapes",
+          "level": 2,
+          "line": 360
+        },
+        {
+          "heading": "Border Radius Scale",
+          "level": 3,
+          "line": 362
+        },
+        {
+          "heading": "Photography Geometry",
+          "level": 3,
+          "line": 373
+        },
+        {
+          "heading": "Components",
+          "level": 2,
+          "line": 376
+        },
+        {
+          "heading": "Buttons",
+          "level": 3,
+          "line": 378
+        },
+        {
+          "heading": "Cards & Containers",
+          "level": 3,
+          "line": 390
+        },
+        {
+          "heading": "Inputs & Forms",
+          "level": 3,
+          "line": 407
+        },
+        {
+          "heading": "Navigation",
+          "level": 3,
+          "line": 413
+        },
+        {
+          "heading": "Pills, Tags, and Chips",
+          "level": 3,
+          "line": 418
+        },
+        {
+          "heading": "Signature Components",
+          "level": 3,
+          "line": 423
+        },
+        {
+          "heading": "Do's and Don'ts",
+          "level": 2,
+          "line": 437
+        },
+        {
+          "heading": "Do",
+          "level": 3,
+          "line": 439
+        },
+        {
+          "heading": "Don't",
+          "level": 3,
+          "line": 447
+        },
+        {
+          "heading": "Responsive Behavior",
+          "level": 2,
+          "line": 455
+        },
+        {
+          "heading": "Breakpoints",
+          "level": 3,
+          "line": 457
+        },
+        {
+          "heading": "Touch Targets",
+          "level": 3,
+          "line": 466
+        },
+        {
+          "heading": "Collapsing Strategy",
+          "level": 3,
+          "line": 470
+        },
+        {
+          "heading": "Image Behavior",
+          "level": 3,
+          "line": 476
+        },
+        {
+          "heading": "Iteration Guide",
+          "level": 2,
+          "line": 479
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 36
+      }
+    },
+    {
+      "path": "EXAMPLES.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 522,
+      "nonEmptyLines": 392,
+      "sections": [
+        {
+          "heading": "Examples",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Think Before Coding",
+          "level": 2,
+          "line": 7
+        },
+        {
+          "heading": "Example 1: Hidden Assumptions",
+          "level": 3,
+          "line": 9
+        },
+        {
+          "heading": "Example 2: Multiple Interpretations",
+          "level": 3,
+          "line": 57
+        },
+        {
+          "heading": "2. Simplicity First",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "Example 1: Over-abstraction",
+          "level": 3,
+          "line": 99
+        },
+        {
+          "heading": "Example 2: Speculative Features",
+          "level": 3,
+          "line": 162
+        },
+        {
+          "heading": "3. Surgical Changes",
+          "level": 2,
+          "line": 225
+        },
+        {
+          "heading": "Example 1: Drive-by Refactoring",
+          "level": 3,
+          "line": 227
+        },
+        {
+          "heading": "Example 2: Style Drift",
+          "level": 3,
+          "line": 293
+        },
+        {
+          "heading": "4. Goal-Driven Execution",
+          "level": 2,
+          "line": 370
+        },
+        {
+          "heading": "Example 1: Vague vs. Verifiable",
+          "level": 3,
+          "line": 372
+        },
+        {
+          "heading": "Example 2: Multi-Step with Verification",
+          "level": 3,
+          "line": 413
+        },
+        {
+          "heading": "Example 3: Test-First Verification",
+          "level": 3,
+          "line": 454
+        },
+        {
+          "heading": "Anti-Patterns Summary",
+          "level": 2,
+          "line": 498
+        },
+        {
+          "heading": "Key Insight",
+          "level": 2,
+          "line": 507
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 16
+      }
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 147,
+      "nonEmptyLines": 106,
+      "sections": [
+        {
+          "heading": "StudioFlow — The One-Person Back Office",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Architecture",
+          "level": 2,
+          "line": 5
+        },
+        {
+          "heading": "Startup",
+          "level": 2,
+          "line": 21
+        },
+        {
+          "heading": "API endpoints",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "Testing and verification",
+          "level": 2,
+          "line": 68
+        },
+        {
+          "heading": "Environment variables",
+          "level": 2,
+          "line": 88
+        },
+        {
+          "heading": "Supabase setup",
+          "level": 2,
+          "line": 97
+        },
+        {
+          "heading": "Deploy",
+          "level": 2,
+          "line": 106
+        },
+        {
+          "heading": "Vercel",
+          "level": 3,
+          "line": 110
+        },
+        {
+          "heading": "Netlify",
+          "level": 3,
+          "line": 118
+        },
+        {
+          "heading": "3-minute hackathon judge script",
+          "level": 2,
+          "line": 126
+        },
+        {
+          "heading": "Alternative pitch outline",
+          "level": 3,
+          "line": 139
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 12
+      }
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 31,
+      "nonEmptyLines": 31,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "private",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "type",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "supabase_schema.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 88,
+      "nonEmptyLines": 78,
+      "definitions": [
+        {
+          "name": "public",
+          "kind": "table",
+          "fields": [
+            "id",
+            "business_name",
+            "owner_name",
+            "currency",
+            "starting_cash",
+            "safety_buffer",
+            "created_at"
+          ],
+          "startLine": 7,
+          "endLine": 15
+        },
+        {
+          "name": "public",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "name",
+            "company",
+            "email",
+            "phone",
+            "created_at"
+          ],
+          "startLine": 24,
+          "endLine": 34
+        },
+        {
+          "name": "public",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "client_id",
+            "client_name",
+            "client_phone",
+            "invoice_number",
+            "project_title",
+            "amount",
+            "issue_date",
+            "due_date",
+            "paid_date",
+            "status",
+            "notes",
+            "created_at"
+          ],
+          "startLine": 40,
+          "endLine": 56
+        },
+        {
+          "name": "public",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "name",
+            "category",
+            "due_day"
+          ],
+          "startLine": 62,
+          "endLine": 72
+        },
+        {
+          "name": "public",
+          "kind": "table",
+          "fields": [
+            "id",
+            "user_id",
+            "invoice_id",
+            "tone"
+          ],
+          "startLine": 78,
+          "endLine": 85
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 5
+      }
+    }
+  ]
+}

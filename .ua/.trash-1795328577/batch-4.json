@@ -1,0 +1,296 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/AgingDashboard.jsx",
+      "type": "file",
+      "name": "AgingDashboard.jsx",
+      "filePath": "src/components/AgingDashboard.jsx",
+      "summary": "Receivables aging breakdown dashboard categorizing outstanding invoices into chronological risk tiers.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "function",
+      "name": "AgingDashboard",
+      "filePath": "src/components/AgingDashboard.jsx",
+      "lineRange": [
+        13,
+        347
+      ],
+      "summary": "Function AgingDashboard in AgingDashboard.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/ClientPortalModal.jsx",
+      "type": "file",
+      "name": "ClientPortalModal.jsx",
+      "filePath": "src/components/ClientPortalModal.jsx",
+      "summary": "Client invoice payment simulation portal allowing clients to view and settle outstanding bills.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "function",
+      "name": "ClientPortalModal",
+      "filePath": "src/components/ClientPortalModal.jsx",
+      "lineRange": [
+        23,
+        227
+      ],
+      "summary": "Function ClientPortalModal in ClientPortalModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/DebtorCard.jsx",
+      "type": "file",
+      "name": "DebtorCard.jsx",
+      "filePath": "src/components/DebtorCard.jsx",
+      "summary": "Client debtor card displaying overdue amounts, status badge, and WhatsApp follow-up action.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "function",
+      "name": "DebtorCard",
+      "filePath": "src/components/DebtorCard.jsx",
+      "lineRange": [
+        12,
+        235
+      ],
+      "summary": "Function DebtorCard in DebtorCard.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/WhatsAppModal.jsx",
+      "type": "file",
+      "name": "WhatsAppModal.jsx",
+      "filePath": "src/components/WhatsAppModal.jsx",
+      "summary": "WhatsApp template editor and message generator for polite debtor payment reminders.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "function",
+      "name": "WhatsAppModal",
+      "filePath": "src/components/WhatsAppModal.jsx",
+      "lineRange": [
+        14,
+        251
+      ],
+      "summary": "Function WhatsAppModal in WhatsAppModal.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/lib/dateUtils.js",
+      "type": "file",
+      "name": "dateUtils.js",
+      "filePath": "src/lib/dateUtils.js",
+      "summary": "Source code file dateUtils.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "service",
+        "client-logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "function",
+      "name": "parseLocalDate",
+      "filePath": "src/lib/dateUtils.js",
+      "lineRange": [
+        10,
+        23
+      ],
+      "summary": "Function parseLocalDate in dateUtils.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "function",
+      "name": "getDaysDiff",
+      "filePath": "src/lib/dateUtils.js",
+      "lineRange": [
+        31,
+        42
+      ],
+      "summary": "Function getDaysDiff in dateUtils.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "function:src/components/AgingDashboard.jsx:AgingDashboard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "file:src/components/DebtorCard.jsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/AgingDashboard.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "function:src/components/ClientPortalModal.jsx:ClientPortalModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/ClientPortalModal.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "function:src/components/DebtorCard.jsx:DebtorCard",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/DebtorCard.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "function:src/components/WhatsAppModal.jsx:WhatsAppModal",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/WhatsAppModal.jsx",
+      "target": "file:src/lib/dateUtils.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:parseLocalDate",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/lib/dateUtils.js",
+      "target": "function:src/lib/dateUtils.js:getDaysDiff",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

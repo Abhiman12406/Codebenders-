@@ -1,0 +1,330 @@
+{
+  "nodes": [
+    {
+      "id": "config:.codebenders/state.json",
+      "type": "config",
+      "name": "state.json",
+      "filePath": ".codebenders/state.json",
+      "summary": "JSON configuration and data file for state.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/ideas/studioflow-operations-cockpit.md",
+      "type": "document",
+      "name": "studioflow-operations-cockpit.md",
+      "filePath": "docs/ideas/studioflow-operations-cockpit.md",
+      "summary": "Markdown documentation detailing studioflow operations cockpit.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:docs/intent/one-person-backoffice.md",
+      "type": "document",
+      "name": "one-person-backoffice.md",
+      "filePath": "docs/intent/one-person-backoffice.md",
+      "summary": "Markdown documentation detailing one person backoffice.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:docs/spec/one-person-backoffice-fullstack-spec.md",
+      "type": "document",
+      "name": "one-person-backoffice-fullstack-spec.md",
+      "filePath": "docs/spec/one-person-backoffice-fullstack-spec.md",
+      "summary": "Markdown documentation detailing one person backoffice fullstack spec.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:docs/spec/one-person-backoffice-spec.md",
+      "type": "document",
+      "name": "one-person-backoffice-spec.md",
+      "filePath": "docs/spec/one-person-backoffice-spec.md",
+      "summary": "Markdown documentation detailing one person backoffice spec.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:postcss.config.js",
+      "type": "config",
+      "name": "postcss.config.js",
+      "filePath": "postcss.config.js",
+      "summary": "Source code file postcss.config.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:references/index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "references/index.html",
+      "summary": "Source code file index.html providing functionality for markup.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/artcraft.html",
+      "type": "file",
+      "name": "artcraft.html",
+      "filePath": "scratch/artcraft.html",
+      "summary": "Source code file artcraft.html providing functionality for markup.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/download_chunks.py",
+      "type": "file",
+      "name": "download_chunks.py",
+      "filePath": "scratch/download_chunks.py",
+      "summary": "Source code file download_chunks.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/extract_hero_comp.py",
+      "type": "file",
+      "name": "extract_hero_comp.py",
+      "filePath": "scratch/extract_hero_comp.py",
+      "summary": "Source code file extract_hero_comp.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/extract_ruler.py",
+      "type": "file",
+      "name": "extract_ruler.py",
+      "filePath": "scratch/extract_ruler.py",
+      "summary": "Source code file extract_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_base_doc.py",
+      "type": "file",
+      "name": "find_base_doc.py",
+      "filePath": "scratch/find_base_doc.py",
+      "summary": "Source code file find_base_doc.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_hero_ruler.py",
+      "type": "file",
+      "name": "find_hero_ruler.py",
+      "filePath": "scratch/find_hero_ruler.py",
+      "summary": "Source code file find_hero_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_herowordmark.py",
+      "type": "file",
+      "name": "find_herowordmark.py",
+      "filePath": "scratch/find_herowordmark.py",
+      "summary": "Source code file find_herowordmark.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_ishero.py",
+      "type": "file",
+      "name": "find_ishero.py",
+      "filePath": "scratch/find_ishero.py",
+      "summary": "Source code file find_ishero.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_ruler.py",
+      "type": "file",
+      "name": "find_ruler.py",
+      "filePath": "scratch/find_ruler.py",
+      "summary": "Source code file find_ruler.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/find_wordmark_init.py",
+      "type": "file",
+      "name": "find_wordmark_init.py",
+      "filePath": "scratch/find_wordmark_init.py",
+      "summary": "Source code file find_wordmark_init.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/hero_wordmark_component.js",
+      "type": "file",
+      "name": "hero_wordmark_component.js",
+      "filePath": "scratch/hero_wordmark_component.js",
+      "summary": "Source code file hero_wordmark_component.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/inspect_artcraft.py",
+      "type": "file",
+      "name": "inspect_artcraft.py",
+      "filePath": "scratch/inspect_artcraft.py",
+      "summary": "Source code file inspect_artcraft.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/parse_artcraft_html.py",
+      "type": "file",
+      "name": "parse_artcraft_html.py",
+      "filePath": "scratch/parse_artcraft_html.py",
+      "summary": "Source code file parse_artcraft_html.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/print_hero_jsx.py",
+      "type": "file",
+      "name": "print_hero_jsx.py",
+      "filePath": "scratch/print_hero_jsx.py",
+      "summary": "Source code file print_hero_jsx.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/query_scrollbar.py",
+      "type": "file",
+      "name": "query_scrollbar.py",
+      "filePath": "scratch/query_scrollbar.py",
+      "summary": "Source code file query_scrollbar.py providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/ruler_chunk.js",
+      "type": "file",
+      "name": "ruler_chunk.js",
+      "filePath": "scratch/ruler_chunk.js",
+      "summary": "Source code file ruler_chunk.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:scratch/ruler_raw.js",
+      "type": "file",
+      "name": "ruler_raw.js",
+      "filePath": "scratch/ruler_raw.js",
+      "summary": "Source code file ruler_raw.js providing functionality for code.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:server/data/db.json",
+      "type": "config",
+      "name": "db.json",
+      "filePath": "server/data/db.json",
+      "summary": "JSON configuration and data file for db.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": []
+}

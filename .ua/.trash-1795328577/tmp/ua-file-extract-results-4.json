@@ -1,0 +1,770 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/components/AgingDashboard.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 347,
+      "nonEmptyLines": 312,
+      "functions": [
+        {
+          "name": "AgingDashboard",
+          "startLine": 13,
+          "endLine": 347,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AgingDashboard",
+          "line": 13,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AgingDashboard",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "useMemo",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "clients.forEach",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "map.set",
+          "lineNumber": 28
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "map.set",
+          "lineNumber": 29
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "c.name.toLowerCase",
+          "lineNumber": 29
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "useMemo",
+          "lineNumber": 42
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "invoices.forEach",
+          "lineNumber": 55
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "Number",
+          "lineNumber": 56
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "paidCohort.push",
+          "lineNumber": 60
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "getDaysDiff",
+          "lineNumber": 66
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "severeCohort.push",
+          "lineNumber": 76
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "overdueCohort.push",
+          "lineNumber": 78
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "graceCohort.push",
+          "lineNumber": 80
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "currentCohort.push",
+          "lineNumber": 82
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "Math.round",
+          "lineNumber": 86
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "searchQuery.trim",
+          "lineNumber": 105
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "searchQuery.toLowerCase",
+          "lineNumber": 106
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "list.filter",
+          "lineNumber": 107
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.client_name?.toLowerCase().includes",
+          "lineNumber": 109
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.client_name?.toLowerCase",
+          "lineNumber": 109
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.project_title?.toLowerCase().includes",
+          "lineNumber": 110
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.project_title?.toLowerCase",
+          "lineNumber": 110
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.invoice_number?.toLowerCase().includes",
+          "lineNumber": 111
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "i.invoice_number?.toLowerCase",
+          "lineNumber": 111
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setSearchQuery",
+          "lineNumber": 149
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "totalOwed.toLocaleString",
+          "lineNumber": 167
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "invoices.filter",
+          "lineNumber": 170
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "criticalOverdueAmount.toLocaleString",
+          "lineNumber": 183
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 230
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 242
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 255
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 268
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 281
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "setActiveTab",
+          "lineNumber": 294
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "filteredInvoices.map",
+          "lineNumber": 315
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "clientMap.get",
+          "lineNumber": 316
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "clientMap.get",
+          "lineNumber": 316
+        },
+        {
+          "caller": "AgingDashboard",
+          "callee": "inv.client_name?.toLowerCase",
+          "lineNumber": 316
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ClientPortalModal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 227,
+      "nonEmptyLines": 206,
+      "functions": [
+        {
+          "name": "formatDate",
+          "startLine": 13,
+          "endLine": 18,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "formatMoney",
+          "startLine": 20,
+          "endLine": 21,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "ClientPortalModal",
+          "startLine": 23,
+          "endLine": 227,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ClientPortalModal",
+          "line": 23,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatDate",
+          "callee": "Number.isNaN",
+          "lineNumber": 16
+        },
+        {
+          "caller": "formatDate",
+          "callee": "date.getTime",
+          "lineNumber": 16
+        },
+        {
+          "caller": "formatDate",
+          "callee": "date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }).toUpperCase",
+          "lineNumber": 17
+        },
+        {
+          "caller": "formatDate",
+          "callee": "date.toLocaleDateString",
+          "lineNumber": 17
+        },
+        {
+          "caller": "formatMoney",
+          "callee": "Number(value || 0).toLocaleString",
+          "lineNumber": 21
+        },
+        {
+          "caller": "formatMoney",
+          "callee": "Number",
+          "lineNumber": 21
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "useState",
+          "lineNumber": 33
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "Array.isArray",
+          "lineNumber": 39
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "items.map",
+          "lineNumber": 41
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "Number",
+          "lineNumber": 42
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "Number",
+          "lineNumber": 43
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "lineItems.reduce",
+          "lineNumber": 48
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "Number",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handlePay",
+          "callee": "setIsPaying",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handlePay",
+          "callee": "onPay",
+          "lineNumber": 57
+        },
+        {
+          "caller": "handlePay",
+          "callee": "setIsPaying",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handlePay",
+          "callee": "setPaidInvoiceId",
+          "lineNumber": 59
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "getDaysDiff",
+          "lineNumber": 61
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatMoney",
+          "lineNumber": 101
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatDate",
+          "lineNumber": 138
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatDate",
+          "lineNumber": 145
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "lineItems.map",
+          "lineNumber": 163
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatMoney",
+          "lineNumber": 167
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatMoney",
+          "lineNumber": 168
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "formatMoney",
+          "lineNumber": 188
+        },
+        {
+          "caller": "ClientPortalModal",
+          "callee": "window.print",
+          "lineNumber": 198
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/DebtorCard.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 235,
+      "nonEmptyLines": 219,
+      "functions": [
+        {
+          "name": "DebtorCard",
+          "startLine": 12,
+          "endLine": 235,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DebtorCard",
+          "line": 12,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "DebtorCard",
+          "callee": "getDaysDiff",
+          "lineNumber": 21
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "getReliabilityBadge",
+          "lineNumber": 63
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "getStatusBadge",
+          "lineNumber": 105
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "Number(invoice.amount).toLocaleString",
+          "lineNumber": 156
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "Number",
+          "lineNumber": 156
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "onViewAsClient",
+          "lineNumber": 182
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "onChaseWhatsApp",
+          "lineNumber": 193
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "onMarkPaid",
+          "lineNumber": 204
+        },
+        {
+          "caller": "DebtorCard",
+          "callee": "onSplitPayment",
+          "lineNumber": 215
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/WhatsAppModal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 251,
+      "nonEmptyLines": 227,
+      "functions": [
+        {
+          "name": "WhatsAppModal",
+          "startLine": 14,
+          "endLine": 251,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "WhatsAppModal",
+          "line": 14,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WhatsAppModal",
+          "callee": "getDaysDiff",
+          "lineNumber": 24
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "Number(invoice.amount).toLocaleString",
+          "lineNumber": 28
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "Number",
+          "lineNumber": 28
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "Math.max",
+          "lineNumber": 37
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "useState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "getRecommendedTone",
+          "lineNumber": 49
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "useState",
+          "lineNumber": 50
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "getRecommendedTone",
+          "lineNumber": 50
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "useState",
+          "lineNumber": 51
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleSelectTone",
+          "callee": "setSelectedTone",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleSelectTone",
+          "callee": "setCustomText",
+          "lineNumber": 56
+        },
+        {
+          "caller": "buildWhatsAppUrl",
+          "callee": "phoneInput.replace",
+          "lineNumber": 60
+        },
+        {
+          "caller": "buildWhatsAppUrl",
+          "callee": "encodeURIComponent",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleSendViaWhatsApp",
+          "callee": "onLogFollowUp",
+          "lineNumber": 69
+        },
+        {
+          "caller": "handleSendViaWhatsApp",
+          "callee": "window.open",
+          "lineNumber": 76
+        },
+        {
+          "caller": "handleSendViaWhatsApp",
+          "callee": "buildWhatsAppUrl",
+          "lineNumber": 76
+        },
+        {
+          "caller": "handleCopyToClipboard",
+          "callee": "navigator.clipboard.writeText",
+          "lineNumber": 82
+        },
+        {
+          "caller": "handleCopyToClipboard",
+          "callee": "setCopied",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handleCopyToClipboard",
+          "callee": "setTimeout",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleCopyToClipboard",
+          "callee": "setCopied",
+          "lineNumber": 84
+        },
+        {
+          "caller": "handleCopyToClipboard",
+          "callee": "console.warn",
+          "lineNumber": 87
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "getRecommendedTone",
+          "lineNumber": 155
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "cadences.map",
+          "lineNumber": 160
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "handleSelectTone",
+          "lineNumber": 167
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "setPhoneInput",
+          "lineNumber": 193
+        },
+        {
+          "caller": "WhatsAppModal",
+          "callee": "setCustomText",
+          "lineNumber": 212
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/dateUtils.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 35,
+      "functions": [
+        {
+          "name": "parseLocalDate",
+          "startLine": 10,
+          "endLine": 23,
+          "params": [
+            "dateStr"
+          ]
+        },
+        {
+          "name": "getDaysDiff",
+          "startLine": 31,
+          "endLine": 42,
+          "params": [
+            "targetDateStr"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "parseLocalDate",
+          "line": 10,
+          "isDefault": false
+        },
+        {
+          "name": "getDaysDiff",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parseLocalDate",
+          "callee": "dateStr.split('T')[0].split",
+          "lineNumber": 14
+        },
+        {
+          "caller": "parseLocalDate",
+          "callee": "dateStr.split",
+          "lineNumber": 14
+        },
+        {
+          "caller": "parseLocalDate",
+          "callee": "parseInt",
+          "lineNumber": 16
+        },
+        {
+          "caller": "parseLocalDate",
+          "callee": "parseInt",
+          "lineNumber": 17
+        },
+        {
+          "caller": "parseLocalDate",
+          "callee": "parseInt",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "today.setHours",
+          "lineNumber": 35
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "parseLocalDate",
+          "lineNumber": 37
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "target.setHours",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "today.getTime",
+          "lineNumber": 40
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "target.getTime",
+          "lineNumber": 40
+        },
+        {
+          "caller": "getDaysDiff",
+          "callee": "Math.round",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    }
+  ]
+}

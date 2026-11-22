@@ -1,0 +1,138 @@
+[
+  {
+    "id": "layer:frontend-ui",
+    "name": "Frontend UI Components",
+    "description": "React UI components, modals, visual effects, and main application layouts.",
+    "nodeIds": [
+      "file:src/App.jsx",
+      "file:src/components/ArtCraftPrinciples.jsx",
+      "file:src/components/BadDayTriageModal.jsx",
+      "file:src/components/FeedbackCarousel.jsx",
+      "file:src/components/HorizontalAccordions.jsx",
+      "file:src/components/InfiniteMarquee.jsx",
+      "file:src/components/InvoiceModal.jsx",
+      "file:src/components/Navbar.jsx",
+      "file:src/components/OutflowsManager.jsx",
+      "file:src/components/QuickInputBar.jsx",
+      "file:src/components/ScrubTextReveal.jsx",
+      "file:src/components/WhatIfSimulator.jsx",
+      "file:src/main.jsx",
+      "file:src/components/CashForecastChart.jsx",
+      "file:src/components/AgingDashboard.jsx",
+      "file:src/components/ClientPortalModal.jsx",
+      "file:src/components/DebtorCard.jsx",
+      "file:src/components/WhatsAppModal.jsx",
+      "file:src/components/AuthModal.jsx",
+      "file:index.html",
+      "file:src/components/HeroWordmark.jsx",
+      "file:src/components/OrbitalGalaxyBackground.jsx",
+      "file:src/components/RightScrollRuler.jsx",
+      "file:src/index.css"
+    ]
+  },
+  {
+    "id": "layer:frontend-services",
+    "name": "Client Services & State",
+    "description": "Offline-first data sync service, API client wrappers, client-side forecast math, and seed data.",
+    "nodeIds": [
+      "file:src/lib/nlpParser.js",
+      "file:src/data/mockDesignerData.js",
+      "file:src/lib/forecastEngine.js",
+      "file:src/lib/dateUtils.js",
+      "file:src/lib/api.js",
+      "file:src/lib/dataService.js",
+      "file:src/lib/supabaseClient.js"
+    ]
+  },
+  {
+    "id": "layer:backend-api",
+    "name": "Backend API & Storage",
+    "description": "Express server entry point, modular route handlers, and local JSON database persistence.",
+    "nodeIds": [
+      "file:server/index.js",
+      "file:server/routes/ai.js",
+      "file:server/routes/forecast.js",
+      "file:server/routes/invoices.js",
+      "file:server/routes/outflows.js",
+      "file:server/routes/portal.js",
+      "file:server/routes/profile.js",
+      "file:server/routes/triage.js",
+      "file:server/store.js",
+      "config:server/data/db.json"
+    ]
+  },
+  {
+    "id": "layer:business-engines",
+    "name": "Financial & NLP Engines",
+    "description": "Core domain calculation engines for cash flow forecasting and natural language draft invoice parsing.",
+    "nodeIds": [
+      "file:server/engine/forecast.js",
+      "file:server/engine/nlp.js"
+    ]
+  },
+  {
+    "id": "layer:testing-qa",
+    "name": "Testing & Verification",
+    "description": "Automated test suites covering API endpoints, calculation algorithms, and end-to-end user flows.",
+    "nodeIds": [
+      "file:server/test-api.js",
+      "file:test-mockData.js",
+      "file:test_e2e_phase3.js",
+      "file:test_forecastEngine.js",
+      "file:test-dataService.js",
+      "file:scratch/artcraft.html",
+      "file:scratch/download_chunks.py",
+      "file:scratch/extract_hero_comp.py",
+      "file:scratch/extract_ruler.py",
+      "file:scratch/find_base_doc.py",
+      "file:scratch/find_hero_ruler.py",
+      "file:scratch/find_herowordmark.py",
+      "file:scratch/find_ishero.py",
+      "file:scratch/find_ruler.py",
+      "file:scratch/find_wordmark_init.py",
+      "file:scratch/hero_wordmark_component.js",
+      "file:scratch/inspect_artcraft.py",
+      "file:scratch/parse_artcraft_html.py",
+      "file:scratch/print_hero_jsx.py",
+      "file:scratch/query_scrollbar.py",
+      "file:scratch/ruler_chunk.js",
+      "file:scratch/ruler_raw.js"
+    ]
+  },
+  {
+    "id": "layer:config-tooling",
+    "name": "Configuration & Build Tooling",
+    "description": "Vite build config, Tailwind styling, package manifests, and environment settings.",
+    "nodeIds": [
+      "config:.codebenders/scratch/body-array.json",
+      "config:.codebenders/scratch/body-negamount-named.json",
+      "config:.codebenders/scratch/body-negative.json",
+      "config:.env.example",
+      "config:package.json",
+      "table:supabase_schema.sql",
+      "config:.codebenders/state.json",
+      "config:postcss.config.js",
+      "config:tailwind.config.js",
+      "config:vite.config.js"
+    ]
+  },
+  {
+    "id": "layer:documentation-specs",
+    "name": "Documentation & Product Specs",
+    "description": "Architecture specifications, product requirements, design guidelines, and task plans.",
+    "nodeIds": [
+      "document:AGENTS.md",
+      "document:DESIGN-spacex.md",
+      "document:DESIGN-stripe.md",
+      "document:EXAMPLES.md",
+      "document:README.md",
+      "document:docs/ideas/studioflow-operations-cockpit.md",
+      "document:docs/intent/one-person-backoffice.md",
+      "document:docs/spec/one-person-backoffice-fullstack-spec.md",
+      "document:docs/spec/one-person-backoffice-spec.md",
+      "file:references/index.html",
+      "document:tasks/plan.md",
+      "document:tasks/todo.md"
+    ]
+  }
+]

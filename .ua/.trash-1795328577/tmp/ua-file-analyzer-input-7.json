@@ -1,0 +1,70 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": ".env.example",
+      "language": "config",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "DESIGN-spacex.md",
+      "language": "markdown",
+      "sizeLines": 363,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "DESIGN-stripe.md",
+      "language": "markdown",
+      "sizeLines": 487,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "EXAMPLES.md",
+      "language": "markdown",
+      "sizeLines": 522,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 147,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "index.html",
+      "language": "html",
+      "sizeLines": 16,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 31,
+      "fileCategory": "config"
+    },
+    {
+      "path": "supabase_schema.sql",
+      "language": "sql",
+      "sizeLines": 88,
+      "fileCategory": "data"
+    }
+  ],
+  "batchImportData": {
+    ".env.example": [],
+    "AGENTS.md": [],
+    "DESIGN-spacex.md": [],
+    "DESIGN-stripe.md": [],
+    "EXAMPLES.md": [],
+    "README.md": [],
+    "index.html": [],
+    "package.json": [],
+    "supabase_schema.sql": []
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": "src/App.jsx",
+      "language": "javascript",
+      "sizeLines": 915,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ArtCraftPrinciples.jsx",
+      "language": "javascript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/BadDayTriageModal.jsx",
+      "language": "javascript",
+      "sizeLines": 186,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/FeedbackCarousel.jsx",
+      "language": "javascript",
+      "sizeLines": 132,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/HorizontalAccordions.jsx",
+      "language": "javascript",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/InfiniteMarquee.jsx",
+      "language": "javascript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/InvoiceModal.jsx",
+      "language": "javascript",
+      "sizeLines": 417,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/Navbar.jsx",
+      "language": "javascript",
+      "sizeLines": 182,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/OutflowsManager.jsx",
+      "language": "javascript",
+      "sizeLines": 171,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/QuickInputBar.jsx",
+      "language": "javascript",
+      "sizeLines": 163,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ScrubTextReveal.jsx",
+      "language": "javascript",
+      "sizeLines": 65,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/WhatIfSimulator.jsx",
+      "language": "javascript",
+      "sizeLines": 307,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/nlpParser.js",
+      "language": "javascript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/main.jsx",
+      "language": "javascript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/App.jsx": [
+      "src/components/AgingDashboard.jsx",
+      "src/components/ArtCraftPrinciples.jsx",
+      "src/components/AuthModal.jsx",
+      "src/components/BadDayTriageModal.jsx",
+      "src/components/CashForecastChart.jsx",
+      "src/components/ClientPortalModal.jsx",
+      "src/components/FeedbackCarousel.jsx",
+      "src/components/HorizontalAccordions.jsx",
+      "src/components/InfiniteMarquee.jsx",
+      "src/components/InvoiceModal.jsx",
+      "src/components/Navbar.jsx",
+      "src/components/OutflowsManager.jsx",
+      "src/components/QuickInputBar.jsx",
+      "src/components/ScrubTextReveal.jsx",
+      "src/components/WhatIfSimulator.jsx",
+      "src/components/WhatsAppModal.jsx",
+      "src/data/mockDesignerData.js",
+      "src/lib/api.js",
+      "src/lib/dataService.js",
+      "src/lib/forecastEngine.js",
+      "src/lib/supabaseClient.js"
+    ],
+    "src/components/ArtCraftPrinciples.jsx": [],
+    "src/components/BadDayTriageModal.jsx": [],
+    "src/components/FeedbackCarousel.jsx": [],
+    "src/components/HorizontalAccordions.jsx": [],
+    "src/components/InfiniteMarquee.jsx": [],
+    "src/components/InvoiceModal.jsx": [],
+    "src/components/Navbar.jsx": [],
+    "src/components/OutflowsManager.jsx": [],
+    "src/components/QuickInputBar.jsx": [
+      "src/lib/nlpParser.js"
+    ],
+    "src/components/ScrubTextReveal.jsx": [],
+    "src/components/WhatIfSimulator.jsx": [],
+    "src/lib/nlpParser.js": [],
+    "src/main.jsx": [
+      "src/App.jsx",
+      "src/index.css"
+    ]
+  }
+}

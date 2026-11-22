@@ -94,6 +94,24 @@ export function calculateCashForecast({
       dailyBills.push({ id: `tax_${dayOffset}`, name: 'Quarterly Freelance Tax Reserve Account', amount: 2710.00, category: 'tax', is_flexible: true });
     }
 
+    // Also include any user-created custom bills matching the cycle day
+    bills
+      .filter((b) => !['bill_rent', 'bill_adobe', 'bill_figma', 'bill_render', 'bill_fiber', 'bill_tax', 'rent', 'adobe', 'figma', 'render', 'fiber', 'tax'].includes(b.id))
+      .forEach((bill) => {
+        if ((Number(bill.due_day) || 1) === cycleDay) {
+          if (!bill.is_flexible || !mergedScenarios.deferFlexibleBills) {
+            const amt = Number(bill.amount) || 0;
+            dailyBills.push({
+              id: `${bill.id}_${dayOffset}`,
+              name: bill.name,
+              amount: bill.frequency === 'quarterly' ? amt / 3 : amt,
+              category: bill.category,
+              is_flexible: Boolean(bill.is_flexible),
+            });
+          }
+        }
+      });
+
     // Check for CapEx one-off purchase
     if (mergedScenarios.macbookCapex && dayOffset === mergedScenarios.capexDay) {
       dailyBills.push({
@@ -302,7 +320,7 @@ export function calculateCashForecast({
     : 'Action: Follow up on outstanding receivables today.';
 
   const alertMessage = firstDeficitDay !== null
-    ? `⚠️ Cash Deficit Alert: -$${maxShortfall} shortfall on Day ${firstDeficitDay}. ${recommendedAction}`
+    ? `Cash Deficit Alert: -$${maxShortfall} shortfall on Day ${firstDeficitDay}. ${recommendedAction}`
     : null;
 
   const combinedPoints = [

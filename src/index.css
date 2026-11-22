@@ -1,12 +1,313 @@
+@import url('https://fonts.cdnfonts.com/css/d-din');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   color-scheme: dark;
+  --canvas-night: #000000;
+  --canvas-night-soft: #0a0a0a;
+  --canvas-light: #ffffff;
+  --canvas-cool: #f0f0fa;
+  --on-primary: #ffffff;
+  --on-primary-mute: #f0f0fa;
+  --hairline-on-dark: #3a3a3f;
+  --hairline-on-light: #e0e0e8;
+  --ink-mute: #5a5a5f;
+  --link-on-dark: #ffffff;
+  --link-blue-fallback: #0000ee;
 }
 
 body {
   margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'D-DIN', 'Inter', 'Arial', sans-serif;
+  letter-spacing: 0.32px;
   min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Tabular figures for telemetry & financial numerics */
+.tabular-nums, .tnum, [data-tnum="true"] {
+  font-feature-settings: 'tnum';
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.96px;
+}
+
+/* SpaceX Typography Classes */
+.display-xxl {
+  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
+  font-size: clamp(38px, 6.5vw, 80px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.display-xl {
+  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
+  font-size: clamp(30px, 4.5vw, 60px);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.display-lg {
+  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
+  font-size: clamp(24px, 3.5vw, 48px);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+.body-lg {
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.32px;
+}
+
+.body-md {
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+}
+
+.button-cap {
+  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 13.008px;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: 1.17px;
+  text-transform: uppercase;
+}
+
+.micro-cap {
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.0;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+.caption {
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 13.008px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* SpaceX Ghost Button (The Universal Marketing CTA) */
+.button-ghost-on-dark,
+.btn-spacex-ghost,
+.button-primary-pill,
+.btn-stripe-primary,
+.artcraft-btn-primary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 13.008px;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: 1.17px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  padding: 18px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.button-ghost-on-dark:hover,
+.btn-spacex-ghost:hover,
+.button-primary-pill:hover,
+.btn-stripe-primary:hover,
+.artcraft-btn-primary:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: none;
+}
+
+.button-ghost-on-dark:active,
+.btn-spacex-ghost:active,
+.button-primary-pill:active,
+.btn-stripe-primary:active {
+  transform: scale(0.98);
+}
+
+/* Compact Ghost Button for toolbars and table rows */
+.button-ghost-sm,
+.button-secondary,
+.btn-stripe-secondary,
+.button-outline,
+.btn-stripe-outline,
+.artcraft-btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #3a3a3f;
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 0.94;
+  letter-spacing: 1.17px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.button-ghost-sm:hover,
+.button-secondary:hover,
+.btn-stripe-secondary:hover,
+.button-outline:hover,
+.btn-stripe-outline:hover,
+.artcraft-btn-secondary:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Button on dark */
+.button-on-dark,
+.btn-stripe-dark {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border: 1px solid #3a3a3f;
+  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 13.008px;
+  font-weight: 700;
+  letter-spacing: 1.17px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  padding: 12px 20px;
+  transition: all 0.2s ease;
+}
+
+.button-on-dark:hover,
+.btn-stripe-dark:hover {
+  border-color: #ffffff;
+}
+
+/* SpaceX Dark Surface Card */
+.card-spacex,
+.stripe-card,
+.stripe-card-cream,
+.stripe-card-dark,
+.artcraft-card {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border: 1px solid #3a3a3f;
+  border-radius: 8px;
+  box-shadow: none;
+  transition: border-color 0.2s ease;
+}
+
+.card-spacex:hover,
+.stripe-card:hover {
+  border-color: #5a5a5f;
+  box-shadow: none;
+}
+
+/* Eyebrow Micro-Cap Pill Tag */
+.pill-tag-soft {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #3a3a3f;
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.96px;
+  border-radius: 32px;
+  padding: 4px 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* SpaceX Form Inputs */
+.text-input,
+.text-input-stripe {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  border-radius: 4px;
+  border: 1px solid #3a3a3f;
+  padding: 12px 16px;
+  transition: border-color 0.2s ease;
+  outline: none;
+}
+
+.text-input:focus,
+.text-input-stripe:focus {
+  border-color: #ffffff;
+  box-shadow: none;
+}
+
+/* Full-Bleed Photographic Band */
+.card-photo-band {
+  background-color: #000000;
+  padding: 0;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* SpaceX Fixed Top Nav Overlay */
+.nav-bar-overlay {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid #3a3a3f;
+}
+
+/* Custom Scrollbar for SpaceX Dark Aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a3a3f;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5f;
+}
+
+/* Printable Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  header, nav, footer, .no-print {
+    display: none !important;
+  }
 }

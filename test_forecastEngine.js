@@ -41,11 +41,11 @@ const test1Passed = base.dailyPoints[24]?.cashBalance > 1500 && base.deficitInfo
 const test2Passed = delayed.deficitInfo.isBelowBuffer === true &&
                     delayed.deficitInfo.firstDeficitDay === 24 &&
                     delayed.deficitInfo.maxShortfall === 420 &&
-                    delayed.deficitInfo.alertMessage.includes('⚠️ Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today.');
+                    delayed.deficitInfo.alertMessage.includes('Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today.');
 const test3Passed = res30.dailyPoints.length === 31 && res60.dailyPoints.length === 61 && res90.dailyPoints.length === 91;
 
 if (test1Passed && test2Passed && test3Passed) {
-  console.log('\n🎉 ALL FORECAST ENGINE UNIT TESTS PASSED WITH 100% PRECISION!');
+  console.log('\nALL FORECAST ENGINE UNIT TESTS PASSED WITH 100% PRECISION!');
 } else {
   console.error('\n❌ Unit test verification failed', { test1Passed, test2Passed, test3Passed });
   process.exit(1);

@@ -1,0 +1,2127 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/components/AuthModal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 152,
+      "nonEmptyLines": 142,
+      "functions": [
+        {
+          "name": "AuthModal",
+          "startLine": 5,
+          "endLine": 152,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthModal",
+          "line": 5,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 6
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 7
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 8
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 9
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 10
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "useState",
+          "lineNumber": 11
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "Boolean",
+          "lineNumber": 15
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "isSupabaseConfigured",
+          "lineNumber": 15
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 18
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setBusy",
+          "lineNumber": 21
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 22
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setMessage",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "supabase.auth.signUp",
+          "lineNumber": 26
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "onAuthChanged",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setMessage",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "supabase.auth.signInWithPassword",
+          "lineNumber": 34
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "onAuthChanged",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setBusy",
+          "lineNumber": 41
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "e.stopPropagation",
+          "lineNumber": 49
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setMode",
+          "lineNumber": 80
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setError",
+          "lineNumber": 80
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setMessage",
+          "lineNumber": 80
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setMode",
+          "lineNumber": 87
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setError",
+          "lineNumber": 87
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setMessage",
+          "lineNumber": 87
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setEmail",
+          "lineNumber": 100
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "setPassword",
+          "lineNumber": 109
+        },
+        {
+          "caller": "AuthModal",
+          "callee": "onResetDemo",
+          "lineNumber": 141
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/api.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 34,
+      "functions": [
+        {
+          "name": "request",
+          "startLine": 3,
+          "endLine": 20,
+          "params": [
+            "method",
+            "path",
+            "body"
+          ]
+        },
+        {
+          "name": "getHealth",
+          "startLine": 22,
+          "endLine": 22,
+          "params": []
+        },
+        {
+          "name": "getInvoices",
+          "startLine": 24,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "getInvoice",
+          "startLine": 25,
+          "endLine": 25,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "createInvoice",
+          "startLine": 26,
+          "endLine": 26,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "updateInvoice",
+          "startLine": 27,
+          "endLine": 27,
+          "params": [
+            "id",
+            "data"
+          ]
+        },
+        {
+          "name": "deleteInvoice",
+          "startLine": 28,
+          "endLine": 28,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "payInvoice",
+          "startLine": 29,
+          "endLine": 30,
+          "params": [
+            "id",
+            "paid_date"
+          ]
+        },
+        {
+          "name": "getForecast",
+          "startLine": 32,
+          "endLine": 32,
+          "params": []
+        },
+        {
+          "name": "getTriage",
+          "startLine": 33,
+          "endLine": 33,
+          "params": []
+        },
+        {
+          "name": "getBills",
+          "startLine": 35,
+          "endLine": 35,
+          "params": []
+        },
+        {
+          "name": "createBill",
+          "startLine": 36,
+          "endLine": 36,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "updateBill",
+          "startLine": 37,
+          "endLine": 37,
+          "params": [
+            "id",
+            "data"
+          ]
+        },
+        {
+          "name": "deleteBill",
+          "startLine": 38,
+          "endLine": 38,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getProfile",
+          "startLine": 40,
+          "endLine": 40,
+          "params": []
+        },
+        {
+          "name": "updateProfile",
+          "startLine": 41,
+          "endLine": 41,
+          "params": [
+            "data"
+          ]
+        },
+        {
+          "name": "parseNlp",
+          "startLine": 43,
+          "endLine": 43,
+          "params": [
+            "prompt"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getHealth",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "getInvoices",
+          "line": 24,
+          "isDefault": false
+        },
+        {
+          "name": "getInvoice",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "createInvoice",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "updateInvoice",
+          "line": 27,
+          "isDefault": false
+        },
+        {
+          "name": "deleteInvoice",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "payInvoice",
+          "line": 29,
+          "isDefault": false
+        },
+        {
+          "name": "getForecast",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "getTriage",
+          "line": 33,
+          "isDefault": false
+        },
+        {
+          "name": "getBills",
+          "line": 35,
+          "isDefault": false
+        },
+        {
+          "name": "createBill",
+          "line": 36,
+          "isDefault": false
+        },
+        {
+          "name": "updateBill",
+          "line": 37,
+          "isDefault": false
+        },
+        {
+          "name": "deleteBill",
+          "line": 38,
+          "isDefault": false
+        },
+        {
+          "name": "getProfile",
+          "line": 40,
+          "isDefault": false
+        },
+        {
+          "name": "updateProfile",
+          "line": 41,
+          "isDefault": false
+        },
+        {
+          "name": "parseNlp",
+          "line": 43,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "request",
+          "callee": "JSON.stringify",
+          "lineNumber": 7
+        },
+        {
+          "caller": "request",
+          "callee": "fetch",
+          "lineNumber": 10
+        },
+        {
+          "caller": "request",
+          "callee": "response.json().catch",
+          "lineNumber": 13
+        },
+        {
+          "caller": "request",
+          "callee": "response.json",
+          "lineNumber": 13
+        },
+        {
+          "caller": "getHealth",
+          "callee": "request",
+          "lineNumber": 22
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "request",
+          "lineNumber": 24
+        },
+        {
+          "caller": "getInvoice",
+          "callee": "request",
+          "lineNumber": 25
+        },
+        {
+          "caller": "getInvoice",
+          "callee": "encodeURIComponent",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "request",
+          "lineNumber": 26
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "request",
+          "lineNumber": 27
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "encodeURIComponent",
+          "lineNumber": 27
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "request",
+          "lineNumber": 28
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "encodeURIComponent",
+          "lineNumber": 28
+        },
+        {
+          "caller": "payInvoice",
+          "callee": "request",
+          "lineNumber": 30
+        },
+        {
+          "caller": "payInvoice",
+          "callee": "encodeURIComponent",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getForecast",
+          "callee": "request",
+          "lineNumber": 32
+        },
+        {
+          "caller": "getTriage",
+          "callee": "request",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getBills",
+          "callee": "request",
+          "lineNumber": 35
+        },
+        {
+          "caller": "createBill",
+          "callee": "request",
+          "lineNumber": 36
+        },
+        {
+          "caller": "updateBill",
+          "callee": "request",
+          "lineNumber": 37
+        },
+        {
+          "caller": "updateBill",
+          "callee": "encodeURIComponent",
+          "lineNumber": 37
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "request",
+          "lineNumber": 38
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "encodeURIComponent",
+          "lineNumber": 38
+        },
+        {
+          "caller": "getProfile",
+          "callee": "request",
+          "lineNumber": 40
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "request",
+          "lineNumber": 41
+        },
+        {
+          "caller": "parseNlp",
+          "callee": "request",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 16,
+        "functionCount": 17,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/dataService.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 567,
+      "nonEmptyLines": 494,
+      "functions": [
+        {
+          "name": "generateId",
+          "startLine": 52,
+          "endLine": 57,
+          "params": []
+        },
+        {
+          "name": "isNetworkError",
+          "startLine": 61,
+          "endLine": 61,
+          "params": [
+            "err"
+          ]
+        },
+        {
+          "name": "replaceCachedInvoice",
+          "startLine": 63,
+          "endLine": 68,
+          "params": [
+            "id",
+            "record"
+          ]
+        },
+        {
+          "name": "getActiveUser",
+          "startLine": 83,
+          "endLine": 92,
+          "params": []
+        },
+        {
+          "name": "getProfile",
+          "startLine": 97,
+          "endLine": 125,
+          "params": []
+        },
+        {
+          "name": "updateProfile",
+          "startLine": 127,
+          "endLine": 158,
+          "params": [
+            "updates"
+          ]
+        },
+        {
+          "name": "getClients",
+          "startLine": 163,
+          "endLine": 182,
+          "params": []
+        },
+        {
+          "name": "saveClient",
+          "startLine": 184,
+          "endLine": 211,
+          "params": [
+            "client"
+          ]
+        },
+        {
+          "name": "getInvoices",
+          "startLine": 216,
+          "endLine": 243,
+          "params": []
+        },
+        {
+          "name": "createInvoice",
+          "startLine": 245,
+          "endLine": 280,
+          "params": [
+            "invoice"
+          ]
+        },
+        {
+          "name": "updateInvoice",
+          "startLine": 282,
+          "endLine": 325,
+          "params": [
+            "id",
+            "updates"
+          ]
+        },
+        {
+          "name": "deleteInvoice",
+          "startLine": 327,
+          "endLine": 353,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "markPaid",
+          "startLine": 355,
+          "endLine": 368,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getBills",
+          "startLine": 373,
+          "endLine": 400,
+          "params": []
+        },
+        {
+          "name": "saveBill",
+          "startLine": 402,
+          "endLine": 445,
+          "params": [
+            "bill"
+          ]
+        },
+        {
+          "name": "deleteBill",
+          "startLine": 447,
+          "endLine": 473,
+          "params": [
+            "id"
+          ]
+        },
+        {
+          "name": "getFollowUps",
+          "startLine": 478,
+          "endLine": 497,
+          "params": []
+        },
+        {
+          "name": "logFollowUp",
+          "startLine": 499,
+          "endLine": 523,
+          "params": [
+            "followUp"
+          ]
+        },
+        {
+          "name": "seedInitialData",
+          "startLine": 528,
+          "endLine": 540,
+          "params": []
+        },
+        {
+          "name": "resetDemoData",
+          "startLine": 542,
+          "endLine": 544,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DEFAULT_PROFILE",
+          "line": 70,
+          "isDefault": false
+        },
+        {
+          "name": "getActiveUser",
+          "line": 83,
+          "isDefault": false
+        },
+        {
+          "name": "getProfile",
+          "line": 97,
+          "isDefault": false
+        },
+        {
+          "name": "updateProfile",
+          "line": 127,
+          "isDefault": false
+        },
+        {
+          "name": "getClients",
+          "line": 163,
+          "isDefault": false
+        },
+        {
+          "name": "saveClient",
+          "line": 184,
+          "isDefault": false
+        },
+        {
+          "name": "getInvoices",
+          "line": 216,
+          "isDefault": false
+        },
+        {
+          "name": "createInvoice",
+          "line": 245,
+          "isDefault": false
+        },
+        {
+          "name": "updateInvoice",
+          "line": 282,
+          "isDefault": false
+        },
+        {
+          "name": "deleteInvoice",
+          "line": 327,
+          "isDefault": false
+        },
+        {
+          "name": "markPaid",
+          "line": 355,
+          "isDefault": false
+        },
+        {
+          "name": "getBills",
+          "line": 373,
+          "isDefault": false
+        },
+        {
+          "name": "saveBill",
+          "line": 402,
+          "isDefault": false
+        },
+        {
+          "name": "deleteBill",
+          "line": 447,
+          "isDefault": false
+        },
+        {
+          "name": "getFollowUps",
+          "line": 478,
+          "isDefault": false
+        },
+        {
+          "name": "logFollowUp",
+          "line": 499,
+          "isDefault": false
+        },
+        {
+          "name": "seedInitialData",
+          "line": 528,
+          "isDefault": false
+        },
+        {
+          "name": "resetDemoData",
+          "line": 542,
+          "isDefault": false
+        },
+        {
+          "name": "dataService",
+          "line": 546,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "get",
+          "callee": "window.localStorage.getItem",
+          "lineNumber": 11
+        },
+        {
+          "caller": "get",
+          "callee": "JSON.parse",
+          "lineNumber": 12
+        },
+        {
+          "caller": "get",
+          "callee": "JSON.parse",
+          "lineNumber": 14
+        },
+        {
+          "caller": "get",
+          "callee": "console.warn",
+          "lineNumber": 16
+        },
+        {
+          "caller": "set",
+          "callee": "JSON.stringify",
+          "lineNumber": 22
+        },
+        {
+          "caller": "set",
+          "callee": "window.localStorage.setItem",
+          "lineNumber": 24
+        },
+        {
+          "caller": "set",
+          "callee": "console.warn",
+          "lineNumber": 28
+        },
+        {
+          "caller": "set",
+          "callee": "JSON.stringify",
+          "lineNumber": 29
+        },
+        {
+          "caller": "remove",
+          "callee": "window.localStorage.removeItem",
+          "lineNumber": 35
+        },
+        {
+          "caller": "generateId",
+          "callee": "crypto.randomUUID",
+          "lineNumber": 54
+        },
+        {
+          "caller": "generateId",
+          "callee": "Math.random().toString(36).slice",
+          "lineNumber": 56
+        },
+        {
+          "caller": "generateId",
+          "callee": "Math.random().toString",
+          "lineNumber": 56
+        },
+        {
+          "caller": "generateId",
+          "callee": "Math.random",
+          "lineNumber": 56
+        },
+        {
+          "caller": "generateId",
+          "callee": "Date.now().toString",
+          "lineNumber": 56
+        },
+        {
+          "caller": "generateId",
+          "callee": "Date.now",
+          "lineNumber": 56
+        },
+        {
+          "caller": "replaceCachedInvoice",
+          "callee": "storage.set",
+          "lineNumber": 64
+        },
+        {
+          "caller": "replaceCachedInvoice",
+          "callee": "storage.get(STORAGE_KEYS.INVOICES, []).map",
+          "lineNumber": 66
+        },
+        {
+          "caller": "replaceCachedInvoice",
+          "callee": "storage.get",
+          "lineNumber": 66
+        },
+        {
+          "caller": "getActiveUser",
+          "callee": "isSupabaseConfigured",
+          "lineNumber": 84
+        },
+        {
+          "caller": "getActiveUser",
+          "callee": "supabase.auth.getUser",
+          "lineNumber": 86
+        },
+        {
+          "caller": "getProfile",
+          "callee": "api.getProfile",
+          "lineNumber": 99
+        },
+        {
+          "caller": "getProfile",
+          "callee": "storage.set",
+          "lineNumber": 100
+        },
+        {
+          "caller": "getProfile",
+          "callee": "isNetworkError",
+          "lineNumber": 103
+        },
+        {
+          "caller": "getProfile",
+          "callee": "getActiveUser",
+          "lineNumber": 106
+        },
+        {
+          "caller": "getProfile",
+          "callee": "supabase\n        .from('profiles')\n        .select('*')\n        .eq('id', user.id)\n        .maybeSingle",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getProfile",
+          "callee": "supabase\n        .from('profiles')\n        .select('*')\n        .eq",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getProfile",
+          "callee": "supabase\n        .from('profiles')\n        .select",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getProfile",
+          "callee": "supabase\n        .from",
+          "lineNumber": 109
+        },
+        {
+          "caller": "getProfile",
+          "callee": "storage.set",
+          "lineNumber": 116
+        },
+        {
+          "caller": "getProfile",
+          "callee": "console.warn",
+          "lineNumber": 120
+        },
+        {
+          "caller": "getProfile",
+          "callee": "storage.get",
+          "lineNumber": 124
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "getProfile",
+          "lineNumber": 128
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "Number",
+          "lineNumber": 132
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "Number",
+          "lineNumber": 133
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "api.updateProfile",
+          "lineNumber": 137
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "storage.set",
+          "lineNumber": 138
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "isNetworkError",
+          "lineNumber": 141
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "storage.set",
+          "lineNumber": 144
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "getActiveUser",
+          "lineNumber": 146
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "supabase\n        .from('profiles')\n        .upsert",
+          "lineNumber": 149
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "supabase\n        .from",
+          "lineNumber": 149
+        },
+        {
+          "caller": "updateProfile",
+          "callee": "console.warn",
+          "lineNumber": 153
+        },
+        {
+          "caller": "getClients",
+          "callee": "getActiveUser",
+          "lineNumber": 164
+        },
+        {
+          "caller": "getClients",
+          "callee": "supabase\n        .from('clients')\n        .select('*')\n        .order",
+          "lineNumber": 167
+        },
+        {
+          "caller": "getClients",
+          "callee": "supabase\n        .from('clients')\n        .select",
+          "lineNumber": 167
+        },
+        {
+          "caller": "getClients",
+          "callee": "supabase\n        .from",
+          "lineNumber": 167
+        },
+        {
+          "caller": "getClients",
+          "callee": "Array.isArray",
+          "lineNumber": 172
+        },
+        {
+          "caller": "getClients",
+          "callee": "storage.set",
+          "lineNumber": 173
+        },
+        {
+          "caller": "getClients",
+          "callee": "console.warn",
+          "lineNumber": 177
+        },
+        {
+          "caller": "getClients",
+          "callee": "storage.get",
+          "lineNumber": 181
+        },
+        {
+          "caller": "saveClient",
+          "callee": "getClients",
+          "lineNumber": 185
+        },
+        {
+          "caller": "saveClient",
+          "callee": "generateId",
+          "lineNumber": 188
+        },
+        {
+          "caller": "saveClient",
+          "callee": "new Date().toISOString",
+          "lineNumber": 189
+        },
+        {
+          "caller": "saveClient",
+          "callee": "clients.findIndex",
+          "lineNumber": 192
+        },
+        {
+          "caller": "saveClient",
+          "callee": "clients.map",
+          "lineNumber": 194
+        },
+        {
+          "caller": "saveClient",
+          "callee": "storage.set",
+          "lineNumber": 197
+        },
+        {
+          "caller": "saveClient",
+          "callee": "getActiveUser",
+          "lineNumber": 199
+        },
+        {
+          "caller": "saveClient",
+          "callee": "supabase\n        .from('clients')\n        .upsert",
+          "lineNumber": 202
+        },
+        {
+          "caller": "saveClient",
+          "callee": "supabase\n        .from",
+          "lineNumber": 202
+        },
+        {
+          "caller": "saveClient",
+          "callee": "console.warn",
+          "lineNumber": 206
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "api.getInvoices",
+          "lineNumber": 218
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "storage.set",
+          "lineNumber": 219
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "isNetworkError",
+          "lineNumber": 222
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "getActiveUser",
+          "lineNumber": 225
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "supabase\n        .from('invoices')\n        .select('*')\n        .order",
+          "lineNumber": 228
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "supabase\n        .from('invoices')\n        .select",
+          "lineNumber": 228
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "supabase\n        .from",
+          "lineNumber": 228
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "Array.isArray",
+          "lineNumber": 233
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "storage.set",
+          "lineNumber": 234
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "console.warn",
+          "lineNumber": 238
+        },
+        {
+          "caller": "getInvoices",
+          "callee": "storage.get",
+          "lineNumber": 242
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "getInvoices",
+          "lineNumber": 246
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "generateId",
+          "lineNumber": 249
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "Number",
+          "lineNumber": 250
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 252
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "new Date().toISOString",
+          "lineNumber": 252
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "new Date().toISOString",
+          "lineNumber": 253
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "api.createInvoice",
+          "lineNumber": 258
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "storage.set",
+          "lineNumber": 259
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "isNetworkError",
+          "lineNumber": 262
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "storage.set",
+          "lineNumber": 266
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "getActiveUser",
+          "lineNumber": 268
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "supabase\n        .from('invoices')\n        .insert",
+          "lineNumber": 271
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "supabase\n        .from",
+          "lineNumber": 271
+        },
+        {
+          "caller": "createInvoice",
+          "callee": "console.warn",
+          "lineNumber": 275
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "api.updateInvoice",
+          "lineNumber": 284
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "replaceCachedInvoice",
+          "lineNumber": 285
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "isNetworkError",
+          "lineNumber": 288
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "getInvoices",
+          "lineNumber": 291
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "invoices.map",
+          "lineNumber": 294
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "Number",
+          "lineNumber": 299
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "storage.set",
+          "lineNumber": 310
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "getActiveUser",
+          "lineNumber": 312
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "supabase\n        .from('invoices')\n        .update(updates)\n        .eq",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "supabase\n        .from('invoices')\n        .update",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "supabase\n        .from",
+          "lineNumber": 315
+        },
+        {
+          "caller": "updateInvoice",
+          "callee": "console.warn",
+          "lineNumber": 320
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "api.deleteInvoice",
+          "lineNumber": 329
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "storage.set",
+          "lineNumber": 330
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "storage.get(STORAGE_KEYS.INVOICES, []).filter",
+          "lineNumber": 330
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "storage.get",
+          "lineNumber": 330
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "isNetworkError",
+          "lineNumber": 333
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "getInvoices",
+          "lineNumber": 336
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "invoices.filter",
+          "lineNumber": 337
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "storage.set",
+          "lineNumber": 338
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "getActiveUser",
+          "lineNumber": 340
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "supabase\n        .from('invoices')\n        .delete()\n        .eq",
+          "lineNumber": 343
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "supabase\n        .from('invoices')\n        .delete",
+          "lineNumber": 343
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "supabase\n        .from",
+          "lineNumber": 343
+        },
+        {
+          "caller": "deleteInvoice",
+          "callee": "console.warn",
+          "lineNumber": 348
+        },
+        {
+          "caller": "markPaid",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 355
+        },
+        {
+          "caller": "markPaid",
+          "callee": "new Date().toISOString",
+          "lineNumber": 355
+        },
+        {
+          "caller": "markPaid",
+          "callee": "api.payInvoice",
+          "lineNumber": 357
+        },
+        {
+          "caller": "markPaid",
+          "callee": "replaceCachedInvoice",
+          "lineNumber": 358
+        },
+        {
+          "caller": "markPaid",
+          "callee": "isNetworkError",
+          "lineNumber": 361
+        },
+        {
+          "caller": "markPaid",
+          "callee": "updateInvoice",
+          "lineNumber": 364
+        },
+        {
+          "caller": "getBills",
+          "callee": "api.getBills",
+          "lineNumber": 375
+        },
+        {
+          "caller": "getBills",
+          "callee": "storage.set",
+          "lineNumber": 376
+        },
+        {
+          "caller": "getBills",
+          "callee": "isNetworkError",
+          "lineNumber": 379
+        },
+        {
+          "caller": "getBills",
+          "callee": "getActiveUser",
+          "lineNumber": 382
+        },
+        {
+          "caller": "getBills",
+          "callee": "supabase\n        .from('bills')\n        .select('*')\n        .order",
+          "lineNumber": 385
+        },
+        {
+          "caller": "getBills",
+          "callee": "supabase\n        .from('bills')\n        .select",
+          "lineNumber": 385
+        },
+        {
+          "caller": "getBills",
+          "callee": "supabase\n        .from",
+          "lineNumber": 385
+        },
+        {
+          "caller": "getBills",
+          "callee": "Array.isArray",
+          "lineNumber": 390
+        },
+        {
+          "caller": "getBills",
+          "callee": "storage.set",
+          "lineNumber": 391
+        },
+        {
+          "caller": "getBills",
+          "callee": "console.warn",
+          "lineNumber": 395
+        },
+        {
+          "caller": "getBills",
+          "callee": "storage.get",
+          "lineNumber": 399
+        },
+        {
+          "caller": "saveBill",
+          "callee": "getBills",
+          "lineNumber": 403
+        },
+        {
+          "caller": "saveBill",
+          "callee": "generateId",
+          "lineNumber": 406
+        },
+        {
+          "caller": "saveBill",
+          "callee": "Number",
+          "lineNumber": 407
+        },
+        {
+          "caller": "saveBill",
+          "callee": "Number",
+          "lineNumber": 408
+        },
+        {
+          "caller": "saveBill",
+          "callee": "Boolean",
+          "lineNumber": 410
+        },
+        {
+          "caller": "saveBill",
+          "callee": "new Date().toISOString",
+          "lineNumber": 411
+        },
+        {
+          "caller": "saveBill",
+          "callee": "api.updateBill",
+          "lineNumber": 416
+        },
+        {
+          "caller": "saveBill",
+          "callee": "api.createBill",
+          "lineNumber": 417
+        },
+        {
+          "caller": "saveBill",
+          "callee": "storage.set",
+          "lineNumber": 418
+        },
+        {
+          "caller": "saveBill",
+          "callee": "bills.some",
+          "lineNumber": 418
+        },
+        {
+          "caller": "saveBill",
+          "callee": "bills.map",
+          "lineNumber": 419
+        },
+        {
+          "caller": "saveBill",
+          "callee": "isNetworkError",
+          "lineNumber": 423
+        },
+        {
+          "caller": "saveBill",
+          "callee": "bills.findIndex",
+          "lineNumber": 426
+        },
+        {
+          "caller": "saveBill",
+          "callee": "bills.map",
+          "lineNumber": 428
+        },
+        {
+          "caller": "saveBill",
+          "callee": "storage.set",
+          "lineNumber": 431
+        },
+        {
+          "caller": "saveBill",
+          "callee": "getActiveUser",
+          "lineNumber": 433
+        },
+        {
+          "caller": "saveBill",
+          "callee": "supabase\n        .from('bills')\n        .upsert",
+          "lineNumber": 436
+        },
+        {
+          "caller": "saveBill",
+          "callee": "supabase\n        .from",
+          "lineNumber": 436
+        },
+        {
+          "caller": "saveBill",
+          "callee": "console.warn",
+          "lineNumber": 440
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "api.deleteBill",
+          "lineNumber": 449
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "storage.set",
+          "lineNumber": 450
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "storage.get(STORAGE_KEYS.BILLS, []).filter",
+          "lineNumber": 450
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "storage.get",
+          "lineNumber": 450
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "isNetworkError",
+          "lineNumber": 453
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "getBills",
+          "lineNumber": 456
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "bills.filter",
+          "lineNumber": 457
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "storage.set",
+          "lineNumber": 458
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "getActiveUser",
+          "lineNumber": 460
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "supabase\n        .from('bills')\n        .delete()\n        .eq",
+          "lineNumber": 463
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "supabase\n        .from('bills')\n        .delete",
+          "lineNumber": 463
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "supabase\n        .from",
+          "lineNumber": 463
+        },
+        {
+          "caller": "deleteBill",
+          "callee": "console.warn",
+          "lineNumber": 468
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "getActiveUser",
+          "lineNumber": 479
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "supabase\n        .from('follow_ups')\n        .select('*')\n        .order",
+          "lineNumber": 482
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "supabase\n        .from('follow_ups')\n        .select",
+          "lineNumber": 482
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "supabase\n        .from",
+          "lineNumber": 482
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "Array.isArray",
+          "lineNumber": 487
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "storage.set",
+          "lineNumber": 488
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "console.warn",
+          "lineNumber": 492
+        },
+        {
+          "caller": "getFollowUps",
+          "callee": "storage.get",
+          "lineNumber": 496
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "getFollowUps",
+          "lineNumber": 500
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "generateId",
+          "lineNumber": 503
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "new Date().toISOString",
+          "lineNumber": 505
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "storage.set",
+          "lineNumber": 509
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "getActiveUser",
+          "lineNumber": 511
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "supabase\n        .from('follow_ups')\n        .insert",
+          "lineNumber": 514
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "supabase\n        .from",
+          "lineNumber": 514
+        },
+        {
+          "caller": "logFollowUp",
+          "callee": "console.warn",
+          "lineNumber": 518
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.get",
+          "lineNumber": 529
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.set",
+          "lineNumber": 532
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.set",
+          "lineNumber": 533
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.set",
+          "lineNumber": 534
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.set",
+          "lineNumber": 535
+        },
+        {
+          "caller": "seedInitialData",
+          "callee": "storage.set",
+          "lineNumber": 536
+        },
+        {
+          "caller": "resetDemoData",
+          "callee": "seedInitialData",
+          "lineNumber": 543
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 19,
+        "functionCount": 20,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/supabaseClient.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 47,
+      "nonEmptyLines": 40,
+      "functions": [
+        {
+          "name": "getEnvVar",
+          "startLine": 3,
+          "endLine": 11,
+          "params": [
+            "key"
+          ]
+        },
+        {
+          "name": "isSupabaseConfigured",
+          "startLine": 16,
+          "endLine": 24,
+          "params": []
+        },
+        {
+          "name": "getSupabaseClient",
+          "startLine": 28,
+          "endLine": 44,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "isSupabaseConfigured",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "getSupabaseClient",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "supabase",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isSupabaseConfigured",
+          "callee": "Boolean",
+          "lineNumber": 17
+        },
+        {
+          "caller": "isSupabaseConfigured",
+          "callee": "supabaseUrl.startsWith",
+          "lineNumber": 20
+        },
+        {
+          "caller": "isSupabaseConfigured",
+          "callee": "supabaseUrl.includes",
+          "lineNumber": 21
+        },
+        {
+          "caller": "isSupabaseConfigured",
+          "callee": "supabaseUrl.includes",
+          "lineNumber": 22
+        },
+        {
+          "caller": "getSupabaseClient",
+          "callee": "isSupabaseConfigured",
+          "lineNumber": 30
+        },
+        {
+          "caller": "getSupabaseClient",
+          "callee": "createClient",
+          "lineNumber": 33
+        },
+        {
+          "caller": "getSupabaseClient",
+          "callee": "console.warn",
+          "lineNumber": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test-dataService.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 137,
+      "nonEmptyLines": 119,
+      "functions": [
+        {
+          "name": "runTests",
+          "startLine": 22,
+          "endLine": 132,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 23
+        },
+        {
+          "caller": "runTests",
+          "callee": "isSupabaseConfigured",
+          "lineNumber": 26
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 27
+        },
+        {
+          "caller": "runTests",
+          "callee": "getProfile",
+          "lineNumber": 30
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 31
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 32
+        },
+        {
+          "caller": "runTests",
+          "callee": "updateProfile",
+          "lineNumber": 34
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 35
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 36
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 37
+        },
+        {
+          "caller": "runTests",
+          "callee": "saveClient",
+          "lineNumber": 40
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 48
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 49
+        },
+        {
+          "caller": "runTests",
+          "callee": "getClients",
+          "lineNumber": 51
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 52
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 53
+        },
+        {
+          "caller": "runTests",
+          "callee": "createInvoice",
+          "lineNumber": 56
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 64
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 65
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 66
+        },
+        {
+          "caller": "runTests",
+          "callee": "getInvoices",
+          "lineNumber": 68
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 69
+        },
+        {
+          "caller": "runTests",
+          "callee": "invoices.some",
+          "lineNumber": 69
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 70
+        },
+        {
+          "caller": "runTests",
+          "callee": "markPaid",
+          "lineNumber": 72
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 73
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 74
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 75
+        },
+        {
+          "caller": "runTests",
+          "callee": "updateInvoice",
+          "lineNumber": 77
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 78
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 79
+        },
+        {
+          "caller": "runTests",
+          "callee": "saveBill",
+          "lineNumber": 82
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 90
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 91
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 92
+        },
+        {
+          "caller": "runTests",
+          "callee": "getBills",
+          "lineNumber": 94
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 95
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 96
+        },
+        {
+          "caller": "runTests",
+          "callee": "logFollowUp",
+          "lineNumber": 99
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 104
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 105
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 106
+        },
+        {
+          "caller": "runTests",
+          "callee": "getFollowUps",
+          "lineNumber": 108
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 109
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 110
+        },
+        {
+          "caller": "runTests",
+          "callee": "resetDemoData",
+          "lineNumber": 113
+        },
+        {
+          "caller": "runTests",
+          "callee": "getProfile",
+          "lineNumber": 118
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 119
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 120
+        },
+        {
+          "caller": "runTests",
+          "callee": "deleteInvoice",
+          "lineNumber": 123
+        },
+        {
+          "caller": "runTests",
+          "callee": "deleteBill",
+          "lineNumber": 124
+        },
+        {
+          "caller": "runTests",
+          "callee": "getInvoices",
+          "lineNumber": 125
+        },
+        {
+          "caller": "runTests",
+          "callee": "getBills",
+          "lineNumber": 126
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 127
+        },
+        {
+          "caller": "runTests",
+          "callee": "remainingInvoices.some",
+          "lineNumber": 127
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.assert",
+          "lineNumber": 128
+        },
+        {
+          "caller": "runTests",
+          "callee": "remainingBills.some",
+          "lineNumber": 128
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 129
+        },
+        {
+          "caller": "runTests",
+          "callee": "console.log",
+          "lineNumber": 131
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    }
+  ]
+}

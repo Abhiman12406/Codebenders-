@@ -1,0 +1,51 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": "src/components/AgingDashboard.jsx",
+      "language": "javascript",
+      "sizeLines": 347,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/ClientPortalModal.jsx",
+      "language": "javascript",
+      "sizeLines": 227,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/DebtorCard.jsx",
+      "language": "javascript",
+      "sizeLines": 235,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/components/WhatsAppModal.jsx",
+      "language": "javascript",
+      "sizeLines": 251,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/lib/dateUtils.js",
+      "language": "javascript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "src/components/AgingDashboard.jsx": [
+      "src/components/DebtorCard.jsx",
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/ClientPortalModal.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/DebtorCard.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/WhatsAppModal.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/lib/dateUtils.js": []
+  }
+}

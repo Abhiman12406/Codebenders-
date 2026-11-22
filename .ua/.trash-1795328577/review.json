@@ -1,0 +1,63 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:.codebenders/scratch/body-array.json' has no edges (orphan)",
+    "Node 'config:.codebenders/scratch/body-negamount-named.json' has no edges (orphan)",
+    "Node 'config:.codebenders/scratch/body-negative.json' has no edges (orphan)",
+    "Node 'config:.env.example' has no edges (orphan)",
+    "Node 'document:AGENTS.md' has no edges (orphan)",
+    "Node 'document:DESIGN-spacex.md' has no edges (orphan)",
+    "Node 'document:DESIGN-stripe.md' has no edges (orphan)",
+    "Node 'document:EXAMPLES.md' has no edges (orphan)",
+    "Node 'file:index.html' has no edges (orphan)",
+    "Node 'table:supabase_schema.sql' has no edges (orphan)",
+    "Node 'config:.codebenders/state.json' has no edges (orphan)",
+    "Node 'document:docs/ideas/studioflow-operations-cockpit.md' has no edges (orphan)",
+    "Node 'document:docs/intent/one-person-backoffice.md' has no edges (orphan)",
+    "Node 'document:docs/spec/one-person-backoffice-fullstack-spec.md' has no edges (orphan)",
+    "Node 'document:docs/spec/one-person-backoffice-spec.md' has no edges (orphan)",
+    "Node 'config:postcss.config.js' has no edges (orphan)",
+    "Node 'file:references/index.html' has no edges (orphan)",
+    "Node 'file:scratch/artcraft.html' has no edges (orphan)",
+    "Node 'file:scratch/download_chunks.py' has no edges (orphan)",
+    "Node 'file:scratch/extract_hero_comp.py' has no edges (orphan)",
+    "Node 'file:scratch/extract_ruler.py' has no edges (orphan)",
+    "Node 'file:scratch/find_base_doc.py' has no edges (orphan)",
+    "Node 'file:scratch/find_hero_ruler.py' has no edges (orphan)",
+    "Node 'file:scratch/find_herowordmark.py' has no edges (orphan)",
+    "Node 'file:scratch/find_ishero.py' has no edges (orphan)",
+    "Node 'file:scratch/find_ruler.py' has no edges (orphan)",
+    "Node 'file:scratch/find_wordmark_init.py' has no edges (orphan)",
+    "Node 'file:scratch/hero_wordmark_component.js' has no edges (orphan)",
+    "Node 'file:scratch/inspect_artcraft.py' has no edges (orphan)",
+    "Node 'file:scratch/parse_artcraft_html.py' has no edges (orphan)",
+    "Node 'file:scratch/print_hero_jsx.py' has no edges (orphan)",
+    "Node 'file:scratch/query_scrollbar.py' has no edges (orphan)",
+    "Node 'file:scratch/ruler_chunk.js' has no edges (orphan)",
+    "Node 'file:scratch/ruler_raw.js' has no edges (orphan)",
+    "Node 'config:server/data/db.json' has no edges (orphan)",
+    "Node 'document:tasks/plan.md' has no edges (orphan)",
+    "Node 'document:tasks/todo.md' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 160,
+    "totalEdges": 202,
+    "totalLayers": 7,
+    "tourSteps": 10,
+    "nodeTypes": {
+      "file": 65,
+      "function": 72,
+      "class": 1,
+      "config": 10,
+      "document": 11,
+      "table": 1
+    },
+    "edgeTypes": {
+      "contains": 73,
+      "exports": 65,
+      "imports": 59,
+      "documents": 2,
+      "configures": 3
+    }
+  }
+}

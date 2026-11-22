@@ -1,0 +1,44 @@
+{
+  "nodes": [
+    {
+      "id": "config:.codebenders/scratch/body-array.json",
+      "type": "config",
+      "name": "body-array.json",
+      "filePath": ".codebenders/scratch/body-array.json",
+      "summary": "JSON configuration and data file for body-array.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codebenders/scratch/body-negamount-named.json",
+      "type": "config",
+      "name": "body-negamount-named.json",
+      "filePath": ".codebenders/scratch/body-negamount-named.json",
+      "summary": "JSON configuration and data file for body-negamount-named.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:.codebenders/scratch/body-negative.json",
+      "type": "config",
+      "name": "body-negative.json",
+      "filePath": ".codebenders/scratch/body-negative.json",
+      "summary": "JSON configuration and data file for body-negative.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,181 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 87,
+    "filesWithImports": 24,
+    "totalEdges": 59
+  },
+  "failures": [],
+  "importMap": {
+    ".codebenders/scratch/body-array.json": [],
+    ".codebenders/scratch/body-negamount-named.json": [],
+    ".codebenders/scratch/body-negative.json": [],
+    ".codebenders/state.json": [],
+    ".env.example": [],
+    "AGENTS.md": [],
+    "DESIGN-spacex.md": [],
+    "DESIGN-stripe.md": [],
+    "EXAMPLES.md": [],
+    "README.md": [],
+    "docs/ideas/studioflow-operations-cockpit.md": [],
+    "docs/intent/one-person-backoffice.md": [],
+    "docs/spec/one-person-backoffice-fullstack-spec.md": [],
+    "docs/spec/one-person-backoffice-spec.md": [],
+    "index.html": [],
+    "package.json": [],
+    "postcss.config.js": [],
+    "references/index.html": [],
+    "scratch/artcraft.html": [],
+    "scratch/download_chunks.py": [],
+    "scratch/extract_hero_comp.py": [],
+    "scratch/extract_ruler.py": [],
+    "scratch/find_base_doc.py": [],
+    "scratch/find_hero_ruler.py": [],
+    "scratch/find_herowordmark.py": [],
+    "scratch/find_ishero.py": [],
+    "scratch/find_ruler.py": [],
+    "scratch/find_wordmark_init.py": [],
+    "scratch/hero_wordmark_component.js": [],
+    "scratch/inspect_artcraft.py": [],
+    "scratch/parse_artcraft_html.py": [],
+    "scratch/print_hero_jsx.py": [],
+    "scratch/query_scrollbar.py": [],
+    "scratch/ruler_chunk.js": [],
+    "scratch/ruler_raw.js": [],
+    "server/data/db.json": [],
+    "server/engine/forecast.js": [],
+    "server/engine/nlp.js": [],
+    "server/index.js": [
+      "server/routes/ai.js",
+      "server/routes/forecast.js",
+      "server/routes/invoices.js",
+      "server/routes/outflows.js",
+      "server/routes/portal.js",
+      "server/routes/profile.js",
+      "server/routes/triage.js"
+    ],
+    "server/routes/ai.js": [
+      "server/engine/nlp.js",
+      "server/store.js"
+    ],
+    "server/routes/forecast.js": [
+      "server/engine/forecast.js",
+      "server/store.js"
+    ],
+    "server/routes/invoices.js": [
+      "server/store.js"
+    ],
+    "server/routes/outflows.js": [
+      "server/store.js"
+    ],
+    "server/routes/portal.js": [
+      "server/store.js"
+    ],
+    "server/routes/profile.js": [
+      "server/store.js"
+    ],
+    "server/routes/triage.js": [
+      "server/store.js"
+    ],
+    "server/store.js": [],
+    "server/test-api.js": [
+      "server/index.js"
+    ],
+    "src/App.jsx": [
+      "src/components/AgingDashboard.jsx",
+      "src/components/ArtCraftPrinciples.jsx",
+      "src/components/AuthModal.jsx",
+      "src/components/BadDayTriageModal.jsx",
+      "src/components/CashForecastChart.jsx",
+      "src/components/ClientPortalModal.jsx",
+      "src/components/FeedbackCarousel.jsx",
+      "src/components/HorizontalAccordions.jsx",
+      "src/components/InfiniteMarquee.jsx",
+      "src/components/InvoiceModal.jsx",
+      "src/components/Navbar.jsx",
+      "src/components/OutflowsManager.jsx",
+      "src/components/QuickInputBar.jsx",
+      "src/components/ScrubTextReveal.jsx",
+      "src/components/WhatIfSimulator.jsx",
+      "src/components/WhatsAppModal.jsx",
+      "src/data/mockDesignerData.js",
+      "src/lib/api.js",
+      "src/lib/dataService.js",
+      "src/lib/forecastEngine.js",
+      "src/lib/supabaseClient.js"
+    ],
+    "src/components/AgingDashboard.jsx": [
+      "src/components/DebtorCard.jsx",
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/ArtCraftPrinciples.jsx": [],
+    "src/components/AuthModal.jsx": [
+      "src/lib/supabaseClient.js"
+    ],
+    "src/components/BadDayTriageModal.jsx": [],
+    "src/components/CashForecastChart.jsx": [
+      "src/lib/forecastEngine.js"
+    ],
+    "src/components/ClientPortalModal.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/DebtorCard.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/components/FeedbackCarousel.jsx": [],
+    "src/components/HeroWordmark.jsx": [],
+    "src/components/HorizontalAccordions.jsx": [],
+    "src/components/InfiniteMarquee.jsx": [],
+    "src/components/InvoiceModal.jsx": [],
+    "src/components/Navbar.jsx": [],
+    "src/components/OrbitalGalaxyBackground.jsx": [],
+    "src/components/OutflowsManager.jsx": [],
+    "src/components/QuickInputBar.jsx": [
+      "src/lib/nlpParser.js"
+    ],
+    "src/components/RightScrollRuler.jsx": [],
+    "src/components/ScrubTextReveal.jsx": [],
+    "src/components/WhatIfSimulator.jsx": [],
+    "src/components/WhatsAppModal.jsx": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/data/mockDesignerData.js": [],
+    "src/index.css": [],
+    "src/lib/api.js": [],
+    "src/lib/dataService.js": [
+      "src/lib/api.js",
+      "src/lib/supabaseClient.js"
+    ],
+    "src/lib/dateUtils.js": [],
+    "src/lib/forecastEngine.js": [
+      "src/lib/dateUtils.js"
+    ],
+    "src/lib/nlpParser.js": [],
+    "src/lib/supabaseClient.js": [],
+    "src/main.jsx": [
+      "src/App.jsx",
+      "src/index.css"
+    ],
+    "supabase_schema.sql": [],
+    "tailwind.config.js": [],
+    "tasks/plan.md": [],
+    "tasks/todo.md": [],
+    "test-dataService.js": [
+      "src/lib/dataService.js",
+      "src/lib/supabaseClient.js"
+    ],
+    "test-mockData.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/dataService.js"
+    ],
+    "test_e2e_phase3.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/forecastEngine.js"
+    ],
+    "test_forecastEngine.js": [
+      "src/data/mockDesignerData.js",
+      "src/lib/forecastEngine.js"
+    ],
+    "vite.config.js": []
+  }
+}

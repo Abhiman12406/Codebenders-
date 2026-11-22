@@ -1,0 +1,117 @@
+{
+  "projectRoot": "C:/Users/Asus/Desktop/Codebenders",
+  "batchFiles": [
+    {
+      "path": "server/engine/forecast.js",
+      "language": "javascript",
+      "sizeLines": 228,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/engine/nlp.js",
+      "language": "javascript",
+      "sizeLines": 120,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/index.js",
+      "language": "javascript",
+      "sizeLines": 41,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/ai.js",
+      "language": "javascript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/forecast.js",
+      "language": "javascript",
+      "sizeLines": 32,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/invoices.js",
+      "language": "javascript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/outflows.js",
+      "language": "javascript",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/portal.js",
+      "language": "javascript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/profile.js",
+      "language": "javascript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/routes/triage.js",
+      "language": "javascript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/store.js",
+      "language": "javascript",
+      "sizeLines": 506,
+      "fileCategory": "code"
+    },
+    {
+      "path": "server/test-api.js",
+      "language": "javascript",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    }
+  ],
+  "batchImportData": {
+    "server/engine/forecast.js": [],
+    "server/engine/nlp.js": [],
+    "server/index.js": [
+      "server/routes/ai.js",
+      "server/routes/forecast.js",
+      "server/routes/invoices.js",
+      "server/routes/outflows.js",
+      "server/routes/portal.js",
+      "server/routes/profile.js",
+      "server/routes/triage.js"
+    ],
+    "server/routes/ai.js": [
+      "server/engine/nlp.js",
+      "server/store.js"
+    ],
+    "server/routes/forecast.js": [
+      "server/engine/forecast.js",
+      "server/store.js"
+    ],
+    "server/routes/invoices.js": [
+      "server/store.js"
+    ],
+    "server/routes/outflows.js": [
+      "server/store.js"
+    ],
+    "server/routes/portal.js": [
+      "server/store.js"
+    ],
+    "server/routes/profile.js": [
+      "server/store.js"
+    ],
+    "server/routes/triage.js": [
+      "server/store.js"
+    ],
+    "server/store.js": [],
+    "server/test-api.js": [
+      "server/index.js"
+    ]
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "nodes": [
+    {
+      "id": "file:src/components/HeroWordmark.jsx",
+      "type": "file",
+      "name": "HeroWordmark.jsx",
+      "filePath": "src/components/HeroWordmark.jsx",
+      "summary": "Animated typographic brand wordmark and hero visual header component.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "function",
+      "name": "HeroWordmark",
+      "filePath": "src/components/HeroWordmark.jsx",
+      "lineRange": [
+        36,
+        300
+      ],
+      "summary": "Function HeroWordmark in HeroWordmark.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "type": "file",
+      "name": "OrbitalGalaxyBackground.jsx",
+      "filePath": "src/components/OrbitalGalaxyBackground.jsx",
+      "summary": "Canvas-based particle galaxy background providing ambient visual depth.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "function",
+      "name": "OrbitalGalaxyBackground",
+      "filePath": "src/components/OrbitalGalaxyBackground.jsx",
+      "lineRange": [
+        16,
+        311
+      ],
+      "summary": "Function OrbitalGalaxyBackground in OrbitalGalaxyBackground.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/components/RightScrollRuler.jsx",
+      "type": "file",
+      "name": "RightScrollRuler.jsx",
+      "filePath": "src/components/RightScrollRuler.jsx",
+      "summary": "Custom vertical scroll ruler and page position indicator with visual tick marks.",
+      "tags": [
+        "component",
+        "ui",
+        "react",
+        "studioflow"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "function",
+      "name": "RightScrollRuler",
+      "filePath": "src/components/RightScrollRuler.jsx",
+      "lineRange": [
+        16,
+        398
+      ],
+      "summary": "Function RightScrollRuler in RightScrollRuler.jsx implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:src/index.css",
+      "type": "file",
+      "name": "index.css",
+      "filePath": "src/index.css",
+      "summary": "Global styles and Tailwind CSS directives, typography, and utility styling.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:tailwind.config.js",
+      "type": "config",
+      "name": "tailwind.config.js",
+      "filePath": "tailwind.config.js",
+      "summary": "Tailwind CSS design token configuration defining custom theme colors, spacing, and animations.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:tasks/plan.md",
+      "type": "document",
+      "name": "plan.md",
+      "filePath": "tasks/plan.md",
+      "summary": "Markdown documentation detailing plan.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:tasks/todo.md",
+      "type": "document",
+      "name": "todo.md",
+      "filePath": "tasks/todo.md",
+      "summary": "Markdown documentation detailing todo.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:vite.config.js",
+      "type": "config",
+      "name": "vite.config.js",
+      "filePath": "vite.config.js",
+      "summary": "Vite bundler configuration setting up React plugin and backend API proxying.",
+      "tags": [
+        "utility",
+        "module",
+        "code"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/components/HeroWordmark.jsx",
+      "target": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/HeroWordmark.jsx",
+      "target": "function:src/components/HeroWordmark.jsx:HeroWordmark",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "target": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/OrbitalGalaxyBackground.jsx",
+      "target": "function:src/components/OrbitalGalaxyBackground.jsx:OrbitalGalaxyBackground",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:src/components/RightScrollRuler.jsx",
+      "target": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:src/components/RightScrollRuler.jsx",
+      "target": "function:src/components/RightScrollRuler.jsx:RightScrollRuler",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "config:tailwind.config.js",
+      "target": "file:src/index.css",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:vite.config.js",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

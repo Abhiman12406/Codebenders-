@@ -24,13 +24,12 @@ export default function InvoiceModal({
   const [invoiceNumber, setInvoiceNumber] = useState('');
   const [issueDate, setIssueDate] = useState('');
   const [dueDate, setDueDate] = useState('');
-  const [notes, setNotes] = useState('Payment due via ACH/Stripe. Thank you for your business!');
+  const [notes, setNotes] = useState('Payment due via ACH/Wire. Thank you for your business!');
   
   const [items, setItems] = useState([
     { desc: 'Creative Direction & Design Deliverables', qty: 1, rate: 2500 },
   ]);
 
-  // Set default dates and random invoice number on open
   useEffect(() => {
     if (isOpen) {
       const today = new Date();
@@ -54,7 +53,6 @@ export default function InvoiceModal({
 
   if (!isOpen) return null;
 
-  // Handle client select change
   const handleClientChange = (e) => {
     const val = e.target.value;
     if (val === '__new__') {
@@ -69,14 +67,12 @@ export default function InvoiceModal({
     }
   };
 
-  // Quick terms helper
   const setQuickTerms = (days) => {
     const d = new Date(issueDate || new Date());
     d.setDate(d.getDate() + days);
     setDueDate(d.toISOString().split('T')[0]);
   };
 
-  // Line items helpers
   const handleItemChange = (index, field, value) => {
     setItems((prev) =>
       prev.map((item, i) =>
@@ -94,7 +90,6 @@ export default function InvoiceModal({
     setItems((prev) => prev.filter((_, i) => i !== index));
   };
 
-  // Calculate total
   const calculatedTotal = items.reduce((sum, item) => {
     const qty = Number(item.qty) || 0;
     const rate = Number(item.rate) || 0;
@@ -147,50 +142,50 @@ export default function InvoiceModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-2xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl shadow-slate-950/90 overflow-hidden my-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-slate-800 bg-slate-900/50">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-indigo-600/10 text-indigo-400 border border-indigo-500/20">
-              <FileText className="w-5 h-5" />
+        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white flex items-center justify-center rounded-[4px]">
+              <FileText className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white tracking-tight">Create New Invoice</h3>
-              <p className="text-xs text-slate-400">Generate studio deliverable invoice & Net terms</p>
+              <h3 className="button-cap text-white text-base">CREATE NEW INVOICE</h3>
+              <p className="micro-cap text-[#5a5a5f] mt-0.5">Issue invoice and update your cash forecast horizon</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition"
+            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
         {/* Form Body */}
-        <form onSubmit={handleSubmit} className="p-6 space-y-5">
+        <form onSubmit={handleSubmit} className="p-6 sm:p-8 space-y-5 text-xs">
           
           {/* Client & Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Client
+              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+                CLIENT ENTITY
               </label>
               {!isNewClient ? (
                 <div className="space-y-1.5">
                   <select
                     value={selectedClientId}
                     onChange={handleClientChange}
-                    className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full text-input text-xs tracking-[0.96px] bg-black text-white"
                   >
                     {clients.map((c) => (
-                      <option key={c.id} value={c.id}>
+                      <option key={c.id} value={c.id} className="bg-black text-white">
                         {c.name} {c.company ? `(${c.company})` : ''}
                       </option>
                     ))}
-                    <option value="__new__">+ Add New Client...</option>
+                    <option value="__new__" className="text-white font-bold bg-[#0a0a0a]">+ Add new client...</option>
                   </select>
                 </div>
               ) : (
@@ -198,18 +193,18 @@ export default function InvoiceModal({
                   <div className="flex items-center gap-2">
                     <input
                       type="text"
-                      placeholder="Client or Company Name"
+                      placeholder="Client or company name"
                       value={newClientName}
                       onChange={(e) => setNewClientName(e.target.value)}
                       required
-                      className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                      className="w-full text-input text-xs tracking-[0.96px]"
                     />
                     <button
                       type="button"
                       onClick={() => setIsNewClient(false)}
-                      className="text-xs text-slate-400 hover:text-slate-200 underline shrink-0"
+                      className="micro-cap text-white hover:underline shrink-0"
                     >
-                      Cancel
+                      CANCEL
                     </button>
                   </div>
                 </div>
@@ -218,18 +213,18 @@ export default function InvoiceModal({
 
             {/* Client WhatsApp Phone */}
             <div>
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
-                <span>Client WhatsApp Phone</span>
-                <span className="text-[10px] text-slate-500 lowercase font-normal">(with country code)</span>
+              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5 flex items-center justify-between">
+                <span>WHATSAPP PHONE</span>
+                <span className="text-[10px] text-[#5a5a5f]">(Int'l format)</span>
               </label>
               <div className="relative">
-                <Phone className="absolute left-3 top-3 w-4 h-4 text-slate-400" />
+                <Phone className="absolute left-3.5 top-3 w-4 h-4 text-[#5a5a5f]" />
                 <input
                   type="text"
                   placeholder="+15551234567"
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
-                  className="w-full pl-9 pr-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  className="w-full text-input pl-10 text-xs tracking-[0.96px]"
                 />
               </div>
             </div>
@@ -238,8 +233,8 @@ export default function InvoiceModal({
           {/* Project Title & Invoice # */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="sm:col-span-2">
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Project Deliverable Title
+              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+                PROJECT TITLE
               </label>
               <input
                 type="text"
@@ -247,20 +242,20 @@ export default function InvoiceModal({
                 value={projectTitle}
                 onChange={(e) => setProjectTitle(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full text-input text-xs tracking-[0.96px]"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Invoice #
+              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+                INVOICE NUMBER
               </label>
               <input
                 type="text"
                 value={invoiceNumber}
                 onChange={(e) => setInvoiceNumber(e.target.value)}
                 required
-                className="w-full px-3.5 py-2.5 bg-slate-950 border border-slate-800 rounded-xl text-sm font-mono text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                className="w-full text-input text-xs tabular-nums tracking-[1.17px] font-bold"
               />
             </div>
           </div>
@@ -268,41 +263,41 @@ export default function InvoiceModal({
           {/* Dates & Quick Net Terms */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-                Issue Date
+              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+                ISSUE DATE
               </label>
               <input
                 type="date"
                 value={issueDate}
                 onChange={(e) => setIssueDate(e.target.value)}
-                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 focus:outline-none focus:border-indigo-500"
+                className="w-full text-input text-xs bg-black text-white"
               />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
-                  Due Date
+                <label className="micro-cap text-[#5a5a5f] font-bold">
+                  DUE DATE
                 </label>
-                <div className="flex items-center gap-1">
+                <div className="flex items-center gap-1.5">
                   <button
                     type="button"
                     onClick={() => setQuickTerms(0)}
-                    className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
                   >
-                    Receipt
+                    Today
                   </button>
                   <button
                     type="button"
                     onClick={() => setQuickTerms(15)}
-                    className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
                   >
                     Net 15
                   </button>
                   <button
                     type="button"
                     onClick={() => setQuickTerms(30)}
-                    className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:bg-slate-700"
+                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
                   >
                     Net 30
                   </button>
@@ -312,28 +307,28 @@ export default function InvoiceModal({
                 type="date"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-sm text-slate-200 focus:outline-none focus:border-indigo-500"
+                className="w-full text-input text-xs bg-black text-white"
               />
             </div>
           </div>
 
           {/* Line Items */}
-          <div className="space-y-2 pt-2">
+          <div className="space-y-3 pt-3 border-t border-[#3a3a3f]">
             <div className="flex items-center justify-between">
-              <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
-                Line Items
+              <label className="micro-cap text-[#5a5a5f] font-bold">
+                LINE ITEMS
               </label>
               <button
                 type="button"
                 onClick={handleAddItem}
-                className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-400 hover:text-indigo-300"
+                className="inline-flex items-center gap-1 micro-cap text-white font-bold hover:underline"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Item</span>
               </button>
             </div>
 
-            <div className="space-y-2 max-h-48 overflow-y-auto pr-1">
+            <div className="space-y-2 max-h-44 overflow-y-auto pr-1">
               {items.map((item, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <input
@@ -342,30 +337,30 @@ export default function InvoiceModal({
                     value={item.desc}
                     onChange={(e) => handleItemChange(index, 'desc', e.target.value)}
                     required
-                    className="flex-1 px-3 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                    className="flex-1 text-input text-xs py-2 tracking-[0.32px]"
                   />
                   <input
                     type="number"
                     min="1"
-                    placeholder="Qty"
+                    placeholder="QTY"
                     value={item.qty}
                     onChange={(e) => handleItemChange(index, 'qty', e.target.value)}
-                    className="w-16 px-2.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-center text-slate-200 focus:outline-none focus:border-indigo-500"
+                    className="w-16 text-input text-xs text-center py-2 tabular-nums"
                   />
                   <input
                     type="number"
                     min="0"
                     step="0.01"
-                    placeholder="Rate"
+                    placeholder="RATE"
                     value={item.rate}
                     onChange={(e) => handleItemChange(index, 'rate', e.target.value)}
-                    className="w-24 px-2.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-right text-slate-200 focus:outline-none focus:border-indigo-500"
+                    className="w-28 text-input text-xs text-right py-2 tabular-nums"
                   />
                   <button
                     type="button"
                     onClick={() => handleRemoveItem(index)}
                     disabled={items.length === 1}
-                    className="p-2 text-slate-500 hover:text-rose-400 disabled:opacity-30 disabled:hover:text-slate-500 transition"
+                    className="p-2 text-[#5a5a5f] hover:text-[#ef4444] disabled:opacity-30 transition"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -374,11 +369,11 @@ export default function InvoiceModal({
             </div>
 
             {/* Total Display */}
-            <div className="flex items-center justify-between p-3 bg-slate-950/60 border border-slate-800 rounded-xl mt-3">
-              <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">
-                Total Invoice Balance
+            <div className="flex items-center justify-between p-4 bg-black border border-[#3a3a3f] rounded-[4px] mt-2">
+              <span className="micro-cap text-[#5a5a5f] font-bold">
+                TOTAL INVOICE BALANCE
               </span>
-              <span className="text-lg font-bold text-white tracking-tight">
+              <span className="text-xl font-bold text-white tabular-nums tracking-[1.2px]">
                 {currency}{calculatedTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
@@ -386,31 +381,31 @@ export default function InvoiceModal({
 
           {/* Notes */}
           <div>
-            <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1.5">
-              Client Memo / Payment Notes
+            <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+              PAYMENT INSTRUCTIONS &amp; NOTES
             </label>
             <input
               type="text"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full px-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-300 placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+              className="w-full text-input text-xs tracking-[0.32px]"
             />
           </div>
 
           {/* Modal Actions */}
-          <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-800">
+          <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#3a3a3f]">
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2.5 rounded-xl text-sm font-medium text-slate-400 hover:text-white transition"
+              className="button-ghost-sm text-xs py-2.5 px-5"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 transition shadow-lg shadow-indigo-600/30"
+              className="button-ghost-on-dark text-xs py-2.5 px-6"
             >
-              Create & Issue Invoice
+              Issue Invoice
             </button>
           </div>
 

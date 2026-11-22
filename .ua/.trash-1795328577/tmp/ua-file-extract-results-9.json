@@ -1,0 +1,1280 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [
+    "src/index.css"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 5,
+      "failed": 0,
+      "skipped": 2
+    }
+  },
+  "results": [
+    {
+      "path": "src/components/HeroWordmark.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 300,
+      "nonEmptyLines": 262,
+      "functions": [
+        {
+          "name": "clamp01",
+          "startLine": 28,
+          "endLine": 30,
+          "params": [
+            "val"
+          ]
+        },
+        {
+          "name": "easeInOutCubic",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "t"
+          ]
+        },
+        {
+          "name": "HeroWordmark",
+          "startLine": 36,
+          "endLine": 300,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HeroWordmark",
+          "line": 36,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "clamp01",
+          "callee": "Math.max",
+          "lineNumber": 29
+        },
+        {
+          "caller": "clamp01",
+          "callee": "Math.min",
+          "lineNumber": 29
+        },
+        {
+          "caller": "easeInOutCubic",
+          "callee": "Math.pow",
+          "lineNumber": 33
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useRef",
+          "lineNumber": 37
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useRef",
+          "lineNumber": 38
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useRef",
+          "lineNumber": 39
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useState",
+          "lineNumber": 47
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useState",
+          "lineNumber": 48
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useRef",
+          "lineNumber": 49
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useCallback",
+          "lineNumber": 52
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "letterRefs.current.filter",
+          "lineNumber": 60
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "els.forEach",
+          "lineNumber": 64
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "window.getComputedStyle",
+          "lineNumber": 70
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "parseFloat",
+          "lineNumber": 71
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "els.map",
+          "lineNumber": 73
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "el.getBoundingClientRect",
+          "lineNumber": 73
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "rects.map",
+          "lineNumber": 74
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "rects.map",
+          "lineNumber": 75
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "rects.map",
+          "lineNumber": 76
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "applyScrollFrame",
+          "lineNumber": 87
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useCallback",
+          "lineNumber": 91
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "letterRefs.current.filter",
+          "lineNumber": 93
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "els.forEach",
+          "lineNumber": 99
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "clamp01",
+          "lineNumber": 107
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "setIsDocked",
+          "lineNumber": 109
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "clamp01",
+          "lineNumber": 123
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "easeInOutCubic",
+          "lineNumber": 124
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "Math.min",
+          "lineNumber": 140
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "deltaX.toFixed",
+          "lineNumber": 153
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "deltaY.toFixed",
+          "lineNumber": 153
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "curRot.toFixed",
+          "lineNumber": 153
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "curScale.toFixed",
+          "lineNumber": 153
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "(d * 100).toFixed",
+          "lineNumber": 159
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "useEffect",
+          "lineNumber": 173
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "measure",
+          "lineNumber": 174
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 177
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 178
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "applyScrollFrame",
+          "lineNumber": 180
+        },
+        {
+          "caller": "handleResize",
+          "callee": "measure",
+          "lineNumber": 185
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "window.addEventListener",
+          "lineNumber": 188
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "window.addEventListener",
+          "lineNumber": 189
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "document.fonts.ready.then(measure).catch",
+          "lineNumber": 192
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "document.fonts.ready.then",
+          "lineNumber": 192
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "window.removeEventListener",
+          "lineNumber": 196
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "window.removeEventListener",
+          "lineNumber": 197
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 198
+        },
+        {
+          "caller": "handleJumpToHero",
+          "callee": "window.scrollTo",
+          "lineNumber": 204
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "LETTERS.slice(0, 6).map",
+          "lineNumber": 226
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "LETTERS.slice",
+          "lineNumber": 226
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "LETTERS.slice(6).map",
+          "lineNumber": 253
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "LETTERS.slice",
+          "lineNumber": 253
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "setIsHoveredDock",
+          "lineNumber": 277
+        },
+        {
+          "caller": "HeroWordmark",
+          "callee": "setIsHoveredDock",
+          "lineNumber": 278
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/OrbitalGalaxyBackground.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 311,
+      "nonEmptyLines": 261,
+      "functions": [
+        {
+          "name": "OrbitalGalaxyBackground",
+          "startLine": 16,
+          "endLine": 311,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrbitalGalaxyBackground",
+          "line": 16,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "useRef",
+          "lineNumber": 17
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "useRef",
+          "lineNumber": 18
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "useEffect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "canvas.getContext",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "canvas.getBoundingClientRect",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleResize",
+          "callee": "canvas.parentElement.getBoundingClientRect",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handleResize",
+          "callee": "Math.round",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleResize",
+          "callee": "Math.round",
+          "lineNumber": 53
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "window.addEventListener",
+          "lineNumber": 58
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "window.addEventListener",
+          "lineNumber": 59
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "handleResize",
+          "lineNumber": 60
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "performance.now",
+          "lineNumber": 90
+        },
+        {
+          "caller": "render",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 93
+        },
+        {
+          "caller": "render",
+          "callee": "Math.max",
+          "lineNumber": 108
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 115
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.scale",
+          "lineNumber": 116
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.clearRect",
+          "lineNumber": 117
+        },
+        {
+          "caller": "render",
+          "callee": "orbitalRadii.forEach",
+          "lineNumber": 121
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 122
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.ellipse",
+          "lineNumber": 123
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.setLineDash",
+          "lineNumber": 126
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 127
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.setLineDash",
+          "lineNumber": 129
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 137
+        },
+        {
+          "caller": "render",
+          "callee": "Math.cos",
+          "lineNumber": 143
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 144
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 147
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 149
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.createLinearGradient",
+          "lineNumber": 154
+        },
+        {
+          "caller": "render",
+          "callee": "Math.cos",
+          "lineNumber": 157
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 158
+        },
+        {
+          "caller": "render",
+          "callee": "grad.addColorStop",
+          "lineNumber": 160
+        },
+        {
+          "caller": "render",
+          "callee": "grad.addColorStop",
+          "lineNumber": 161
+        },
+        {
+          "caller": "render",
+          "callee": "grad.addColorStop",
+          "lineNumber": 162
+        },
+        {
+          "caller": "render",
+          "callee": "grad.addColorStop",
+          "lineNumber": 163
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 167
+        },
+        {
+          "caller": "render",
+          "callee": "Math.cos",
+          "lineNumber": 176
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 177
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 186
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.moveTo",
+          "lineNumber": 187
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.lineTo",
+          "lineNumber": 188
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 191
+        },
+        {
+          "caller": "render",
+          "callee": "Math.cos",
+          "lineNumber": 203
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 204
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.createRadialGradient",
+          "lineNumber": 207
+        },
+        {
+          "caller": "render",
+          "callee": "auraGrad.addColorStop",
+          "lineNumber": 208
+        },
+        {
+          "caller": "render",
+          "callee": "auraGrad.addColorStop",
+          "lineNumber": 209
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 211
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 212
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 214
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 217
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 218
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 222
+        },
+        {
+          "caller": "render",
+          "callee": "BADGES.forEach",
+          "lineNumber": 228
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 230
+        },
+        {
+          "caller": "render",
+          "callee": "Math.cos",
+          "lineNumber": 237
+        },
+        {
+          "caller": "render",
+          "callee": "Math.sin",
+          "lineNumber": 238
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.save",
+          "lineNumber": 245
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.translate",
+          "lineNumber": 246
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 254
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.roundRect",
+          "lineNumber": 255
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 256
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.stroke",
+          "lineNumber": 257
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 260
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.arc",
+          "lineNumber": 261
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 265
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fillText",
+          "lineNumber": 273
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 275
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.createRadialGradient",
+          "lineNumber": 280
+        },
+        {
+          "caller": "render",
+          "callee": "centerHoleGrad.addColorStop",
+          "lineNumber": 281
+        },
+        {
+          "caller": "render",
+          "callee": "centerHoleGrad.addColorStop",
+          "lineNumber": 282
+        },
+        {
+          "caller": "render",
+          "callee": "centerHoleGrad.addColorStop",
+          "lineNumber": 283
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.beginPath",
+          "lineNumber": 286
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.ellipse",
+          "lineNumber": 287
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.fill",
+          "lineNumber": 288
+        },
+        {
+          "caller": "render",
+          "callee": "ctx.restore",
+          "lineNumber": 290
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 293
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 296
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "window.removeEventListener",
+          "lineNumber": 297
+        },
+        {
+          "caller": "OrbitalGalaxyBackground",
+          "callee": "window.removeEventListener",
+          "lineNumber": 298
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/RightScrollRuler.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 398,
+      "nonEmptyLines": 363,
+      "functions": [
+        {
+          "name": "RightScrollRuler",
+          "startLine": 16,
+          "endLine": 398,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RightScrollRuler",
+          "line": 16,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useRef",
+          "lineNumber": 24
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useRef",
+          "lineNumber": 25
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useRef",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useRef",
+          "lineNumber": 27
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useCallback",
+          "lineNumber": 30
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.max",
+          "lineNumber": 34
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.min",
+          "lineNumber": 36
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.max",
+          "lineNumber": 36
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.min",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.max",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.abs",
+          "lineNumber": 40
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.min",
+          "lineNumber": 41
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "setScrollProgress",
+          "lineNumber": 44
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "setViewportRatio",
+          "lineNumber": 45
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "useEffect",
+          "lineNumber": 48
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "updateScroll",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 54
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "updateScroll",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "clearTimeout",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleScroll",
+          "callee": "setTimeout",
+          "lineNumber": 57
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "window.addEventListener",
+          "lineNumber": 63
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "window.addEventListener",
+          "lineNumber": 64
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "window.removeEventListener",
+          "lineNumber": 67
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "window.removeEventListener",
+          "lineNumber": 68
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 69
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "clearTimeout",
+          "lineNumber": 70
+        },
+        {
+          "caller": "scrollToPercent",
+          "callee": "Math.max",
+          "lineNumber": 78
+        },
+        {
+          "caller": "scrollToPercent",
+          "callee": "window.scrollTo",
+          "lineNumber": 82
+        },
+        {
+          "caller": "scrollToPercent",
+          "callee": "window.scrollTo",
+          "lineNumber": 87
+        },
+        {
+          "caller": "calculatePctFromClientY",
+          "callee": "rulerRef.current.getBoundingClientRect",
+          "lineNumber": 94
+        },
+        {
+          "caller": "calculatePctFromClientY",
+          "callee": "Math.max",
+          "lineNumber": 98
+        },
+        {
+          "caller": "calculatePctFromClientY",
+          "callee": "Math.min",
+          "lineNumber": 98
+        },
+        {
+          "caller": "calculatePctFromClientY",
+          "callee": "Math.round",
+          "lineNumber": 99
+        },
+        {
+          "caller": "handleClick",
+          "callee": "calculatePctFromClientY",
+          "lineNumber": 103
+        },
+        {
+          "caller": "handleClick",
+          "callee": "scrollToPercent",
+          "lineNumber": 104
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "e.preventDefault",
+          "lineNumber": 108
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "setIsDragging",
+          "lineNumber": 109
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "calculatePctFromClientY",
+          "lineNumber": 110
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "scrollToPercent",
+          "lineNumber": 111
+        },
+        {
+          "caller": "onPointerMove",
+          "callee": "calculatePctFromClientY",
+          "lineNumber": 114
+        },
+        {
+          "caller": "onPointerMove",
+          "callee": "scrollToPercent",
+          "lineNumber": 115
+        },
+        {
+          "caller": "onPointerMove",
+          "callee": "setHoverPct",
+          "lineNumber": 116
+        },
+        {
+          "caller": "onPointerMove",
+          "callee": "setHoverY",
+          "lineNumber": 117
+        },
+        {
+          "caller": "onPointerUp",
+          "callee": "setIsDragging",
+          "lineNumber": 121
+        },
+        {
+          "caller": "onPointerUp",
+          "callee": "window.removeEventListener",
+          "lineNumber": 122
+        },
+        {
+          "caller": "onPointerUp",
+          "callee": "window.removeEventListener",
+          "lineNumber": 123
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "window.addEventListener",
+          "lineNumber": 126
+        },
+        {
+          "caller": "handlePointerDown",
+          "callee": "window.addEventListener",
+          "lineNumber": 127
+        },
+        {
+          "caller": "handlePointerMove",
+          "callee": "rulerRef.current.getBoundingClientRect",
+          "lineNumber": 132
+        },
+        {
+          "caller": "handlePointerMove",
+          "callee": "calculatePctFromClientY",
+          "lineNumber": 133
+        },
+        {
+          "caller": "handlePointerMove",
+          "callee": "setHoverPct",
+          "lineNumber": 134
+        },
+        {
+          "caller": "handlePointerMove",
+          "callee": "setHoverY",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handlePointerEnter",
+          "callee": "setIsHovered",
+          "lineNumber": 139
+        },
+        {
+          "caller": "handlePointerLeave",
+          "callee": "setIsHovered",
+          "lineNumber": 144
+        },
+        {
+          "caller": "handlePointerLeave",
+          "callee": "setHoverY",
+          "lineNumber": 145
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "ticks.push",
+          "lineNumber": 153
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.round",
+          "lineNumber": 161
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "ticks.map",
+          "lineNumber": 221
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.abs",
+          "lineNumber": 224
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "Math.abs",
+          "lineNumber": 225
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "sectionAnchors.map",
+          "lineNumber": 284
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "e.stopPropagation",
+          "lineNumber": 294
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "document.getElementById",
+          "lineNumber": 295
+        },
+        {
+          "caller": "RightScrollRuler",
+          "callee": "el.scrollIntoView",
+          "lineNumber": 297
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tailwind.config.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 93,
+      "nonEmptyLines": 93,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "tasks/plan.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 98,
+      "nonEmptyLines": 83,
+      "sections": [
+        {
+          "heading": "Technical Implementation Plan: StudioFlow Fullstack Operations Cockpit",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Architectural Strategy & Slicing",
+          "level": 2,
+          "line": 8
+        },
+        {
+          "heading": "2. Implementation Phases & Checkpoints",
+          "level": 2,
+          "line": 31
+        },
+        {
+          "heading": "Phase 1: Backend API Server & Persistence Layer",
+          "level": 3,
+          "line": 33
+        },
+        {
+          "heading": "Phase 2: Fullstack Wireup & Development Tooling",
+          "level": 3,
+          "line": 46
+        },
+        {
+          "heading": "Phase 3: Interactive Client Pay Portal & Settlement Engine",
+          "level": 3,
+          "line": 55
+        },
+        {
+          "heading": "Phase 4: Operational Cockpit Refactor (Purging Landing Page Fluff)",
+          "level": 3,
+          "line": 64
+        },
+        {
+          "heading": "Phase 5: Automated Verification & Production Readiness",
+          "level": 3,
+          "line": 81
+        },
+        {
+          "heading": "3. Risks & Mitigations",
+          "level": 2,
+          "line": 91
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "tasks/todo.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 80,
+      "nonEmptyLines": 60,
+      "sections": [
+        {
+          "heading": "Task Checklist: StudioFlow Fullstack Operations Cockpit",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Phase 1: Backend API Server & Persistence Layer",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Phase 2: Fullstack Wireup & Development Tooling",
+          "level": 2,
+          "line": 22
+        },
+        {
+          "heading": "Phase 3: Interactive Client Pay Portal & Settlement Engine",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "Phase 4: Operational Cockpit Refactor (Purging Landing Page Fluff)",
+          "level": 2,
+          "line": 50
+        },
+        {
+          "heading": "Phase 5: Verification & Production Readiness",
+          "level": 2,
+          "line": 70
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "vite.config.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 14,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

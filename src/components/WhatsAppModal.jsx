@@ -1,16 +1,13 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState } from 'react';
 import { 
   X, 
   MessageSquare, 
-  ExternalLink, 
+  Send, 
   Copy, 
   Check, 
-  Send, 
-  Sparkles, 
-  Phone, 
+  Calendar, 
   Clock, 
-  ShieldAlert,
-  Calendar
+  ShieldAlert
 } from 'lucide-react';
 import { getDaysDiff } from '../lib/dateUtils.js';
 
@@ -22,98 +19,66 @@ export default function WhatsAppModal({
   currency = '$',
   onLogFollowUp,
 }) {
-  const [activeCadence, setActiveCadence] = useState('friendly');
-  const [customText, setCustomText] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [copied, setCopied] = useState(false);
-
-  // Compute overdue days
-  const { diffDays, defaultCadence } = useMemo(() => {
-    if (!invoice?.due_date) return { diffDays: 0, defaultCadence: 'friendly' };
-
-    const diff = getDaysDiff(invoice.due_date);
-
-    let cadence = 'friendly';
-    if (diff > 14) {
-      cadence = 'urgent';
-    } else if (diff > 0) {
-      cadence = 'firm';
-    } else if (diff === 0) {
-      cadence = 'due_today';
-    } else {
-      cadence = 'friendly';
-    }
-
-    return { diffDays: diff, defaultCadence: cadence };
-  }, [invoice]);
-
-  // Pre-drafted cadence templates
-  const templates = useMemo(() => {
-    if (!invoice) return {};
-
-    const clientName = invoice.client_name?.split(' ')[0] || 'there';
-    const amountStr = `${currency}${Number(invoice.amount).toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
-    const project = invoice.project_title || 'Design Deliverables';
-    const invNum = invoice.invoice_number || 'INV';
-    const due = invoice.due_date || 'today';
-    const payLink = `https://pay.studioflow.design/${invNum}`;
-
-    return {
-      friendly: `Hi ${clientName}! Hope you're having a great week. Just sharing a friendly heads-up that invoice #${invNum} (${amountStr}) for ${project} is due on ${due}. You can view/settle it here: ${payLink}. Let me know if you need anything else!`,
-      
-      due_today: `Hi ${clientName}, quick note that invoice #${invNum} (${amountStr}) for ${project} is due today. Let me know if you need our bank transfer details or Stripe link again. Thank you!`,
-      
-      firm: `Hi ${clientName}, checking in regarding invoice #${invNum} (${amountStr}) which was due on ${due}${diffDays > 0 ? ` (${diffDays} days ago)` : ''}. Please let me know when payment will be processed so we can keep upcoming design deliverables on schedule.`,
-      
-      urgent: `Hi ${clientName}, invoice #${invNum} (${amountStr}) for ${project} is now ${Math.max(diffDays, 15)} days overdue. To prevent pausing production on the current project milestones, please clear the outstanding balance today: ${payLink}. Thank you for your immediate attention.`,
-    };
-  }, [invoice, currency, diffDays]);
-
-  // Sync state on open
-  useEffect(() => {
-    if (isOpen && invoice) {
-      setActiveCadence(defaultCadence);
-      setCustomText(templates[defaultCadence] || '');
-      const rawPhone = invoice.client_phone || client?.phone || '+15552345678';
-      setPhoneNumber(rawPhone);
-      setCopied(false);
-    }
-  }, [isOpen, invoice, client, defaultCadence, templates]);
-
-  // When cadence tab switches
-  const handleSelectCadence = (cadence) => {
-    setActiveCadence(cadence);
-    setCustomText(templates[cadence] || '');
-  };
-
   if (!isOpen || !invoice) return null;
 
-  // Clean phone number for wa.me (digits only)
-  const cleanPhone = (phoneNumber || '').replace(/[^0-9]/g, '');
+  const diffDays = invoice?.due_date ? getDaysDiff(invoice.due_date) : 0;
+  const isOverdue = diffDays > 0;
+  const clientName = client?.name || invoice.client_name || 'Client';
+  const clientPhone = client?.phone || invoice.client_phone || '';
+  const amountStr = `${currency}${Number(invoice.amount).toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
 
-  // Formatted wa.me URL
-  const waUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(customText)}`;
+  const templates = {
+    friendly: `Hi ${clientName}, hope you're having a great week! Just sharing a friendly reminder that invoice ${invoice.invoice_number} for ${invoice.project_title} (${amountStr}) is scheduled for payment on ${invoice.due_date}. Let me know if you need any additional details!`,
+    
+    due_today: `Hi ${clientName}, just checking in regarding invoice ${invoice.invoice_number} for ${invoice.project_title} (${amountStr}), which is due today (${invoice.due_date}). Thank you!`,
+    
+    firm: `Hi ${clientName}, following up on invoice ${invoice.invoice_number} for ${invoice.project_title} (${amountStr}), which is now ${diffDays} days overdue. Could you confirm when payment will be processed this week? Thank you.`,
+    
+    urgent: `Hi ${clientName}, invoice ${invoice.invoice_number} (${amountStr}) is now ${Math.max(diffDays, 15)} days overdue. Please let us know when to expect settlement as studio scheduling for active deliverables is currently on pause until accounts are current.`,
+  };
 
-  const handleSendWhatsApp = () => {
-    if (typeof window !== 'undefined') {
-      window.open(waUrl, '_blank', 'noopener,noreferrer');
+  const getRecommendedTone = () => {
+    if (isOverdue) {
+      if (diffDays >= 15) return 'urgent';
+      return 'firm';
     }
+    if (diffDays === 0) return 'due_today';
+    return 'friendly';
+  };
 
+  const [selectedTone, setSelectedTone] = useState(getRecommendedTone());
+  const [customText, setCustomText] = useState(templates[getRecommendedTone()]);
+  const [phoneInput, setPhoneInput] = useState(clientPhone);
+  const [copied, setCopied] = useState(false);
+
+  const handleSelectTone = (tone) => {
+    setSelectedTone(tone);
+    setCustomText(templates[tone]);
+  };
+
+  const buildWhatsAppUrl = () => {
+    const cleanPhone = phoneInput.replace(/[^\d+]/g, '');
+    const encoded = encodeURIComponent(customText);
+    return cleanPhone
+      ? `https://wa.me/${cleanPhone}?text=${encoded}`
+      : `https://wa.me/?text=${encoded}`;
+  };
+
+  const handleSendViaWhatsApp = () => {
     if (onLogFollowUp) {
       onLogFollowUp({
         invoice_id: invoice.id,
-        tone: activeCadence,
         channel: 'whatsapp',
-        sent_at: new Date().toISOString(),
+        tone: selectedTone,
+        message_snapshot: customText,
       });
     }
-
-    onClose();
+    window.open(buildWhatsAppUrl(), '_blank');
   };
 
-  const handleCopy = async () => {
+  const handleCopyToClipboard = async () => {
     try {
-      if (typeof navigator !== 'undefined' && navigator.clipboard) {
+      if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(customText);
         setCopied(true);
         setTimeout(() => setCopied(false), 2500);
@@ -124,164 +89,162 @@ export default function WhatsAppModal({
   };
 
   const cadences = [
-    { id: 'friendly', label: 'Friendly', desc: 'Pre-due heads up', icon: Sparkles, color: 'text-sky-400' },
-    { id: 'due_today', label: 'Due Today', desc: 'Day 0 gentle ping', icon: Calendar, color: 'text-indigo-400' },
-    { id: 'firm', label: 'Firm', desc: '1-14d delay nudge', icon: Clock, color: 'text-amber-400' },
-    { id: 'urgent', label: 'Urgent', desc: '15d+ work halt warning', icon: ShieldAlert, color: 'text-rose-400' },
+    { id: 'friendly', label: 'FRIENDLY', desc: 'Pre-due check-in', icon: MessageSquare },
+    { id: 'due_today', label: 'DUE TODAY', desc: 'Day 0 notification', icon: Calendar },
+    { id: 'firm', label: 'FIRM', desc: '1–14d delay follow-up', icon: Clock },
+    { id: 'urgent', label: 'URGENT', desc: '15d+ notice', icon: ShieldAlert },
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm overflow-y-auto">
-      <div className="relative w-full max-w-xl bg-slate-900 border border-slate-800 rounded-3xl shadow-2xl shadow-slate-950/90 overflow-hidden my-8 animate-in fade-in zoom-in-95">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
         
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-slate-800 bg-emerald-950/20">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              <MessageSquare className="w-5 h-5" />
+            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white flex items-center justify-center rounded-[4px]">
+              <MessageSquare className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white tracking-tight flex items-center gap-2">
-                <span>Assisted WhatsApp Follow-up</span>
+              <h3 className="button-cap text-white text-base">
+                WHATSAPP CLIENT RECOVERY
               </h3>
-              <p className="text-xs text-slate-400">
-                Chasing <span className="text-white font-medium">{invoice.client_name}</span> for {currency}{Number(invoice.amount).toLocaleString('en-US')}
+              <p className="micro-cap text-[#5a5a5f] mt-0.5">
+                Invoice {invoice.invoice_number} · {clientName}
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition"
+            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
         </div>
 
-        <div className="p-6 space-y-5">
+        {/* Modal Body */}
+        <div className="p-6 sm:p-8 space-y-5 text-xs">
           
-          {/* Overdue Status Banner */}
-          <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950 border border-slate-800 text-xs">
-            <span className="text-slate-400">
-              Invoice <span className="font-mono text-slate-200">{invoice.invoice_number}</span> (Due: {invoice.due_date})
-            </span>
-            <span className={`font-semibold ${
-              diffDays > 14 
-                ? 'text-rose-400' 
-                : diffDays > 0 
-                  ? 'text-amber-400' 
-                  : diffDays === 0 
-                    ? 'text-indigo-400' 
-                    : 'text-emerald-400'
-            }`}>
-              {diffDays > 0 ? `${diffDays} days overdue` : diffDays === 0 ? 'Due Today' : `Due in ${-diffDays} days`}
-            </span>
+          {/* Invoice Summary Strip */}
+          <div className="grid grid-cols-3 gap-3 p-4 bg-black border border-[#3a3a3f] rounded-[4px]">
+            <div>
+              <span className="micro-cap text-[#5a5a5f] font-bold block">AMOUNT DUE</span>
+              <span className="font-bold text-white text-base tabular-nums mt-0.5 block">{amountStr}</span>
+            </div>
+            <div>
+              <span className="micro-cap text-[#5a5a5f] font-bold block">STATUS</span>
+              <span className={`micro-cap font-bold mt-1 block ${isOverdue ? 'text-[#ef4444]' : 'text-white'}`}>
+                {isOverdue ? `${diffDays}d overdue` : 'Upcoming'}
+              </span>
+            </div>
+            <div>
+              <span className="micro-cap text-[#5a5a5f] font-bold block">CLIENT LAG</span>
+              <span className="text-white text-xs tabular-nums mt-1 block font-mono">
+                {client?.avg_delay_days != null ? `+${client.avg_delay_days}d avg` : 'Net 15'}
+              </span>
+            </div>
           </div>
 
-          {/* 4 Emotional Cadences */}
+          {/* Tone Selector */}
           <div>
-            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">
-              Select Tone Cadence
-            </label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="micro-cap text-[#5a5a5f] font-bold">
+                COMMUNICATION CADENCE
+              </label>
+              <span className="micro-cap text-white border border-[#3a3a3f] px-2 py-0.5 rounded-[32px] bg-black">
+                Suggested: {getRecommendedTone()}
+              </span>
+            </div>
+
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-              {cadences.map((c) => {
-                const Icon = c.icon;
-                const isSelected = activeCadence === c.id;
+              {cadences.map((cadence) => {
+                const isSelected = selectedTone === cadence.id;
+                const Icon = cadence.icon;
                 return (
                   <button
-                    key={c.id}
+                    key={cadence.id}
                     type="button"
-                    onClick={() => handleSelectCadence(c.id)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-2xl border text-center transition ${
+                    onClick={() => handleSelectTone(cadence.id)}
+                    className={`p-3 rounded-[4px] border text-left transition ${
                       isSelected
-                        ? 'bg-slate-800 border-indigo-500 shadow-sm text-white'
-                        : 'bg-slate-950/60 border-slate-800/80 text-slate-400 hover:border-slate-700 hover:text-slate-200'
+                        ? 'border-white bg-black'
+                        : 'border-[#3a3a3f] bg-black/60 hover:border-[#5a5a5f]'
                     }`}
                   >
-                    <Icon className={`w-4 h-4 mb-1.5 ${c.color}`} />
-                    <span className="text-xs font-bold">{c.label}</span>
-                    <span className="text-[10px] text-slate-500 line-clamp-1">{c.desc}</span>
+                    <div className="flex items-center gap-1.5 mb-1 text-white">
+                      <Icon className="w-3.5 h-3.5 text-white" />
+                      <span className="button-cap text-xs text-white">{cadence.label}</span>
+                    </div>
+                    <p className="micro-cap text-[#5a5a5f] text-[10px]">{cadence.desc}</p>
                   </button>
                 );
               })}
             </div>
           </div>
 
-          {/* Client WhatsApp Phone Number */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1.5 flex items-center justify-between">
-              <span>Recipient WhatsApp Phone</span>
-              <span className="text-[10px] text-slate-500">Digits with country code</span>
+          {/* Client WhatsApp Number */}
+          <div className="space-y-1.5">
+            <label className="micro-cap text-[#5a5a5f] font-bold block">
+              RECIPIENT PHONE (WHATSAPP)
             </label>
-            <div className="relative">
-              <Phone className="absolute left-3 top-2.5 w-4 h-4 text-emerald-400" />
-              <input
-                type="text"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                placeholder="+15551234567"
-                className="w-full pl-9 pr-3.5 py-2 bg-slate-950 border border-slate-800 rounded-xl text-xs sm:text-sm text-slate-200 focus:outline-none focus:border-emerald-500 font-mono"
-              />
-            </div>
-          </div>
-
-          {/* Drafted Message Area */}
-          <div>
-            <div className="flex items-center justify-between mb-1.5">
-              <label className="text-xs font-semibold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-                <span>Generated WhatsApp Message</span>
-              </label>
-              <span className="text-[10px] text-slate-500">Editable before launch</span>
-            </div>
-            <textarea
-              rows={5}
-              value={customText}
-              onChange={(e) => setCustomText(e.target.value)}
-              className="w-full p-3.5 bg-slate-950 border border-slate-800 rounded-2xl text-xs sm:text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 resize-none leading-relaxed"
+            <input
+              type="text"
+              value={phoneInput}
+              onChange={(e) => setPhoneInput(e.target.value)}
+              placeholder="+15551234567"
+              className="w-full text-input text-xs tracking-[0.96px]"
             />
           </div>
 
-          {/* Deep link URL Preview */}
-          <div className="p-2.5 rounded-xl bg-slate-950/80 border border-slate-800 text-[11px] text-slate-400 font-mono truncate">
-            <span className="text-emerald-400 font-semibold">wa.me: </span>
-            {waUrl}
+          {/* Message Draft Textarea */}
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <label className="micro-cap text-[#5a5a5f] font-bold block">
+                MESSAGE PREVIEW
+              </label>
+              <span className="micro-cap text-[#5a5a5f]">
+                {customText.length} CHARS
+              </span>
+            </div>
+            <textarea
+              rows={4}
+              value={customText}
+              onChange={(e) => setCustomText(e.target.value)}
+              className="w-full text-input text-xs leading-relaxed resize-none font-mono"
+            />
           </div>
 
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-slate-800">
-            {/* Copy Fallback */}
+          <div className="flex items-center justify-between pt-3 border-t border-[#3a3a3f]">
             <button
               type="button"
-              onClick={handleCopy}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 hover:text-white border border-slate-700 transition"
+              onClick={handleCopyToClipboard}
+              className="button-ghost-sm text-xs py-2 px-4 flex items-center gap-1.5"
             >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400">Copied to Clipboard!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" />
-                  <span>Copy Message</span>
-                </>
-              )}
+              {copied ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
+              <span>{copied ? 'Copied' : 'Copy Text'}</span>
             </button>
 
-            {/* Launch WhatsApp Deep Link */}
-            <button
-              type="button"
-              onClick={handleSendWhatsApp}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 transition shadow-lg shadow-emerald-600/30 border border-emerald-500/50"
-            >
-              <Send className="w-4 h-4" />
-              <span>Send via WhatsApp</span>
-              <ExternalLink className="w-3.5 h-3.5 opacity-75" />
-            </button>
+            <div className="flex items-center gap-2.5">
+              <button
+                type="button"
+                onClick={onClose}
+                className="button-ghost-sm text-xs py-2 px-4"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={handleSendViaWhatsApp}
+                className="button-ghost-on-dark text-xs py-2 px-5 flex items-center gap-1.5"
+              >
+                <Send className="w-3.5 h-3.5" />
+                <span>Send via WhatsApp</span>
+              </button>
+            </div>
           </div>
 
         </div>
-
       </div>
     </div>
   );

@@ -54,7 +54,7 @@ if (alertRes.deficitInfo.firstDeficitDay !== 24) {
 if (alertRes.deficitInfo.maxShortfall !== 420) {
   throw new Error(`Expected max shortfall 420, got ${alertRes.deficitInfo.maxShortfall}`);
 }
-if (!alertRes.deficitInfo.alertMessage.includes('⚠️ Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today.')) {
+if (!alertRes.deficitInfo.alertMessage.includes('Cash Deficit Alert: -$420 shortfall on Day 24. Action: Chase invoice #104 today.')) {
   throw new Error(`Alert message mismatch: ${alertRes.deficitInfo.alertMessage}`);
 }
 
@@ -85,4 +85,4 @@ if (!badDayRes.deficitInfo.isBelowBuffer) {
   throw new Error('Expected bad day to trigger deficit');
 }
 
-console.log('✅ ALL PHASE 3 END-TO-END VERIFICATION CHECKS PASSED PERFECTLY!');
+console.log('ALL PHASE 3 END-TO-END VERIFICATION CHECKS PASSED PERFECTLY!');

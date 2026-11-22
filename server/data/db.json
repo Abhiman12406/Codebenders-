@@ -1,0 +1,986 @@
+{
+  "profile": {
+    "id": "studio_profile_01",
+    "business_name": "Aura Design Studio",
+    "owner_name": "Alex Morgan",
+    "currency": "$",
+    "starting_cash": 25200,
+    "safety_buffer": 1500,
+    "created_at": "2026-11-21T13:55:39.535Z"
+  },
+  "clients": [
+    {
+      "id": "client_acme",
+      "name": "Acme Studios",
+      "company": "Acme Studios Global",
+      "email": "billing@acmestudios.design",
+      "phone": "+15552345678",
+      "payment_behavior": "habitual_late",
+      "avg_delay_days": 14,
+      "created_at": "2026-07-24"
+    },
+    {
+      "id": "client_horizon",
+      "name": "Horizon Tech",
+      "company": "Horizon Tech Systems",
+      "email": "accounts@horizontech.io",
+      "phone": "+15553456789",
+      "payment_behavior": "fast",
+      "avg_delay_days": 0,
+      "created_at": "2026-08-23"
+    },
+    {
+      "id": "client_bloom",
+      "name": "Bloom Botanicals",
+      "company": "Bloom Botanicals Organics",
+      "email": "finance@bloombotanicals.co",
+      "phone": "+15554567890",
+      "payment_behavior": "reliable",
+      "avg_delay_days": 4,
+      "created_at": "2026-09-07"
+    },
+    {
+      "id": "client_nova",
+      "name": "Nova Fintech",
+      "company": "Nova Financial Labs",
+      "email": "invoices@novafintech.app",
+      "phone": "+15555678901",
+      "payment_behavior": "reliable",
+      "avg_delay_days": 2,
+      "created_at": "2026-10-07"
+    },
+    {
+      "id": "client_artisan",
+      "name": "Local Artisan",
+      "company": "Local Artisan Coffee Roasters",
+      "email": "owner@localartisancoffee.com",
+      "phone": "+15556789012",
+      "payment_behavior": "chronic_risk",
+      "avg_delay_days": 28,
+      "created_at": "2026-06-24"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "inv_1795331104021",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331104020-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:05:04.021Z"
+    },
+    {
+      "id": "inv_1795331104018",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331104017-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:05:04.018Z"
+    },
+    {
+      "id": "inv_1795331104015",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331104014-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:05:04.015Z"
+    },
+    {
+      "id": "inv_1795331104011",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331104010-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:05:04.011Z"
+    },
+    {
+      "id": "inv_1795331002632",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331002631-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:03:22.632Z"
+    },
+    {
+      "id": "inv_1795331002626",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331002625-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:03:22.626Z"
+    },
+    {
+      "id": "inv_1795331002620",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331002619-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:03:22.620Z"
+    },
+    {
+      "id": "inv_1795331002616",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795331002614-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:03:22.616Z"
+    },
+    {
+      "id": "inv_1795331002554",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-514",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-22",
+      "due_date": "2026-11-22",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T07:03:22.554Z"
+    },
+    {
+      "id": "ff8b2bd8-9307-4fd7-8c69-eb65b25a0427",
+      "client_id": "6f4b4d33-3eb0-456b-a813-38f9eb2ad849",
+      "client_name": "Client",
+      "client_phone": "",
+      "invoice_number": "INV-2943-B",
+      "project_title": "Figma ui sprint (Part 2/2 - 50%)",
+      "amount": 900,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-12-06",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Figma ui sprint",
+          "qty": 1,
+          "rate": 1800
+        }
+      ],
+      "notes": "Split payment agreement: 50% remaining due on 2026-12-06.",
+      "created_at": "2026-11-21T18:29:00.738Z"
+    },
+    {
+      "id": "44ffd7d2-c558-4943-93f0-8ba703fa8a7b",
+      "client_id": "6f4b4d33-3eb0-456b-a813-38f9eb2ad849",
+      "client_name": "Client",
+      "client_phone": "",
+      "invoice_number": "INV-2943",
+      "project_title": "Figma ui sprint (Part 1/2 - 50%)",
+      "amount": 900,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Figma ui sprint",
+          "qty": 1,
+          "rate": 1800
+        }
+      ],
+      "notes": "Split payment agreement: 50% due immediately (2026-11-21).",
+      "created_at": "2026-11-21T18:28:54.233Z"
+    },
+    {
+      "id": "inv_1795283986832",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-149",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T17:59:46.832Z"
+    },
+    {
+      "id": "inv_1795283030739",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-739",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T17:43:50.739Z"
+    },
+    {
+      "id": "inv_1795283005568",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-901",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T17:43:25.568Z"
+    },
+    {
+      "id": "inv_1795282971256",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-381",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T17:42:51.256Z"
+    },
+    {
+      "id": "inv_1795272863976",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-906",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:54:23.976Z"
+    },
+    {
+      "id": "inv_1795272462101",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-542",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:47:42.101Z"
+    },
+    {
+      "id": "inv_1795272442291",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-905",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:47:22.291Z"
+    },
+    {
+      "id": "inv_1795272245088",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-947",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:44:05.088Z"
+    },
+    {
+      "id": "inv_1795272057189",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-360",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:40:57.189Z"
+    },
+    {
+      "id": "7e5b7049-7e75-44a2-b71d-f1ca7e46596f",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "INV-5202",
+      "project_title": "Brand Identity",
+      "amount": 2500,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Brand Identity",
+          "qty": 1,
+          "rate": 2500
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:30:45.235Z"
+    },
+    {
+      "id": "inv_1795271142347",
+      "client_id": null,
+      "client_phone": "",
+      "invoice_number": "INV-2026-210",
+      "project_title": "Test",
+      "amount": 100,
+      "issue_date": "2026-11-21",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Test",
+          "qty": 1,
+          "rate": 100
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-21T14:25:42.347Z"
+    },
+    {
+      "id": "inv_101",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "INV-2026-101",
+      "project_title": "Brand Refresh & Visual Identity System",
+      "amount": 3500,
+      "issue_date": "2026-10-10",
+      "due_date": "2026-11-09",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Comprehensive Logo & Identity System",
+          "qty": 1,
+          "rate": 2500
+        },
+        {
+          "desc": "Brand Guidelines Manual (60 pages)",
+          "qty": 1,
+          "rate": 1000
+        }
+      ],
+      "notes": "Net 30 terms. Followed up on day 7.",
+      "created_at": "2026-10-10"
+    },
+    {
+      "id": "inv_102",
+      "client_id": "client_horizon",
+      "client_name": "Horizon Tech",
+      "client_phone": "+15553456789",
+      "invoice_number": "INV-2026-102",
+      "project_title": "Design System & UI Component Library",
+      "amount": 2800,
+      "issue_date": "2026-11-14",
+      "due_date": "2026-11-29",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Figma Token Library & Auto-Layout Specs",
+          "qty": 1,
+          "rate": 2000
+        },
+        {
+          "desc": "Developer Handoff Documentation",
+          "qty": 1,
+          "rate": 800
+        }
+      ],
+      "notes": "Horizon pays via Stripe/ACH within 15 days.",
+      "created_at": "2026-11-14"
+    },
+    {
+      "id": "inv_103",
+      "client_id": "client_bloom",
+      "client_name": "Bloom Botanicals",
+      "client_phone": "+15554567890",
+      "invoice_number": "INV-2026-103",
+      "project_title": "E-Commerce Packaging & Eco Box Design",
+      "amount": 1450,
+      "issue_date": "2026-11-06",
+      "due_date": "2026-11-21",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Dielines & Packaging Print Master Files",
+          "qty": 1,
+          "rate": 1450
+        }
+      ],
+      "notes": "Due today. Reminder queued.",
+      "created_at": "2026-11-06"
+    },
+    {
+      "id": "inv_104",
+      "client_id": "client_nova",
+      "client_name": "Nova Fintech",
+      "client_phone": "+15555678901",
+      "invoice_number": "INV-2026-104",
+      "project_title": "Mobile Banking App UI Sprint",
+      "amount": 4200,
+      "issue_date": "2026-11-20",
+      "due_date": "2026-12-05",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "User Onboarding & KYC Flow Redesign",
+          "qty": 1,
+          "rate": 2400
+        },
+        {
+          "desc": "Investment Portfolio Dashboard",
+          "qty": 1,
+          "rate": 1800
+        }
+      ],
+      "notes": "Net 15 terms.",
+      "created_at": "2026-11-20"
+    },
+    {
+      "id": "inv_105",
+      "client_id": "client_artisan",
+      "client_name": "Local Artisan",
+      "client_phone": "+15556789012",
+      "invoice_number": "INV-2026-105",
+      "project_title": "Cafe Brand Collateral & Custom Menus",
+      "amount": 850,
+      "issue_date": "2026-09-18",
+      "due_date": "2026-10-18",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Coffee Bag Illustration & Menu Typography",
+          "qty": 1,
+          "rate": 850
+        }
+      ],
+      "notes": "Severe delay. Owner promised payment end of month.",
+      "created_at": "2026-09-18"
+    },
+    {
+      "id": "inv_106",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "INV-2026-106",
+      "project_title": "3D Motion Graphics & Launch Teaser",
+      "amount": 1900,
+      "issue_date": "2026-08-21",
+      "due_date": "2026-09-20",
+      "paid_date": "2026-11-21",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Cinema 4D Rendering & Octane Shaders",
+          "qty": 1,
+          "rate": 1900
+        }
+      ],
+      "notes": "Critical overdue. Project assets delivered in full.",
+      "created_at": "2026-08-21"
+    },
+    {
+      "id": "inv_107",
+      "client_id": "client_bloom",
+      "client_name": "Bloom Botanicals",
+      "client_phone": "+15554567890",
+      "invoice_number": "INV-2026-107",
+      "project_title": "Seasonal Social Media Asset Kit",
+      "amount": 750,
+      "issue_date": "2026-10-17",
+      "due_date": "2026-11-01",
+      "paid_date": "2026-11-16",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Instagram Story Templates & Ads Kit",
+          "qty": 1,
+          "rate": 750
+        }
+      ],
+      "notes": "Paid on time via direct deposit.",
+      "created_at": "2026-10-17"
+    }
+  ],
+  "bills": [
+    {
+      "id": "bill_adobe",
+      "name": "Adobe Creative Cloud All Apps",
+      "category": "software",
+      "amount": 59.99,
+      "due_day": 5,
+      "frequency": "monthly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    },
+    {
+      "id": "bill_figma",
+      "name": "Figma Organization Seat",
+      "category": "software",
+      "amount": 45,
+      "due_day": 12,
+      "frequency": "monthly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    },
+    {
+      "id": "bill_rent",
+      "name": "Co-working Studio Dedicated Desk & Storage",
+      "category": "rent",
+      "amount": 650,
+      "due_day": 1,
+      "frequency": "monthly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    },
+    {
+      "id": "bill_render",
+      "name": "AWS / 3D Cloud GPU Render Farm",
+      "category": "software",
+      "amount": 220,
+      "due_day": 18,
+      "frequency": "monthly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    },
+    {
+      "id": "bill_fiber",
+      "name": "Studio Gigabit Fiber Internet",
+      "category": "utilities",
+      "amount": 85,
+      "due_day": 22,
+      "frequency": "monthly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    },
+    {
+      "id": "bill_tax",
+      "name": "Quarterly Freelance Tax Reserve Account",
+      "category": "tax",
+      "amount": 1200,
+      "due_day": 28,
+      "frequency": "quarterly",
+      "is_flexible": false,
+      "created_at": "2026-05-25"
+    }
+  ],
+  "follow_ups": [
+    {
+      "id": "fu_01",
+      "invoice_id": "inv_101",
+      "tone": "friendly",
+      "channel": "whatsapp",
+      "sent_at": "2026-11-11"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx_1795331103960",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795331002632",
+      "invoice_number": "TEST-RC-1795331002631-4",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T07:05:03.960Z"
+    },
+    {
+      "id": "tx_1795331002562",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795331002554",
+      "invoice_number": "INV-2026-514",
+      "amount": 100,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T07:03:22.562Z"
+    },
+    {
+      "id": "tx_1795330910914",
+      "type": "invoice_payment",
+      "invoice_id": "44ffd7d2-c558-4943-93f0-8ba703fa8a7b",
+      "invoice_number": "INV-2943",
+      "client_name": "Client",
+      "amount": 900,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T07:01:50.914Z"
+    },
+    {
+      "id": "tx_1795329486010",
+      "type": "invoice_payment",
+      "invoice_id": "ff8b2bd8-9307-4fd7-8c69-eb65b25a0427",
+      "invoice_number": "INV-2943-B",
+      "client_name": "Client",
+      "amount": 900,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T06:38:06.010Z"
+    },
+    {
+      "id": "tx_1795283986837",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795283986832",
+      "invoice_number": "INV-2026-149",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T17:59:46.837Z"
+    },
+    {
+      "id": "tx_1795283030743",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795283030739",
+      "invoice_number": "INV-2026-739",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T17:43:50.743Z"
+    },
+    {
+      "id": "tx_1795283005572",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795283005568",
+      "invoice_number": "INV-2026-901",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T17:43:25.572Z"
+    },
+    {
+      "id": "tx_1795282971260",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795282971256",
+      "invoice_number": "INV-2026-381",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T17:42:51.260Z"
+    },
+    {
+      "id": "tx_1795272863980",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795272863976",
+      "invoice_number": "INV-2026-906",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:54:23.980Z"
+    },
+    {
+      "id": "tx_1795272462106",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795272462101",
+      "invoice_number": "INV-2026-542",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:47:42.106Z"
+    },
+    {
+      "id": "tx_1795272442297",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795272442291",
+      "invoice_number": "INV-2026-905",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:47:22.297Z"
+    },
+    {
+      "id": "tx_1795272245093",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795272245088",
+      "invoice_number": "INV-2026-947",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:44:05.093Z"
+    },
+    {
+      "id": "tx_1795272057193",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795272057189",
+      "invoice_number": "INV-2026-360",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:40:57.193Z"
+    },
+    {
+      "id": "tx_1795271931111",
+      "type": "invoice_payment",
+      "invoice_id": "7e5b7049-7e75-44a2-b71d-f1ca7e46596f",
+      "invoice_number": "INV-5202",
+      "client_name": "Acme Studios",
+      "amount": 2500,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:38:51.111Z"
+    },
+    {
+      "id": "tx_1795271142352",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795271142347",
+      "invoice_number": "INV-2026-210",
+      "amount": 100,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:25:42.352Z"
+    },
+    {
+      "id": "tx_1795270536657",
+      "type": "invoice_payment",
+      "invoice_id": "inv_106",
+      "invoice_number": "INV-2026-106",
+      "client_name": "Acme Studios",
+      "amount": 1900,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:15:36.657Z"
+    },
+    {
+      "id": "tx_1795270462172",
+      "type": "invoice_payment",
+      "invoice_id": "inv_105",
+      "invoice_number": "INV-2026-105",
+      "client_name": "Local Artisan",
+      "amount": 850,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:14:22.172Z"
+    },
+    {
+      "id": "tx_1795270321626",
+      "type": "invoice_payment",
+      "invoice_id": "inv_104",
+      "invoice_number": "INV-2026-104",
+      "client_name": "Nova Fintech",
+      "amount": 4200,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:12:01.626Z"
+    },
+    {
+      "id": "tx_1795270224681",
+      "type": "invoice_payment",
+      "invoice_id": "inv_103",
+      "invoice_number": "INV-2026-103",
+      "client_name": "Bloom Botanicals",
+      "amount": 1450,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:10:24.681Z"
+    },
+    {
+      "id": "tx_1795269658735",
+      "type": "invoice_payment",
+      "invoice_id": "inv_102",
+      "invoice_number": "INV-2026-102",
+      "client_name": "Horizon Tech",
+      "amount": 2800,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T14:00:58.735Z"
+    },
+    {
+      "id": "tx_1795269429040",
+      "type": "invoice_payment",
+      "invoice_id": "inv_101",
+      "invoice_number": "INV-2026-101",
+      "client_name": "Acme Studios",
+      "amount": 3500,
+      "paid_date": "2026-11-21",
+      "created_at": "2026-11-21T13:57:09.040Z"
+    },
+    {
+      "id": "tx_init",
+      "type": "initial_deposit",
+      "amount": 4850,
+      "description": "Initial Studio Operating Reserves",
+      "created_at": "2026-11-20"
+    }
+  ]
+}

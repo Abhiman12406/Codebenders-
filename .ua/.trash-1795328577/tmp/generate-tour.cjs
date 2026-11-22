@@ -1,0 +1,107 @@
+const fs = require('fs');
+
+const uaDir = 'C:/Users/Asus/Desktop/Codebenders/.ua';
+
+const tour = [
+  {
+    order: 1,
+    title: "Project Architecture & Vision",
+    description: "Start with StudioFlow's README and manifest to understand the single-designer financial back-office concept and architecture.",
+    nodeIds: [
+      "document:README.md",
+      "config:package.json"
+    ]
+  },
+  {
+    order: 2,
+    title: "Frontend Boot & Orchestration",
+    description: "Explore how Vite boots the React application and mounts App.jsx, which coordinates state, views, and notifications.",
+    nodeIds: [
+      "file:src/main.jsx",
+      "file:src/App.jsx"
+    ]
+  },
+  {
+    order: 3,
+    title: "Receivables Aging & WhatsApp Reminders",
+    description: "Discover the accounts receivable aging bucket tiers and client follow-up reminder generator.",
+    nodeIds: [
+      "file:src/components/AgingDashboard.jsx",
+      "file:src/components/DebtorCard.jsx",
+      "file:src/components/WhatsAppModal.jsx"
+    ]
+  },
+  {
+    order: 4,
+    title: "Cash Forecasting & What-If Simulation",
+    description: "Understand the financial trajectory forecasting engine and interactive sliders modeling payment delay scenarios.",
+    nodeIds: [
+      "file:src/components/CashForecastChart.jsx",
+      "file:src/components/WhatIfSimulator.jsx",
+      "file:src/lib/forecastEngine.js"
+    ]
+  },
+  {
+    order: 5,
+    title: "Crisis Triage & Outflows Management",
+    description: "Inspect the Bad Day crisis triage modal and outgoing studio expense manager.",
+    nodeIds: [
+      "file:src/components/BadDayTriageModal.jsx",
+      "file:src/components/OutflowsManager.jsx"
+    ]
+  },
+  {
+    order: 6,
+    title: "Invoicing & NLP Parsing",
+    description: "Examine invoice authoring and the natural language command parser converting text into draft invoices.",
+    nodeIds: [
+      "file:src/components/InvoiceModal.jsx",
+      "file:src/components/QuickInputBar.jsx",
+      "file:src/lib/nlpParser.js"
+    ]
+  },
+  {
+    order: 7,
+    title: "Offline-First Data Synchronization",
+    description: "Review the unified data layer gracefully falling back across Express API, Supabase cloud, and localStorage.",
+    nodeIds: [
+      "file:src/lib/dataService.js",
+      "file:src/lib/api.js",
+      "file:src/lib/supabaseClient.js",
+      "file:src/components/AuthModal.jsx"
+    ]
+  },
+  {
+    order: 8,
+    title: "Backend Express Server & Storage",
+    description: "Inspect the Express 5 backend server mounting API routes and persisting state to server/data/db.json.",
+    nodeIds: [
+      "file:server/index.js",
+      "file:server/store.js",
+      "file:server/routes/invoices.js",
+      "file:server/routes/forecast.js"
+    ]
+  },
+  {
+    order: 9,
+    title: "Server Calculation Engines",
+    description: "Explore the server-side cash forecast math and regex-based invoice natural language parsing.",
+    nodeIds: [
+      "file:server/engine/forecast.js",
+      "file:server/engine/nlp.js"
+    ]
+  },
+  {
+    order: 10,
+    title: "Verification & Automated Testing",
+    description: "See the backend integration tests and client verification suites guaranteeing correctness.",
+    nodeIds: [
+      "file:server/test-api.js",
+      "file:test_forecastEngine.js",
+      "file:test_e2e_phase3.js"
+    ]
+  }
+];
+
+fs.writeFileSync(`${uaDir}/intermediate/tour.json`, JSON.stringify(tour, null, 2));
+console.log('tour.json written successfully. Steps:', tour.length);

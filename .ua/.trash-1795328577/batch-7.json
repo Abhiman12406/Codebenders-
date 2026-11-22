@@ -1,0 +1,144 @@
+{
+  "nodes": [
+    {
+      "id": "config:.env.example",
+      "type": "config",
+      "name": ".env.example",
+      "filePath": ".env.example",
+      "summary": "Source code file .env.example providing functionality for config.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:AGENTS.md",
+      "type": "document",
+      "name": "AGENTS.md",
+      "filePath": "AGENTS.md",
+      "summary": "Markdown documentation detailing AGENTS.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "document:DESIGN-spacex.md",
+      "type": "document",
+      "name": "DESIGN-spacex.md",
+      "filePath": "DESIGN-spacex.md",
+      "summary": "Markdown documentation detailing DESIGN spacex.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:DESIGN-stripe.md",
+      "type": "document",
+      "name": "DESIGN-stripe.md",
+      "filePath": "DESIGN-stripe.md",
+      "summary": "Markdown documentation detailing DESIGN stripe.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:EXAMPLES.md",
+      "type": "document",
+      "name": "EXAMPLES.md",
+      "filePath": "EXAMPLES.md",
+      "summary": "Markdown documentation detailing EXAMPLES.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "document:README.md",
+      "type": "document",
+      "name": "README.md",
+      "filePath": "README.md",
+      "summary": "Primary project documentation detailing StudioFlow architecture, setup instructions, and API endpoints.",
+      "tags": [
+        "documentation",
+        "markdown",
+        "guide"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:index.html",
+      "type": "file",
+      "name": "index.html",
+      "filePath": "index.html",
+      "summary": "Single-page application HTML entry shell loading fonts and Vite bundle.",
+      "tags": [
+        "utility",
+        "module",
+        "markup"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "config:package.json",
+      "type": "config",
+      "name": "package.json",
+      "filePath": "package.json",
+      "summary": "Node.js package manifest specifying dependencies, scripts, and project metadata.",
+      "tags": [
+        "configuration",
+        "settings",
+        "build-system"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "table:supabase_schema.sql",
+      "type": "table",
+      "name": "supabase_schema.sql",
+      "filePath": "supabase_schema.sql",
+      "summary": "Source code file supabase_schema.sql providing functionality for data.",
+      "tags": [
+        "utility",
+        "module",
+        "data"
+      ],
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:README.md",
+      "target": "file:src/App.jsx",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "document:README.md",
+      "target": "file:server/index.js",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:package.json",
+      "target": "file:src/App.jsx",
+      "type": "configures",
+      "direction": "forward",
+      "weight": 0.6
+    }
+  ]
+}

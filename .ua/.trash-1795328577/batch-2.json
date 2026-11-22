@@ -1,0 +1,430 @@
+{
+  "nodes": [
+    {
+      "id": "file:server/engine/forecast.js",
+      "type": "file",
+      "name": "forecast.js",
+      "filePath": "server/engine/forecast.js",
+      "summary": "Backend cash forecast engine projecting daily cash balances across configurable day horizons.",
+      "tags": [
+        "engine",
+        "algorithm",
+        "calculation",
+        "backend"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "function",
+      "name": "calculateCashForecast",
+      "filePath": "server/engine/forecast.js",
+      "lineRange": [
+        11,
+        228
+      ],
+      "summary": "Function calculateCashForecast in forecast.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/engine/nlp.js",
+      "type": "file",
+      "name": "nlp.js",
+      "filePath": "server/engine/nlp.js",
+      "summary": "Backend natural language processing engine parsing conversational invoice prompts into invoice records.",
+      "tags": [
+        "engine",
+        "algorithm",
+        "calculation",
+        "backend"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "function",
+      "name": "parseInvoicePrompt",
+      "filePath": "server/engine/nlp.js",
+      "lineRange": [
+        1,
+        120
+      ],
+      "summary": "Function parseInvoicePrompt in nlp.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "exported",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:server/index.js",
+      "type": "file",
+      "name": "index.js",
+      "filePath": "server/index.js",
+      "summary": "Express API server entry point mounting routes, CORS middleware, and starting HTTP listener on port 3001.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/ai.js",
+      "type": "file",
+      "name": "ai.js",
+      "filePath": "server/routes/ai.js",
+      "summary": "Express router module handling HTTP endpoints for ai.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/forecast.js",
+      "type": "file",
+      "name": "forecast.js",
+      "filePath": "server/routes/forecast.js",
+      "summary": "Express router module handling HTTP endpoints for forecast.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/invoices.js",
+      "type": "file",
+      "name": "invoices.js",
+      "filePath": "server/routes/invoices.js",
+      "summary": "Express router module handling HTTP endpoints for invoices.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/outflows.js",
+      "type": "file",
+      "name": "outflows.js",
+      "filePath": "server/routes/outflows.js",
+      "summary": "Express router module handling HTTP endpoints for outflows.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/portal.js",
+      "type": "file",
+      "name": "portal.js",
+      "filePath": "server/routes/portal.js",
+      "summary": "Express router module handling HTTP endpoints for portal.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/profile.js",
+      "type": "file",
+      "name": "profile.js",
+      "filePath": "server/routes/profile.js",
+      "summary": "Express router module handling HTTP endpoints for profile.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/routes/triage.js",
+      "type": "file",
+      "name": "triage.js",
+      "filePath": "server/routes/triage.js",
+      "summary": "Express router module handling HTTP endpoints for triage.",
+      "tags": [
+        "api-handler",
+        "express",
+        "router",
+        "backend"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:server/store.js",
+      "type": "file",
+      "name": "store.js",
+      "filePath": "server/store.js",
+      "summary": "JSON file-based persistence manager reading and updating server/data/db.json with auto-seeding.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:server/store.js:getInitialSeed",
+      "type": "function",
+      "name": "getInitialSeed",
+      "filePath": "server/store.js",
+      "lineRange": [
+        16,
+        289
+      ],
+      "summary": "Function getInitialSeed in store.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "class:server/store.js:Store",
+      "type": "class",
+      "name": "Store",
+      "filePath": "server/store.js",
+      "lineRange": [
+        291,
+        503
+      ],
+      "summary": "Class Store encapsulated in store.js.",
+      "tags": [
+        "class",
+        "data-model"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:server/test-api.js",
+      "type": "file",
+      "name": "test-api.js",
+      "filePath": "server/test-api.js",
+      "summary": "Backend integration test script running 8 verification checks against the Express API.",
+      "tags": [
+        "server",
+        "backend",
+        "express"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:server/test-api.js:call",
+      "type": "function",
+      "name": "call",
+      "filePath": "server/test-api.js",
+      "lineRange": [
+        9,
+        23
+      ],
+      "summary": "Function call in test-api.js implementing component or logic operations.",
+      "tags": [
+        "function",
+        "internal",
+        "logic"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:server/engine/forecast.js",
+      "target": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/engine/forecast.js",
+      "target": "function:server/engine/forecast.js:calculateCashForecast",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/engine/nlp.js",
+      "target": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/engine/nlp.js",
+      "target": "function:server/engine/nlp.js:parseInvoicePrompt",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/ai.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/forecast.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/invoices.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/outflows.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/portal.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/profile.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/routes/triage.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/ai.js",
+      "target": "file:server/engine/nlp.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/ai.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/forecast.js",
+      "target": "file:server/engine/forecast.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/forecast.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/invoices.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/outflows.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/portal.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/profile.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/routes/triage.js",
+      "target": "file:server/store.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/store.js",
+      "target": "function:server/store.js:getInitialSeed",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/store.js",
+      "target": "class:server/store.js:Store",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/test-api.js",
+      "target": "function:server/test-api.js:call",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1
+    },
+    {
+      "source": "file:server/test-api.js",
+      "target": "file:server/index.js",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:server/index.js",
+      "target": "file:server/test-api.js",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

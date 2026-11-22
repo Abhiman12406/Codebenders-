@@ -1,0 +1,6151 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 23,
+  "filesSkipped": [
+    "references/index.html",
+    "scratch/artcraft.html"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 23,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 17,
+      "failed": 0,
+      "skipped": 6
+    }
+  },
+  "results": [
+    {
+      "path": ".codebenders/state.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 7,
+      "nonEmptyLines": 7,
+      "sections": [
+        {
+          "heading": "schemaVersion",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "createdAt",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "updatedAt",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "phases",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "settings",
+          "level": 1,
+          "line": 6
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "docs/ideas/studioflow-operations-cockpit.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 66,
+      "nonEmptyLines": 52,
+      "sections": [
+        {
+          "heading": "StudioFlow: The Zero-Friction One-Person Operations Cockpit",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Problem Statement",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Recommended Direction",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Key Assumptions to Validate",
+          "level": 2,
+          "line": 36
+        },
+        {
+          "heading": "MVP Scope",
+          "level": 2,
+          "line": 42
+        },
+        {
+          "heading": "IN SCOPE",
+          "level": 3,
+          "line": 44
+        },
+        {
+          "heading": "NOT DOING (and Why)",
+          "level": 3,
+          "line": 59
+        },
+        {
+          "heading": "Open Questions",
+          "level": 2,
+          "line": 64
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 8
+      }
+    },
+    {
+      "path": "docs/intent/one-person-backoffice.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 23,
+      "nonEmptyLines": 19,
+      "sections": [
+        {
+          "heading": "Statement of Intent: The One-Person Back Office (StudioFlow)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. Core Intent",
+          "level": 2,
+          "line": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 2
+      }
+    },
+    {
+      "path": "docs/spec/one-person-backoffice-fullstack-spec.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 268,
+      "nonEmptyLines": 223,
+      "sections": [
+        {
+          "heading": "Fullstack Specification: StudioFlow — The One-Person Back Office",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Assumptions",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "1. Objective",
+          "level": 2,
+          "line": 20
+        },
+        {
+          "heading": "2. Tech Stack",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "3. Commands",
+          "level": 2,
+          "line": 43
+        },
+        {
+          "heading": "4. Project Structure",
+          "level": 2,
+          "line": 67
+        },
+        {
+          "heading": "5. API Contract Specifications",
+          "level": 2,
+          "line": 124
+        },
+        {
+          "heading": "5.1 Profile & Status",
+          "level": 3,
+          "line": 126
+        },
+        {
+          "heading": "5.2 Invoices & Accounts Receivable",
+          "level": 3,
+          "line": 132
+        },
+        {
+          "heading": "5.3 Public Client Pay Portal",
+          "level": 3,
+          "line": 143
+        },
+        {
+          "heading": "5.4 30–90 Day Forecasting & Scenarios",
+          "level": 3,
+          "line": 155
+        },
+        {
+          "heading": "5.5 \"Bad Day\" Crisis Triage",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "5.6 Natural Language Processing",
+          "level": 3,
+          "line": 170
+        },
+        {
+          "heading": "6. Code Style & Conventions",
+          "level": 2,
+          "line": 177
+        },
+        {
+          "heading": "7. Testing Strategy",
+          "level": 2,
+          "line": 204
+        },
+        {
+          "heading": "8. Boundaries",
+          "level": 2,
+          "line": 222
+        },
+        {
+          "heading": "9. Success Criteria",
+          "level": 2,
+          "line": 239
+        },
+        {
+          "heading": "10. Open Questions for Human Review",
+          "level": 2,
+          "line": 265
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 18
+      }
+    },
+    {
+      "path": "docs/spec/one-person-backoffice-spec.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 245,
+      "nonEmptyLines": 208,
+      "sections": [
+        {
+          "heading": "Technical Specification: StudioFlow — The One-Person Back Office",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1. System Architecture & Dual-Mode Strategy",
+          "level": 2,
+          "line": 10
+        },
+        {
+          "heading": "2. Supabase Database Schema (`supabase_schema.sql`)",
+          "level": 2,
+          "line": 45
+        },
+        {
+          "heading": "3. Mathematical Cash Forecasting & \"What-If\" Engine",
+          "level": 2,
+          "line": 135
+        },
+        {
+          "heading": "Baseline Forecast Formula:",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "Behavioral Adjustment (The \"Structural Optimism\" Fix):",
+          "level": 3,
+          "line": 146
+        },
+        {
+          "heading": "What-If Scenario Overrides:",
+          "level": 3,
+          "line": 150
+        },
+        {
+          "heading": "4. Feature Specifications",
+          "level": 2,
+          "line": 163
+        },
+        {
+          "heading": "A. Frictionless Data Entry (Natural Language Parser)",
+          "level": 3,
+          "line": 165
+        },
+        {
+          "heading": "B. \"Who Owes Me, How Much, Since When?\" (Aging AR Dashboard)",
+          "level": 3,
+          "line": 178
+        },
+        {
+          "heading": "C. Assisted Follow-Ups (WhatsApp-First)",
+          "level": 3,
+          "line": 191
+        },
+        {
+          "heading": "D. The \"Bad Day\" Crisis Triage Protocol",
+          "level": 3,
+          "line": 202
+        },
+        {
+          "heading": "5. UI Component Structure",
+          "level": 2,
+          "line": 213
+        },
+        {
+          "heading": "6. Verification & Acceptance Checklist",
+          "level": 2,
+          "line": 239
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 14
+      }
+    },
+    {
+      "path": "postcss.config.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 6,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/download_chunks.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 23,
+      "nonEmptyLines": 20,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/extract_hero_comp.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 11,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/extract_ruler.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 11,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_base_doc.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_hero_ruler.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_herowordmark.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 15,
+      "nonEmptyLines": 13,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_ishero.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_ruler.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/find_wordmark_init.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/hero_wordmark_component.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/inspect_artcraft.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 28,
+      "nonEmptyLines": 22,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/parse_artcraft_html.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/print_hero_jsx.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 7,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/query_scrollbar.py",
+      "language": "python",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 7,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/ruler_chunk.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "callGraph": [
+        {
+          "caller": "a",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "n.createContext",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "Object.values",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useContext",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "Error",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "i.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "n.createContext",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "u",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "e.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "r.reduce",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "n.useContext",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "Error",
+          "lineNumber": 1
+        },
+        {
+          "caller": "h",
+          "callee": "d",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "Error",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "v",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "w",
+          "callee": "e.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "w",
+          "callee": "x",
+          "lineNumber": 1
+        },
+        {
+          "caller": "w",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "w",
+          "callee": "x",
+          "lineNumber": 1
+        },
+        {
+          "caller": "y",
+          "callee": "n.useCallback",
+          "lineNumber": 1
+        },
+        {
+          "caller": "y",
+          "callee": "w",
+          "lineNumber": 1
+        },
+        {
+          "caller": "E",
+          "callee": "S",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.forwardRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "T",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "I",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.Children.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "R",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "T",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "I",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "j",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "a.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "a.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.cloneElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.Children.count",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.isValidElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "M",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "y",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "Error",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "A",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "L",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "C",
+          "lineNumber": 1
+        },
+        {
+          "caller": "k",
+          "callee": "n.cloneElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "C",
+          "callee": "/^on[A-Z]/.test",
+          "lineNumber": 1
+        },
+        {
+          "caller": "C",
+          "callee": "o",
+          "lineNumber": 1
+        },
+        {
+          "caller": "C",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "C",
+          "callee": "[i,o].filter(Boolean).join",
+          "lineNumber": 1
+        },
+        {
+          "caller": "C",
+          "callee": "[i,o].filter",
+          "lineNumber": 1
+        },
+        {
+          "caller": "M",
+          "callee": "Object.getOwnPropertyDescriptor",
+          "lineNumber": 1
+        },
+        {
+          "caller": "M",
+          "callee": "Object.getOwnPropertyDescriptor",
+          "lineNumber": 1
+        },
+        {
+          "caller": "R",
+          "callee": "n.isValidElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "T",
+          "callee": "O",
+          "lineNumber": 1
+        },
+        {
+          "caller": "z",
+          "callee": "l.flushSync",
+          "lineNumber": 1
+        },
+        {
+          "caller": "z",
+          "callee": "e.dispatchEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "H",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "Error",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "$",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "F",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Y",
+          "callee": "t.current",
+          "lineNumber": 1
+        },
+        {
+          "caller": "q",
+          "callee": "U",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "q",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "Z",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "n.useCallback",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "K",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "s.current",
+          "lineNumber": 1
+        },
+        {
+          "caller": "B",
+          "callee": "l",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "n.useState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "V",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Z",
+          "callee": "l.current",
+          "lineNumber": 1
+        },
+        {
+          "caller": "Q",
+          "callee": "n.useContext",
+          "lineNumber": 1
+        },
+        {
+          "caller": "et",
+          "callee": "ee",
+          "lineNumber": 1
+        },
+        {
+          "caller": "er",
+          "callee": "n.useReducer",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "er",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "F",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "F",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "et",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es(i.current).includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "CSS.escape",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "r.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "et",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "r.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "t.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "[\"mounted\",\"unmountSuspended\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "n.useCallback",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "getComputedStyle",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "es",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ei",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eo",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "n.useCallback",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "r.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "eo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "el",
+          "callee": "eo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ea",
+          "callee": "Object.getOwnPropertyDescriptor",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ea",
+          "callee": "Object.getOwnPropertyDescriptor",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eh",
+          "callee": "n.useState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eh",
+          "callee": "eu",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eh",
+          "callee": "F",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eh",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eh",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ep",
+          "callee": "ef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "ep",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "k",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.forwardRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "y",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "k",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.forwardRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "y",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "u.itemMap.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "u.itemMap.delete",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.useCallback",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "Array.from",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "e.querySelectorAll",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "Array.from(r.itemMap.values()).sort",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "Array.from",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "r.itemMap.values",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "t.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "t.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "em",
+          "callee": "ep",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "super",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "super.keys",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "eg.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "set",
+          "callee": "eg.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "set",
+          "callee": "this.has",
+          "lineNumber": 1
+        },
+        {
+          "caller": "set",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "set",
+          "callee": "this.#e.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "set",
+          "callee": "super.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.has",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "ew",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.delete",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.delete",
+          "lineNumber": 1
+        },
+        {
+          "caller": "insert",
+          "callee": "this.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "with",
+          "callee": "i.insert",
+          "lineNumber": 1
+        },
+        {
+          "caller": "before",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "before",
+          "callee": "this.entryAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setBefore",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setBefore",
+          "callee": "this.insert",
+          "lineNumber": 1
+        },
+        {
+          "caller": "after",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "after",
+          "callee": "this.entryAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setAfter",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setAfter",
+          "callee": "this.insert",
+          "lineNumber": 1
+        },
+        {
+          "caller": "first",
+          "callee": "this.entryAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "last",
+          "callee": "this.entryAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "clear",
+          "callee": "super.clear",
+          "lineNumber": 1
+        },
+        {
+          "caller": "delete",
+          "callee": "super.delete",
+          "lineNumber": 1
+        },
+        {
+          "caller": "delete",
+          "callee": "this.#e.splice",
+          "lineNumber": 1
+        },
+        {
+          "caller": "delete",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "deleteAt",
+          "callee": "this.keyAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "deleteAt",
+          "callee": "this.delete",
+          "lineNumber": 1
+        },
+        {
+          "caller": "at",
+          "callee": "eb",
+          "lineNumber": 1
+        },
+        {
+          "caller": "at",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "entryAt",
+          "callee": "eb",
+          "lineNumber": 1
+        },
+        {
+          "caller": "entryAt",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "indexOf",
+          "callee": "this.#e.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "keyAt",
+          "callee": "eb",
+          "lineNumber": 1
+        },
+        {
+          "caller": "from",
+          "callee": "this.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "from",
+          "callee": "this.at",
+          "lineNumber": 1
+        },
+        {
+          "caller": "keyFrom",
+          "callee": "this.indexOf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "keyFrom",
+          "callee": "this.keyAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "find",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "findIndex",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "filter",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "filter",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "map",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "map",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reduce",
+          "callee": "this.at",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reduce",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reduceRight",
+          "callee": "this.at",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reduceRight",
+          "callee": "this.at",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reduceRight",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toSorted",
+          "callee": "[...this.entries()].sort",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toSorted",
+          "callee": "this.entries",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toReversed",
+          "callee": "this.keyAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toReversed",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toReversed",
+          "callee": "t.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toSpliced",
+          "callee": "this.entries",
+          "lineNumber": 1
+        },
+        {
+          "caller": "toSpliced",
+          "callee": "r.splice",
+          "lineNumber": 1
+        },
+        {
+          "caller": "slice",
+          "callee": "this.keyAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "slice",
+          "callee": "this.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "slice",
+          "callee": "n.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "every",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "some",
+          "callee": "Reflect.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eb",
+          "callee": "Array.prototype.at.call",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eb",
+          "callee": "ex",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ex",
+          "callee": "ew",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ew",
+          "callee": "Math.trunc",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ey",
+          "callee": "Object.keys",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ey",
+          "callee": "Object.keys",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ey",
+          "callee": "Object.prototype.hasOwnProperty.call",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eS",
+          "callee": "t.compareDocumentPosition",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eE",
+          "callee": "eS",
+          "lineNumber": 1
+        },
+        {
+          "caller": "ek",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eN",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eN",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eN",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eN",
+          "callee": "t.current",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "n.useState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eC",
+          "callee": "ej",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eN",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "e",
+          "callee": "d.current.clear",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Array.from(d.current.values()).some",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Array.from",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "d.current.values",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "[...l].some",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "e.contains",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "d.current.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "window.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "h.current",
+          "lineNumber": 1
+        },
+        {
+          "caller": "f",
+          "callee": "d.current.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "eI",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "d.current.clear",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "l",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "window.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "window.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eO",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "eN",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "n.useEffect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "eI",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "t.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "t.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eL",
+          "callee": "eC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eA",
+          "callee": "document.dispatchEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eI",
+          "callee": "i.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eI",
+          "callee": "z",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eI",
+          "callee": "i.dispatchEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eD",
+          "callee": "n.useRef",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eD",
+          "callee": "n.useMemo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "eH",
+          "callee": "eW",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tc",
+          "callee": "document.createTreeWalker",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tc",
+          "callee": "eH",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tc",
+          "callee": "r.nextNode",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tc",
+          "callee": "t.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tu",
+          "callee": "e.some",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tu",
+          "callee": "e.focus",
+          "lineNumber": 1
+        },
+        {
+          "caller": "td",
+          "callee": "e.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "td",
+          "callee": "e.getAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "td",
+          "callee": "e.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "td",
+          "callee": "e.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "td",
+          "callee": "e.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tm",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tC",
+          "callee": "document.documentElement.getAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tC",
+          "callee": "window.matchMedia",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "(0,n.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "(0,n.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "tC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "tC",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "t.classList.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "window.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "window.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "t.classList.remove",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "t.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "localStorage.setItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tM",
+          "callee": "(0,r.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tA",
+          "callee": "Array.isArray",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tI",
+          "callee": "/^https?:\\/\\//.test",
+          "lineNumber": 1
+        },
+        {
+          "caller": "tI",
+          "callee": "e.startsWith",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "o?.kill",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "r.default.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "(o=r.default.timeline()).to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "r.default.timeline",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "n.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "o.to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "l",
+          "callee": "o.timeScale",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "(0,n.introFastForward)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "o?.timeScale",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "n.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "n.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "document.documentElement.removeAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "localStorage.setItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "e.replace",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "e.replace",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "m.has",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "p.has",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "m.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "p.get(t).then",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "p.get",
+          "lineNumber": 1
+        },
+        {
+          "caller": "f",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "f",
+          "callee": "m.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.createElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "new Promise((e,t)=>{g.addEventListener(\"load\",function(t){e(),n&&n.call(this,t),f()}),g.addEventListener(\"error\",function(e){t(e)})}).catch",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "g.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "e",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "n.call",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "f",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "g.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "f",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Array.isArray",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "l.join",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "f",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "p.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,d.setAttributesFromProps)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "g.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "g.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(e=>{if(a.default.preinit)return e.forEach(e=>{a.default.preinit(e,{as:\"style\"})});if(\"u\">typeof window){let t=document.head;e.forEach(e=>{let r=document.createElement(\"link\");r.type=\"text/css\",r.rel=\"stylesheet\",r.href=e,t.appendChild(r)})}})",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "e.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "a.default.preinit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "e.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.createElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.appendChild",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.body.appendChild",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "(0,h.requestIdleCallback)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "e.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "[...document.querySelectorAll('[data-nscript=\"beforeInteractive\"]'),...document.querySelectorAll('[data-nscript=\"beforePageRender\"]')].forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "document.querySelectorAll",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "e.getAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "m.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,c.useContext)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,c.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,c.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "m.has",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,c.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,c.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,h.requestIdleCallback)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,h.requestIdleCallback)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(b[o]||[]).concat",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "v",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "x",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "m.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "x",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "g",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "d.forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "a.default.preinit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,s.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,f.htmlEscapeJsonString)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "a.default.preload",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,s.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "(0,f.htmlEscapeJsonString)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "x",
+          "callee": "a.default.preload",
+          "lineNumber": 1
+        },
+        {
+          "caller": "e",
+          "callee": "(0,i.trackClick)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "o",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "o",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "this.easing",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "this.stop",
+          "lineNumber": 1
+        },
+        {
+          "caller": "advance",
+          "callee": "this.onUpdate",
+          "lineNumber": 1
+        },
+        {
+          "caller": "fromTo",
+          "callee": "o",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "function(e,t){let r;return function(...n){clearTimeout(r),r=setTimeout(()=>{r=void 0,e.apply(this,n)},t)}}",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "e.apply",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.wrapperResizeObserver.observe",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.contentResizeObserver.observe",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.resize",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.wrapperResizeObserver?.disconnect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.contentResizeObserver?.disconnect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "emit",
+          "callee": "r[e]",
+          "lineNumber": 1
+        },
+        {
+          "caller": "on",
+          "callee": "this.events[e].push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "on",
+          "callee": "this.events[e]?.filter",
+          "lineNumber": 1
+        },
+        {
+          "caller": "off",
+          "callee": "this.events[e]?.filter",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.onWindowResize",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.element.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.element.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.element.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.element.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "on",
+          "callee": "this.emitter.on",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.emitter.destroy",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.element.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.element.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.element.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.element.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "f",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.updateClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.options.wrapper.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.options.wrapper.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.options.wrapper.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.options.wrapper.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.virtualScroll.on",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.checkOverflow",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "this.rootElement.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "constructor",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.emitter.destroy",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.options.wrapper.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.options.wrapper.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.options.wrapper.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.options.wrapper.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.virtualScroll.destroy",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.dimensions.destroy",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "this.cleanUpClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "destroy",
+          "callee": "cancelAnimationFrame",
+          "lineNumber": 1
+        },
+        {
+          "caller": "on",
+          "callee": "this.emitter.on",
+          "lineNumber": 1
+        },
+        {
+          "caller": "off",
+          "callee": "this.emitter.off",
+          "lineNumber": 1
+        },
+        {
+          "caller": "overflow",
+          "callee": "getComputedStyle",
+          "lineNumber": 1
+        },
+        {
+          "caller": "checkOverflow",
+          "callee": "[\"hidden\",\"clip\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "checkOverflow",
+          "callee": "this.internalStop",
+          "lineNumber": 1
+        },
+        {
+          "caller": "checkOverflow",
+          "callee": "this.internalStart",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setScroll",
+          "callee": "this.options.wrapper.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "setScroll",
+          "callee": "this.options.wrapper.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "resize",
+          "callee": "this.dimensions.resize",
+          "lineNumber": 1
+        },
+        {
+          "caller": "resize",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "emit",
+          "callee": "this.emitter.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "reset",
+          "callee": "this.animate.stop",
+          "lineNumber": 1
+        },
+        {
+          "caller": "start",
+          "callee": "this.rootElement.style.removeProperty",
+          "lineNumber": 1
+        },
+        {
+          "caller": "start",
+          "callee": "this.internalStart",
+          "lineNumber": 1
+        },
+        {
+          "caller": "internalStart",
+          "callee": "this.reset",
+          "lineNumber": 1
+        },
+        {
+          "caller": "internalStart",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "stop",
+          "callee": "this.rootElement.style.setProperty",
+          "lineNumber": 1
+        },
+        {
+          "caller": "stop",
+          "callee": "this.internalStop",
+          "lineNumber": 1
+        },
+        {
+          "caller": "internalStop",
+          "callee": "this.reset",
+          "lineNumber": 1
+        },
+        {
+          "caller": "internalStop",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "[\"top\",\"left\",\"start\",\"#\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "[\"bottom\",\"right\",\"end\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "document.querySelector",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "console.warn",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.rootElement.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "e.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "getComputedStyle",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.parseFloat",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.parseFloat",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "getComputedStyle",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.parseFloat",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.parseFloat",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.isNaN",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Number.isNaN",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "o",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "u",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.setScroll",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.reset",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.preventNextNativeScrollEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "u",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.dispatchScrollendEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.animate.fromTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "c",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "Math.sign",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.setScroll",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.reset",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.emit",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "u",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.dispatchScrollendEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "scrollTo",
+          "callee": "this.preventNextNativeScrollEvent",
+          "lineNumber": 1
+        },
+        {
+          "caller": "preventNextNativeScrollEvent",
+          "callee": "requestAnimationFrame",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Date.now",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Date.now",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "window.getComputedStyle",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "[\"auto\",\"overlay\",\"scroll\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "[\"auto\",\"overlay\",\"scroll\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "[\"auto\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "[\"auto\"].includes",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "hasNestedScroll",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "isScrolling",
+          "callee": "this.updateClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "isStopped",
+          "callee": "this.updateClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "isLocked",
+          "callee": "this.updateClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "updateClassName",
+          "callee": "this.cleanUpClassName",
+          "lineNumber": 1
+        },
+        {
+          "caller": "updateClassName",
+          "callee": "this.className.split(\" \").forEach",
+          "lineNumber": 1
+        },
+        {
+          "caller": "updateClassName",
+          "callee": "this.className.split",
+          "lineNumber": 1
+        },
+        {
+          "caller": "updateClassName",
+          "callee": "this.rootElement.classList.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "cleanUpClassName",
+          "callee": "Array.from",
+          "lineNumber": 1
+        },
+        {
+          "caller": "cleanUpClassName",
+          "callee": "e.startsWith",
+          "lineNumber": 1
+        },
+        {
+          "caller": "cleanUpClassName",
+          "callee": "this.rootElement.classList.remove",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "(0,n.usePathname)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "b",
+          "callee": "v.lenisRef.current?.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "e.raf",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,a.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "o.map(e=>e.label).join",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "o.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "v",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "function(e){let t=document.createElement(\"div\");t.className=\"font-display\",t.style.cssText=\"position:absolute;left:-9999px;top:0;visibility:hidden;white-space:pre;font-size:100px;line-height:1;\",document.body.appendChild(t);let r={};for(let n of e){t.textContent=\"\";let e=n.split(\"\").map(e=>{let r=document.createElement(\"span\");return r.textContent=e,t.appendChild(r),r}).map(e=>e.getBoundingClientRect().width/100),i=[],o=0;for(let t of e)i.push(o),o+=t;r[n]={adv:e,cum:i,total:o}}return t.remove(),r}",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "document.createElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "document.body.appendChild",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "n.split(\"\").map(e=>{let r=document.createElement(\"span\");return r.textContent=e,t.appendChild(r),r}).map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "n.split(\"\").map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "n.split",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "document.createElement",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "t.appendChild",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "e.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "i.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "t.remove",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "o.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "n.then(r).catch",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "n.then",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.rulerMap)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "P.drift",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.easeInOutCubic)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "o.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Z",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "B",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "B",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Z",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "B",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Z",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "performance.now",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.easeInOutCubic)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "r",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "n",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "B",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "f.wordmarkTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(f.WORDMARK_STRETCH-(f.WORDMARK_STRETCH-f.DISPLAY_STRETCH)*t).toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(100*(0,c.clamp01)(j)).toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "(70*V).toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "c.railOccupancy.spans.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Number.isFinite",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "performance.now",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "$.findIndex",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "i",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "i",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "K.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "i.default.ticker.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "i.default.ticker.remove",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "o.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "O",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "O",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "O",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "O",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "o.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "t.preventDefault",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "t.stopPropagation",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "performance.now",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "document.getElementById",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "i.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "r.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "window.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "e.label.split(\"\").map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "e.label.split",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "/Android|iPhone|iPad|iPod|Mobile/i.test",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.matchMedia",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.matchMedia",
+          "lineNumber": 1
+        },
+        {
+          "caller": "i",
+          "callee": "n",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "i",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "a.useTunerStore.subscribe",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "b",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "n",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.style.setProperty",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.style.removeProperty",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "t",
+          "callee": "m",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r.observe",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.addEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.fonts?.ready.then(t).catch",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.fonts?.ready.then",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r.disconnect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.removeEventListener",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "document.getElementById",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "w",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useMemo)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "t.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "M.current.filter",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r?.kill",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "(r=i.default.timeline()).to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.timeline",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "l.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r.to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r.timeScale",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "n",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,l.onIntroFast)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r?.timeScale",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "l.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,l.onIntroReplay)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "o",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "r?.kill",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,r.useEffect)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.rulerMap)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "m.drift",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "y.current?.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String(w).padStart",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "e.charCodeAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "i.default.ticker.add",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "i.default.ticker.remove",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "window.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "window.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "H",
+          "callee": "y.current?.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "H",
+          "callee": "W",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(e=>{let t=O.current,r=(0,c.rulerMap)(t.geom.vh,u.read().edgePad),n=(0,c.clamp01)((e-r.base)/r.span)*Math.max(1,t.geom.docH-t.geom.vh),i=s.lenisRef.current;if(i){let e=d.read(),r=Math.abs(n-window.scrollY);i.scrollTo(n,{duration:e.jumpDur*(.4+.6*Math.min(1,r/(2.5*t.geom.vh))),easing:c.easeOutExpo})}else window.scrollTo({top:n})})",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,c.rulerMap)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "i.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "window.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "i.default.fromTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "W",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "W",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,c.rulerMap)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "s.lenisRef.current?.scrollTo",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "e.preventDefault",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "e.currentTarget.setPointerCapture",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "v",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "v",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "_.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "[0,1,2].map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "\"0123456789\".split(\"\").map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "\"0123456789\".split",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "g",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "t.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "Math.pow",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "o.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "l.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.join",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "JSON.parse",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "localStorage.getItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "localStorage.setItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "navigator.clipboard.writeText",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "(0,n.tunerSnapshot)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Object.values(e).sort",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Object.values",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "e.target.setPointerCapture",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.getTunerActions)().map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.getTunerActions)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "g.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "e.stopPropagation",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,n.tunerSnapshot)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText(JSON.stringify({[e.id]:t},null,2)).then(()=>{s(!0),setTimeout(()=>s(!1),1200)}).catch",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText(JSON.stringify({[e.id]:t},null,2)).then",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useTunerStore.getState().resetGroup",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useTunerStore.getState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "Object.entries(e.defs).map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "Object.entries",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "e.preventDefault",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "e.preventDefault",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "Number",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "Number.isNaN",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "d",
+          "callee": "Number",
+          "lineNumber": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "scratch/ruler_raw.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "functions": [
+        {
+          "name": "W",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "H",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "v",
+          "startLine": 1,
+          "endLine": 1,
+          "params": [
+            "e",
+            "t",
+            "r"
+          ]
+        },
+        {
+          "name": "s",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "a",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "c",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        },
+        {
+          "name": "u",
+          "startLine": 1,
+          "endLine": 1,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "t",
+          "callee": "m",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r?.kill",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.set",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "(r=i.default.timeline()).to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "i.default.timeline",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "l.introTuner.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r.to",
+          "lineNumber": 1
+        },
+        {
+          "caller": "n",
+          "callee": "r.timeScale",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.rulerMap)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "u.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "m.drift",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "h.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.round",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "y.current?.setAttribute",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String(w).padStart",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "e.charCodeAt",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.exp",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "(0,c.clamp01)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.abs",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "r",
+          "callee": "String",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "window.clearTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "d.read",
+          "lineNumber": 1
+        },
+        {
+          "caller": "W",
+          "callee": "window.setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "H",
+          "callee": "y.current?.getBoundingClientRect",
+          "lineNumber": 1
+        },
+        {
+          "caller": "H",
+          "callee": "W",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "t.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "Math.pow",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "o.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "l.toFixed",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.push",
+          "lineNumber": 1
+        },
+        {
+          "caller": "v",
+          "callee": "n.join",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "JSON.parse",
+          "lineNumber": 1
+        },
+        {
+          "caller": "s",
+          "callee": "localStorage.getItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.useTunerStore)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,r.useRef)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "a",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "localStorage.setItem",
+          "lineNumber": 1
+        },
+        {
+          "caller": "p",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "navigator.clipboard.writeText",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "(0,n.tunerSnapshot)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "m",
+          "callee": "h",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Object.values(e).sort",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Object.values",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "e.target.setPointerCapture",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.max",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "Math.min",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.getTunerActions)().map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,n.getTunerActions)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "g.map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "a",
+          "callee": "p",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "c",
+          "callee": "e.stopPropagation",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,r.useState)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsxs)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,n.tunerSnapshot)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText(JSON.stringify({[e.id]:t},null,2)).then(()=>{s(!0),setTimeout(()=>s(!1),1200)}).catch",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText(JSON.stringify({[e.id]:t},null,2)).then",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "navigator.clipboard?.writeText",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "JSON.stringify",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "setTimeout",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "s",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useTunerStore.getState().resetGroup",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "n.useTunerStore.getState",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "Object.entries(e.defs).map",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "Object.entries",
+          "lineNumber": 1
+        },
+        {
+          "caller": "u",
+          "callee": "(0,t.jsx)",
+          "lineNumber": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "server/data/db.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 750,
+      "nonEmptyLines": 750,
+      "sections": [
+        {
+          "heading": "profile",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "clients",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "invoices",
+          "level": 1,
+          "line": 63
+        },
+        {
+          "heading": "bills",
+          "level": 1,
+          "line": 510
+        },
+        {
+          "heading": "follow_ups",
+          "level": 1,
+          "line": 572
+        },
+        {
+          "heading": "transactions",
+          "level": 1,
+          "line": 581
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

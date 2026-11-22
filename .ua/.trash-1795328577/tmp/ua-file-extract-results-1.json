@@ -1,0 +1,2551 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 14,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 14,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 14,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/App.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 915,
+      "nonEmptyLines": 813,
+      "functions": [
+        {
+          "name": "App",
+          "startLine": 35,
+          "endLine": 915,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "App",
+          "line": 35,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 36
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 37
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 38
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 39
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 40
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 41
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 42
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 44
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 45
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 48
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 49
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 53
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 54
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 55
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 56
+        },
+        {
+          "caller": "App",
+          "callee": "useState",
+          "lineNumber": 57
+        },
+        {
+          "caller": "showToast",
+          "callee": "setToastMessage",
+          "lineNumber": 60
+        },
+        {
+          "caller": "showToast",
+          "callee": "setTimeout",
+          "lineNumber": 61
+        },
+        {
+          "caller": "showToast",
+          "callee": "setToastMessage",
+          "lineNumber": 61
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.seedInitialData",
+          "lineNumber": 67
+        },
+        {
+          "caller": "loadData",
+          "callee": "Promise.all",
+          "lineNumber": 69
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getProfile",
+          "lineNumber": 70
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getClients",
+          "lineNumber": 71
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getInvoices",
+          "lineNumber": 72
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getBills",
+          "lineNumber": 73
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getFollowUps",
+          "lineNumber": 74
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.getActiveUser",
+          "lineNumber": 75
+        },
+        {
+          "caller": "loadData",
+          "callee": "setProfile",
+          "lineNumber": 78
+        },
+        {
+          "caller": "loadData",
+          "callee": "setClients",
+          "lineNumber": 79
+        },
+        {
+          "caller": "loadData",
+          "callee": "setInvoices",
+          "lineNumber": 80
+        },
+        {
+          "caller": "loadData",
+          "callee": "setBills",
+          "lineNumber": 81
+        },
+        {
+          "caller": "loadData",
+          "callee": "setFollowUps",
+          "lineNumber": 82
+        },
+        {
+          "caller": "loadData",
+          "callee": "setCashBalance",
+          "lineNumber": 83
+        },
+        {
+          "caller": "loadData",
+          "callee": "setIsCloudSynced",
+          "lineNumber": 84
+        },
+        {
+          "caller": "loadData",
+          "callee": "Boolean",
+          "lineNumber": 84
+        },
+        {
+          "caller": "loadData",
+          "callee": "dataService.isSupabaseConfigured",
+          "lineNumber": 84
+        },
+        {
+          "caller": "loadData",
+          "callee": "console.error",
+          "lineNumber": 86
+        },
+        {
+          "caller": "loadData",
+          "callee": "setLoading",
+          "lineNumber": 88
+        },
+        {
+          "caller": "App",
+          "callee": "useEffect",
+          "lineNumber": 92
+        },
+        {
+          "caller": "App",
+          "callee": "loadData",
+          "lineNumber": 93
+        },
+        {
+          "caller": "App",
+          "callee": "useEffect",
+          "lineNumber": 96
+        },
+        {
+          "caller": "checkApi",
+          "callee": "getHealth",
+          "lineNumber": 99
+        },
+        {
+          "caller": "checkApi",
+          "callee": "setApiOnline",
+          "lineNumber": 100
+        },
+        {
+          "caller": "checkApi",
+          "callee": "setApiOnline",
+          "lineNumber": 102
+        },
+        {
+          "caller": "App",
+          "callee": "checkApi",
+          "lineNumber": 105
+        },
+        {
+          "caller": "handleSignOut",
+          "callee": "supabase.auth.signOut",
+          "lineNumber": 110
+        },
+        {
+          "caller": "handleSignOut",
+          "callee": "loadData",
+          "lineNumber": 111
+        },
+        {
+          "caller": "handleSignOut",
+          "callee": "console.error",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleResetDemo",
+          "callee": "dataService.resetDemoData",
+          "lineNumber": 119
+        },
+        {
+          "caller": "handleResetDemo",
+          "callee": "loadData",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleResetDemo",
+          "callee": "console.error",
+          "lineNumber": 122
+        },
+        {
+          "caller": "App",
+          "callee": "useMemo",
+          "lineNumber": 127
+        },
+        {
+          "caller": "App",
+          "callee": "bills.reduce",
+          "lineNumber": 128
+        },
+        {
+          "caller": "App",
+          "callee": "Number",
+          "lineNumber": 129
+        },
+        {
+          "caller": "App",
+          "callee": "Math.max",
+          "lineNumber": 136
+        },
+        {
+          "caller": "App",
+          "callee": "Math.round",
+          "lineNumber": 136
+        },
+        {
+          "caller": "handleToggleBadDay",
+          "callee": "setIsBadDayActive",
+          "lineNumber": 142
+        },
+        {
+          "caller": "handleToggleBadDay",
+          "callee": "setIsBadDayModalOpen",
+          "lineNumber": 143
+        },
+        {
+          "caller": "App",
+          "callee": "useMemo",
+          "lineNumber": 147
+        },
+        {
+          "caller": "App",
+          "callee": "calculateCashForecast",
+          "lineNumber": 148
+        },
+        {
+          "caller": "handleResetScenarios",
+          "callee": "setScenarios",
+          "lineNumber": 163
+        },
+        {
+          "caller": "handleOpenNewInvoice",
+          "callee": "setIsInvoiceModalOpen",
+          "lineNumber": 167
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 173
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "new Date().toISOString",
+          "lineNumber": 173
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "dataService.markPaid",
+          "lineNumber": 174
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "setInvoices",
+          "lineNumber": 176
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "prev.map",
+          "lineNumber": 177
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "Number",
+          "lineNumber": 182
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "setCashBalance",
+          "lineNumber": 184
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "dataService.updateProfile",
+          "lineNumber": 185
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "showToast",
+          "lineNumber": 187
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "amt.toLocaleString",
+          "lineNumber": 187
+        },
+        {
+          "caller": "handleMarkAsPaid",
+          "callee": "console.error",
+          "lineNumber": 190
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "Math.round",
+          "lineNumber": 198
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "Number",
+          "lineNumber": 198
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "Number",
+          "lineNumber": 199
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "(Number(invoice.amount) - halfAmount).toFixed",
+          "lineNumber": 199
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "Number",
+          "lineNumber": 199
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "today.toISOString().split",
+          "lineNumber": 202
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "today.toISOString",
+          "lineNumber": 202
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "due2Date.setDate",
+          "lineNumber": 204
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "due2Date.getDate",
+          "lineNumber": 204
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "due2Date.toISOString().split",
+          "lineNumber": 205
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "due2Date.toISOString",
+          "lineNumber": 205
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "dataService.updateInvoice",
+          "lineNumber": 207
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "dataService.createInvoice",
+          "lineNumber": 214
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "setInvoices",
+          "lineNumber": 228
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "prev.map",
+          "lineNumber": 229
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "showToast",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "halfAmount.toLocaleString",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "part2Amount.toLocaleString",
+          "lineNumber": 232
+        },
+        {
+          "caller": "handleSplitPayment",
+          "callee": "console.error",
+          "lineNumber": 234
+        },
+        {
+          "caller": "handleChaseWhatsApp",
+          "callee": "setSelectedInvoiceForWhatsApp",
+          "lineNumber": 239
+        },
+        {
+          "caller": "handleViewAsClient",
+          "callee": "setSelectedInvoiceForPortal",
+          "lineNumber": 243
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "dataService.saveClient",
+          "lineNumber": 251
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "setClients",
+          "lineNumber": 259
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "dataService.createInvoice",
+          "lineNumber": 262
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "setInvoices",
+          "lineNumber": 267
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "showToast",
+          "lineNumber": 268
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "created.amount.toLocaleString",
+          "lineNumber": 268
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "console.error",
+          "lineNumber": 270
+        },
+        {
+          "caller": "handleSaveInvoice",
+          "callee": "showToast",
+          "lineNumber": 271
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 276
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "new Date().toISOString",
+          "lineNumber": 276
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "clients.find",
+          "lineNumber": 278
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "c.name.toLowerCase",
+          "lineNumber": 278
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "draft.client.toLowerCase",
+          "lineNumber": 278
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "handleSaveInvoice",
+          "lineNumber": 281
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "Date.now().toString().slice",
+          "lineNumber": 285
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "Date.now().toString",
+          "lineNumber": 285
+        },
+        {
+          "caller": "handleQuickCreateInvoice",
+          "callee": "Date.now",
+          "lineNumber": 285
+        },
+        {
+          "caller": "handleLogFollowUp",
+          "callee": "dataService.logFollowUp",
+          "lineNumber": 298
+        },
+        {
+          "caller": "handleLogFollowUp",
+          "callee": "setFollowUps",
+          "lineNumber": 299
+        },
+        {
+          "caller": "handleLogFollowUp",
+          "callee": "showToast",
+          "lineNumber": 300
+        },
+        {
+          "caller": "handleLogFollowUp",
+          "callee": "console.error",
+          "lineNumber": 302
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "dataService.saveBill",
+          "lineNumber": 308
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "setBills",
+          "lineNumber": 309
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "dataService.getBills",
+          "lineNumber": 309
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "showToast",
+          "lineNumber": 310
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "console.error",
+          "lineNumber": 312
+        },
+        {
+          "caller": "handleSaveBill",
+          "callee": "showToast",
+          "lineNumber": 313
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "dataService.deleteBill",
+          "lineNumber": 319
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "setBills",
+          "lineNumber": 320
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "prev.filter",
+          "lineNumber": 320
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "showToast",
+          "lineNumber": 321
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "console.error",
+          "lineNumber": 323
+        },
+        {
+          "caller": "handleDeleteBill",
+          "callee": "showToast",
+          "lineNumber": 324
+        },
+        {
+          "caller": "handleToggleFlexible",
+          "callee": "handleSaveBill",
+          "lineNumber": 329
+        },
+        {
+          "caller": "App",
+          "callee": "setToastMessage",
+          "lineNumber": 350
+        },
+        {
+          "caller": "App",
+          "callee": "setIsAuthModalOpen",
+          "lineNumber": 369
+        },
+        {
+          "caller": "App",
+          "callee": "Number(cashBalance).toLocaleString",
+          "lineNumber": 443
+        },
+        {
+          "caller": "App",
+          "callee": "Number",
+          "lineNumber": 443
+        },
+        {
+          "caller": "App",
+          "callee": "Math.round(monthlyBurn).toLocaleString",
+          "lineNumber": 453
+        },
+        {
+          "caller": "App",
+          "callee": "Math.round",
+          "lineNumber": 453
+        },
+        {
+          "caller": "App",
+          "callee": "setIsBadDayModalOpen",
+          "lineNumber": 499
+        },
+        {
+          "caller": "App",
+          "callee": "setIsBadDayActive",
+          "lineNumber": 505
+        },
+        {
+          "caller": "App",
+          "callee": "Math.round(monthlyBurn).toLocaleString",
+          "lineNumber": 558
+        },
+        {
+          "caller": "App",
+          "callee": "Math.round",
+          "lineNumber": 558
+        },
+        {
+          "caller": "App",
+          "callee": "Math.min",
+          "lineNumber": 572
+        },
+        {
+          "caller": "App",
+          "callee": "Number(forecastData.deficitInfo.maxShortfall || 0).toLocaleString",
+          "lineNumber": 645
+        },
+        {
+          "caller": "App",
+          "callee": "Number",
+          "lineNumber": 645
+        },
+        {
+          "caller": "App",
+          "callee": "handleChaseWhatsApp",
+          "lineNumber": 653
+        },
+        {
+          "caller": "App",
+          "callee": "handleSplitPayment",
+          "lineNumber": 662
+        },
+        {
+          "caller": "App",
+          "callee": "setIsInvoiceModalOpen",
+          "lineNumber": 866
+        },
+        {
+          "caller": "App",
+          "callee": "setIsBadDayModalOpen",
+          "lineNumber": 874
+        },
+        {
+          "caller": "App",
+          "callee": "invoices.filter",
+          "lineNumber": 875
+        },
+        {
+          "caller": "App",
+          "callee": "setScenarios",
+          "lineNumber": 881
+        },
+        {
+          "caller": "App",
+          "callee": "setIsAuthModalOpen",
+          "lineNumber": 887
+        },
+        {
+          "caller": "App",
+          "callee": "Boolean",
+          "lineNumber": 893
+        },
+        {
+          "caller": "App",
+          "callee": "setSelectedInvoiceForWhatsApp",
+          "lineNumber": 894
+        },
+        {
+          "caller": "App",
+          "callee": "clients.find",
+          "lineNumber": 898
+        },
+        {
+          "caller": "App",
+          "callee": "Boolean",
+          "lineNumber": 906
+        },
+        {
+          "caller": "App",
+          "callee": "clients.find",
+          "lineNumber": 908
+        },
+        {
+          "caller": "App",
+          "callee": "setSelectedInvoiceForPortal",
+          "lineNumber": 910
+        }
+      ],
+      "metrics": {
+        "importCount": 21,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ArtCraftPrinciples.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 84,
+      "functions": [
+        {
+          "name": "ArtCraftPrinciples",
+          "startLine": 28,
+          "endLine": 94,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ArtCraftPrinciples",
+          "line": 28,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ArtCraftPrinciples",
+          "callee": "PRINCIPLES.map",
+          "lineNumber": 48
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/BadDayTriageModal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 186,
+      "nonEmptyLines": 170,
+      "functions": [
+        {
+          "name": "toAmount",
+          "startLine": 4,
+          "endLine": 4,
+          "params": [
+            "item"
+          ]
+        },
+        {
+          "name": "formatDollars",
+          "startLine": 6,
+          "endLine": 7,
+          "params": [
+            "value"
+          ]
+        },
+        {
+          "name": "BadDayTriageModal",
+          "startLine": 9,
+          "endLine": 186,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "BadDayTriageModal",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "toAmount",
+          "callee": "Number",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatDollars",
+          "callee": "Math.round(value).toLocaleString",
+          "lineNumber": 7
+        },
+        {
+          "caller": "formatDollars",
+          "callee": "Math.round",
+          "lineNumber": 7
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "pendingInvoices.filter",
+          "lineNumber": 21
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "unpaidInvoices.reduce",
+          "lineNumber": 22
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 22
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "bills.filter",
+          "lineNumber": 24
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "Number",
+          "lineNumber": 24
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "cycleBills.reduce",
+          "lineNumber": 25
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 25
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "Math.max",
+          "lineNumber": 26
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "Number",
+          "lineNumber": 26
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "unpaidInvoices.filter",
+          "lineNumber": 28
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 28
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "unpaidInvoices.reduce",
+          "lineNumber": 30
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 31
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 31
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "bills.filter",
+          "lineNumber": 35
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "formatDollars",
+          "lineNumber": 52
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "formatDollars",
+          "lineNumber": 53
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "quickCashInvoices.map",
+          "lineNumber": 79
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "formatDollars",
+          "lineNumber": 87
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 87
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "onChaseWhatsApp",
+          "lineNumber": 92
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "formatDollars",
+          "lineNumber": 117
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 117
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "onSplitPayment",
+          "lineNumber": 122
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "flexibleBills.map",
+          "lineNumber": 147
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "formatDollars",
+          "lineNumber": 154
+        },
+        {
+          "caller": "BadDayTriageModal",
+          "callee": "toAmount",
+          "lineNumber": 154
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/FeedbackCarousel.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 132,
+      "nonEmptyLines": 118,
+      "functions": [
+        {
+          "name": "FeedbackCarousel",
+          "startLine": 31,
+          "endLine": 132,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "FeedbackCarousel",
+          "line": 31,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "FeedbackCarousel",
+          "callee": "useState",
+          "lineNumber": 32
+        },
+        {
+          "caller": "prev",
+          "callee": "setCurrentIndex",
+          "lineNumber": 35
+        },
+        {
+          "caller": "next",
+          "callee": "setCurrentIndex",
+          "lineNumber": 39
+        },
+        {
+          "caller": "FeedbackCarousel",
+          "callee": "TESTIMONIALS.map",
+          "lineNumber": 51
+        },
+        {
+          "caller": "FeedbackCarousel",
+          "callee": "TESTIMONIALS.map",
+          "lineNumber": 106
+        },
+        {
+          "caller": "FeedbackCarousel",
+          "callee": "setCurrentIndex",
+          "lineNumber": 109
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/HorizontalAccordions.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 120,
+      "nonEmptyLines": 111,
+      "functions": [
+        {
+          "name": "HorizontalAccordions",
+          "startLine": 47,
+          "endLine": 120,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "HorizontalAccordions",
+          "line": 47,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "HorizontalAccordions",
+          "callee": "useState",
+          "lineNumber": 48
+        },
+        {
+          "caller": "HorizontalAccordions",
+          "callee": "SLICES.map",
+          "lineNumber": 67
+        },
+        {
+          "caller": "HorizontalAccordions",
+          "callee": "setActiveId",
+          "lineNumber": 74
+        },
+        {
+          "caller": "HorizontalAccordions",
+          "callee": "setActiveId",
+          "lineNumber": 75
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/InfiniteMarquee.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 48,
+      "functions": [
+        {
+          "name": "InfiniteMarquee",
+          "startLine": 22,
+          "endLine": 51,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "InfiniteMarquee",
+          "line": 22,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "InfiniteMarquee",
+          "callee": "repeated.map",
+          "lineNumber": 28
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/InvoiceModal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 417,
+      "nonEmptyLines": 380,
+      "functions": [
+        {
+          "name": "InvoiceModal",
+          "startLine": 10,
+          "endLine": 417,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "InvoiceModal",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 25
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 26
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "useEffect",
+          "lineNumber": 33
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "today.toISOString().split",
+          "lineNumber": 36
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "today.toISOString",
+          "lineNumber": 36
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "due.setDate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "due.getDate",
+          "lineNumber": 39
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "due.toISOString().split",
+          "lineNumber": 40
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "due.toISOString",
+          "lineNumber": 40
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "Math.floor",
+          "lineNumber": 42
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "Math.random",
+          "lineNumber": 42
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setInvoiceNumber",
+          "lineNumber": 43
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setIssueDate",
+          "lineNumber": 44
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setDueDate",
+          "lineNumber": 45
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setSelectedClientId",
+          "lineNumber": 48
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setClientPhone",
+          "lineNumber": 49
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setIsNewClient",
+          "lineNumber": 59
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setSelectedClientId",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setClientPhone",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setIsNewClient",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setSelectedClientId",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "clients.find",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleClientChange",
+          "callee": "setClientPhone",
+          "lineNumber": 66
+        },
+        {
+          "caller": "setQuickTerms",
+          "callee": "d.setDate",
+          "lineNumber": 72
+        },
+        {
+          "caller": "setQuickTerms",
+          "callee": "d.getDate",
+          "lineNumber": 72
+        },
+        {
+          "caller": "setQuickTerms",
+          "callee": "setDueDate",
+          "lineNumber": 73
+        },
+        {
+          "caller": "setQuickTerms",
+          "callee": "d.toISOString().split",
+          "lineNumber": 73
+        },
+        {
+          "caller": "setQuickTerms",
+          "callee": "d.toISOString",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleItemChange",
+          "callee": "setItems",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleItemChange",
+          "callee": "prev.map",
+          "lineNumber": 78
+        },
+        {
+          "caller": "handleAddItem",
+          "callee": "setItems",
+          "lineNumber": 85
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "setItems",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "prev.filter",
+          "lineNumber": 90
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "items.reduce",
+          "lineNumber": 93
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "Number",
+          "lineNumber": 94
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "Number",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 100
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "newClientName.trim",
+          "lineNumber": 106
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "alert",
+          "lineNumber": 107
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "newClientName.trim",
+          "lineNumber": 110
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "clients.find",
+          "lineNumber": 112
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "projectTitle.trim",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "alert",
+          "lineNumber": 117
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "alert",
+          "lineNumber": 122
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "onSaveInvoice",
+          "lineNumber": 126
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "clientPhone.trim",
+          "lineNumber": 130
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "invoiceNumber.trim",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Date.now().toString().slice",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Date.now().toString",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Date.now",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "projectTitle.trim",
+          "lineNumber": 132
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "notes.trim",
+          "lineNumber": 138
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "onClose",
+          "lineNumber": 141
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "clients.map",
+          "lineNumber": 183
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setNewClientName",
+          "lineNumber": 198
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setIsNewClient",
+          "lineNumber": 204
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setClientPhone",
+          "lineNumber": 226
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setProjectTitle",
+          "lineNumber": 243
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setInvoiceNumber",
+          "lineNumber": 256
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setIssueDate",
+          "lineNumber": 272
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setQuickTerms",
+          "lineNumber": 285
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setQuickTerms",
+          "lineNumber": 292
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setQuickTerms",
+          "lineNumber": 299
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setDueDate",
+          "lineNumber": 309
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "items.map",
+          "lineNumber": 332
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "handleItemChange",
+          "lineNumber": 338
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "handleItemChange",
+          "lineNumber": 347
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "handleItemChange",
+          "lineNumber": 356
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "handleRemoveItem",
+          "lineNumber": 361
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "calculatedTotal.toLocaleString",
+          "lineNumber": 377
+        },
+        {
+          "caller": "InvoiceModal",
+          "callee": "setNotes",
+          "lineNumber": 390
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/Navbar.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 182,
+      "nonEmptyLines": 167,
+      "functions": [
+        {
+          "name": "Navbar",
+          "startLine": 10,
+          "endLine": 182,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Navbar",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Navbar",
+          "callee": "getRunwayBadge",
+          "lineNumber": 47
+        },
+        {
+          "caller": "Navbar",
+          "callee": "Number(cashBalance).toLocaleString",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Navbar",
+          "callee": "Number",
+          "lineNumber": 136
+        },
+        {
+          "caller": "Navbar",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/OutflowsManager.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 171,
+      "nonEmptyLines": 162,
+      "functions": [
+        {
+          "name": "OutflowsManager",
+          "startLine": 13,
+          "endLine": 171,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OutflowsManager",
+          "line": 13,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OutflowsManager",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "CATEGORIES.map",
+          "lineNumber": 16
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "bills.forEach",
+          "lineNumber": 17
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "(bill.category || 'software').toLowerCase",
+          "lineNumber": 18
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "groups.has",
+          "lineNumber": 19
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "groups.set",
+          "lineNumber": 19
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "groups.get(key).push",
+          "lineNumber": 20
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "groups.get",
+          "lineNumber": 20
+        },
+        {
+          "caller": "labelFor",
+          "callee": "CATEGORIES.find",
+          "lineNumber": 23
+        },
+        {
+          "caller": "labelFor",
+          "callee": "key.toUpperCase",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "form.name.trim",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Number",
+          "lineNumber": 28
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "onSaveBill",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "form.name.trim",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Number",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "Number",
+          "lineNumber": 32
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setForm",
+          "lineNumber": 37
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "[...groups.entries()].map",
+          "lineNumber": 62
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "groups.entries",
+          "lineNumber": 62
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "CATEGORIES.some",
+          "lineNumber": 63
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "labelFor",
+          "lineNumber": 70
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "items.map",
+          "lineNumber": 73
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "Number(bill.amount).toFixed",
+          "lineNumber": 78
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "Number",
+          "lineNumber": 78
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "onToggleFlexible",
+          "lineNumber": 85
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "onDeleteBill",
+          "lineNumber": 96
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "setForm",
+          "lineNumber": 120
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "setForm",
+          "lineNumber": 129
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "setForm",
+          "lineNumber": 138
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "setForm",
+          "lineNumber": 143
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "CATEGORIES.map",
+          "lineNumber": 146
+        },
+        {
+          "caller": "OutflowsManager",
+          "callee": "setForm",
+          "lineNumber": 155
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/QuickInputBar.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 163,
+      "nonEmptyLines": 149,
+      "functions": [
+        {
+          "name": "QuickInputBar",
+          "startLine": 11,
+          "endLine": 163,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "QuickInputBar",
+          "line": 11,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "QuickInputBar",
+          "callee": "useState",
+          "lineNumber": 12
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "useState",
+          "lineNumber": 13
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "runParse",
+          "callee": "parseInvoiceText",
+          "lineNumber": 17
+        },
+        {
+          "caller": "runParse",
+          "callee": "setDraft",
+          "lineNumber": 18
+        },
+        {
+          "caller": "runParse",
+          "callee": "setError",
+          "lineNumber": 19
+        },
+        {
+          "caller": "handleParse",
+          "callee": "e.preventDefault",
+          "lineNumber": 23
+        },
+        {
+          "caller": "handleParse",
+          "callee": "text.trim",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleParse",
+          "callee": "runParse",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handlePreset",
+          "callee": "preset.project.toLowerCase",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handlePreset",
+          "callee": "setText",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handlePreset",
+          "callee": "runParse",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "onCreateInvoice",
+          "lineNumber": 36
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "setDraft",
+          "lineNumber": 37
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "setText",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleConfirm",
+          "callee": "setError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "setText",
+          "lineNumber": 64
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "PRESETS.map",
+          "lineNumber": 83
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "handlePreset",
+          "lineNumber": 87
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "Number(draft.amount).toLocaleString",
+          "lineNumber": 126
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "Number",
+          "lineNumber": 126
+        },
+        {
+          "caller": "QuickInputBar",
+          "callee": "setDraft",
+          "lineNumber": 138
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/ScrubTextReveal.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 65,
+      "nonEmptyLines": 58,
+      "functions": [
+        {
+          "name": "ScrubTextReveal",
+          "startLine": 7,
+          "endLine": 65,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ScrubTextReveal",
+          "line": 7,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "useRef",
+          "lineNumber": 11
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "useRef",
+          "lineNumber": 12
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "useEffect",
+          "lineNumber": 14
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "gsap.context",
+          "lineNumber": 15
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "gsap.fromTo",
+          "lineNumber": 17
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "ctx.revert",
+          "lineNumber": 36
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "statement.split",
+          "lineNumber": 39
+        },
+        {
+          "caller": "ScrubTextReveal",
+          "callee": "words.map",
+          "lineNumber": 52
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/components/WhatIfSimulator.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 307,
+      "nonEmptyLines": 286,
+      "functions": [
+        {
+          "name": "WhatIfSimulator",
+          "startLine": 14,
+          "endLine": 307,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "WhatIfSimulator",
+          "line": 14,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "Number",
+          "lineNumber": 23
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "Boolean",
+          "lineNumber": 24
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "Boolean",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleAcmeSliderChange",
+          "callee": "parseInt",
+          "lineNumber": 30
+        },
+        {
+          "caller": "handleAcmeSliderChange",
+          "callee": "onScenarioChange",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleToggleCapex",
+          "callee": "onScenarioChange",
+          "lineNumber": 38
+        },
+        {
+          "caller": "handleToggleFlexibleBills",
+          "callee": "onScenarioChange",
+          "lineNumber": 45
+        },
+        {
+          "caller": "handleApplyPreset",
+          "callee": "onScenarioChange",
+          "lineNumber": 52
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 110
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "deficitInfo.lowestCashPoint?.toLocaleString",
+          "lineNumber": 114
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "onChaseInvoice",
+          "lineNumber": 122
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "deficitInfo.actionInvoice.invoice_number?.replace",
+          "lineNumber": 126
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 137
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "[\n              { label: 'On Time (0d)', days: 0 },\n              { label: '+10 Days', days: 10 },\n              { label: '+16 Days (Shortfall)', days: 16 },\n              { label: '+30 Days (Crisis)', days: 30 },\n            ].map",
+          "lineNumber": 201
+        },
+        {
+          "caller": "WhatIfSimulator",
+          "callee": "handleApplyPreset",
+          "lineNumber": 209
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/nlpParser.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 65,
+      "functions": [
+        {
+          "name": "formatDate",
+          "startLine": 3,
+          "endLine": 7,
+          "params": [
+            "d"
+          ]
+        },
+        {
+          "name": "addDays",
+          "startLine": 9,
+          "endLine": 11,
+          "params": [
+            "base",
+            "n"
+          ]
+        },
+        {
+          "name": "nextWeekday",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "today",
+            "dow"
+          ]
+        },
+        {
+          "name": "parseAmount",
+          "startLine": 23,
+          "endLine": 28,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "parseDueDate",
+          "startLine": 30,
+          "endLine": 39,
+          "params": [
+            "text",
+            "today"
+          ]
+        },
+        {
+          "name": "parseClientAndProject",
+          "startLine": 45,
+          "endLine": 59,
+          "params": [
+            "text"
+          ]
+        },
+        {
+          "name": "parseInvoiceText",
+          "startLine": 61,
+          "endLine": 71,
+          "params": [
+            "text"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "parseInvoiceText",
+          "line": 61,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatDate",
+          "callee": "String(d.getMonth() + 1).padStart",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatDate",
+          "callee": "String",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatDate",
+          "callee": "d.getMonth",
+          "lineNumber": 4
+        },
+        {
+          "caller": "formatDate",
+          "callee": "String(d.getDate()).padStart",
+          "lineNumber": 5
+        },
+        {
+          "caller": "formatDate",
+          "callee": "String",
+          "lineNumber": 5
+        },
+        {
+          "caller": "formatDate",
+          "callee": "d.getDate",
+          "lineNumber": 5
+        },
+        {
+          "caller": "formatDate",
+          "callee": "d.getFullYear",
+          "lineNumber": 6
+        },
+        {
+          "caller": "addDays",
+          "callee": "base.getFullYear",
+          "lineNumber": 10
+        },
+        {
+          "caller": "addDays",
+          "callee": "base.getMonth",
+          "lineNumber": 10
+        },
+        {
+          "caller": "addDays",
+          "callee": "base.getDate",
+          "lineNumber": 10
+        },
+        {
+          "caller": "nextWeekday",
+          "callee": "today.getDay",
+          "lineNumber": 17
+        },
+        {
+          "caller": "nextWeekday",
+          "callee": "addDays",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parseAmount",
+          "callee": "text.matchAll",
+          "lineNumber": 25
+        },
+        {
+          "caller": "parseAmount",
+          "callee": "Number",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parseAmount",
+          "callee": "m[0].replace",
+          "lineNumber": 27
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "text.toLowerCase",
+          "lineNumber": 31
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "lower.match",
+          "lineNumber": 32
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "formatDate",
+          "lineNumber": 33
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "addDays",
+          "lineNumber": 33
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "Number",
+          "lineNumber": 33
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "/\\btomorrow\\b/.test",
+          "lineNumber": 34
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "formatDate",
+          "lineNumber": 34
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "addDays",
+          "lineNumber": 34
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "/\\btoday\\b/.test",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "formatDate",
+          "lineNumber": 35
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "lower.match",
+          "lineNumber": 36
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "formatDate",
+          "lineNumber": 37
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "nextWeekday",
+          "lineNumber": 37
+        },
+        {
+          "caller": "parseDueDate",
+          "callee": "WEEKDAYS.indexOf",
+          "lineNumber": 37
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "text.match",
+          "lineNumber": 46
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "text.match",
+          "lineNumber": 46
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "text.slice",
+          "lineNumber": 48
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "rest.search",
+          "lineNumber": 49
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "(cut === -1 ? rest : rest.slice(0, cut)).trim",
+          "lineNumber": 50
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "rest.slice",
+          "lineNumber": 50
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "segment.split(/\\s+/).filter",
+          "lineNumber": 51
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "segment.split",
+          "lineNumber": 51
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "/^[A-Z]/.test",
+          "lineNumber": 53
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "Math.min",
+          "lineNumber": 54
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "words.slice(0, i).join",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "words.slice",
+          "lineNumber": 55
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "words.slice(i).join",
+          "lineNumber": 56
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "words.slice",
+          "lineNumber": 56
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "remaining[0].toUpperCase",
+          "lineNumber": 57
+        },
+        {
+          "caller": "parseClientAndProject",
+          "callee": "remaining.slice",
+          "lineNumber": 57
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "String",
+          "lineNumber": 62
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "now.getFullYear",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "now.getMonth",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "now.getDate",
+          "lineNumber": 63
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "parseClientAndProject",
+          "lineNumber": 64
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "parseAmount",
+          "lineNumber": 68
+        },
+        {
+          "caller": "parseInvoiceText",
+          "callee": "parseDueDate",
+          "lineNumber": 69
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 7,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/main.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

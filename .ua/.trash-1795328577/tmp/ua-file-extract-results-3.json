@@ -1,0 +1,1552 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/components/CashForecastChart.jsx",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 641,
+      "nonEmptyLines": 588,
+      "functions": [
+        {
+          "name": "CashForecastChart",
+          "startLine": 15,
+          "endLine": 641,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CashForecastChart",
+          "line": 15,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CashForecastChart",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "useRef",
+          "lineNumber": 22
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "useMemo",
+          "lineNumber": 40
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.min",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "allPoints.map",
+          "lineNumber": 43
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.max",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "allPoints.map",
+          "lineNumber": 44
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.floor",
+          "lineNumber": 46
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.ceil",
+          "lineNumber": 47
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "ticks.push",
+          "lineNumber": 52
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.round",
+          "lineNumber": 52
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "useMemo",
+          "lineNumber": 58
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "useMemo",
+          "lineNumber": 85
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "allPoints.filter",
+          "lineNumber": 90
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "allPoints.filter",
+          "lineNumber": 91
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "histPts.forEach",
+          "lineNumber": 94
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 95
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 96
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "forePts.forEach",
+          "lineNumber": 101
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 102
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 103
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 108
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 109
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 117
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 118
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 119
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.max",
+          "lineNumber": 119
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 127
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 128
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 129
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "svgRef.current.getBoundingClientRect",
+          "lineNumber": 135
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "setHoveredPoint",
+          "lineNumber": 140
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "Math.round",
+          "lineNumber": 145
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "Math.abs",
+          "lineNumber": 148
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "Math.abs",
+          "lineNumber": 151
+        },
+        {
+          "caller": "handleMouseMove",
+          "callee": "setHoveredPoint",
+          "lineNumber": 158
+        },
+        {
+          "caller": "handleMouseLeave",
+          "callee": "setHoveredPoint",
+          "lineNumber": 162
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "[30, 60, 90].map",
+          "lineNumber": 188
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "onHorizonChange",
+          "lineNumber": 191
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(summary.startingCash || 0).toLocaleString",
+          "lineNumber": 210
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 210
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(summary.endingCash || 0).toLocaleString",
+          "lineNumber": 223
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 223
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(summary.netChange || 0).toLocaleString",
+          "lineNumber": 226
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 226
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(summary.lowestCashPoint || 0).toLocaleString",
+          "lineNumber": 236
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 236
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "formatShortDate",
+          "lineNumber": 239
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Date.now",
+          "lineNumber": 239
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 255
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "yGridTicks.map",
+          "lineNumber": 290
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 291
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "val.toLocaleString",
+          "lineNumber": 312
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.abs(val).toLocaleString",
+          "lineNumber": 312
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.abs",
+          "lineNumber": 312
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 324
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 358
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "dailyPoints.map",
+          "lineNumber": 434
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 439
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 440
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 454
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 455
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "allPoints.map",
+          "lineNumber": 475
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 478
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "formatShortDate(pt.date).toUpperCase",
+          "lineNumber": 509
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "formatShortDate",
+          "lineNumber": 509
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 521
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 523
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 531
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getY",
+          "lineNumber": 532
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.min",
+          "lineNumber": 547
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Math.max",
+          "lineNumber": 548
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "getX",
+          "lineNumber": 548
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "formatShortDate",
+          "lineNumber": 558
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(hoveredPoint.cashBalance).toLocaleString",
+          "lineNumber": 572
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 572
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(hoveredPoint.inflows).toLocaleString",
+          "lineNumber": 583
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 583
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "hoveredPoint.inflowItems?.map",
+          "lineNumber": 585
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(item.amount).toLocaleString",
+          "lineNumber": 587
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 587
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(hoveredPoint.outflows).toLocaleString",
+          "lineNumber": 600
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 600
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "hoveredPoint.outflowItems?.map",
+          "lineNumber": 602
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number(item.amount).toLocaleString",
+          "lineNumber": 604
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "Number",
+          "lineNumber": 604
+        },
+        {
+          "caller": "CashForecastChart",
+          "callee": "safetyBuffer.toLocaleString",
+          "lineNumber": 631
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/data/mockDesignerData.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 301,
+      "nonEmptyLines": 294,
+      "functions": [
+        {
+          "name": "getRelativeDate",
+          "startLine": 2,
+          "endLine": 6,
+          "params": [
+            "offsetDays"
+          ]
+        },
+        {
+          "name": "createMockDesignerData",
+          "startLine": 8,
+          "endLine": 298,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "createMockDesignerData",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "mockDesignerData",
+          "line": 300,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getRelativeDate",
+          "callee": "d.setDate",
+          "lineNumber": 4
+        },
+        {
+          "caller": "getRelativeDate",
+          "callee": "d.getDate",
+          "lineNumber": 4
+        },
+        {
+          "caller": "getRelativeDate",
+          "callee": "d.toISOString().split",
+          "lineNumber": 5
+        },
+        {
+          "caller": "getRelativeDate",
+          "callee": "d.toISOString",
+          "lineNumber": 5
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "new Date().toISOString",
+          "lineNumber": 16
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 28
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 38
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 48
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 58
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 68
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 81
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 82
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 90
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 100
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 101
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 109
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 119
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 120
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 127
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 137
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 138
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 146
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 156
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 157
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 164
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 174
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 175
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 182
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 192
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 193
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 194
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 200
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 213
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 223
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 233
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 243
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 253
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 263
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 273
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 280
+        },
+        {
+          "caller": "createMockDesignerData",
+          "callee": "getRelativeDate",
+          "lineNumber": 287
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/lib/forecastEngine.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 357,
+      "nonEmptyLines": 318,
+      "functions": [
+        {
+          "name": "formatDateISO",
+          "startLine": 22,
+          "endLine": 27,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "formatShortDate",
+          "startLine": 32,
+          "endLine": 34,
+          "params": [
+            "date"
+          ]
+        },
+        {
+          "name": "calculateCashForecast",
+          "startLine": 50,
+          "endLine": 357,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "DEFAULT_SCENARIOS",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "formatDateISO",
+          "line": 22,
+          "isDefault": false
+        },
+        {
+          "name": "formatShortDate",
+          "line": 32,
+          "isDefault": false
+        },
+        {
+          "name": "calculateCashForecast",
+          "line": 50,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "formatDateISO",
+          "callee": "date.getFullYear",
+          "lineNumber": 23
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "String(date.getMonth() + 1).padStart",
+          "lineNumber": 24
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "String",
+          "lineNumber": 24
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "date.getMonth",
+          "lineNumber": 24
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "String(date.getDate()).padStart",
+          "lineNumber": 25
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "String",
+          "lineNumber": 25
+        },
+        {
+          "caller": "formatDateISO",
+          "callee": "date.getDate",
+          "lineNumber": 25
+        },
+        {
+          "caller": "formatShortDate",
+          "callee": "date.toLocaleDateString",
+          "lineNumber": 33
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "clients.forEach",
+          "lineNumber": 61
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "clientMap.set",
+          "lineNumber": 62
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "today.setHours",
+          "lineNumber": 66
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 79
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 82
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 85
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 88
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 91
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 94
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "bills\n      .filter((b) => !['bill_rent', 'bill_adobe', 'bill_figma', 'bill_render', 'bill_fiber', 'bill_tax', 'rent', 'adobe', 'figma', 'render', 'fiber', 'tax'].includes(b.id))\n      .forEach",
+          "lineNumber": 98
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "bills\n      .filter",
+          "lineNumber": 98
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "['bill_rent', 'bill_adobe', 'bill_figma', 'bill_render', 'bill_fiber', 'bill_tax', 'rent', 'adobe', 'figma', 'render', 'fiber', 'tax'].includes",
+          "lineNumber": 99
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 101
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 103
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 104
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Boolean",
+          "lineNumber": 109
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dailyBills.push",
+          "lineNumber": 117
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 120
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayOutflowsMap.set",
+          "lineNumber": 127
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "invoices.forEach",
+          "lineNumber": 136
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase().includes",
+          "lineNumber": 139
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase",
+          "lineNumber": 139
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase().includes",
+          "lineNumber": 140
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase",
+          "lineNumber": 140
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase().includes",
+          "lineNumber": 141
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase",
+          "lineNumber": 141
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase().includes",
+          "lineNumber": 142
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase",
+          "lineNumber": 142
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase().includes",
+          "lineNumber": 143
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.client_name.toLowerCase",
+          "lineNumber": 143
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 147
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 151
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 153
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 156
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 159
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 162
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 165
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 167
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "getDaysDiff",
+          "lineNumber": 171
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.max",
+          "lineNumber": 173
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 177
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayInflowsMap.get",
+          "lineNumber": 186
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "existing.push",
+          "lineNumber": 187
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 192
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayInflowsMap.set",
+          "lineNumber": 196
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "histDate.setDate",
+          "lineNumber": 206
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "today.getDate",
+          "lineNumber": 206
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "formatDateISO",
+          "lineNumber": 207
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 211
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 213
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "historicalPoints.unshift",
+          "lineNumber": 216
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "forecastPoints.push",
+          "lineNumber": 242
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "formatDateISO",
+          "lineNumber": 245
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayDate.setDate",
+          "lineNumber": 259
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "today.getDate",
+          "lineNumber": 259
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "formatDateISO",
+          "lineNumber": 260
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayInflowsMap.get",
+          "lineNumber": 262
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "dayOutflowsMap.get",
+          "lineNumber": 263
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inflowsList.reduce",
+          "lineNumber": 265
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "outflowsList.reduce",
+          "lineNumber": 266
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 268
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 280
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 282
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "forecastPoints.push",
+          "lineNumber": 288
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "invoices.find",
+          "lineNumber": 307
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "inv.invoice_number?.includes",
+          "lineNumber": 308
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "invoices\n      .filter((inv) => inv.status !== 'paid')\n      .sort",
+          "lineNumber": 312
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "invoices\n      .filter",
+          "lineNumber": 312
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 314
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Number",
+          "lineNumber": 314
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "actionInvoice?.invoice_number?.replace",
+          "lineNumber": 317
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "historicalPoints.slice",
+          "lineNumber": 327
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "Math.round",
+          "lineNumber": 341
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "forecastPoints.reduce",
+          "lineNumber": 342
+        },
+        {
+          "caller": "calculateCashForecast",
+          "callee": "forecastPoints.reduce",
+          "lineNumber": 343
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 4,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test-mockData.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 79,
+      "functions": [
+        {
+          "name": "runMockDataTest",
+          "startLine": 5,
+          "endLine": 89,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 6
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "createMockDesignerData",
+          "lineNumber": 9
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 19
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "expectedClients.forEach",
+          "lineNumber": 20
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.clients.find",
+          "lineNumber": 21
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 22
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 23
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "found.phone.startsWith",
+          "lineNumber": 23
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 24
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 25
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 29
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "new Date().toISOString().split",
+          "lineNumber": 31
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "new Date().toISOString",
+          "lineNumber": 31
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.invoices.find",
+          "lineNumber": 32
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 33
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 34
+        },
+        {
+          "caller": "calculateDaysDiff",
+          "callee": "today.setHours",
+          "lineNumber": 39
+        },
+        {
+          "caller": "calculateDaysDiff",
+          "callee": "target.setHours",
+          "lineNumber": 41
+        },
+        {
+          "caller": "calculateDaysDiff",
+          "callee": "Math.round",
+          "lineNumber": 42
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.invoices.find",
+          "lineNumber": 45
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "calculateDaysDiff",
+          "lineNumber": 45
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.invoices.find",
+          "lineNumber": 46
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "calculateDaysDiff",
+          "lineNumber": 46
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.invoices.find",
+          "lineNumber": 47
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "calculateDaysDiff",
+          "lineNumber": 47
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 49
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 50
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 51
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 52
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.invoices.filter",
+          "lineNumber": 55
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "calculateDaysDiff",
+          "lineNumber": 56
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 59
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 60
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.bills.find",
+          "lineNumber": 63
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "b.name.includes",
+          "lineNumber": 63
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.bills.find",
+          "lineNumber": 64
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "b.name.includes",
+          "lineNumber": 64
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.bills.find",
+          "lineNumber": 65
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "b.name.includes",
+          "lineNumber": 65
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "data.bills.find",
+          "lineNumber": 66
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "b.name.includes",
+          "lineNumber": 66
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "b.name.includes",
+          "lineNumber": 66
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 68
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 69
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 70
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 71
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 72
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "resetDemoData",
+          "lineNumber": 75
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "getProfile",
+          "lineNumber": 76
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "getClients",
+          "lineNumber": 77
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "getInvoices",
+          "lineNumber": 78
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "getBills",
+          "lineNumber": 79
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "getFollowUps",
+          "lineNumber": 80
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 82
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 83
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 84
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 85
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.assert",
+          "lineNumber": 86
+        },
+        {
+          "caller": "runMockDataTest",
+          "callee": "console.log",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test_e2e_phase3.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 88,
+      "nonEmptyLines": 80,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test_forecastEngine.js",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 52,
+      "nonEmptyLines": 46,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}
