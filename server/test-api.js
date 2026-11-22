@@ -168,6 +168,118 @@ try {
     assert.equal(r.status, 422);
   });
 
+  await check('recovery copilot: customNotes passed through to escalations', async () => {
+    const overdue = await createInvoice({});
+    const r = await call('POST', '/ai/recovery-copilot', {
+      invoiceId: overdue.id,
+      customNotes: 'Finance manager is away this week',
+    });
+    assert.equal(r.status, 200);
+    assert.equal(r.body.escalations.length, 5);
+    assert.equal(r.body.customNotes, 'Finance manager is away this week');
+    assert.ok(r.body.risk);
+    assert.equal(typeof r.body.strategy, 'string');
+    assert.ok(r.body.draft);
+  });
+
+  await check('recovery copilot: non-string customNotes is 400', async () => {
+    const overdue = await createInvoice({});
+    const r = await call('POST', '/ai/recovery-copilot', { invoiceId: overdue.id, customNotes: 42 });
+    assert.equal(r.status, 400);
+  });
+
+  await check('recovery copilot: customNotes over 500 chars is 400', async () => {
+    const overdue = await createInvoice({});
+    const r = await call('POST', '/ai/recovery-copilot', {
+      invoiceId: overdue.id,
+      customNotes: 'a'.repeat(501),
+    });
+    assert.equal(r.status, 400);
+  });
+
+  // escalation drafts seam: server/engine/escalation.js
+  const loadEscalation = () => import('./engine/escalation.js');
+  const escalationArgs = (overrides = {}) => ({
+    invoices: [{ invoice_number: 'INV-1', amount: 100, due_date: '2024-01-01' }],
+    totalPrincipal: 100,
+    daysPastDue: 45,
+    money: (n) => '$' + Number(n).toFixed(2),
+    clientName: 'Acme',
+    portalLink: '/portal/x',
+    businessName: 'Studio',
+    customNotes: '',
+    ...overrides,
+  });
+
+  await check('escalation: ESCALATION_TIERS ids and labels in order', async () => {
+    const { ESCALATION_TIERS } = await loadEscalation();
+    assert.deepEqual(
+      ESCALATION_TIERS.map((t) => t.id),
+      ['friendly_check_in', 'direct_status_inquiry', 'operational_hold', 'settlement_proposal', 'statutory_notice'],
+    );
+    assert.deepEqual(
+      ESCALATION_TIERS.map((t) => t.label),
+      ['Friendly Check-in', 'Direct Status Inquiry', 'Studio Operational Hold', 'Settlement Proposal', 'Statutory Legal Notice'],
+    );
+  });
+
+  await check('escalation: buildEscalationDrafts returns 5 populated drafts in tier order', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const drafts = buildEscalationDrafts(escalationArgs());
+    assert.equal(drafts.length, 5);
+    assert.deepEqual(
+      drafts.map((d) => d.id),
+      ['friendly_check_in', 'direct_status_inquiry', 'operational_hold', 'settlement_proposal', 'statutory_notice'],
+    );
+    for (const d of drafts) {
+      assert.equal(typeof d.whatsapp, 'string');
+      assert.ok(d.whatsapp.length > 0);
+      assert.equal(typeof d.email.subject, 'string');
+      assert.ok(d.email.subject.length > 0);
+      assert.equal(typeof d.email.body, 'string');
+      assert.ok(d.email.body.length > 0);
+    }
+  });
+
+  await check('escalation: statutory notice cites Freelance Isn\'t Free Act at 45 days past due', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const statutory = buildEscalationDrafts(escalationArgs({ daysPastDue: 45 }))[4];
+    assert.ok(statutory.whatsapp.includes('Freelance Isn\'t Free Act'));
+    assert.ok(statutory.whatsapp.includes('statutory interest'));
+    assert.ok(statutory.email.body.includes('Freelance Isn\'t Free Act'));
+    assert.ok(statutory.email.body.includes('statutory interest'));
+  });
+
+  await check('escalation: statutory notice omits Freelance Isn\'t Free Act at 10 days past due', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const statutory = buildEscalationDrafts(escalationArgs({ daysPastDue: 10 }))[4];
+    assert.ok(!statutory.email.body.includes('Freelance Isn\'t Free Act'));
+  });
+
+  await check('escalation: statutory notice cites Freelance Isn\'t Free Act at exactly 30 days past due', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const statutory = buildEscalationDrafts(escalationArgs({ daysPastDue: 30 }))[4];
+    assert.ok(statutory.whatsapp.includes('Freelance Isn\'t Free Act'));
+    assert.ok(statutory.email.body.includes('Freelance Isn\'t Free Act'));
+  });
+
+  await check('escalation: customNotes appended to every draft, and absent when empty', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const note = 'Finance manager is away this week';
+    const withNotes = buildEscalationDrafts(escalationArgs({ customNotes: note }));
+    assert.equal(withNotes.length, 5);
+    for (const d of withNotes) {
+      assert.ok(d.whatsapp.includes(note));
+      assert.ok(d.email.body.includes(note));
+    }
+    const withoutNotes = buildEscalationDrafts(escalationArgs({ customNotes: '' }));
+    for (const d of withoutNotes) {
+      assert.ok(!d.whatsapp.includes('Note:'));
+      assert.ok(!d.email.body.includes('Note:'));
+    }
+  });
+
+
 } catch {
   failed = true;
 } finally {

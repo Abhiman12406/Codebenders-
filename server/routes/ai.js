@@ -2,6 +2,7 @@ import express from 'express';
 import { store } from '../store.js';
 import { parseInvoicePrompt } from '../engine/nlp.js';
 import { scoreDelinquencyRisk } from '../engine/recoveryRisk.js';
+import { buildEscalationDrafts } from '../engine/escalation.js';
 
 const router = express.Router();
 
@@ -39,10 +40,15 @@ router.post('/parse', (req, res) => {
 
 // Body: { invoiceId } or { invoiceNumber } (invoiceId wins if both are given).
 router.post('/recovery-copilot', (req, res) => {
-  const { invoiceId, invoiceNumber } = req.body ?? {};
+  const { invoiceId, invoiceNumber, customNotes } = req.body ?? {};
   const idValue = typeof invoiceId === 'string' ? invoiceId.trim() : '';
   const numberValue = typeof invoiceNumber === 'string' ? invoiceNumber.trim() : '';
   if (!idValue && !numberValue) return sendError(res, 400, 'invoiceId or invoiceNumber is required');
+  if (customNotes !== undefined && typeof customNotes !== 'string') {
+    return sendError(res, 400, 'customNotes must be a string');
+  }
+  const trimmedNotes = typeof customNotes === 'string' ? customNotes.trim() : '';
+  if (trimmedNotes.length > 500) return sendError(res, 400, 'customNotes must be 500 characters or fewer');
 
   const invoice = idValue
     ? store.getInvoiceById(idValue)
@@ -85,6 +91,16 @@ router.post('/recovery-copilot', (req, res) => {
     'Thank you,',
     profile.business_name || '',
   ].join('\n');
+  const escalations = buildEscalationDrafts({
+    invoices: overdueInvoices,
+    totalPrincipal,
+    daysPastDue,
+    money,
+    clientName,
+    portalLink,
+    businessName: profile.business_name || '',
+    customNotes: trimmedNotes,
+  });
 
   res.json({
     risk,
@@ -96,6 +112,8 @@ router.post('/recovery-copilot', (req, res) => {
       dueDates: overdueInvoices.map((inv) => inv.due_date),
       portalLink,
     },
+    escalations,
+    customNotes: trimmedNotes,
     client: { name: clientName, phone: client?.phone || invoice.client_phone || '' },
   });
 });
