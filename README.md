@@ -2,6 +2,11 @@
 
 > **An intelligent cash-flow runway cockpit, accounts receivable aging radar, and AI-powered late-payment recovery copilot for freelance designers and solo creative studios.**
 
+🚀 **Live Production Deployment:** [https://codebenders-qus9.vercel.app](https://codebenders-qus9.vercel.app)
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-codebenders--qus9.vercel.app-000?style=for-the-badge&logo=vercel&logoColor=white)](https://codebenders-qus9.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Codebenders--.git-24292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abhiman12406/Codebenders-.git)
+
 [![Vite](https://img.shields.io/badge/Vite-6.1.0-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![React](https://img.shields.io/badge/React-18.3.1-61DAFB?logo=react&logoColor=black)](https://react.dev/)
 [![Express](https://img.shields.io/badge/Express-5.3.0-000000?logo=express&logoColor=white)](https://expressjs.com/)
@@ -301,10 +306,10 @@ StudioFlow is configured for seamless deployment to **Render** (Express API) and
    - *(Optional)* `VITE_SUPABASE_URL`: Your Supabase Project URL
    - *(Optional)* `VITE_SUPABASE_ANON_KEY`: Your Supabase Anon Public Key
 5. Click **Deploy**.
-6. Note your live Vercel URL (e.g. `https://studioflow.vercel.app`).
+6. **Live Production URL:** [https://codebenders-qus9.vercel.app](https://codebenders-qus9.vercel.app)
 
 ### Step 3: Lock Down CORS (Production Polish)
-In your Render Dashboard settings for `studioflow-api`, set `CLIENT_URL` to your Vercel URL (`https://studioflow.vercel.app`). Render will redeploy instantly with scoped CORS protection.
+In your Render Dashboard settings for `studioflow-api`, set `CLIENT_URL` to your Vercel URL (`https://codebenders-qus9.vercel.app`). Render will redeploy instantly with scoped CORS protection.
 
 ### Environment Variables Summary
 
@@ -312,7 +317,7 @@ In your Render Dashboard settings for `studioflow-api`, set `CLIENT_URL` to your
 |---|---|:---:|---|
 | `NODE_ENV` | Render | Yes | Enables production performance mode (`production`) |
 | `PORT` | Render | Optional | Handled automatically by Render (defaults to 3001) |
-| `CLIENT_URL` | Render | Recommended | Restricts CORS to your specific Vercel frontend domain |
+| `CLIENT_URL` | Render | Recommended | Restricts CORS to your specific Vercel frontend domain (`https://codebenders-qus9.vercel.app`) |
 | `VITE_API_URL` | Vercel | Yes | Directs API requests to your live Render backend service |
 | `VITE_SUPABASE_URL` | Vercel | Optional | Supabase database URL for multi-device sync |
 | `VITE_SUPABASE_ANON_KEY` | Vercel | Optional | Supabase anonymous API public key |
