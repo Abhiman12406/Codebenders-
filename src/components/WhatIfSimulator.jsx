@@ -6,9 +6,8 @@ import {
   ShieldCheck, 
   Laptop, 
   Clock, 
-  MessageSquare,
-  Zap,
-  ArrowRight
+  MessageSquare, 
+  ArrowRight 
 } from 'lucide-react';
 
 export default function WhatIfSimulator({
@@ -56,38 +55,38 @@ export default function WhatIfSimulator({
   };
 
   return (
-    <div className="card-spacex p-6 sm:p-8 space-y-6 bg-[#0a0a0a]">
+    <div className="card-cockpit p-5 sm:p-6 space-y-6 rounded-[28px] border-[#2A2A30]">
       {/* Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#3a3a3f]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#2A2A30]">
         <div>
-          <div className="flex items-center gap-3">
-            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-white">
-              <Sliders className="w-3.5 h-3.5" />
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-xl bg-[#675DFC]/15 border border-[#675DFC]/30 flex items-center justify-center text-[#A298DF] shadow-inner">
+              <Sliders className="w-4 h-4" />
             </div>
-            <h2 className="button-cap text-white text-base">
-              WHAT-IF CASH STRESS SIMULATOR
+            <h2 className="font-extrabold text-white text-base tracking-tight">
+              What-If Stress Simulator
             </h2>
             {isSimulationActive ? (
-              <span className="micro-cap text-white px-2.5 py-0.5 rounded-[32px] border border-white bg-black">
-                SIMULATION ACTIVE
+              <span className="text-[10px] font-bold text-[#C4FC51] px-2.5 py-0.5 rounded-full border border-[#C4FC51]/40 bg-[#C4FC51]/10 shadow-sm animate-pulse">
+                Simulation Active
               </span>
             ) : (
-              <span className="micro-cap text-[#5a5a5f] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black">
-                BASELINE
+              <span className="text-[10px] font-semibold text-[#A1A1AA] px-2.5 py-0.5 rounded-full border border-[#2D2D35] bg-[#141417]">
+                Baseline
               </span>
             )}
           </div>
-          <p className="micro-cap text-[#5a5a5f] mt-1.5">
-            Model liquidity resilience against late client payments and unexpected hardware expenses
+          <p className="text-xs text-[#A1A1AA] mt-1">
+            Model liquidity resilience against late client settlements and unexpected studio expenses.
           </p>
         </div>
 
         {isSimulationActive && (
           <button
             onClick={onResetScenarios}
-            className="button-ghost-sm text-xs py-1.5 px-3.5 self-start sm:self-auto flex items-center gap-1.5"
+            className="button-ghost text-xs py-1.5 px-3 self-start sm:self-auto flex items-center gap-1.5 hover:border-white transition-all"
           >
-            <RotateCcw className="w-3 h-3 text-white" />
+            <RotateCcw className="w-3 h-3" />
             <span>Reset Baseline</span>
           </button>
         )}
@@ -95,22 +94,22 @@ export default function WhatIfSimulator({
 
       {/* Dynamic Deficit Warning Banner */}
       {deficitInfo?.isBelowBuffer ? (
-        <div className="bg-black border border-[#ef4444] rounded-[4px] p-5 text-white space-y-4 animate-in fade-in">
+        <div className="bg-gradient-to-r from-rose-950/40 via-[#1E1418] to-[#18181B] border border-rose-500/40 rounded-2xl p-4.5 text-white space-y-3 shadow-lg shadow-rose-950/20">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-            <div className="flex items-start gap-3">
-              <div className="p-2 rounded-[4px] border border-[#ef4444] text-[#ef4444] shrink-0 mt-0.5">
-                <AlertTriangle className="w-5 h-5 text-[#ef4444]" />
+            <div className="flex items-start gap-3.5">
+              <div className="p-2 rounded-xl bg-rose-500/15 border border-rose-500/30 text-rose-400 shrink-0 mt-0.5 shadow-inner">
+                <AlertTriangle className="w-4 h-4" />
               </div>
               <div className="space-y-1">
                 <div className="flex items-center gap-2 flex-wrap">
-                  <h3 className="button-cap text-white text-sm">
+                  <h3 className="font-bold text-rose-200 text-sm">
                     DEFICIT ALERT: -{currency}{deficitInfo.maxShortfall} SHORTFALL ON DAY {deficitInfo.firstDeficitDay}
                   </h3>
-                  <span className="micro-cap text-[#ef4444] px-2 py-0.5 rounded-[32px] border border-[#ef4444]">
-                    BELOW {currency}{safetyBuffer.toLocaleString()} BUFFER
+                  <span className="text-[10px] font-bold text-rose-300 px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-500/40">
+                    Below {currency}{safetyBuffer.toLocaleString()} Buffer
                   </span>
                 </div>
-                <p className="text-xs text-[#f0f0fa]">
+                <p className="text-xs text-zinc-300 leading-relaxed">
                   {deficitInfo.alertMessage || `Cash dips to ${currency}${deficitInfo.lowestCashPoint?.toLocaleString()} on Day ${deficitInfo.lowestCashDay}. ${deficitInfo.recommendedAction}`}
                 </p>
               </div>
@@ -120,7 +119,7 @@ export default function WhatIfSimulator({
             {deficitInfo?.actionInvoice && (
               <button
                 onClick={() => onChaseInvoice && onChaseInvoice(deficitInfo.actionInvoice)}
-                className="button-ghost-on-dark shrink-0 self-start md:self-auto text-xs py-2.5 px-5"
+                className="btn-primary-purple shrink-0 self-start md:self-auto text-xs py-2 px-4 shadow-md flex items-center gap-2"
               >
                 <MessageSquare className="w-3.5 h-3.5" />
                 <span>Chase Invoice #{deficitInfo.actionInvoice.invoice_number?.replace('INV-2026-', '') || '104'}</span>
@@ -130,54 +129,54 @@ export default function WhatIfSimulator({
           </div>
         </div>
       ) : (
-        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4 text-white flex items-center justify-between gap-3 text-xs">
+        <div className="bg-gradient-to-r from-emerald-950/30 via-[#131D17] to-[#18181B] border border-emerald-500/30 rounded-2xl p-4 text-white flex items-center justify-between gap-3 text-xs shadow-sm">
           <div className="flex items-center gap-2.5">
-            <ShieldCheck className="w-4 h-4 text-white shrink-0" />
-            <span className="text-[#f0f0fa]">
-              <strong className="text-white">Healthy Trajectory:</strong> Studio maintains minimum {currency}{safetyBuffer.toLocaleString()} safe reserve across the forecast window.
+            <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span className="text-zinc-300">
+              <strong className="text-white">Nominal Trajectory:</strong> Reserves remain securely above the {currency}{safetyBuffer.toLocaleString()} buffer across the forecast window.
             </span>
           </div>
-          <span className="micro-cap text-white border border-[#3a3a3f] px-2.5 py-0.5 rounded-[32px] shrink-0">
+          <span className="text-[10px] font-bold text-emerald-300 border border-emerald-500/30 px-2.5 py-0.5 rounded-full bg-emerald-950/50 shrink-0">
             NOMINAL
           </span>
         </div>
       )}
 
       {/* Simulator Controls Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         
         {/* Control 1: Key Client Acme Studios Delay Slider */}
-        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-5 space-y-4">
+        <div className="bg-[#18181B] border border-[#2A2A30] rounded-2xl p-4.5 space-y-4 shadow-sm">
           <div className="flex items-center justify-between">
             <div className="min-w-0">
               <div className="flex items-center gap-2">
-                <span className="button-cap text-white text-sm">
-                  ACME STUDIOS ({currency}3,500)
+                <span className="font-bold text-white text-sm">
+                  Acme Studios ({currency}3,500)
                 </span>
-                <span className="micro-cap text-[#5a5a5f]">
+                <span className="text-xs text-zinc-500 font-mono">
                   #101
                 </span>
               </div>
-              <p className="micro-cap text-[#5a5a5f] mt-1">
-                Net 30 milestone invoice payment delay
+              <p className="text-xs text-[#A1A1AA] mt-0.5">
+                Simulate delayed settlement on milestone receivable
               </p>
             </div>
 
             <div className="text-right shrink-0">
-              <span className={`micro-cap text-xs font-bold px-2.5 py-1 rounded-[32px] border tabular-nums ${
+              <span className={`text-xs font-bold px-2.5 py-1 rounded-full border tabular-nums ${
                 acmeDelay > 15
-                  ? 'border-[#ef4444] text-[#ef4444]'
+                  ? 'border-rose-500/40 text-rose-400 bg-rose-950/30'
                   : acmeDelay > 0
-                  ? 'border-[#f59e0b] text-[#f59e0b]'
-                  : 'border-[#3a3a3f] text-[#5a5a5f]'
+                  ? 'border-amber-500/40 text-amber-400 bg-amber-950/30'
+                  : 'border-[#2D2D35] text-[#A1A1AA] bg-[#141417]'
               }`}>
-                +{acmeDelay} DAYS
+                +{acmeDelay}d DELAY
               </span>
             </div>
           </div>
 
           {/* Interactive Range Slider */}
-          <div className="space-y-2.5 pt-1">
+          <div className="space-y-2 pt-1">
             <input
               type="range"
               min="0"
@@ -185,19 +184,19 @@ export default function WhatIfSimulator({
               step="1"
               value={acmeDelay}
               onChange={handleAcmeSliderChange}
-              className="w-full h-1.5 bg-[#3a3a3f] rounded-none appearance-none cursor-pointer accent-white focus:outline-none"
+              className="w-full cursor-pointer accent-[#675DFC]"
             />
-            <div className="flex justify-between micro-cap text-[#5a5a5f]">
+            <div className="flex justify-between text-[10px] text-zinc-500 font-medium">
               <span>On Time (Day 12)</span>
-              <span className={acmeDelay >= 15 ? 'text-white font-bold' : ''}>+15d (Day 27)</span>
-              <span className={acmeDelay >= 30 ? 'text-[#ef4444] font-bold' : ''}>+30d</span>
-              <span>+45d extreme</span>
+              <span className={acmeDelay >= 15 ? 'text-amber-400 font-bold' : ''}>+15d (Day 27)</span>
+              <span className={acmeDelay >= 30 ? 'text-rose-400 font-bold' : ''}>+30d</span>
+              <span>+45d Extreme</span>
             </div>
           </div>
 
           {/* Preset Chips */}
           <div className="flex items-center gap-2 pt-1 flex-wrap">
-            <span className="micro-cap text-[#5a5a5f] mr-1">PRESETS:</span>
+            <span className="text-xs text-[#A1A1AA] mr-1 font-semibold">Presets:</span>
             {[
               { label: 'On Time (0d)', days: 0 },
               { label: '+10 Days', days: 10 },
@@ -207,10 +206,10 @@ export default function WhatIfSimulator({
               <button
                 key={preset.days}
                 onClick={() => handleApplyPreset(preset.days)}
-                className={`text-[11px] font-bold px-3 py-1 rounded-[32px] border transition ${
+                className={`text-xs font-semibold px-3 py-1 rounded-full border transition-all ${
                   acmeDelay === preset.days
-                    ? 'bg-white text-black border-white'
-                    : 'bg-black text-[#f0f0fa] border-[#3a3a3f] hover:border-white'
+                    ? 'bg-[#6458E2] text-white border-[#6458E2] shadow-sm shadow-[#6458E2]/25'
+                    : 'bg-[#141417] text-zinc-300 border-[#2D2D35] hover:border-zinc-500 hover:text-white'
                 }`}
               >
                 {preset.label}
@@ -218,89 +217,87 @@ export default function WhatIfSimulator({
             ))}
           </div>
 
-          <p className="text-[11px] text-[#5a5a5f] italic">
+          <p className="text-[11px] text-zinc-500">
             {acmeDelay > 15
-              ? 'Delaying beyond 15 days pushes Acme settlement past day 24 overhead, triggering a cash deficit.'
-              : 'Acme settlement lands before day 24 overhead, maintaining buffer integrity.'}
+              ? 'Delaying beyond 15 days pushes settlement past recurring rent/server outflows, causing a deficit.'
+              : 'Settlement lands before day 24 overhead, maintaining buffer integrity.'}
           </p>
         </div>
 
         {/* Control 2: CapEx & Flexible Outflows Controls */}
-        <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-5 space-y-4 flex flex-col justify-between">
-          <div className="space-y-3.5">
+        <div className="bg-[#18181B] border border-[#2A2A30] rounded-2xl p-4.5 space-y-3.5 flex flex-col justify-between shadow-sm">
+          <div className="space-y-3">
             {/* CapEx Toggle: M4 MacBook */}
-            <div className="flex items-center justify-between gap-3 p-3.5 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
+            <div className="flex items-center justify-between gap-3 p-3.5 rounded-xl bg-[#141417] border border-[#2A2A30]">
               <div className="flex items-start gap-3 min-w-0">
-                <div className={`p-2 rounded-[4px] border ${
+                <div className={`p-2 rounded-lg border ${
                   isMacbookCapex
-                    ? 'border-white text-white'
-                    : 'border-[#3a3a3f] text-[#5a5a5f]'
+                    ? 'border-[#675DFC]/50 text-[#A298DF] bg-[#675DFC]/15'
+                    : 'border-[#2D2D35] text-zinc-500 bg-transparent'
                 }`}>
                   <Laptop className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
-                  <span className="button-cap text-white text-xs block truncate">
-                    SIMULATE HARDWARE CAPEX ({currency}1,800)
+                  <span className="font-bold text-white text-xs block truncate">
+                    Simulate Hardware CapEx ({currency}1,800)
                   </span>
-                  <p className="micro-cap text-[#5a5a5f] mt-0.5">
-                    Studio workstation upgrade on Day 14
+                  <p className="text-[11px] text-[#A1A1AA] mt-0.5">
+                    Workstation hardware upgrade on Day 14
                   </p>
                 </div>
               </div>
-
               <button
+                type="button"
                 onClick={handleToggleCapex}
-                className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-[32px] border transition-colors duration-200 ease-in-out focus:outline-none ${
-                  isMacbookCapex ? 'bg-white border-white' : 'bg-black border-[#3a3a3f]'
+                className={`px-3.5 py-1 rounded-full text-xs font-semibold border transition-all ${
+                  isMacbookCapex
+                    ? 'bg-[#6458E2] text-white border-[#6458E2] shadow-sm'
+                    : 'bg-transparent text-zinc-300 border-[#2D2D35] hover:border-zinc-500'
                 }`}
               >
-                <span
-                  className={`pointer-events-none inline-block h-3.5 w-3.5 transform rounded-full transition duration-200 ease-in-out mt-[2px] ml-[2px] ${
-                    isMacbookCapex ? 'translate-x-5 bg-black' : 'translate-x-0 bg-white'
-                  }`}
-                />
+                {isMacbookCapex ? 'Added' : '+ Add'}
               </button>
             </div>
 
-            {/* Defense Toggle: Defer Flexible Expenses */}
-            <div className="flex items-center justify-between gap-3 p-3.5 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
+            {/* Flexible Bill Deferral Toggle */}
+            <div className="flex items-center justify-between gap-3 p-3.5 rounded-xl bg-[#141417] border border-[#2A2A30]">
               <div className="flex items-start gap-3 min-w-0">
-                <div className={`p-2 rounded-[4px] border ${
+                <div className={`p-2 rounded-lg border ${
                   isDeferFlexible
-                    ? 'border-white text-white'
-                    : 'border-[#3a3a3f] text-[#5a5a5f]'
+                    ? 'border-emerald-500/40 text-emerald-400 bg-emerald-950/30'
+                    : 'border-[#2D2D35] text-zinc-500 bg-transparent'
                 }`}>
-                  <ShieldCheck className="w-4 h-4" />
+                  <Clock className="w-4 h-4" />
                 </div>
                 <div className="min-w-0">
-                  <span className="button-cap text-white text-xs block truncate">
-                    DEFENSE: DEFER FLEXIBLE OUTFLOWS
+                  <span className="font-bold text-white text-xs block truncate">
+                    Defer Discretionary Software Outflows
                   </span>
-                  <p className="micro-cap text-[#5a5a5f] mt-0.5">
-                    Temporarily halt AWS GPU ($220) &amp; tax reserve ($2,710)
+                  <p className="text-[11px] text-[#A1A1AA] mt-0.5">
+                    Postpone flexible subscriptions during cash dips
                   </p>
                 </div>
               </div>
-
               <button
+                type="button"
                 onClick={handleToggleFlexibleBills}
-                className={`relative inline-flex h-5 w-10 shrink-0 cursor-pointer rounded-[32px] border transition-colors duration-200 ease-in-out focus:outline-none ${
-                  isDeferFlexible ? 'bg-white border-white' : 'bg-black border-[#3a3a3f]'
+                className={`px-3.5 py-1 rounded-full text-xs font-semibold border transition-all ${
+                  isDeferFlexible
+                    ? 'bg-[#10B981] text-white border-emerald-500 shadow-sm'
+                    : 'bg-transparent text-zinc-300 border-[#2D2D35] hover:border-zinc-500'
                 }`}
               >
-                <span
-                  className={`pointer-events-none inline-block h-3.5 w-3.5 transform rounded-full transition duration-200 ease-in-out mt-[2px] ml-[2px] ${
-                    isDeferFlexible ? 'translate-x-5 bg-black' : 'translate-x-0 bg-white'
-                  }`}
-                />
+                {isDeferFlexible ? 'Active' : 'Engage'}
               </button>
             </div>
           </div>
 
-          <p className="micro-cap text-[#5a5a5f]">
-            Combine delayed receivables with CapEx to stress-test minimum runway trajectory.
-          </p>
+          <div className="pt-2 border-t border-[#2A2A30] flex items-center justify-between text-[11px] text-zinc-500 font-medium">
+            <span>Buffer Protection: Real-Time</span>
+            <span className="text-[#A1A1AA] font-mono">Dynamic Recalculation</span>
+          </div>
         </div>
+
       </div>
     </div>
   );

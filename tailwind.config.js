@@ -8,84 +8,77 @@ export default {
   theme: {
     extend: {
       colors: {
+        fintech: {
+          bg: '#EFEFEF',              // Canvas background directly from photo
+          card: '#FFFFFF',            // Pure white card surface
+          obsidian: '#1E1E1E',        // Card 1 Total Balance background
+          panel: '#1C1C1C',           // Right panel & sidebar background
+          dock: '#1C1C1C',            // Left vertical dock background
+          lime: '#C4FC51',            // Exact neon lime from photo (Visa card & badge)
+          limeHover: '#B8F540',
+          limeSoft: '#C3EA75',        // Income growth tag bg
+          limeDark: '#165A00',
+          purple: '#675DFC',          // Exact purple from photo (+ buttons & wave)
+          purpleHover: '#584EED',
+          purpleDock: '#6458E2',      // Dock active capsule from photo
+          purpleBar: '#625BFF',       // Expences active bar from photo
+          purpleCurve: '#A298DF',     // Income line curve from photo
+          textDark: '#1C1C1C',        // Primary dark text from photo
+          textMuted: '#909090',       // Muted subtitle and label text from photo
+          textSubtle: '#666666',
+          borderSoft: '#E5E5E5',
+          borderDark: '#282828',
+          tooltip: '#0E0E0E',         // Dark tooltips ($4121, $2121) from photo
+        },
         primary: {
-          DEFAULT: '#000000',
+          DEFAULT: '#1C1C1C',
           dark: '#000000',
           soft: '#0a0a0a',
         },
+        surface: {
+          dark: '#1E1E1E',
+          night: '#1C1C1C',
+          card: '#FFFFFF',
+          cardHover: '#FAFAFA',
+          border: '#E5E5E5',
+          borderHover: '#CCCCCC',
+        },
         ink: {
-          DEFAULT: '#000000',
-          mute: '#5a5a5f',
+          DEFAULT: '#1C1C1C',
+          primary: '#1C1C1C',
+          secondary: '#666666',
+          mute: '#909090',
           light: '#ffffff',
-        },
-        'on-primary': {
-          DEFAULT: '#ffffff',
-          mute: '#f0f0fa',
-        },
-        canvas: {
-          night: '#000000',
-          'night-soft': '#0a0a0a',
-          light: '#ffffff',
-          cool: '#f0f0fa',
-        },
-        hairline: {
-          onDark: '#3a3a3f',
-          onLight: '#e0e0e8',
-        },
-        link: {
-          onDark: '#ffffff',
-          fallback: '#0000ee',
         },
         telemetry: {
-          danger: '#ef4444',
+          danger: '#f43f5e',
           warning: '#f59e0b',
           success: '#10b981',
+          neutral: '#909090',
         },
       },
       fontFamily: {
-        din: ['"D-DIN-Bold"', '"D-DIN"', '"Arial Narrow"', 'Inter', 'Arial', 'sans-serif'],
-        display: ['"D-DIN-Bold"', '"D-DIN"', '"Arial Narrow"', 'Inter', 'Arial', 'sans-serif'],
-        body: ['"D-DIN"', 'Inter', 'Arial', 'Verdana', 'sans-serif'],
-        sans: ['"D-DIN"', 'Inter', 'Arial', 'sans-serif'],
-        tabular: ['"D-DIN"', 'Inter', 'Arial', 'sans-serif'],
+        sans: ['"Outfit"', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['"Outfit"', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       borderRadius: {
         xs: '4px',
         sm: '8px',
-        md: '16px',
-        pill: '32px',
+        md: '12px',
+        lg: '16px',
+        xl: '20px',
+        '2xl': '24px',
+        '3xl': '28px',
+        '4xl': '32px',
+        pill: '9999px',
         full: '9999px',
       },
-      spacing: {
-        xxs: '4px',
-        xs: '8px',
-        sm: '12px',
-        md: '16px',
-        lg: '18px',
-        xl: '24px',
-        xxl: '32px',
-        huge: '48px',
-      },
-      letterSpacing: {
-        'display-xxl': '1.6px',
-        'display-xl': '1.2px',
-        'display-lg': '0.96px',
-        'button-cap': '1.17px',
-        'micro-cap': '0.96px',
-        'body-lg': '0.32px',
-        'body-md': '0.32px',
-      },
-      lineHeight: {
-        'display-xxl': '0.95',
-        'display-xl': '1.2',
-        'display-lg': '1.25',
-        'button-cap': '0.94',
-        'micro-cap': '2.0',
-        'body-lg': '1.7',
-        'body-md': '1.5',
-      },
       boxShadow: {
-        none: 'none',
+        fintech: '0 8px 24px -4px rgba(0, 0, 0, 0.04)',
+        fintechHover: '0 12px 30px -4px rgba(0, 0, 0, 0.07)',
+        fintechCard: '0 6px 20px -3px rgba(0, 0, 0, 0.03)',
+        fintechDark: '0 16px 36px -8px rgba(0, 0, 0, 0.35)',
       },
     },
   },

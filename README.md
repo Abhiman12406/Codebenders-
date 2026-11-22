@@ -105,23 +105,34 @@ The table schema is not included in this repository (there is no SQL file), so y
 
 ## Deploy
 
-> **Caveat:** Vercel and Netlify static hosting serve only the `dist/` folder. They do **not** run the Express API. Either host the backend (`server/index.js`) separately and point the app at it, or deploy the frontend alone and accept fallback mode (localStorage / Supabase only).
+StudioFlow is architected for decoupled cloud deployment: the **Express API on Render** and the **Vite React Frontend on Vercel**.
 
-### Vercel
+### Step 1: Deploy Backend to Render
 
-1. Import the repository in Vercel.
-2. Set the framework preset to **Vite**.
-3. Set the build command to `npm run build`.
-4. Set the output directory to `dist`.
-5. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables.
+1. Create a new Web Service on [Render](https://render.com) (or connect your repo via Render Blueprint using the included `render.yaml`).
+2. Configure settings:
+   - **Environment:** `Node`
+   - **Build Command:** `npm install`
+   - **Start Command:** `npm start`
+   - **Health Check Path:** `/api/health`
+3. Add Environment Variables:
+   - `NODE_ENV`: `production`
+   - `CLIENT_URL`: `https://your-studioflow.vercel.app` (your Vercel frontend URL, or comma-separated allowed origins)
+4. Note your Render service URL (e.g., `https://studioflow-api.onrender.com`).
 
-### Netlify
+### Step 2: Deploy Frontend to Vercel
 
-1. Set the build command to `npm run build`.
-2. Set the publish directory to `dist`.
-3. Add `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` as environment variables.
+1. Import your GitHub repository (`https://github.com/Abhiman12406/Codebenders-.git`) on [Vercel](https://vercel.com).
+2. Framework Preset: **Vite** (auto-detected via `vercel.json`).
+3. Build Command: `npm run build`
+4. Output Directory: `dist`
+5. Configure Environment Variables in Vercel:
+   - `VITE_API_URL`: Your Render service URL (e.g., `https://studioflow-api.onrender.com`)
+   - `VITE_SUPABASE_URL`: (Optional) Your Supabase project URL
+   - `VITE_SUPABASE_ANON_KEY`: (Optional) Your Supabase anon public key
+6. Click **Deploy**.
 
-**Single-page app note:** the app does not use client-side routing, so no rewrite rule is needed.
+When deployed, the frontend automatically routes all `/api/*` telemetry and AI recovery queries to your Render backend, enabling full real-time cash forecasting and debt recovery in production. If the backend is ever offline, StudioFlow seamlessly falls back to local/guest mode.
 
 ## 3-minute hackathon judge script
 

@@ -89,34 +89,35 @@ export default function WhatsAppModal({
   };
 
   const cadences = [
-    { id: 'friendly', label: 'FRIENDLY', desc: 'Pre-due check-in', icon: MessageSquare },
-    { id: 'due_today', label: 'DUE TODAY', desc: 'Day 0 notification', icon: Calendar },
-    { id: 'firm', label: 'FIRM', desc: '1–14d delay follow-up', icon: Clock },
-    { id: 'urgent', label: 'URGENT', desc: '15d+ notice', icon: ShieldAlert },
+    { id: 'friendly', label: 'Friendly', desc: 'Pre-due check-in', icon: MessageSquare },
+    { id: 'due_today', label: 'Due Today', desc: 'Day 0 notification', icon: Calendar },
+    { id: 'firm', label: 'Firm', desc: '1–14d delay follow-up', icon: Clock },
+    { id: 'urgent', label: 'Urgent', desc: '15d+ escalation notice', icon: ShieldAlert },
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-[#1C1C1F] border border-[#2E2E35] rounded-[28px] overflow-hidden my-8 text-white shadow-2xl">
         
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-[#2A2A32] bg-[#161619]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white flex items-center justify-center rounded-[4px]">
+            <div className="w-9 h-9 rounded-[14px] bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center">
               <MessageSquare className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="button-cap text-white text-base">
-                WHATSAPP CLIENT RECOVERY
+              <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                WhatsApp Client Recovery
               </h3>
-              <p className="micro-cap text-[#5a5a5f] mt-0.5">
-                Invoice {invoice.invoice_number} · {clientName}
+              <p className="text-xs text-[#A1A1AA] mt-0.5">
+                Invoice {invoice.invoice_number} · <span className="text-white">{clientName}</span>
               </p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
+            className="p-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 transition"
+            aria-label="Close"
           >
             <X className="w-4 h-4" />
           </button>
@@ -126,20 +127,20 @@ export default function WhatsAppModal({
         <div className="p-6 sm:p-8 space-y-5 text-xs">
           
           {/* Invoice Summary Strip */}
-          <div className="grid grid-cols-3 gap-3 p-4 bg-black border border-[#3a3a3f] rounded-[4px]">
+          <div className="grid grid-cols-3 gap-3 p-4 bg-[#141417] border border-[#27272F] rounded-[18px]">
             <div>
-              <span className="micro-cap text-[#5a5a5f] font-bold block">AMOUNT DUE</span>
-              <span className="font-bold text-white text-base tabular-nums mt-0.5 block">{amountStr}</span>
+              <span className="text-[10px] font-bold text-[#A1A1AA] tracking-wider uppercase block">AMOUNT DUE</span>
+              <span className="font-extrabold text-white text-base sm:text-lg tabular-nums mt-0.5 block">{amountStr}</span>
             </div>
             <div>
-              <span className="micro-cap text-[#5a5a5f] font-bold block">STATUS</span>
-              <span className={`micro-cap font-bold mt-1 block ${isOverdue ? 'text-[#ef4444]' : 'text-white'}`}>
+              <span className="text-[10px] font-bold text-[#A1A1AA] tracking-wider uppercase block">STATUS</span>
+              <span className={`text-xs font-bold mt-1 block ${isOverdue ? 'text-rose-400' : 'text-emerald-400'}`}>
                 {isOverdue ? `${diffDays}d overdue` : 'Upcoming'}
               </span>
             </div>
             <div>
-              <span className="micro-cap text-[#5a5a5f] font-bold block">CLIENT LAG</span>
-              <span className="text-white text-xs tabular-nums mt-1 block font-mono">
+              <span className="text-[10px] font-bold text-[#A1A1AA] tracking-wider uppercase block">CLIENT LAG</span>
+              <span className="text-white text-xs tabular-nums mt-1 block font-mono font-medium">
                 {client?.avg_delay_days != null ? `+${client.avg_delay_days}d avg` : 'Net 15'}
               </span>
             </div>
@@ -147,11 +148,11 @@ export default function WhatsAppModal({
 
           {/* Tone Selector */}
           <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="micro-cap text-[#5a5a5f] font-bold">
-                COMMUNICATION CADENCE
+            <div className="flex items-center justify-between mb-2.5">
+              <label className="text-[11px] font-bold text-[#A1A1AA] tracking-wider uppercase">
+                Communication Cadence
               </label>
-              <span className="micro-cap text-white border border-[#3a3a3f] px-2 py-0.5 rounded-[32px] bg-black">
+              <span className="text-[10px] font-semibold text-[#8B82FF] border border-[#675DFC]/30 px-2.5 py-0.5 rounded-full bg-[#675DFC]/10">
                 Suggested: {getRecommendedTone()}
               </span>
             </div>
@@ -165,17 +166,17 @@ export default function WhatsAppModal({
                     key={cadence.id}
                     type="button"
                     onClick={() => handleSelectTone(cadence.id)}
-                    className={`p-3 rounded-[4px] border text-left transition ${
+                    className={`p-3 rounded-[16px] border text-left transition-all ${
                       isSelected
-                        ? 'border-white bg-black'
-                        : 'border-[#3a3a3f] bg-black/60 hover:border-[#5a5a5f]'
+                        ? 'border-[#675DFC] bg-[#675DFC]/15 text-white ring-1 ring-[#675DFC]/50'
+                        : 'border-[#27272F] bg-[#141417] text-[#A1A1AA] hover:border-[#383844] hover:text-white'
                     }`}
                   >
                     <div className="flex items-center gap-1.5 mb-1 text-white">
-                      <Icon className="w-3.5 h-3.5 text-white" />
-                      <span className="button-cap text-xs text-white">{cadence.label}</span>
+                      <Icon className={`w-3.5 h-3.5 ${isSelected ? 'text-[#8B82FF]' : 'text-[#A1A1AA]'}`} />
+                      <span className="font-bold text-xs text-white">{cadence.label}</span>
                     </div>
-                    <p className="micro-cap text-[#5a5a5f] text-[10px]">{cadence.desc}</p>
+                    <p className="text-[10px] text-[#A1A1AA] leading-snug">{cadence.desc}</p>
                   </button>
                 );
               })}
@@ -184,44 +185,44 @@ export default function WhatsAppModal({
 
           {/* Client WhatsApp Number */}
           <div className="space-y-1.5">
-            <label className="micro-cap text-[#5a5a5f] font-bold block">
-              RECIPIENT PHONE (WHATSAPP)
+            <label className="text-[11px] font-bold text-[#A1A1AA] tracking-wider uppercase block">
+              Recipient Phone (WhatsApp)
             </label>
             <input
               type="text"
               value={phoneInput}
               onChange={(e) => setPhoneInput(e.target.value)}
               placeholder="+15551234567"
-              className="w-full text-input text-xs tracking-[0.96px]"
+              className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] px-3.5 py-2.5 text-white text-xs font-mono focus:border-[#675DFC] focus:ring-1 focus:ring-[#675DFC] outline-none transition"
             />
           </div>
 
           {/* Message Draft Textarea */}
           <div className="space-y-1.5">
             <div className="flex items-center justify-between">
-              <label className="micro-cap text-[#5a5a5f] font-bold block">
-                MESSAGE PREVIEW
+              <label className="text-[11px] font-bold text-[#A1A1AA] tracking-wider uppercase block">
+                Message Preview
               </label>
-              <span className="micro-cap text-[#5a5a5f]">
-                {customText.length} CHARS
+              <span className="text-[10px] font-medium text-[#71717A]">
+                {customText.length} chars
               </span>
             </div>
             <textarea
               rows={4}
               value={customText}
               onChange={(e) => setCustomText(e.target.value)}
-              className="w-full text-input text-xs leading-relaxed resize-none font-mono"
+              className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] p-3 text-white text-xs leading-relaxed resize-none font-mono focus:border-[#675DFC] focus:ring-1 focus:ring-[#675DFC] outline-none transition"
             />
           </div>
 
           {/* Actions */}
-          <div className="flex items-center justify-between pt-3 border-t border-[#3a3a3f]">
+          <div className="flex items-center justify-between pt-3 border-t border-[#2A2A32]">
             <button
               type="button"
               onClick={handleCopyToClipboard}
-              className="button-ghost-sm text-xs py-2 px-4 flex items-center gap-1.5"
+              className="px-4 py-2 rounded-full bg-[#26262B] hover:bg-[#32323A] text-white text-xs font-semibold flex items-center gap-1.5 transition"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
               <span>{copied ? 'Copied' : 'Copy Text'}</span>
             </button>
 
@@ -229,14 +230,14 @@ export default function WhatsAppModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="button-ghost-sm text-xs py-2 px-4"
+                className="px-4 py-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 text-xs font-medium transition"
               >
                 Cancel
               </button>
               <button
                 type="button"
                 onClick={handleSendViaWhatsApp}
-                className="button-ghost-on-dark text-xs py-2 px-5 flex items-center gap-1.5"
+                className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-2 shadow-sm transition"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Send via WhatsApp</span>

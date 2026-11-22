@@ -43,23 +43,23 @@ export default function AuthModal({ isOpen, onClose, onAuthChanged, onResetDemo 
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4" onClick={onClose}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/75 backdrop-blur-md p-4" onClick={onClose}>
       <div
-        className="w-full max-w-md bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden text-white"
+        className="w-full max-w-md bg-[#1C1C1F] border border-[#2E2E35] rounded-[28px] overflow-hidden text-white shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-[#2A2A32] bg-[#161619]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f] flex items-center justify-center text-white">
+            <div className="w-9 h-9 rounded-[14px] bg-[#675DFC]/10 border border-[#675DFC]/30 flex items-center justify-center text-[#8B82FF]">
               <Cloud className="w-4 h-4" />
             </div>
-            <span className="button-cap text-white text-base">SUPABASE CLOUD SYNC</span>
+            <span className="text-base font-bold text-white tracking-tight">Supabase Cloud Sync</span>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
+            className="p-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 transition"
             aria-label="Close"
           >
             <X className="w-4 h-4" />
@@ -68,24 +68,24 @@ export default function AuthModal({ isOpen, onClose, onAuthChanged, onResetDemo 
 
         <div className="p-6 sm:p-7 space-y-6 text-xs">
           {!configured ? (
-            <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4 text-[#f0f0fa] leading-relaxed micro-cap">
-              Supabase cloud credentials are not configured. The app is currently operating with local browser storage.
+            <div className="bg-[#141417] border border-[#27272F] rounded-[16px] p-4 text-[#A1A1AA] leading-relaxed text-xs">
+              Supabase cloud credentials are not configured. The app is currently operating with local offline browser storage.
             </div>
           ) : (
             <>
               {/* Login / Signup toggle */}
-              <div className="grid grid-cols-2 bg-black border border-[#3a3a3f] rounded-[32px] p-1">
+              <div className="grid grid-cols-2 bg-[#141417] border border-[#2E2E38] rounded-full p-1">
                 <button
                   type="button"
                   onClick={() => { setMode('login'); setError(''); setMessage(''); }}
-                  className={`py-2 rounded-[32px] font-bold uppercase tracking-[1.17px] transition ${mode === 'login' ? 'bg-white text-black' : 'text-[#5a5a5f] hover:text-white'}`}
+                  className={`py-2 rounded-full font-bold text-xs uppercase tracking-wide transition ${mode === 'login' ? 'bg-[#675DFC] text-white shadow-sm' : 'text-[#A1A1AA] hover:text-white'}`}
                 >
                   Log In
                 </button>
                 <button
                   type="button"
                   onClick={() => { setMode('signup'); setError(''); setMessage(''); }}
-                  className={`py-2 rounded-[32px] font-bold uppercase tracking-[1.17px] transition ${mode === 'signup' ? 'bg-white text-black' : 'text-[#5a5a5f] hover:text-white'}`}
+                  className={`py-2 rounded-full font-bold text-xs uppercase tracking-wide transition ${mode === 'signup' ? 'bg-[#675DFC] text-white shadow-sm' : 'text-[#A1A1AA] hover:text-white'}`}
                 >
                   Sign Up
                 </button>
@@ -98,7 +98,7 @@ export default function AuthModal({ isOpen, onClose, onAuthChanged, onResetDemo 
                   placeholder="name@studio.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full text-input text-xs tracking-[0.96px]"
+                  className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] px-4 py-3 text-white text-xs focus:border-[#675DFC] focus:ring-1 focus:ring-[#675DFC] outline-none transition placeholder-[#71717A]"
                 />
                 <input
                   type="password"
@@ -107,24 +107,24 @@ export default function AuthModal({ isOpen, onClose, onAuthChanged, onResetDemo 
                   placeholder="Password (min 6 characters)"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full text-input text-xs tracking-[0.96px]"
+                  className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] px-4 py-3 text-white text-xs focus:border-[#675DFC] focus:ring-1 focus:ring-[#675DFC] outline-none transition placeholder-[#71717A]"
                 />
                 <button
                   type="submit"
                   disabled={busy}
-                  className="button-ghost-on-dark w-full text-xs py-3 disabled:opacity-50"
+                  className="w-full py-3 rounded-full bg-[#675DFC] hover:bg-[#786FFD] text-white font-bold text-xs tracking-wider uppercase transition shadow-md shadow-[#675DFC]/20 disabled:opacity-50"
                 >
                   {busy ? 'Authenticating...' : mode === 'signup' ? 'Create Cloud Account' : 'Log In to Account'}
                 </button>
               </form>
 
               {error && (
-                <p className="bg-black border border-[#ef4444] rounded-[4px] p-3 text-[#ef4444] micro-cap font-bold">
+                <p className="bg-rose-500/10 border border-rose-500/30 rounded-[14px] p-3 text-rose-400 text-xs font-medium">
                   {error}
                 </p>
               )}
               {message && (
-                <p className="bg-black border border-white rounded-[4px] p-3 text-white micro-cap font-bold">
+                <p className="bg-emerald-500/10 border border-emerald-500/30 rounded-[14px] p-3 text-emerald-400 text-xs font-medium">
                   {message}
                 </p>
               )}
@@ -132,14 +132,14 @@ export default function AuthModal({ isOpen, onClose, onAuthChanged, onResetDemo 
           )}
 
           {/* Guest / Demo reset */}
-          <div className="border-t border-[#3a3a3f] pt-5 space-y-3">
-            <p className="micro-cap text-[#5a5a5f]">
-              LOCAL STORAGE SANDBOX
+          <div className="border-t border-[#2A2A32] pt-5 space-y-3">
+            <p className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider">
+              Local Storage Sandbox
             </p>
             <button
               type="button"
               onClick={() => onResetDemo?.()}
-              className="button-ghost-sm w-full text-xs py-2.5 px-4 flex items-center justify-center gap-2"
+              className="w-full py-2.5 px-4 rounded-full bg-[#26262B] hover:bg-[#32323A] text-white text-xs font-semibold flex items-center justify-center gap-2 transition"
             >
               <Terminal className="w-3.5 h-3.5 text-white" />
               <span>Continue as Guest / Reset Demo Data</span>

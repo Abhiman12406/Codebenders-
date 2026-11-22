@@ -40,18 +40,29 @@ const TIER_COPY = {
   },
 };
 
-export function buildEscalationDrafts({
-  invoices,
-  totalPrincipal,
-  daysPastDue,
-  money,
-  clientName,
-  portalLink,
-  businessName,
-  customNotes,
-  settlement = {},
-  today,
-}) {
+export function buildEscalationDrafts(args) {
+  const {
+    invoices = [],
+    context = {},
+    settlement = {},
+    today,
+  } = args;
+
+  // Unclump parameters: support both bundled context and flat backwards-compatible arguments
+  const clientName = args.clientName ?? context.clientName ?? 'there';
+  const portalLink = args.portalLink ?? context.portalLink ?? '';
+  const businessName = args.businessName ?? context.businessName ?? '';
+  const customNotes = args.customNotes ?? context.customNotes ?? '';
+  const money = args.money ?? ((n) => `$${Number(n).toFixed(2)}`);
+
+  const totalPrincipal =
+    args.totalPrincipal ??
+    Math.round(invoices.reduce((sum, inv) => sum + Number(inv.amount || 0), 0) * 100) / 100;
+
+  const daysPastDue =
+    args.daysPastDue ??
+    Math.max(...invoices.map((inv) => Number(inv.diffDays || inv.daysPastDue || 0)), 0);
+
   const ref = invoices[0]?.invoice_number || 'your invoice';
   const invoiceLines = invoices.map((inv) => `- ${inv.invoice_number}: ${money(inv.amount)} (due ${inv.due_date})`);
   const trimmedNotes = (customNotes ?? '').trim();

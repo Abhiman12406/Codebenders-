@@ -4,7 +4,7 @@
     "business_name": "Aura Design Studio",
     "owner_name": "Alex Morgan",
     "currency": "$",
-    "starting_cash": 25200,
+    "starting_cash": 30200,
     "safety_buffer": 1500,
     "created_at": "2026-11-21T13:55:39.535Z"
   },
@@ -62,6 +62,2338 @@
   ],
   "invoices": [
     {
+      "id": "inv_1795351945501",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945500-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.501Z"
+    },
+    {
+      "id": "inv_1795351945499",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945498-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.499Z"
+    },
+    {
+      "id": "inv_1795351945495",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945495-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.495Z"
+    },
+    {
+      "id": "inv_1795351945493",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945492-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.493Z"
+    },
+    {
+      "id": "inv_1795351945490",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945490-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.490Z"
+    },
+    {
+      "id": "inv_1795351945486",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945485-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.486Z"
+    },
+    {
+      "id": "inv_1795351945482",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351945481-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:52:25.482Z"
+    },
+    {
+      "id": "inv_1795351757832",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757832-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.832Z"
+    },
+    {
+      "id": "inv_1795351757829",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757829-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.829Z"
+    },
+    {
+      "id": "inv_1795351757826",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757825-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.826Z"
+    },
+    {
+      "id": "inv_1795351757822",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757822-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.822Z"
+    },
+    {
+      "id": "inv_1795351757820",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757819-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.820Z"
+    },
+    {
+      "id": "inv_1795351757817",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757816-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.817Z"
+    },
+    {
+      "id": "inv_1795351757812",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795351757812-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T12:49:17.812Z"
+    },
+    {
+      "id": "inv_1795347404402",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404402-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.402Z"
+    },
+    {
+      "id": "inv_1795347404400",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404399-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.400Z"
+    },
+    {
+      "id": "inv_1795347404397",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404396-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.397Z"
+    },
+    {
+      "id": "inv_1795347404394",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404393-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.394Z"
+    },
+    {
+      "id": "inv_1795347404390",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404389-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.390Z"
+    },
+    {
+      "id": "inv_1795347404386",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404385-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.386Z"
+    },
+    {
+      "id": "inv_1795347404381",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347404381-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:44.381Z"
+    },
+    {
+      "id": "inv_1795347377922",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377922-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.922Z"
+    },
+    {
+      "id": "inv_1795347377920",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377919-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.920Z"
+    },
+    {
+      "id": "inv_1795347377917",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377916-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.917Z"
+    },
+    {
+      "id": "inv_1795347377914",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377913-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.914Z"
+    },
+    {
+      "id": "inv_1795347377911",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377909-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.911Z"
+    },
+    {
+      "id": "inv_1795347377906",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377905-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.906Z"
+    },
+    {
+      "id": "inv_1795347377901",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795347377899-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:36:17.901Z"
+    },
+    {
+      "id": "inv_1795346397687",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397687-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.687Z"
+    },
+    {
+      "id": "inv_1795346397685",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397684-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.685Z"
+    },
+    {
+      "id": "inv_1795346397681",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397681-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.681Z"
+    },
+    {
+      "id": "inv_1795346397678",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397678-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.678Z"
+    },
+    {
+      "id": "inv_1795346397674",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397673-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.674Z"
+    },
+    {
+      "id": "inv_1795346397671",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397670-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.671Z"
+    },
+    {
+      "id": "inv_1795346397665",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795346397664-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T11:19:57.665Z"
+    },
+    {
+      "id": "inv_1795340898357",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898357-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.357Z"
+    },
+    {
+      "id": "inv_1795340898354",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898354-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.354Z"
+    },
+    {
+      "id": "inv_1795340898351",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898350-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.351Z"
+    },
+    {
+      "id": "inv_1795340898348",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898347-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.348Z"
+    },
+    {
+      "id": "inv_1795340898344",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898342-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.344Z"
+    },
+    {
+      "id": "inv_1795340898340",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898339-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.340Z"
+    },
+    {
+      "id": "inv_1795340898335",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340898334-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:48:18.335Z"
+    },
+    {
+      "id": "inv_1795340629337",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629337-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.337Z"
+    },
+    {
+      "id": "inv_1795340629335",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629334-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.335Z"
+    },
+    {
+      "id": "inv_1795340629332",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629331-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.332Z"
+    },
+    {
+      "id": "inv_1795340629329",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629328-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.329Z"
+    },
+    {
+      "id": "inv_1795340629325",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629324-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.325Z"
+    },
+    {
+      "id": "inv_1795340629321",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629321-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.321Z"
+    },
+    {
+      "id": "inv_1795340629317",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795340629317-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:43:49.317Z"
+    },
+    {
+      "id": "inv_1795339549654",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549654-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.654Z"
+    },
+    {
+      "id": "inv_1795339549651",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549650-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.651Z"
+    },
+    {
+      "id": "inv_1795339549648",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549647-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.648Z"
+    },
+    {
+      "id": "inv_1795339549645",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549644-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.645Z"
+    },
+    {
+      "id": "inv_1795339549641",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549640-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.641Z"
+    },
+    {
+      "id": "inv_1795339549637",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549636-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.637Z"
+    },
+    {
+      "id": "inv_1795339549633",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795339549632-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:25:49.633Z"
+    },
+    {
+      "id": "inv_1795338944860",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944860-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.860Z"
+    },
+    {
+      "id": "inv_1795338944857",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944857-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.857Z"
+    },
+    {
+      "id": "inv_1795338944854",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944853-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.854Z"
+    },
+    {
+      "id": "inv_1795338944851",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944849-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.851Z"
+    },
+    {
+      "id": "inv_1795338944846",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944845-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.846Z"
+    },
+    {
+      "id": "inv_1795338944842",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944841-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.842Z"
+    },
+    {
+      "id": "inv_1795338944837",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338944836-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:44.837Z"
+    },
+    {
+      "id": "inv_1795338911538",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911538-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.538Z"
+    },
+    {
+      "id": "inv_1795338911536",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911535-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.536Z"
+    },
+    {
+      "id": "inv_1795338911532",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911532-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.532Z"
+    },
+    {
+      "id": "inv_1795338911528",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911527-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.528Z"
+    },
+    {
+      "id": "inv_1795338911524",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911524-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.525Z"
+    },
+    {
+      "id": "inv_1795338911521",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911520-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.521Z"
+    },
+    {
+      "id": "inv_1795338911517",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338911516-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:15:11.517Z"
+    },
+    {
+      "id": "inv_1795338882660",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882659-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.660Z"
+    },
+    {
+      "id": "inv_1795338882657",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882656-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.657Z"
+    },
+    {
+      "id": "inv_1795338882653",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882653-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.653Z"
+    },
+    {
+      "id": "inv_1795338882648",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882647-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.648Z"
+    },
+    {
+      "id": "inv_1795338882645",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882644-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.645Z"
+    },
+    {
+      "id": "inv_1795338882641",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882640-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.641Z"
+    },
+    {
+      "id": "inv_1795338882637",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338882636-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:14:42.637Z"
+    },
+    {
+      "id": "inv_1795338370065",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370065-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.065Z"
+    },
+    {
+      "id": "inv_1795338370062",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370061-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.062Z"
+    },
+    {
+      "id": "inv_1795338370056",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370054-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.056Z"
+    },
+    {
+      "id": "inv_1795338370048",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370047-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.048Z"
+    },
+    {
+      "id": "inv_1795338370044",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370043-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.044Z"
+    },
+    {
+      "id": "inv_1795338370040",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370039-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.040Z"
+    },
+    {
+      "id": "inv_1795338370035",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795338370034-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T09:06:10.035Z"
+    },
+    {
+      "id": "inv_1795336283420",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283420-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.420Z"
+    },
+    {
+      "id": "inv_1795336283417",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283416-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.417Z"
+    },
+    {
+      "id": "inv_1795336283412",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283411-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.412Z"
+    },
+    {
+      "id": "inv_1795336283408",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283407-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.408Z"
+    },
+    {
+      "id": "inv_1795336283404",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283402-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.404Z"
+    },
+    {
+      "id": "inv_1795336283399",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283399-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.399Z"
+    },
+    {
+      "id": "inv_1795336283394",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795336283393-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:31:23.394Z"
+    },
+    {
+      "id": "f3cab7f8-4cf0-4ffa-a138-f7af7671a1e6",
+      "client_id": "4cbd0cfc-bb02-4bf5-91e4-51d8b12fbafa",
+      "client_name": "Client",
+      "client_phone": "",
+      "invoice_number": "INV-9360",
+      "project_title": "Monthly retainer",
+      "amount": 1500,
+      "issue_date": "2026-11-22",
+      "due_date": "2026-11-22",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Monthly retainer",
+          "qty": 1,
+          "rate": 1500
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:27:49.441Z"
+    },
+    {
+      "id": "inv_1795335359057",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359056-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.057Z"
+    },
+    {
+      "id": "inv_1795335359054",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359054-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.054Z"
+    },
+    {
+      "id": "inv_1795335359051",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359050-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.051Z"
+    },
+    {
+      "id": "inv_1795335359048",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359047-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.048Z"
+    },
+    {
+      "id": "inv_1795335359045",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359044-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.045Z"
+    },
+    {
+      "id": "inv_1795335359041",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359041-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.041Z"
+    },
+    {
+      "id": "inv_1795335359037",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795335359036-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:15:59.037Z"
+    },
+    {
+      "id": "inv_1795334940428",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940427-7",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.428Z"
+    },
+    {
+      "id": "inv_1795334940426",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940425-6",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.426Z"
+    },
+    {
+      "id": "inv_1795334940423",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940422-5",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.423Z"
+    },
+    {
+      "id": "inv_1795334940420",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940419-4",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-12-02",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.420Z"
+    },
+    {
+      "id": "inv_1795334940416",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940416-3",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": "2026-11-22",
+      "status": "paid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.416Z"
+    },
+    {
+      "id": "inv_1795334940413",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940413-2",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.413Z"
+    },
+    {
+      "id": "inv_1795334940410",
+      "client_id": "client_acme",
+      "client_name": "Acme Studios",
+      "client_phone": "+15552345678",
+      "invoice_number": "TEST-RC-1795334940409-1",
+      "project_title": "Recovery copilot test",
+      "amount": 250,
+      "issue_date": "2026-10-23",
+      "due_date": "2026-11-17",
+      "paid_date": null,
+      "status": "unpaid",
+      "items": [
+        {
+          "desc": "Recovery copilot test",
+          "qty": 1,
+          "rate": 250
+        }
+      ],
+      "notes": "",
+      "created_at": "2026-11-22T08:09:00.410Z"
+    },
+    {
       "id": "inv_1795331104021",
       "client_id": "client_acme",
       "client_name": "Acme Studios",
@@ -71,8 +2403,8 @@
       "amount": 250,
       "issue_date": "2026-10-23",
       "due_date": "2026-12-02",
-      "paid_date": null,
-      "status": "unpaid",
+      "paid_date": "2026-11-22",
+      "status": "paid",
       "items": [
         {
           "desc": "Recovery copilot test",
@@ -777,6 +3109,156 @@
   ],
   "transactions": [
     {
+      "id": "tx_1795351945438",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795351757832",
+      "invoice_number": "TEST-RC-1795351757832-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T12:52:25.438Z"
+    },
+    {
+      "id": "tx_1795351757766",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795347404402",
+      "invoice_number": "TEST-RC-1795347404402-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T12:49:17.766Z"
+    },
+    {
+      "id": "tx_1795347404325",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795347377922",
+      "invoice_number": "TEST-RC-1795347377922-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T11:36:44.325Z"
+    },
+    {
+      "id": "tx_1795347377846",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795346397687",
+      "invoice_number": "TEST-RC-1795346397687-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T11:36:17.846Z"
+    },
+    {
+      "id": "tx_1795346397556",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795340898357",
+      "invoice_number": "TEST-RC-1795340898357-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T11:19:57.556Z"
+    },
+    {
+      "id": "tx_1795340898286",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795340629337",
+      "invoice_number": "TEST-RC-1795340629337-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:48:18.286Z"
+    },
+    {
+      "id": "tx_1795340629269",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795339549654",
+      "invoice_number": "TEST-RC-1795339549654-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:43:49.269Z"
+    },
+    {
+      "id": "tx_1795339549579",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795338944860",
+      "invoice_number": "TEST-RC-1795338944860-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:25:49.579Z"
+    },
+    {
+      "id": "tx_1795338944781",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795338911538",
+      "invoice_number": "TEST-RC-1795338911538-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:15:44.781Z"
+    },
+    {
+      "id": "tx_1795338911463",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795338882660",
+      "invoice_number": "TEST-RC-1795338882659-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:15:11.463Z"
+    },
+    {
+      "id": "tx_1795338882580",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795338370065",
+      "invoice_number": "TEST-RC-1795338370065-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:14:42.580Z"
+    },
+    {
+      "id": "tx_1795338369979",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795336283420",
+      "invoice_number": "TEST-RC-1795336283420-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T09:06:09.979Z"
+    },
+    {
+      "id": "tx_1795336283333",
+      "type": "invoice_payment",
+      "invoice_id": "f3cab7f8-4cf0-4ffa-a138-f7af7671a1e6",
+      "invoice_number": "INV-9360",
+      "client_name": "Client",
+      "amount": 1500,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T08:31:23.333Z"
+    },
+    {
+      "id": "tx_1795335358989",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795334940428",
+      "invoice_number": "TEST-RC-1795334940427-7",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T08:15:58.989Z"
+    },
+    {
+      "id": "tx_1795334940362",
+      "type": "invoice_payment",
+      "invoice_id": "inv_1795331104021",
+      "invoice_number": "TEST-RC-1795331104020-4",
+      "client_name": "Acme Studios",
+      "amount": 250,
+      "paid_date": "2026-11-22",
+      "created_at": "2026-11-22T08:09:00.362Z"
+    },
+    {
       "id": "tx_1795331103960",
       "type": "invoice_payment",
       "invoice_id": "inv_1795331002632",
@@ -981,6 +3463,113 @@
       "amount": 4850,
       "description": "Initial Studio Operating Reserves",
       "created_at": "2026-11-20"
+    }
+  ],
+  "outreach_log": [
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795334940434",
+      "channel": "copy",
+      "timestamp": "2026-11-22T08:09:00.435Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795335359061",
+      "channel": "copy",
+      "timestamp": "2026-11-22T08:15:59.062Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795336283427",
+      "channel": "copy",
+      "timestamp": "2026-11-22T08:31:23.428Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795338370072",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:06:10.073Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795338882666",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:14:42.667Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795338911545",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:15:11.546Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795338944865",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:15:44.866Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795339549660",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:25:49.661Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795340629342",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:43:49.343Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795340898362",
+      "channel": "copy",
+      "timestamp": "2026-11-22T09:48:18.363Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795346397694",
+      "channel": "copy",
+      "timestamp": "2026-11-22T11:19:57.695Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795347377927",
+      "channel": "copy",
+      "timestamp": "2026-11-22T11:36:17.928Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795347404407",
+      "channel": "copy",
+      "timestamp": "2026-11-22T11:36:44.408Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795351757837",
+      "channel": "copy",
+      "timestamp": "2026-11-22T12:49:17.837Z"
+    },
+    {
+      "debtorId": "client_acme",
+      "invoiceId": "inv_101",
+      "strategyId": "test-trail-1795351945505",
+      "channel": "copy",
+      "timestamp": "2026-11-22T12:52:25.507Z"
     }
   ]
 }

@@ -1,4 +1,5 @@
-const BASE = '/api';
+const API_HOST = (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_API_URL) || '';
+const BASE = `${API_HOST.replace(/\/$/, '')}/api`;
 
 async function request(method, path, body) {
   const options = { method, headers: {} };

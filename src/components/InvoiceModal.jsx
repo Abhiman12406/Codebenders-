@@ -142,23 +142,23 @@ export default function InvoiceModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-2xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-2xl bg-[#1C1C1F] border border-[#2E2E35] rounded-[28px] overflow-hidden my-8 text-white shadow-2xl">
         
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-between px-6 py-5 border-b border-[#2A2A30] bg-[#18181B]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white flex items-center justify-center rounded-[4px]">
+            <div className="w-9 h-9 bg-[#675DFC]/15 border border-[#675DFC]/30 text-[#A298DF] flex items-center justify-center rounded-xl shadow-inner">
               <FileText className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="button-cap text-white text-base">CREATE NEW INVOICE</h3>
-              <p className="micro-cap text-[#5a5a5f] mt-0.5">Issue invoice and update your cash forecast horizon</p>
+              <h3 className="font-extrabold text-white text-base tracking-tight">CREATE NEW INVOICE</h3>
+              <p className="text-xs text-[#A1A1AA] mt-0.5">Issue invoice and update your cash forecast horizon</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
+            className="p-2 rounded-full border border-[#2D2D35] text-zinc-400 hover:text-white hover:border-zinc-400 hover:bg-white/5 transition"
           >
             <X className="w-4 h-4" />
           </button>
@@ -170,7 +170,7 @@ export default function InvoiceModal({
           {/* Client & Phone */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+              <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
                 CLIENT ENTITY
               </label>
               {!isNewClient ? (
@@ -178,14 +178,14 @@ export default function InvoiceModal({
                   <select
                     value={selectedClientId}
                     onChange={handleClientChange}
-                    className="w-full text-input text-xs tracking-[0.96px] bg-black text-white"
+                    className="w-full text-input text-xs bg-[#141417] text-white border border-[#2E2E35]"
                   >
                     {clients.map((c) => (
-                      <option key={c.id} value={c.id} className="bg-black text-white">
+                      <option key={c.id} value={c.id} className="bg-[#1C1C1F] text-white">
                         {c.name} {c.company ? `(${c.company})` : ''}
                       </option>
                     ))}
-                    <option value="__new__" className="text-white font-bold bg-[#0a0a0a]">+ Add new client...</option>
+                    <option value="__new__" className="text-white font-bold bg-[#141417]">+ Add new client...</option>
                   </select>
                 </div>
               ) : (
@@ -197,12 +197,12 @@ export default function InvoiceModal({
                       value={newClientName}
                       onChange={(e) => setNewClientName(e.target.value)}
                       required
-                      className="w-full text-input text-xs tracking-[0.96px]"
+                      className="w-full text-input text-xs"
                     />
                     <button
                       type="button"
                       onClick={() => setIsNewClient(false)}
-                      className="micro-cap text-white hover:underline shrink-0"
+                      className="text-xs text-[#675DFC] hover:underline shrink-0 font-semibold"
                     >
                       CANCEL
                     </button>
@@ -213,18 +213,18 @@ export default function InvoiceModal({
 
             {/* Client WhatsApp Phone */}
             <div>
-              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5 flex items-center justify-between">
+              <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5 flex items-center justify-between">
                 <span>WHATSAPP PHONE</span>
-                <span className="text-[10px] text-[#5a5a5f]">(Int'l format)</span>
+                <span className="text-[10px] text-zinc-500 font-normal">(Int'l format)</span>
               </label>
               <div className="relative">
-                <Phone className="absolute left-3.5 top-3 w-4 h-4 text-[#5a5a5f]" />
+                <Phone className="absolute left-3.5 top-3 w-4 h-4 text-zinc-500" />
                 <input
                   type="text"
                   placeholder="+15551234567"
                   value={clientPhone}
                   onChange={(e) => setClientPhone(e.target.value)}
-                  className="w-full text-input pl-10 text-xs tracking-[0.96px]"
+                  className="w-full text-input pl-10 text-xs"
                 />
               </div>
             </div>
@@ -233,7 +233,7 @@ export default function InvoiceModal({
           {/* Project Title & Invoice # */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="sm:col-span-2">
-              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+              <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
                 PROJECT TITLE
               </label>
               <input
@@ -242,12 +242,12 @@ export default function InvoiceModal({
                 value={projectTitle}
                 onChange={(e) => setProjectTitle(e.target.value)}
                 required
-                className="w-full text-input text-xs tracking-[0.96px]"
+                className="w-full text-input text-xs"
               />
             </div>
 
             <div>
-              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+              <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
                 INVOICE NUMBER
               </label>
               <input
@@ -255,7 +255,7 @@ export default function InvoiceModal({
                 value={invoiceNumber}
                 onChange={(e) => setInvoiceNumber(e.target.value)}
                 required
-                className="w-full text-input text-xs tabular-nums tracking-[1.17px] font-bold"
+                className="w-full text-input text-xs tabular-nums font-mono font-bold"
               />
             </div>
           </div>
@@ -263,41 +263,41 @@ export default function InvoiceModal({
           {/* Dates & Quick Net Terms */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+              <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
                 ISSUE DATE
               </label>
               <input
                 type="date"
                 value={issueDate}
                 onChange={(e) => setIssueDate(e.target.value)}
-                className="w-full text-input text-xs bg-black text-white"
+                className="w-full text-input text-xs bg-[#141417] text-white"
               />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-1.5">
-                <label className="micro-cap text-[#5a5a5f] font-bold">
+                <label className="text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider">
                   DUE DATE
                 </label>
                 <div className="flex items-center gap-1.5">
                   <button
                     type="button"
                     onClick={() => setQuickTerms(0)}
-                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
+                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-[#2D2D35] bg-[#141417] text-zinc-300 hover:border-[#675DFC] hover:text-white transition-all"
                   >
                     Today
                   </button>
                   <button
                     type="button"
                     onClick={() => setQuickTerms(15)}
-                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
+                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-[#2D2D35] bg-[#141417] text-zinc-300 hover:border-[#675DFC] hover:text-white transition-all"
                   >
                     Net 15
                   </button>
                   <button
                     type="button"
                     onClick={() => setQuickTerms(30)}
-                    className="text-[10px] font-bold uppercase tracking-[0.96px] px-2.5 py-0.5 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white"
+                    className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-[#2D2D35] bg-[#141417] text-zinc-300 hover:border-[#675DFC] hover:text-white transition-all"
                   >
                     Net 30
                   </button>
@@ -307,21 +307,21 @@ export default function InvoiceModal({
                 type="date"
                 value={dueDate}
                 onChange={(e) => setDueDate(e.target.value)}
-                className="w-full text-input text-xs bg-black text-white"
+                className="w-full text-input text-xs bg-[#141417] text-white"
               />
             </div>
           </div>
 
           {/* Line Items */}
-          <div className="space-y-3 pt-3 border-t border-[#3a3a3f]">
+          <div className="space-y-3 pt-3 border-t border-[#2A2A30]">
             <div className="flex items-center justify-between">
-              <label className="micro-cap text-[#5a5a5f] font-bold">
+              <label className="text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider">
                 LINE ITEMS
               </label>
               <button
                 type="button"
                 onClick={handleAddItem}
-                className="inline-flex items-center gap-1 micro-cap text-white font-bold hover:underline"
+                className="inline-flex items-center gap-1 text-xs text-[#675DFC] hover:text-[#8B82FF] font-bold transition-colors"
               >
                 <Plus className="w-3.5 h-3.5" />
                 <span>Add Item</span>
@@ -337,7 +337,7 @@ export default function InvoiceModal({
                     value={item.desc}
                     onChange={(e) => handleItemChange(index, 'desc', e.target.value)}
                     required
-                    className="flex-1 text-input text-xs py-2 tracking-[0.32px]"
+                    className="flex-1 text-input text-xs py-2"
                   />
                   <input
                     type="number"
@@ -360,7 +360,7 @@ export default function InvoiceModal({
                     type="button"
                     onClick={() => handleRemoveItem(index)}
                     disabled={items.length === 1}
-                    className="p-2 text-[#5a5a5f] hover:text-[#ef4444] disabled:opacity-30 transition"
+                    className="p-2 text-zinc-500 hover:text-rose-400 disabled:opacity-30 transition"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>
@@ -369,11 +369,11 @@ export default function InvoiceModal({
             </div>
 
             {/* Total Display */}
-            <div className="flex items-center justify-between p-4 bg-black border border-[#3a3a3f] rounded-[4px] mt-2">
-              <span className="micro-cap text-[#5a5a5f] font-bold">
+            <div className="flex items-center justify-between p-4 bg-[#141417] border border-[#2A2A30] rounded-xl mt-2">
+              <span className="text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider">
                 TOTAL INVOICE BALANCE
               </span>
-              <span className="text-xl font-bold text-white tabular-nums tracking-[1.2px]">
+              <span className="text-xl font-black text-white tabular-nums tracking-tight">
                 {currency}{calculatedTotal.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
               </span>
             </div>
@@ -381,29 +381,29 @@ export default function InvoiceModal({
 
           {/* Notes */}
           <div>
-            <label className="block micro-cap text-[#5a5a5f] font-bold mb-1.5">
+            <label className="block text-[11px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1.5">
               PAYMENT INSTRUCTIONS &amp; NOTES
             </label>
             <input
               type="text"
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
-              className="w-full text-input text-xs tracking-[0.32px]"
+              className="w-full text-input text-xs"
             />
           </div>
 
           {/* Modal Actions */}
-          <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#3a3a3f]">
+          <div className="flex items-center justify-end gap-3 pt-4 border-t border-[#2A2A30]">
             <button
               type="button"
               onClick={onClose}
-              className="button-ghost-sm text-xs py-2.5 px-5"
+              className="button-ghost-on-dark text-xs py-2.5 px-5"
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="button-ghost-on-dark text-xs py-2.5 px-6"
+              className="btn-primary-purple text-xs py-2.5 px-6 shadow-md"
             >
               Issue Invoice
             </button>

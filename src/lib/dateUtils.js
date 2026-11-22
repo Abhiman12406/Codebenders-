@@ -40,3 +40,14 @@ export function getDaysDiff(targetDateStr) {
   const diffTime = today.getTime() - target.getTime();
   return Math.round(diffTime / (1000 * 60 * 60 * 24));
 }
+
+/**
+ * Formats a Date or date string to a short display format like "Nov 22".
+ */
+export function formatShortDate(dateVal) {
+  if (!dateVal) return '';
+  const d = dateVal instanceof Date ? dateVal : parseLocalDate(dateVal);
+  if (Number.isNaN(d.getTime())) return String(dateVal);
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+

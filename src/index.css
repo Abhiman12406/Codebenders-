@@ -1,313 +1,338 @@
-@import url('https://fonts.cdnfonts.com/css/d-din');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
-  --canvas-night: #000000;
-  --canvas-night-soft: #0a0a0a;
-  --canvas-light: #ffffff;
-  --canvas-cool: #f0f0fa;
-  --on-primary: #ffffff;
-  --on-primary-mute: #f0f0fa;
-  --hairline-on-dark: #3a3a3f;
-  --hairline-on-light: #e0e0e8;
-  --ink-mute: #5a5a5f;
-  --link-on-dark: #ffffff;
-  --link-blue-fallback: #0000ee;
+  --canvas-fintech: #EFEFEF;
+  --surface-white: #FFFFFF;
+  --surface-obsidian: #1E1E1E;
+  --panel-dark: #1C1C1C;
+  --dock-dark: #1C1C1C;
+  --accent-lime: #C4FC51;
+  --accent-purple: #675DFC;
+  --accent-purple-dock: #6458E2;
+  --accent-purple-bar: #625BFF;
+  --accent-purple-curve: #A298DF;
+  --ink-heading: #1C1C1C;
+  --ink-secondary: #666666;
+  --ink-muted: #909090;
+  --hairline-soft: #E5E5E5;
 }
 
 body {
   margin: 0;
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'D-DIN', 'Inter', 'Arial', sans-serif;
-  letter-spacing: 0.32px;
+  background-color: var(--canvas-fintech);
+  color: var(--ink-heading);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.015em;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tabular figures for telemetry & financial numerics */
+/* Tabular figures for financial telemetrics & numbers */
 .tabular-nums, .tnum, [data-tnum="true"] {
   font-feature-settings: 'tnum';
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.96px;
+  font-family: 'JetBrains Mono', 'Inter', monospace;
 }
 
-/* SpaceX Typography Classes */
-.display-xxl {
-  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
-  font-size: clamp(38px, 6.5vw, 80px);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
+/* Fintech Design Cards */
+.fintech-card-white {
+  background-color: #FFFFFF;
+  border-radius: 28px;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
-.display-xl {
-  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
-  font-size: clamp(30px, 4.5vw, 60px);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+.fintech-card-white:hover {
+  box-shadow: 0 10px 24px -4px rgba(0, 0, 0, 0.06);
 }
 
-.display-lg {
-  font-family: 'D-DIN-Bold', 'Arial Narrow', 'Inter', Arial, sans-serif;
-  font-size: clamp(24px, 3.5vw, 48px);
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: 0.96px;
-  text-transform: uppercase;
+.fintech-card-obsidian {
+  background-color: #1E1E1E;
+  border-radius: 28px;
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
-.body-lg {
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 0.32px;
+.fintech-card-obsidian:hover {
+  box-shadow: 0 14px 32px -6px rgba(0, 0, 0, 0.35);
 }
 
-.body-md {
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.32px;
-}
-
-.button-cap {
-  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 13.008px;
-  font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: 1.17px;
-  text-transform: uppercase;
-}
-
-.micro-cap {
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 2.0;
-  letter-spacing: 0.96px;
-  text-transform: uppercase;
-}
-
-.caption {
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 13.008px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0;
-}
-
-/* SpaceX Ghost Button (The Universal Marketing CTA) */
-.button-ghost-on-dark,
-.btn-spacex-ghost,
-.button-primary-pill,
-.btn-stripe-primary,
-.artcraft-btn-primary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 13.008px;
-  font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: 1.17px;
-  text-transform: uppercase;
+.fintech-panel-dark {
+  background-color: #1C1C1C;
   border-radius: 32px;
-  padding: 18px 24px;
+  color: #FFFFFF;
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.35);
+}
+
+/* Hatched diagonal stripes for expense chart bars */
+.bg-diagonal-hatch {
+  background-color: #FFFFFF;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #747474 0,
+    #747474 1.5px,
+    transparent 1.5px,
+    transparent 6px
+  );
+}
+
+.bg-diagonal-hatch-dark {
+  background: repeating-linear-gradient(
+    -45deg,
+    #555555 0,
+    #555555 1.5px,
+    transparent 1.5px,
+    transparent 6px
+  );
+}
+
+/* Pill Action Buttons */
+.fintech-pill-btn {
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 10px 22px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: all 0.18s ease;
   cursor: pointer;
-  box-shadow: none;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-.button-ghost-on-dark:hover,
-.btn-spacex-ghost:hover,
-.button-primary-pill:hover,
-.btn-stripe-primary:hover,
-.artcraft-btn-primary:hover {
-  background-color: #ffffff;
-  color: #000000;
-  box-shadow: none;
+.fintech-pill-btn:hover {
+  background-color: #F8F8F8;
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
-.button-ghost-on-dark:active,
-.btn-spacex-ghost:active,
-.button-primary-pill:active,
-.btn-stripe-primary:active {
-  transform: scale(0.98);
+.fintech-pill-btn:active {
+  transform: translateY(0);
 }
 
-/* Compact Ghost Button for toolbars and table rows */
-.button-ghost-sm,
-.button-secondary,
-.btn-stripe-secondary,
-.button-outline,
-.btn-stripe-outline,
-.artcraft-btn-secondary {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #3a3a3f;
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 12px;
+/* Purple Circle Action Button (+ button in My Cards & Contacts) */
+.btn-purple-circle {
+  background-color: #675DFC;
+  color: #FFFFFF;
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+
+.btn-purple-circle:hover {
+  background-color: #584EED;
+  transform: scale(1.06);
+}
+
+/* Operational Cockpit Card */
+.card-cockpit {
+  background-color: #212124;
+  color: #FFFFFF;
+  border: 1px solid #2D2D33;
+  border-radius: 24px;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.25);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card-cockpit:hover {
+  border-color: #3C3C44;
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.35);
+}
+
+.card-cockpit-light,
+.card-glass {
+  background-color: #FFFFFF;
+  color: #1C1C1C;
+  border: 1px solid #E5E5E5;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card-cockpit-light:hover {
+  border-color: #D4D4D4;
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.06);
+}
+
+/* Action Buttons */
+.button-primary,
+.btn-gradient-primary {
+  background-color: #1C1C1C;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 8px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.button-primary:hover,
+.btn-gradient-primary:hover {
+  background-color: #2D2D2D;
+  transform: translateY(-0.5px);
+}
+
+/* Signature Neo-Fintech Pill Buttons */
+.btn-primary-purple {
+  background-color: #675DFC;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+
+.btn-primary-purple:hover {
+  background-color: #584EED;
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 14px rgba(103, 93, 252, 0.35);
+}
+
+.btn-primary-lime {
+  background-color: #C4FC51;
+  color: #1C1C1C;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
   font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: 1.17px;
-  text-transform: uppercase;
-  border-radius: 32px;
-  padding: 10px 18px;
+  border-radius: 9999px;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+  cursor: pointer;
+}
+
+.btn-primary-lime:hover {
+  background-color: #B8F540;
+  transform: translateY(-0.5px);
+  box-shadow: 0 4px 14px rgba(196, 252, 81, 0.35);
+}
+
+.button-ghost,
+.button-ghost-sm {
+  background-color: transparent;
+  color: #F0F0F0;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 6px 14px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
+  transition: all 0.15s ease;
   cursor: pointer;
-  box-shadow: none;
-  transition: all 0.2s ease;
 }
 
-.button-ghost-sm:hover,
-.button-secondary:hover,
-.btn-stripe-secondary:hover,
-.button-outline:hover,
-.btn-stripe-outline:hover,
-.artcraft-btn-secondary:hover {
-  border-color: #ffffff;
-  color: #ffffff;
+.button-ghost:hover,
+.button-ghost-sm:hover {
+  border-color: rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
 }
 
-/* Button on dark */
-.button-on-dark,
-.btn-stripe-dark {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  border: 1px solid #3a3a3f;
-  font-family: 'D-DIN-Bold', 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 13.008px;
-  font-weight: 700;
-  letter-spacing: 1.17px;
-  text-transform: uppercase;
-  border-radius: 32px;
-  padding: 12px 20px;
-  transition: all 0.2s ease;
-}
-
-.button-on-dark:hover,
-.btn-stripe-dark:hover {
-  border-color: #ffffff;
-}
-
-/* SpaceX Dark Surface Card */
-.card-spacex,
-.stripe-card,
-.stripe-card-cream,
-.stripe-card-dark,
-.artcraft-card {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  border: 1px solid #3a3a3f;
-  border-radius: 8px;
-  box-shadow: none;
-  transition: border-color 0.2s ease;
-}
-
-.card-spacex:hover,
-.stripe-card:hover {
-  border-color: #5a5a5f;
-  box-shadow: none;
-}
-
-/* Eyebrow Micro-Cap Pill Tag */
-.pill-tag-soft {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #3a3a3f;
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.96px;
-  border-radius: 32px;
-  padding: 4px 12px;
+.button-ghost-on-dark {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  padding: 8px 18px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 6px;
+  transition: all 0.15s ease;
+  cursor: pointer;
 }
 
-/* SpaceX Form Inputs */
+.button-ghost-on-dark:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
+  transform: translateY(-0.5px);
+}
+
+/* Form Inputs */
 .text-input,
 .text-input-stripe {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'D-DIN', 'Inter', Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.32px;
-  border-radius: 4px;
-  border: 1px solid #3a3a3f;
-  padding: 12px 16px;
-  transition: border-color 0.2s ease;
+  background-color: #17171A;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  border-radius: 12px;
+  border: 1px solid #2E2E35;
+  padding: 10px 14px;
+  transition: all 0.15s ease;
   outline: none;
+}
+
+.text-input::placeholder {
+  color: #71717A;
 }
 
 .text-input:focus,
 .text-input-stripe:focus {
-  border-color: #ffffff;
-  box-shadow: none;
+  border-color: #675DFC;
+  box-shadow: 0 0 0 3px rgba(103, 93, 252, 0.25);
+  background-color: #1B1B20;
 }
 
-/* Full-Bleed Photographic Band */
-.card-photo-band {
-  background-color: #000000;
-  padding: 0;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-/* SpaceX Fixed Top Nav Overlay */
-.nav-bar-overlay {
-  background-color: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid #3a3a3f;
-}
-
-/* Custom Scrollbar for SpaceX Dark Aesthetic */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: #EFEFEF;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a3a3f;
-  border-radius: 0px;
+  background: #CCCCCC;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #5a5a5f;
+  background: #909090;
 }
 
-/* Printable Styles */
-@media print {
-  body {
-    background: #ffffff !important;
-    color: #000000 !important;
-  }
-  header, nav, footer, .no-print {
-    display: none !important;
-  }
+/* Modal Backdrop */
+.modal-backdrop {
+  background-color: rgba(28, 28, 28, 0.75);
+  backdrop-filter: blur(8px);
 }

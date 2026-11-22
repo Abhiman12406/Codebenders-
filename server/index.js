@@ -12,7 +12,23 @@ import aiRouter from './routes/ai.js';
 
 const app = express();
 
-app.use(cors());
+const clientUrl = process.env.CLIENT_URL;
+if (clientUrl) {
+  app.use(cors({
+    origin: [clientUrl, 'http://localhost:5173', /\.vercel\.app$/],
+    credentials: true,
+  }));
+} else {
+  app.use(cors());
+}
+
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'DENY');
+  res.setHeader('X-XSS-Protection', '1; mode=block');
+  next();
+});
+
 app.use(express.json());
 
 app.use('/api/invoices', invoicesRouter);
@@ -23,6 +39,7 @@ app.use('/api/outflows', outflowsRouter);
 app.use('/api/profile', profileRouter);
 app.use('/api/ai', aiRouter);
 
+app.get('/health', (req, res) => res.status(200).json({ status: 'ok' }));
 app.get('/api/health', (req, res) => res.status(200).json({ status: 'ok' }));
 
 app.use((req, res) => res.status(404).json({ error: { message: 'Not found', status: 404 } }));

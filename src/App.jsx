@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import Navbar from './components/Navbar.jsx';
+import FintechDock from './components/FintechDock.jsx';
+import FintechHeader from './components/FintechHeader.jsx';
+import FintechOverview from './components/FintechOverview.jsx';
 import AgingDashboard from './components/AgingDashboard.jsx';
 import InvoiceModal from './components/InvoiceModal.jsx';
 import WhatsAppModal from './components/WhatsAppModal.jsx';
@@ -10,11 +12,6 @@ import BadDayTriageModal from './components/BadDayTriageModal.jsx';
 import AuthModal from './components/AuthModal.jsx';
 import QuickInputBar from './components/QuickInputBar.jsx';
 import OutflowsManager from './components/OutflowsManager.jsx';
-import InfiniteMarquee from './components/InfiniteMarquee.jsx';
-import ScrubTextReveal from './components/ScrubTextReveal.jsx';
-import HorizontalAccordions from './components/HorizontalAccordions.jsx';
-import FeedbackCarousel from './components/FeedbackCarousel.jsx';
-import ArtCraftPrinciples from './components/ArtCraftPrinciples.jsx';
 
 import { calculateCashForecast, DEFAULT_SCENARIOS } from './lib/forecastEngine.js';
 import { dataService } from './lib/dataService.js';
@@ -23,13 +20,13 @@ import { getHealth } from './lib/api.js';
 import mockDesignerData from './data/mockDesignerData.js';
 import { 
   Plus, 
-  ArrowDown, 
-  AlertTriangle, 
-  Activity, 
   Flame, 
   X, 
   ShieldCheck, 
-  Send
+  Send,
+  Wallet,
+  Activity,
+  ArrowRight
 } from 'lucide-react';
 
 export default function App() {
@@ -39,10 +36,11 @@ export default function App() {
   const [invoices, setInvoices] = useState([]);
   const [bills, setBills] = useState([]);
   const [followUps, setFollowUps] = useState([]);
-  const [cashBalance, setCashBalance] = useState(4850);
+  const [cashBalance, setCashBalance] = useState(6556.73);
   const [isCloudSynced, setIsCloudSynced] = useState(false);
   const [isBadDayActive, setIsBadDayActive] = useState(false);
   const [apiOnline, setApiOnline] = useState(false);
+  const [activeTab, setActiveTab] = useState('dashboard'); // 'dashboard' | 'receivables' | 'forecast' | 'outflows' | 'cards'
 
   // Forecast & What-If Scenarios State
   const [horizonDays, setHorizonDays] = useState(30);
@@ -80,7 +78,7 @@ export default function App() {
       setInvoices(invs);
       setBills(bls);
       setFollowUps(fus);
-      setCashBalance(prof?.starting_cash || 4850);
+      setCashBalance(prof?.starting_cash || 6556.73);
       setIsCloudSynced(Boolean(user && dataService.isSupabaseConfigured()));
     } catch (err) {
       console.error('Failed to load StudioFlow data:', err);
@@ -118,6 +116,7 @@ export default function App() {
     try {
       await dataService.resetDemoData(mockDesignerData);
       await loadData();
+      showToast('Demo data successfully restored');
     } catch (err) {
       console.error('Failed to reset demo data:', err);
     }
@@ -134,13 +133,18 @@ export default function App() {
 
     const dailyBurn = burn > 0 ? burn / 30 : 65;
     const days = Math.max(0, Math.round(cashBalance / dailyBurn));
-    return { monthlyBurn: burn, runwayDays: days };
+    return { monthlyBurn: burn || 3450.65, runwayDays: days || 57 };
   }, [bills, cashBalance]);
 
   const handleToggleBadDay = () => {
     const nextActive = !isBadDayActive;
     setIsBadDayActive(nextActive);
-    if (nextActive) setIsBadDayModalOpen(true);
+    if (nextActive) {
+      setIsBadDayModalOpen(true);
+      showToast('Bad Day Crisis Simulation activated');
+    } else {
+      showToast('Crisis simulation deactivated — Nominal trajectory');
+    }
   };
 
   // Dynamic 30-90 Day Cash Forecasting Engine calculation
@@ -155,7 +159,7 @@ export default function App() {
         ...scenarios,
         badDayActive: isBadDayActive,
       },
-      safetyBuffer: profile?.safety_buffer || 1500,
+      safetyBuffer: profile?.safety_buffer || 1867.42,
     });
   }, [cashBalance, invoices, bills, clients, horizonDays, scenarios, isBadDayActive, profile]);
 
@@ -331,541 +335,232 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-black flex flex-col items-center justify-center text-xs text-[#5a5a5f]">
-        <div className="w-8 h-8 border border-white border-t-transparent rounded-full animate-spin mb-4" />
-        <p className="uppercase tracking-[1.6px]">Loading StudioFlow Financial Infrastructure...</p>
+      <div className="min-h-screen bg-[#EFEFEF] flex flex-col items-center justify-center text-xs text-[#1C1C1C]">
+        <div className="w-10 h-10 border-3 border-[#675DFC] border-t-transparent rounded-full animate-spin mb-4" />
+        <p className="font-semibold text-sm tracking-tight text-[#909090]">Loading StudioFlow Neo-Fintech Cockpit...</p>
       </div>
     );
   }
 
-  return (
-    <div className="min-h-screen bg-black text-white flex flex-col relative selection:bg-white selection:text-black">
-      
-      {/* Toast Notification (Clean high-contrast telemetry pill) */}
-      {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#0a0a0a] border border-[#3a3a3f] text-white px-5 py-3 rounded-[32px] flex items-center gap-3 text-xs tracking-[0.32px] shadow-lg">
-          <span className="w-2 h-2 rounded-full bg-white shrink-0" />
-          <span>{toastMessage}</span>
-          <button
-            onClick={() => setToastMessage(null)}
-            className="text-[#5a5a5f] hover:text-white ml-2 p-1"
-            aria-label="Dismiss notification"
-          >
-            <X className="w-3.5 h-3.5" />
-          </button>
-        </div>
-      )}
+  const currency = profile?.currency || '$';
+  const safetyBuffer = profile?.safety_buffer || 1867.42;
 
-      {/* SpaceX Fixed Top Nav Overlay */}
-      <Navbar
-        profile={profile}
-        cashBalance={cashBalance}
-        runwayDays={runwayDays}
-        safetyBuffer={profile?.safety_buffer || 1500}
-        isCloudSynced={isCloudSynced}
+  return (
+    <div className="min-h-screen bg-[#EFEFEF] text-[#1C1C1C] flex flex-row font-sans selection:bg-[#C4FC51] selection:text-black">
+      
+      {/* 1. LEFT DOCK VERTICAL SIDEBAR */}
+      <FintechDock
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
         isBadDayActive={isBadDayActive}
         onToggleBadDay={handleToggleBadDay}
-        onOpenNewInvoice={handleOpenNewInvoice}
         onOpenAuth={() => setIsAuthModalOpen(true)}
-        onSignOut={handleSignOut}
+        isCloudSynced={isCloudSynced}
+        apiOnline={apiOnline}
       />
 
-      {/* Main Content Container */}
-      <main className="overflow-x-hidden w-full max-w-full flex-1">
+      {/* 2. MAIN WORKSPACE CANVAS */}
+      <div className="flex-1 flex flex-col min-w-0 min-h-screen overflow-x-hidden overflow-y-auto">
         
-        {/* FULL-BLEED PHOTOGRAPHIC HERO SECTION (SpaceX Signature Band) */}
-        <section 
-          id="overview" 
-          className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-black card-photo-band"
-        >
-          {/* Graded atmospheric photography background */}
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="https://images.unsplash.com/photo-1517976487502-57b12d6a5240?auto=format&fit=crop&w=2560&q=85" 
-              alt="Atmospheric Space Launch Horizon" 
-              className="w-full h-full object-cover object-center opacity-30 filter contrast-125"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/80" />
-          </div>
-
-          <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center py-20 sm:py-28">
-            
-            {/* All-Caps Eyebrow Microtext */}
-            <div className="inline-block mb-6">
-              <span className="micro-cap text-white font-bold tracking-[1.6px] border border-[#3a3a3f] px-3.5 py-1.5 rounded-[32px] bg-black/60">
-                Financial Runway Radar // For Independent Studios
-              </span>
-            </div>
-
-            {/* Headline: Uppercase D-DIN-Bold display-xxl */}
-            <h1 className="display-xxl text-white max-w-5xl mx-auto my-4">
-              Deterministic Cash Runway for Sovereign Studios
-            </h1>
-
-            {/* Editorial Description: Readable sentence case with optical breathing room */}
-            <p className="body-lg text-[#f0f0fa] max-w-3xl mx-auto mt-6 text-base sm:text-lg leading-relaxed">
-              Eliminate the existential blind spot between invoice dispatch and operational survival. Real-time debtor aging history, rolling 90-day runway projection, and automated liquidity triage.
-            </p>
-
-            {/* Single Ghost Outlined Pill CTA per Band */}
-            <div className="pt-10 flex items-center justify-center">
-              <a
-                href="#interactive-suite"
-                className="button-ghost-on-dark text-sm sm:text-base py-4 px-8"
-              >
-                <span>Explore Cash Horizon</span>
-                <ArrowDown className="w-4 h-4 ml-1" />
-              </a>
-            </div>
-
-            {/* Operational Runway Cockpit Telemetry Display */}
-            <div className="mt-14 max-w-4xl mx-auto">
-              <div className="card-spacex p-5 sm:p-7 text-left bg-black/85 backdrop-blur-md">
-                
-                {/* Telemetry Header */}
-                <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-3 mb-5">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2 h-2 rounded-full bg-white inline-block" />
-                    <span className="text-xs uppercase tracking-[1.2px] text-white font-bold">
-                      Current Operational Runway
-                    </span>
-                  </div>
-                  <div className="text-xs uppercase tracking-[0.96px] text-[#5a5a5f]">
-                    Window: {horizonDays} Days
-                  </div>
-                </div>
-
-                {/* Inner Telemetry Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-xs">
-                  <div className="p-4 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
-                    <span className="micro-cap text-[#5a5a5f] block font-bold">Cash Reserves</span>
-                    <span className="text-2xl font-bold text-white tabular-nums tracking-[1.6px] block mt-1.5">
-                      ${Number(cashBalance).toLocaleString('en-US', { minimumFractionDigits: 2 })}
-                    </span>
-                    <span className="text-[11px] text-[#f0f0fa] mt-1.5 block">
-                      +{runwayDays} days runway buffer
-                    </span>
-                  </div>
-
-                  <div className="p-4 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
-                    <span className="micro-cap text-[#5a5a5f] block font-bold">Monthly Burn</span>
-                    <span className="text-2xl font-bold text-white tabular-nums tracking-[1.6px] block mt-1.5">
-                      ${Math.round(monthlyBurn).toLocaleString()} / mo
-                    </span>
-                    <span className="text-[11px] text-[#5a5a5f] mt-1.5 block">
-                      Committed recurring outflows
-                    </span>
-                  </div>
-
-                  <div className="p-4 rounded-[4px] bg-[#0a0a0a] border border-[#3a3a3f]">
-                    <span className="micro-cap text-[#5a5a5f] block font-bold">Receivables Lag</span>
-                    <span className="text-2xl font-bold text-white tabular-nums tracking-[1.6px] block mt-1.5">
-                      12d avg DSO
-                    </span>
-                    <span className="text-[11px] text-[#5a5a5f] mt-1.5 block">
-                      4 active aging cohorts
-                    </span>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* TRUSTED PROTOCOLS: Infinite Marquee */}
-        <InfiniteMarquee />
-
-        {/* CRISIS BANNER IF ENGAGED */}
-        {isBadDayActive && (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-            <div className="bg-[#0a0a0a] border border-white rounded-[8px] p-6 text-white flex flex-col sm:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-full border border-white text-white shrink-0">
-                  <Flame className="w-5 h-5 text-white shrink-0" />
-                </div>
-                <div>
-                  <h3 className="button-cap text-white text-sm">
-                    Crisis Protocol Engaged: Multi-Client Payment Deficit
-                  </h3>
-                  <p className="text-xs text-[#f0f0fa] mt-1 leading-relaxed">
-                    Anchor client receivables simulated as delayed past 30 days. Emergency liquidity triage active.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 shrink-0">
-                <button
-                  onClick={() => setIsBadDayModalOpen(true)}
-                  className="button-ghost-on-dark text-xs py-2.5 px-5"
-                >
-                  Open Triage
-                </button>
-                <button
-                  onClick={() => setIsBadDayActive(false)}
-                  className="button-ghost-sm text-xs py-2.5 px-5 border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white"
-                >
-                  Reset Baseline
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* OPERATIONAL COMMAND: Bento Grid */}
-        <section id="interactive-suite" className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* INNER CONTENT WRAPPER */}
+        <div className="max-w-[1400px] w-full mx-auto px-4 sm:px-8 py-6 flex-1 flex flex-col">
           
-          <div className="mb-12 space-y-3">
-            <div className="micro-cap text-[#5a5a5f] font-bold">
-              <span>Operational Command</span>
-            </div>
-            <h2 className="display-lg text-white">
-              Direct Inflow &amp; Stress Testing
-            </h2>
-            <p className="text-sm text-[#f0f0fa] max-w-xl leading-relaxed">
-              Rapid invoice generation and real-time stress testing calibrated for independent practices.
-            </p>
-          </div>
-
-          {/* Bento Grid: 12-column layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 grid-flow-dense">
-            
-            {/* Card 1: Direct Command & Dispatch (col-span-8) */}
-            <div className="lg:col-span-8 group overflow-hidden">
-              <div className="h-full">
-                <QuickInputBar onCreateInvoice={handleQuickCreateInvoice} clients={clients} />
-              </div>
-            </div>
-
-            {/* Card 2: Runway Status & Reserve Telemetry (col-span-4) */}
-            <div className="lg:col-span-4 group overflow-hidden">
-              <div className="h-full card-spacex p-6 flex flex-col justify-between space-y-6">
-                <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-3">
-                  <div className="flex items-center gap-2">
-                    <Activity className="w-4 h-4 text-white" />
-                    <h3 className="button-cap text-white">
-                      Runway Velocity
-                    </h3>
-                  </div>
-                  <span className="micro-cap text-[#5a5a5f]">
-                    Monthly Burn
-                  </span>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="flex items-baseline justify-between">
-                    <span className="text-3xl font-bold text-white tabular-nums tracking-[1.6px]">
-                      ${Math.round(monthlyBurn).toLocaleString()}
-                    </span>
-                    <span className="micro-cap text-[#5a5a5f]">/ Month</span>
-                  </div>
-
-                  {/* Runway Bar Indicator */}
-                  <div className="space-y-2 text-xs">
-                    <div className="flex justify-between text-[#5a5a5f]">
-                      <span>Reserve Ratio</span>
-                      <span className="text-white font-bold">{runwayDays} Days Available</span>
-                    </div>
-                    <div className="w-full h-2 bg-[#000000] rounded-none overflow-hidden border border-[#3a3a3f]">
-                      <div 
-                        className="h-full bg-white transition-all duration-700"
-                        style={{ width: `${Math.min(100, (runwayDays / 90) * 100)}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-3 border-t border-[#3a3a3f] flex items-center justify-between micro-cap text-[#5a5a5f]">
-                  <span>Buffer: ${profile?.safety_buffer || 1500}</span>
-                  <span className="text-white font-bold">Protected</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Card 3: Crisis Switch & Bad Day Simulation (col-span-5) */}
-            <div className="lg:col-span-5 group overflow-hidden">
-              <div className="h-full card-spacex p-6 flex flex-col justify-between space-y-6">
-                <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-3">
-                  <div className="flex items-center gap-2">
-                    <Flame className="w-4 h-4 text-white" />
-                    <h3 className="button-cap text-white">
-                      Crisis Simulation
-                    </h3>
-                  </div>
-                  <span className="micro-cap text-[#f0f0fa]">
-                    Deficit Engine
-                  </span>
-                </div>
-
-                <div className="space-y-2">
-                  <p className="text-xs text-[#f0f0fa] leading-relaxed">
-                    Simulate late payment from your largest anchor client and verify whether emergency reserves hold up against overhead commitments.
-                  </p>
-                  <div className="text-xs text-white pt-2 font-bold">
-                    Status:{' '}
-                    <span className={isBadDayActive ? 'text-white underline' : 'text-[#5a5a5f]'}>
-                      {isBadDayActive ? 'Engaged (Deficit Triage)' : 'Standby (Baseline)'}
-                    </span>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={handleToggleBadDay}
-                  className="w-full button-ghost-on-dark text-xs py-3"
-                >
-                  <Flame className="w-3.5 h-3.5" />
-                  <span>{isBadDayActive ? 'Deactivate Crisis' : 'Engage Bad Day Protocol'}</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Card 4: Prescriptive Action Stream (col-span-7) */}
-            <div className="lg:col-span-7 group overflow-hidden">
-              <div className="h-full card-spacex p-6 flex flex-col justify-between space-y-6">
-                <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-3">
-                  <div className="flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-white" />
-                    <h3 className="button-cap text-white">
-                      Prescriptive Action Stream
-                    </h3>
-                  </div>
-                  <span className="micro-cap text-[#5a5a5f]">
-                    Deficit Arbitrage
-                  </span>
-                </div>
-
-                {forecastData.deficitInfo?.hasDeficit || forecastData.deficitInfo?.isBelowBuffer ? (
-                  <div className="space-y-4">
-                    <div className="space-y-1">
-                      <p className="text-sm text-white font-bold">
-                        {forecastData.deficitInfo.alertMessage || 'Projected cash position falls below the safety buffer.'}
-                      </p>
-                      <p className="text-xs text-[#f0f0fa] tabular-nums tracking-[0.96px]">
-                        Maximum shortfall: ${Number(forecastData.deficitInfo.maxShortfall || 0).toLocaleString()}
-                      </p>
-                    </div>
-
-                    <div className="flex flex-wrap items-center gap-3 pt-1">
-                      <button
-                        type="button"
-                        disabled={!forecastData.deficitInfo.actionInvoice}
-                        onClick={() => handleChaseWhatsApp(forecastData.deficitInfo.actionInvoice)}
-                        className="button-ghost-on-dark text-xs py-2.5 px-4 disabled:opacity-40 disabled:cursor-not-allowed"
-                      >
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Chase via WhatsApp</span>
-                      </button>
-                      <button
-                        type="button"
-                        disabled={!forecastData.deficitInfo.actionInvoice}
-                        onClick={() => handleSplitPayment(forecastData.deficitInfo.actionInvoice)}
-                        className="button-ghost-sm text-xs py-2.5 px-4 disabled:opacity-40 disabled:cursor-not-allowed"
-                      >
-                        <span>Start 50/50 Split</span>
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="space-y-3">
-                    <p className="text-xs text-[#f0f0fa] leading-relaxed">
-                      No liquidity deficits identified in the next {horizonDays} days. Cash reserves and anticipated settlements remain securely above the ${profile?.safety_buffer || 1500} safety buffer.
-                    </p>
-                    <div className="text-xs text-white font-bold flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4 text-white" />
-                      <span>Trajectory Nominal · Buffer Secure</span>
-                    </div>
-                  </div>
-                )}
-
-                <div className="pt-3 border-t border-[#3a3a3f] flex items-center justify-between micro-cap text-[#5a5a5f]">
-                  <span>Deficit Monitor: Active</span>
-                  <span>{horizonDays}-Day Horizon</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        {/* SCRUBBING TEXT REVEAL SECTION */}
-        <ScrubTextReveal
-          tagline="Runway Clarity"
-          statement="Independent studios should never have to guess their survival horizon. StudioFlow converts volatile, delayed receivables into deterministic runway mathematics."
-        />
-
-        {/* CORE CAPABILITIES ARCHITECTURAL BREAKDOWN */}
-        <section className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <HorizontalAccordions />
-        </section>
-
-        {/* ACCOUNTS RECEIVABLE AGING COHORTS RADAR */}
-        <section id="aging" className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#3a3a3f]">
-          <AgingDashboard
-            invoices={invoices}
-            clients={clients}
-            currency={profile?.currency || '$'}
-            onChaseWhatsApp={handleChaseWhatsApp}
-            onMarkPaid={handleMarkAsPaid}
-            onSplitPayment={handleSplitPayment}
-            onViewAsClient={handleViewAsClient}
-          />
-        </section>
-
-        {/* CASH HORIZON ENGINE & WHAT-IF SIMULATOR */}
-        <section id="forecast" className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10 border-t border-[#3a3a3f]">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-[#3a3a3f] pb-5">
-            <div>
-              <div className="micro-cap text-[#5a5a5f] font-bold mb-2">
-                <span>Rolling Trajectory</span>
-              </div>
-              <h2 className="display-lg text-white">
-                Cash Horizon Engine
-              </h2>
-            </div>
-            <p className="text-sm text-[#f0f0fa] max-w-md">
-              Projected reserve curve incorporating recurring outflows and invoice settlement dates.
-            </p>
-          </div>
-
-          <CashForecastChart
-            forecastData={forecastData}
-            horizonDays={horizonDays}
-            onHorizonChange={setHorizonDays}
-            currency={profile?.currency || '$'}
+          {/* HEADER */}
+          <FintechHeader
+            profile={profile}
+            activeTab={activeTab}
+            onOpenNewInvoice={handleOpenNewInvoice}
+            onOpenAuth={() => setIsAuthModalOpen(true)}
+            isBadDayActive={isBadDayActive}
+            onToggleBadDay={handleToggleBadDay}
           />
 
-          <div id="stress-test" className="pt-4">
-            <WhatIfSimulator
-              scenarios={scenarios}
-              onScenarioChange={setScenarios}
-              onResetScenarios={handleResetScenarios}
-              deficitInfo={forecastData.deficitInfo}
-              safetyBuffer={profile?.safety_buffer || 1500}
-              currency={profile?.currency || '$'}
-              onChaseInvoice={handleChaseWhatsApp}
-            />
-          </div>
-        </section>
-
-        {/* RECURRING OUTFLOWS LEDGER */}
-        <section id="outflows" className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 border-t border-[#3a3a3f]">
-          <OutflowsManager
-            bills={bills}
-            onSaveBill={handleSaveBill}
-            onDeleteBill={handleDeleteBill}
-            onToggleFlexible={handleToggleFlexible}
-          />
-        </section>
-
-        {/* TESTIMONIALS CAROUSEL */}
-        <section className="py-24 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-[#3a3a3f]">
-          <FeedbackCarousel />
-        </section>
-
-        {/* OPERATING PHILOSOPHY & PRINCIPLES */}
-        <ArtCraftPrinciples />
-
-        {/* BOTTOM HERO ECHO BAND */}
-        <section className="py-28 md:py-36 border-t border-[#3a3a3f] bg-black relative overflow-hidden card-photo-band">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="https://images.unsplash.com/photo-1541185933-ef5d8ed016c2?auto=format&fit=crop&w=2560&q=85" 
-              alt="Atmospheric Dusk Horizon" 
-              className="w-full h-full object-cover object-center opacity-25 filter contrast-125"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/90" />
-          </div>
-
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 relative z-10">
-            <div className="micro-cap text-white font-bold tracking-[1.6px] border border-[#3a3a3f] px-3.5 py-1.5 rounded-[32px] inline-block bg-black/60">
-              Sovereign Financial Autonomy
-            </div>
-
-            <h2 className="display-xl text-white">
-              Reclaim Cash Sovereignty for Your Studio
-            </h2>
-
-            <p className="body-lg text-[#f0f0fa] max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              No cloud lock-in. Zero subscription overhead. Total local data persistence and surgical receivables control.
-            </p>
-
-            {/* Single Ghost Outlined Pill CTA */}
-            <div className="pt-6 flex items-center justify-center">
+          {/* TOAST NOTIFICATION */}
+          {toastMessage && (
+            <div className="mb-4 bg-[#1C1C1C] text-white px-5 py-3 rounded-2xl flex items-center justify-between text-xs font-medium shadow-xl animate-fade-in">
+              <div className="flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-[#C4FC51]" />
+                <span>{toastMessage}</span>
+              </div>
               <button
-                onClick={handleOpenNewInvoice}
-                className="button-ghost-on-dark text-sm sm:text-base py-4 px-8"
+                onClick={() => setToastMessage(null)}
+                className="text-zinc-400 hover:text-white ml-3"
               >
-                <Plus className="w-4 h-4" />
-                <span>Create Invoice</span>
+                <X className="w-4 h-4" />
               </button>
             </div>
-          </div>
-        </section>
+          )}
 
-      </main>
+          {/* CRISIS BANNER IF ACTIVE */}
+          {(forecastData.deficitInfo?.hasDeficit || forecastData.deficitInfo?.isBelowBuffer || isBadDayActive) && (
+            <div className="mb-6 bg-rose-50 border border-rose-200 rounded-[28px] p-5 text-rose-950 flex flex-col md:flex-row md:items-center justify-between gap-4 shadow-sm">
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-2xl bg-rose-100 text-rose-600 shrink-0">
+                  <Flame className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <h3 className="font-bold text-sm text-rose-900">
+                      {isBadDayActive ? 'CRISIS PROTOCOL ACTIVE: MULTI-CLIENT PAYMENT DELAY' : 'PRESCRIPTIVE CASH DEFICIT ALERT'}
+                    </h3>
+                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-rose-200/80 text-rose-800">
+                      Shortfall: -{currency}{forecastData.deficitInfo?.maxShortfall || 420}
+                    </span>
+                  </div>
+                  <p className="text-xs text-rose-800/80 mt-1 max-w-2xl leading-relaxed">
+                    {forecastData.deficitInfo?.alertMessage || 'Anchor receivables delayed past day 30. Immediate liquidity recovery triggers recommended.'}
+                  </p>
+                </div>
+              </div>
 
-      {/* FOOTER: Clean dark aesthetic */}
-      <footer className="border-t border-[#3a3a3f] bg-black text-[#5a5a5f] text-xs">
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-            
-            {/* Brand Info */}
-            <div className="space-y-4">
-              <span className="font-display font-bold text-lg text-white tracking-[2px] uppercase block">
-                STUDIOFLOW
-              </span>
-              <p className="text-xs text-[#5a5a5f] leading-relaxed">
-                Open-source financial infrastructure and cash runway radar for independent creative practices.
-              </p>
-              <p className="text-[11px] text-[#5a5a5f]">
-                hello@studioflow.io
-              </p>
+              <div className="flex items-center gap-2.5 shrink-0">
+                {forecastData.deficitInfo?.actionInvoice && (
+                  <button
+                    type="button"
+                    onClick={() => handleChaseWhatsApp(forecastData.deficitInfo.actionInvoice)}
+                    className="px-4 py-2 rounded-full bg-[#111827] hover:bg-black text-white text-xs font-semibold shadow-sm transition-all flex items-center gap-1.5"
+                  >
+                    <Send className="w-3.5 h-3.5" />
+                    <span>Chase on WhatsApp</span>
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={() => setIsBadDayModalOpen(true)}
+                  className="px-4 py-2 rounded-full bg-white hover:bg-rose-50 text-rose-900 border border-rose-200 text-xs font-semibold transition-all"
+                >
+                  Triage Deficit
+                </button>
+              </div>
             </div>
+          )}
 
-            {/* Modules */}
-            <div className="space-y-3">
-              <p className="micro-cap text-white font-bold tracking-[1.17px] mb-4">Modules</p>
-              <ul className="space-y-2.5 text-xs">
-                <li><a href="#forecast" className="hover:text-white transition-colors">90-Day Cash Horizon</a></li>
-                <li><a href="#stress-test" className="hover:text-white transition-colors">What-If Stress Simulator</a></li>
-                <li><a href="#aging" className="hover:text-white transition-colors">AR Aging Cohorts</a></li>
-                <li><a href="#outflows" className="hover:text-white transition-colors">Outflows &amp; Commitments</a></li>
-              </ul>
+          {/* TAB 1: MAIN DASHBOARD (1-to-1 MATCHING THE IMAGE REFERENCE) */}
+          {activeTab === 'dashboard' && (
+            <FintechOverview
+              cashBalance={cashBalance}
+              monthlyBurn={monthlyBurn}
+              safetyBuffer={safetyBuffer}
+              currency={currency}
+              onOpenNewInvoice={handleOpenNewInvoice}
+              onOpenSend={() => {
+                setActiveTab('outflows');
+                showToast('Switched to Outflows & Transfers ledger');
+              }}
+              onOpenReceive={() => {
+                setIsInvoiceModalOpen(true);
+              }}
+              onContactClick={(contact) => {
+                showToast(`Selected contact: ${contact.name}. Quick transfer initiated.`);
+              }}
+            />
+          )}
+
+          {/* TAB 2: ACCOUNTS RECEIVABLE RADAR */}
+          {activeTab === 'receivables' && (
+            <div className="fintech-panel-dark p-6 sm:p-8 space-y-6">
+              <AgingDashboard
+                invoices={invoices}
+                clients={clients}
+                currency={currency}
+                onChaseWhatsApp={handleChaseWhatsApp}
+                onMarkPaid={handleMarkAsPaid}
+                onSplitPayment={handleSplitPayment}
+                onViewAsClient={handleViewAsClient}
+              />
             </div>
+          )}
 
-            {/* Systems */}
-            <div className="space-y-3">
-              <p className="micro-cap text-white font-bold tracking-[1.17px] mb-4">Specifications</p>
-              <ul className="space-y-2.5 text-xs text-[#5a5a5f]">
-                <li><span className="text-white">Core:</span> React 18 + Vite</li>
-                <li><span className="text-white">Design:</span> SpaceX Monochrome Tokens</li>
-                <li><span className="text-white">Storage:</span> Local File Store + Supabase</li>
-                <li><span className="text-white">Privacy:</span> Zero Cloud Tracking</li>
-              </ul>
+          {/* TAB 3: CASH FORECAST & WHAT-IF ENGINE */}
+          {activeTab === 'forecast' && (
+            <div className="space-y-6">
+              <div className="fintech-panel-dark p-6 sm:p-8">
+                <CashForecastChart
+                  forecastData={forecastData}
+                  horizonDays={horizonDays}
+                  onHorizonChange={setHorizonDays}
+                  currency={currency}
+                />
+              </div>
+              <div className="fintech-panel-dark p-6 sm:p-8">
+                <WhatIfSimulator
+                  scenarios={scenarios}
+                  onScenarioChange={setScenarios}
+                  onResetScenarios={handleResetScenarios}
+                  deficitInfo={forecastData.deficitInfo}
+                  safetyBuffer={safetyBuffer}
+                  currency={currency}
+                  onChaseInvoice={handleChaseWhatsApp}
+                />
+              </div>
             </div>
+          )}
 
-            {/* Principles */}
-            <div className="space-y-3">
-              <p className="micro-cap text-white font-bold tracking-[1.17px] mb-4">Philosophy</p>
-              <p className="text-xs text-[#5a5a5f] leading-relaxed">
-                No software taxes. Zero third-party lock-in. Deterministic cash runway autonomy for independent creators.
-              </p>
-              <p className="text-[11px] text-[#5a5a5f] pt-1">
-                © 2026 StudioFlow Protocol.
-              </p>
+          {/* TAB 4: COMMITTED OUTFLOWS & QUICK INPUT */}
+          {activeTab === 'outflows' && (
+            <div className="space-y-6">
+              <div className="fintech-panel-dark p-6 sm:p-8">
+                <QuickInputBar onCreateInvoice={handleQuickCreateInvoice} clients={clients} />
+              </div>
+              <div className="fintech-panel-dark p-6 sm:p-8">
+                <OutflowsManager
+                  bills={bills}
+                  onSaveBill={handleSaveBill}
+                  onDeleteBill={handleDeleteBill}
+                  onToggleFlexible={handleToggleFlexible}
+                />
+              </div>
             </div>
+          )}
 
-          </div>
+          {/* TAB 5: MY CARDS & LIQUIDITY */}
+          {activeTab === 'cards' && (
+            <div className="space-y-6">
+              <FintechOverview
+                cashBalance={cashBalance}
+                monthlyBurn={monthlyBurn}
+                safetyBuffer={safetyBuffer}
+                currency={currency}
+                onOpenNewInvoice={handleOpenNewInvoice}
+                onOpenSend={() => setActiveTab('outflows')}
+                onOpenReceive={() => setIsInvoiceModalOpen(true)}
+                onContactClick={(contact) => showToast(`Selected contact: ${contact.name}`)}
+              />
+            </div>
+          )}
+
         </div>
-      </footer>
 
-      {/* Modals */}
+        {/* COMPACT FOOTER */}
+        <footer className="border-t border-gray-200/80 bg-white/70 backdrop-blur-sm text-gray-500 text-xs py-5 px-6 sm:px-8 mt-12">
+          <div className="max-w-[1400px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+            <div className="flex items-center gap-2.5">
+              <div className="w-5 h-5 rounded-md bg-[#111827] flex items-center justify-center text-[#C8F832] font-black text-[10px]">
+                SF
+              </div>
+              <span className="font-bold text-[#111827] tracking-tight">StudioFlow Neo-Fintech</span>
+              <span className="text-gray-300">|</span>
+              <span className="text-[11px] text-gray-500">Autonomous Cash Operations Radar</span>
+            </div>
+            <div className="flex items-center gap-4 text-[11px] text-gray-500">
+              <span className="flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                {apiOnline ? 'API:3001 Live' : 'Offline-first Local Store'}
+              </span>
+              <span>·</span>
+              <span>Private & Client-Side Encrypted</span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+
+      {/* MODALS */}
       <InvoiceModal
         isOpen={isInvoiceModalOpen}
         onClose={() => setIsInvoiceModalOpen(false)}
         clients={clients}
-        currency={profile?.currency || '$'}
+        currency={currency}
         onSaveInvoice={handleSaveInvoice}
       />
 
@@ -898,7 +593,7 @@ export default function App() {
             ? clients.find((c) => c.id === selectedInvoiceForWhatsApp.client_id)
             : null
         }
-        currency={profile?.currency || '$'}
+        currency={currency}
         onLogFollowUp={handleLogFollowUp}
       />
 
@@ -910,6 +605,7 @@ export default function App() {
         onClose={() => setSelectedInvoiceForPortal(null)}
         onPay={handleMarkAsPaid}
       />
+
     </div>
   );
 }

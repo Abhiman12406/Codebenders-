@@ -137,32 +137,34 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
       type="button"
       onClick={() => copyText(text, key)}
       disabled={status !== 'ready' || !text}
-      className="button-ghost-sm text-xs py-2 px-4 flex items-center gap-1.5 disabled:opacity-50"
+      className="px-4 py-2 rounded-full bg-[#26262B] hover:bg-[#32323A] text-white text-xs font-semibold flex items-center gap-1.5 disabled:opacity-50 transition"
     >
-      {isCopied(key) ? <Check className="w-3.5 h-3.5 text-white" /> : <Copy className="w-3.5 h-3.5" />}
+      {isCopied(key) ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
       <span>{copyLabel(key, idleLabel)}</span>
     </button>
   );
 
   const channelTabClass = (active) =>
-    `text-[10px] font-bold uppercase tracking-[0.96px] rounded-[4px] px-4 py-2 border transition ${
-      active ? 'border-white text-white' : 'border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white'
+    `text-xs font-bold rounded-full px-4 py-1.5 transition ${
+      active
+        ? 'bg-[#675DFC] text-white shadow-sm'
+        : 'bg-[#18181D] text-[#A1A1AA] hover:text-white hover:bg-[#25252D]'
     }`;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-[#1C1C1F] border border-[#2E2E35] rounded-[28px] overflow-hidden my-8 text-white shadow-2xl">
 
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-[#2A2A32] bg-[#161619]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white flex items-center justify-center rounded-[4px]">
+            <div className="w-9 h-9 bg-[#675DFC]/10 border border-[#675DFC]/30 text-[#8B82FF] flex items-center justify-center rounded-[14px]">
               <Sparkles className="w-4 h-4" />
             </div>
             <div>
-              <h3 className="button-cap text-white text-base">AI RECOVERY COPILOT</h3>
-              <p className="micro-cap text-[#5a5a5f] mt-0.5">
-                Invoice {invoice.invoice_number} · {invoice.client_name}
+              <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">AI Recovery Copilot</h3>
+              <p className="text-xs text-[#A1A1AA] mt-0.5">
+                Invoice {invoice.invoice_number} · <span className="text-white font-medium">{invoice.client_name}</span>
               </p>
             </div>
           </div>
@@ -170,7 +172,7 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
             type="button"
             onClick={onClose}
             aria-label="Close recovery copilot"
-            className="p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
+            className="p-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 transition"
           >
             <X className="w-4 h-4" />
           </button>
@@ -179,11 +181,14 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
         {/* Modal Body */}
         <div className="p-6 sm:p-8 space-y-5 text-xs">
           {status === 'loading' && (
-            <p className="micro-cap text-[#5a5a5f] font-bold">GENERATING RECOVERY PLAN…</p>
+            <div className="py-8 flex flex-col items-center justify-center gap-2">
+              <Sparkles className="w-6 h-6 text-[#8B82FF] animate-spin" />
+              <p className="text-xs text-[#A1A1AA] font-medium">Generating intelligent recovery plan…</p>
+            </div>
           )}
 
           {status === 'error' && (
-            <div className="p-4 bg-black border border-[#ef4444] rounded-[4px] text-[#ef4444]">
+            <div className="p-4 bg-rose-500/10 border border-rose-500/30 rounded-[16px] text-rose-400">
               {error}
             </div>
           )}
@@ -191,32 +196,35 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
           {status === 'ready' && data && (
             <>
               {local && (
-                <p className="micro-cap text-[#5a5a5f] font-bold">Offline: drafts generated locally</p>
+                <p className="text-[11px] text-[#A1A1AA] font-medium flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                  Offline-first: drafts generated with local heuristics
+                </p>
               )}
 
               {/* Risk Tier & Strategy */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-black border border-[#3a3a3f] rounded-[4px]">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-[#141417] border border-[#27272F] rounded-[18px]">
                 <div>
-                  <span className="micro-cap text-[#5a5a5f] font-bold block">DELINQUENCY RISK</span>
+                  <span className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">DELINQUENCY RISK</span>
                   <span
-                    className={`inline-block mt-1 text-[10px] font-bold uppercase tracking-[0.96px] rounded-[32px] px-2.5 py-0.5 border ${RISK_TIER_CLASSES[data.risk.tier] || 'border-[#3a3a3f] text-[#f0f0fa]'}`}
+                    className={`inline-block mt-1 text-[10px] font-bold uppercase tracking-wider rounded-full px-2.5 py-0.5 border ${RISK_TIER_CLASSES[data.risk.tier] || 'border-[#3a3a3f] text-[#f0f0fa]'}`}
                   >
                     {data.risk.tier}
                   </span>
                 </div>
                 <div>
-                  <span className="micro-cap text-[#5a5a5f] font-bold block">SCORE</span>
-                  <span className="font-bold text-white text-base tabular-nums mt-0.5 block">{data.risk.score}/100</span>
+                  <span className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">RISK SCORE</span>
+                  <span className="font-extrabold text-white text-base tabular-nums mt-0.5 block">{data.risk.score}/100</span>
                 </div>
                 <div className="sm:col-span-3">
-                  <span className="micro-cap text-[#5a5a5f] font-bold block">STRATEGY</span>
-                  <p className="text-[#f0f0fa] mt-1">{data.strategy}</p>
+                  <span className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">RECOVERY STRATEGY</span>
+                  <p className="text-[#D4D4D8] mt-1 text-xs leading-relaxed">{data.strategy}</p>
                 </div>
               </div>
 
               {/* Escalation Strategy Cards */}
               <div className="space-y-1.5">
-                <span className="micro-cap text-[#5a5a5f] font-bold block">ESCALATION LEVEL</span>
+                <span className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">ESCALATION LEVEL</span>
                 <div className="flex flex-wrap gap-2">
                   {escalations.map((item) => {
                     const selected = activeTier?.id === item.id;
@@ -225,8 +233,10 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
                         key={item.id}
                         type="button"
                         onClick={() => setSelectedTier(item.id)}
-                        className={`text-[10px] font-bold uppercase tracking-[0.96px] rounded-[4px] px-3 py-2 border transition ${
-                          selected ? 'border-white text-white' : 'border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white'
+                        className={`text-xs font-semibold rounded-full px-3.5 py-1.5 transition ${
+                          selected
+                            ? 'bg-[#675DFC] text-white shadow-sm'
+                            : 'bg-[#18181D] border border-[#2A2A33] text-[#A1A1AA] hover:text-white hover:border-[#3E3E4A]'
                         }`}
                       >
                         {item.label}
@@ -248,12 +258,12 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
 
               {channel === 'whatsapp' && (
                 <div className="space-y-1.5">
-                  <label className="micro-cap text-[#5a5a5f] font-bold block">DRAFT MESSAGE</label>
+                  <label className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">Draft Message</label>
                   <textarea
                     rows={8}
                     readOnly
                     value={whatsappText}
-                    className="w-full text-input text-xs leading-relaxed resize-none font-mono"
+                    className="w-full bg-[#141417] border border-[#2E2E38] rounded-[16px] p-3.5 text-white text-xs leading-relaxed resize-none font-mono focus:border-[#675DFC] outline-none"
                   />
                 </div>
               )}
@@ -262,30 +272,30 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
                 <div className="space-y-3">
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
-                      <label className="micro-cap text-[#5a5a5f] font-bold block">SUBJECT</label>
-                      {renderCopyButton('subject', 'Copy subject', emailSubject)}
+                      <label className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">Subject</label>
+                      {renderCopyButton('subject', 'Copy Subject', emailSubject)}
                     </div>
                     <input
                       type="text"
                       readOnly
                       value={emailSubject}
-                      className="w-full text-input text-xs"
+                      className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] px-3.5 py-2.5 text-white text-xs font-medium focus:border-[#675DFC] outline-none"
                     />
                   </div>
                   <div className="space-y-1.5">
                     <div className="flex items-center justify-between gap-2">
-                      <label className="micro-cap text-[#5a5a5f] font-bold block">BODY</label>
-                      {renderCopyButton('body', 'Copy body', emailBody)}
+                      <label className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">Body</label>
+                      {renderCopyButton('body', 'Copy Body', emailBody)}
                     </div>
                     <textarea
                       rows={8}
                       readOnly
                       value={emailBody}
-                      className="w-full text-input text-xs leading-relaxed resize-none font-mono"
+                      className="w-full bg-[#141417] border border-[#2E2E38] rounded-[16px] p-3.5 text-white text-xs leading-relaxed resize-none font-mono focus:border-[#675DFC] outline-none"
                     />
                   </div>
                   <div className="flex justify-end">
-                    {renderCopyButton('link', 'Copy payment link', portalLink)}
+                    {renderCopyButton('link', 'Copy Payment Link', portalLink)}
                   </div>
                 </div>
               )}
@@ -293,30 +303,32 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
           )}
 
           {/* Settlement Options */}
-          <div className="flex flex-wrap gap-5">
-            <label className="flex items-center gap-2 cursor-pointer">
+          <div className="flex flex-wrap gap-5 pt-1">
+            <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={settlement.discount}
                 disabled={status === 'loading'}
                 onChange={() => toggleSettlement('discount')}
+                className="w-4 h-4 rounded text-[#675DFC] focus:ring-[#675DFC] bg-[#141417] border-[#2E2E38]"
               />
-              <span className="micro-cap text-[#f0f0fa] font-bold">2% early-settlement discount</span>
+              <span className="text-xs text-[#D4D4D8] font-medium">2% early-settlement discount</span>
             </label>
-            <label className="flex items-center gap-2 cursor-pointer">
+            <label className="flex items-center gap-2 cursor-pointer select-none">
               <input
                 type="checkbox"
                 checked={settlement.installments}
                 disabled={status === 'loading'}
                 onChange={() => toggleSettlement('installments')}
+                className="w-4 h-4 rounded text-[#675DFC] focus:ring-[#675DFC] bg-[#141417] border-[#2E2E38]"
               />
-              <span className="micro-cap text-[#f0f0fa] font-bold">50/50 installment split</span>
+              <span className="text-xs text-[#D4D4D8] font-medium">50/50 installment split</span>
             </label>
           </div>
 
           {/* Custom Notes & Regenerate */}
           <div className="space-y-1.5">
-            <label htmlFor="recovery-custom-notes" className="micro-cap text-[#5a5a5f] font-bold block">CUSTOM NOTES</label>
+            <label htmlFor="recovery-custom-notes" className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider block">Custom Notes</label>
             <textarea
               id="recovery-custom-notes"
               rows={2}
@@ -324,14 +336,14 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
               value={notesInput}
               onChange={(e) => setNotesInput(e.target.value)}
               placeholder="Add context for the next draft (optional)"
-              className="w-full text-input text-xs leading-relaxed resize-none"
+              className="w-full bg-[#141417] border border-[#2E2E38] rounded-[14px] p-3 text-white text-xs leading-relaxed resize-none focus:border-[#675DFC] focus:ring-1 focus:ring-[#675DFC] outline-none transition placeholder-[#71717A]"
             />
             <div className="flex justify-end">
               <button
                 type="button"
                 onClick={handleRegenerate}
                 disabled={status === 'loading'}
-                className="button-ghost-sm text-xs py-2 px-4 disabled:opacity-50"
+                className="px-4 py-1.5 rounded-full bg-[#26262B] hover:bg-[#32323A] text-white text-xs font-semibold disabled:opacity-50 transition"
               >
                 Regenerate
               </button>
@@ -339,14 +351,14 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
           </div>
 
           {/* Actions */}
-          <div className="flex flex-wrap items-center justify-end gap-2.5 pt-3 border-t border-[#3a3a3f]">
-            {channel === 'whatsapp' && renderCopyButton('whatsapp', 'Copy', whatsappText)}
+          <div className="flex flex-wrap items-center justify-end gap-2.5 pt-3 border-t border-[#2A2A32]">
+            {channel === 'whatsapp' && renderCopyButton('whatsapp', 'Copy Message', whatsappText)}
             {channel === 'whatsapp' && (
               <button
                 type="button"
                 onClick={handleSendViaWhatsApp}
                 disabled={status !== 'ready'}
-                className="button-ghost-on-dark text-xs py-2 px-5 flex items-center gap-1.5 disabled:opacity-50"
+                className="px-5 py-2 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-2 shadow-sm disabled:opacity-50 transition"
               >
                 <Send className="w-3.5 h-3.5" />
                 <span>Send via WhatsApp</span>
@@ -355,7 +367,7 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
             <button
               type="button"
               onClick={onClose}
-              className="button-ghost-sm text-xs py-2 px-4"
+              className="px-4 py-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 text-xs font-medium transition"
             >
               Close
             </button>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { parseInvoiceText } from '../lib/nlpParser.js';
-import { Terminal, ArrowRight, Check, FileText, Sparkles } from 'lucide-react';
+import { Send, Check, Sparkles, FileText } from 'lucide-react';
 
 const PRESETS = [
   { label: 'Brand Identity ($2,500)', project: 'Brand Identity', amount: 2500 },
@@ -40,19 +40,24 @@ export default function QuickInputBar({ onCreateInvoice }) {
   };
 
   return (
-    <div className="card-spacex p-6 space-y-6 h-full flex flex-col justify-between bg-[#0a0a0a]">
+    <div className="card-cockpit p-5 sm:p-6 space-y-5 h-full flex flex-col justify-between rounded-[28px] border-[#2A2A30]">
       <div className="space-y-4">
-        <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-3">
+        <div className="flex items-center justify-between border-b border-[#2A2A30] pb-3">
           <div className="flex items-center gap-2.5">
-            <div className="w-6 h-6 rounded-[4px] bg-black border border-[#3a3a3f] flex items-center justify-center text-white">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="w-8 h-8 rounded-xl bg-[#675DFC]/15 border border-[#675DFC]/30 flex items-center justify-center text-[#A298DF] shadow-inner">
+              <Sparkles className="w-4 h-4" />
             </div>
-            <h2 className="button-cap text-white text-sm">
-              Quick Inflow Engine
-            </h2>
+            <div>
+              <h2 className="font-extrabold text-white text-base tracking-tight">
+                Quick Inflow NLP Bar
+              </h2>
+              <span className="text-[11px] text-[#A1A1AA] hidden sm:inline">
+                Natural-language sentence-to-invoice dispatcher
+              </span>
+            </div>
           </div>
-          <span className="text-xs text-[#5a5a5f] hidden sm:inline">
-            Natural language invoice parser
+          <span className="text-[10px] font-mono uppercase text-[#A1A1AA] px-2.5 py-0.5 rounded-full bg-[#141417] border border-[#2D2D35]">
+            NLP Parser
           </span>
         </div>
 
@@ -62,22 +67,22 @@ export default function QuickInputBar({ onCreateInvoice }) {
               type="text"
               value={text}
               onChange={(e) => setText(e.target.value)}
-              placeholder="e.g. Billed Nike brand design $3,200 due next Friday"
-              className="w-full text-input text-xs placeholder:text-[#5a5a5f]"
+              placeholder="e.g. Bill Acme Corp $3,500 for Brand Identity due next Friday"
+              className="w-full text-input text-xs sm:text-sm placeholder:text-zinc-500"
             />
           </div>
           <button
             type="submit"
-            className="button-ghost-on-dark shrink-0 text-xs py-2 px-4"
+            className="btn-primary-purple shrink-0 text-xs py-2.5 px-5 flex items-center justify-center gap-2 shadow-md"
           >
             <span>Parse &amp; Draft</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <Send className="w-3.5 h-3.5" />
           </button>
         </form>
 
         {/* Quick Preset Chips */}
         <div className="flex flex-wrap items-center gap-2 pt-1">
-          <span className="text-xs text-[#5a5a5f] mr-1">
+          <span className="text-xs text-[#A1A1AA] mr-1 font-semibold">
             Presets:
           </span>
           {PRESETS.map((preset) => (
@@ -85,7 +90,7 @@ export default function QuickInputBar({ onCreateInvoice }) {
               key={preset.label}
               type="button"
               onClick={() => handlePreset(preset)}
-              className="text-xs font-normal px-3 py-1 rounded-[32px] border border-[#3a3a3f] bg-black text-[#f0f0fa] hover:border-white hover:text-white transition-all"
+              className="text-xs font-semibold px-3 py-1.5 rounded-full border border-[#2D2D35] bg-[#141417] text-zinc-300 hover:border-[#675DFC] hover:text-white transition-all shadow-sm"
             >
               + {preset.label}
             </button>
@@ -93,70 +98,59 @@ export default function QuickInputBar({ onCreateInvoice }) {
         </div>
 
         {error && (
-          <div className="text-xs text-white border border-[#ef4444] rounded-[4px] px-3.5 py-2 bg-black">
+          <div className="text-xs text-rose-300 border border-rose-500/30 rounded-xl px-3.5 py-2.5 bg-rose-950/25">
             {error}
           </div>
         )}
 
-        {/* Draft Confirmation Panel */}
-        {draft && (
-          <div className="bg-black border border-[#3a3a3f] rounded-[4px] p-4 space-y-3 animate-in fade-in duration-200">
-            <div className="flex items-center justify-between border-b border-[#3a3a3f] pb-2">
-              <span className="text-xs font-bold text-white flex items-center gap-2">
-                <FileText className="w-3.5 h-3.5 text-white" />
-                Draft Invoice Preview
+        {draft && draft.amount != null && (
+          <div className="border border-[#675DFC]/30 rounded-2xl p-4 bg-[#141417] space-y-3 shadow-lg shadow-[#675DFC]/5">
+            <div className="flex items-center justify-between text-xs border-b border-[#2A2A30] pb-2">
+              <span className="font-bold text-white flex items-center gap-1.5">
+                <FileText className="w-3.5 h-3.5 text-[#675DFC]" /> Parsed Draft Preview
               </span>
-              <span className="text-[11px] text-[#5a5a5f]">
-                Ready for confirmation
+              <span className="font-bold text-white text-base tabular-nums">
+                ${Number(draft.amount).toLocaleString()}
               </span>
             </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-zinc-300">
               <div>
-                <span className="text-[#5a5a5f] text-[10px] uppercase font-bold block">Client</span>
-                <span className="text-white font-medium">{draft.client ?? '—'}</span>
+                <span className="text-[#A1A1AA] block text-[10px] uppercase font-bold">Client</span>
+                <span className="text-white font-medium">{draft.client || draft.client_name || 'Client'}</span>
               </div>
               <div>
-                <span className="text-[#5a5a5f] text-[10px] uppercase font-bold block">Project</span>
-                <span className="text-white font-medium">{draft.project ?? '—'}</span>
+                <span className="text-[#A1A1AA] block text-[10px] uppercase font-bold">Project</span>
+                <span className="text-white font-medium">{draft.project || draft.project_title || 'Design Work'}</span>
               </div>
               <div>
-                <span className="text-[#5a5a5f] text-[10px] uppercase font-bold block">Amount</span>
-                <span className="text-white font-bold tabular-nums">
-                  {draft.amount != null ? `$${Number(draft.amount).toLocaleString()}` : '—'}
-                </span>
-              </div>
-              <div>
-                <span className="text-[#5a5a5f] text-[10px] uppercase font-bold block">Due Date</span>
-                <span className="text-white font-medium">{draft.dueDate ?? 'Immediate'}</span>
+                <span className="text-[#A1A1AA] block text-[10px] uppercase font-bold">Due Date</span>
+                <span className="text-white font-medium">{draft.dueDate || draft.due_date || 'Standard Net 15'}</span>
               </div>
             </div>
-
-            <div className="pt-2 flex items-center justify-end gap-2 border-t border-[#3a3a3f]">
+            <div className="pt-2.5 flex items-center justify-end gap-2 border-t border-[#2A2A30]">
               <button
                 type="button"
                 onClick={() => setDraft(null)}
-                className="button-ghost-sm text-xs py-1.5 px-3"
+                className="button-ghost text-xs py-1.5 px-3.5 hover:border-white transition-all"
               >
                 Discard
               </button>
               <button
                 type="button"
                 onClick={handleConfirm}
-                disabled={draft.amount == null}
-                className="button-ghost-on-dark text-xs py-1.5 px-4"
+                className="btn-primary-lime text-xs py-1.5 px-4 flex items-center gap-1.5 shadow-md"
               >
-                <Check className="w-3.5 h-3.5" />
-                <span>Confirm &amp; Create Invoice</span>
+                <Check className="w-3.5 h-3.5 stroke-[2.5]" />
+                <span>Confirm &amp; Record</span>
               </button>
             </div>
           </div>
         )}
       </div>
 
-      <div className="pt-3 border-t border-[#3a3a3f] flex items-center justify-between text-xs text-[#5a5a5f]">
-        <span>Instant Draft Generation</span>
-        <span>Enter plain English or click a preset</span>
+      <div className="pt-3 border-t border-[#2A2A30] flex items-center justify-between text-[11px] text-zinc-500 font-medium">
+        <span>Format: "Bill [Client] [Amount] for [Work] due [Date]"</span>
+        <span className="text-[#A1A1AA] font-mono">Offline-First</span>
       </div>
     </div>
   );

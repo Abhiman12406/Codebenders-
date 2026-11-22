@@ -61,31 +61,31 @@ export default function ClientPortalModal({
   const isOverdue = !isPaid && (invoice.status === 'overdue' || getDaysDiff(invoice.due_date) > 0);
 
   const statusBadge = isPaid
-    ? { label: 'PAID & SETTLED', classes: 'border-white text-white' }
+    ? { label: 'PAID & SETTLED', classes: 'border-emerald-500/30 bg-emerald-500/10 text-emerald-400' }
     : isOverdue
-      ? { label: 'PAYMENT OVERDUE', classes: 'border-[#ef4444] text-[#ef4444]' }
-      : { label: 'SENT / DUE', classes: 'border-[#3a3a3f] text-[#f0f0fa]' };
+      ? { label: 'PAYMENT OVERDUE', classes: 'border-rose-500/30 bg-rose-500/10 text-rose-400' }
+      : { label: 'SENT / DUE', classes: 'border-[#3E3E4C] bg-[#222228] text-white' };
 
   return (
-    <div className="client-portal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="client-portal-print relative w-full max-w-2xl bg-[#0a0a0a] border border-[#3a3a3f] rounded-[8px] overflow-hidden my-8 text-white">
+    <div className="client-portal-overlay fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-md overflow-y-auto">
+      <div className="client-portal-print relative w-full max-w-2xl bg-[#1C1C1F] border border-[#2E2E35] rounded-[28px] overflow-hidden my-8 text-white shadow-2xl">
 
         {/* Modal Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-between px-6 sm:px-8 py-5 border-b border-[#2A2A32] bg-[#161619]">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#0a0a0a] border border-[#3a3a3f] text-white font-bold text-xs flex items-center justify-center rounded-[4px]">
+            <div className="w-9 h-9 bg-[#C4FC51] text-[#161619] font-black text-xs flex items-center justify-center rounded-[14px]">
               SF
             </div>
             <div>
-              <h3 className="button-cap text-white text-base">CLIENT SETTLEMENT PORTAL</h3>
-              <p className="micro-cap text-[#5a5a5f] mt-0.5">Direct invoice clearing powered by StudioFlow</p>
+              <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">Client Settlement Portal</h3>
+              <p className="text-xs text-[#A1A1AA] mt-0.5">Direct invoice clearing powered by StudioFlow</p>
             </div>
           </div>
           <button
             type="button"
             onClick={onClose}
             aria-label="Close client portal"
-            className="no-print p-1.5 rounded-[4px] border border-[#3a3a3f] text-[#5a5a5f] hover:text-white hover:border-white transition"
+            className="no-print p-2 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 transition"
           >
             <X className="w-4 h-4" />
           </button>
@@ -95,10 +95,10 @@ export default function ClientPortalModal({
 
           {/* Settlement Success Banner */}
           {isSettled && (
-            <div className="no-print relative overflow-hidden flex items-center gap-3 p-4 bg-black border border-white rounded-[4px] text-white">
-              <CheckCircle2 className="w-5 h-5 shrink-0 text-white" />
-              <span className="button-cap text-xs">
-                Payment successfully settled — {currency}{formatMoney(invoice.amount)} credited to reserves.
+            <div className="no-print relative overflow-hidden flex items-center gap-3 p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-[18px] text-emerald-300">
+              <CheckCircle2 className="w-5 h-5 shrink-0 text-emerald-400" />
+              <span className="text-xs font-semibold">
+                Payment successfully settled — {currency}{formatMoney(invoice.amount)} credited to studio reserves.
               </span>
             </div>
           )}
@@ -106,71 +106,71 @@ export default function ClientPortalModal({
           {/* Studio Branding & Invoice Identity */}
           <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
             <div>
-              <p className="font-display font-bold text-xl text-white tracking-[1.6px] uppercase">{businessName}</p>
+              <p className="font-extrabold text-xl sm:text-2xl text-white tracking-tight uppercase">{businessName}</p>
               {profile?.owner_name && (
-                <p className="micro-cap text-[#5a5a5f] mt-1">{profile.owner_name}</p>
+                <p className="text-xs text-[#A1A1AA] mt-1 font-medium">{profile.owner_name}</p>
               )}
             </div>
             <div className="text-left sm:text-right space-y-1">
-              <p className="micro-cap text-[#5a5a5f] font-bold">INVOICE</p>
-              <p className="font-bold text-white text-base tabular-nums tracking-[1.17px]">{invoice.invoice_number}</p>
-              <span className={`inline-block micro-cap text-[10px] font-bold px-2.5 py-0.5 rounded-[32px] border ${statusBadge.classes}`}>
+              <p className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider">INVOICE</p>
+              <p className="font-extrabold text-white text-base sm:text-lg tabular-nums tracking-wide">{invoice.invoice_number}</p>
+              <span className={`inline-block text-[10px] font-bold px-3 py-0.5 rounded-full border ${statusBadge.classes}`}>
                 {statusBadge.label}
               </span>
             </div>
           </div>
 
           {/* Bill To & Dates */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 bg-black border border-[#3a3a3f] rounded-[4px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 bg-[#141417] border border-[#27272F] rounded-[18px]">
             <div>
-              <p className="micro-cap text-[#5a5a5f] font-bold mb-1">BILL TO</p>
-              <p className="font-bold text-white text-xs tracking-[0.96px]">{clientName}</p>
+              <p className="text-[10px] font-bold text-[#A1A1AA] uppercase tracking-wider mb-1">BILL TO</p>
+              <p className="font-bold text-white text-sm tracking-wide">{clientName}</p>
               {client?.company && client.company !== clientName && (
-                <p className="micro-cap text-[#5a5a5f] mt-0.5">{client.company}</p>
+                <p className="text-xs text-[#A1A1AA] mt-0.5">{client.company}</p>
               )}
               {invoice.project_title && (
-                <p className="text-xs text-[#f0f0fa] mt-2 tracking-[0.32px]">{invoice.project_title}</p>
+                <p className="text-xs text-[#D4D4D8] mt-2 font-medium">{invoice.project_title}</p>
               )}
             </div>
             <div className="space-y-2">
               <div className="flex items-center justify-between gap-3 text-xs">
-                <span className="micro-cap text-[#5a5a5f]">ISSUED</span>
-                <span className="text-white tabular-nums tracking-[0.96px]">{formatDate(invoice.issue_date)}</span>
+                <span className="text-[11px] text-[#A1A1AA]">ISSUED</span>
+                <span className="text-white tabular-nums font-mono font-medium">{formatDate(invoice.issue_date)}</span>
               </div>
               <div className="flex items-center justify-between gap-3 text-xs">
-                <span className="micro-cap text-[#5a5a5f] flex items-center gap-1">
+                <span className="text-[11px] text-[#A1A1AA] flex items-center gap-1">
                   <Calendar className="w-3.5 h-3.5" />
                   DUE DATE
                 </span>
-                <span className="font-bold text-white tabular-nums tracking-[0.96px]">{formatDate(invoice.due_date)}</span>
+                <span className="font-bold text-white tabular-nums font-mono">{formatDate(invoice.due_date)}</span>
               </div>
             </div>
           </div>
 
           {/* Line Items */}
-          <div className="border border-[#3a3a3f] rounded-[4px] overflow-hidden bg-black">
+          <div className="border border-[#27272F] rounded-[18px] overflow-hidden bg-[#141417]">
             <table className="w-full text-left">
-              <thead className="bg-[#0a0a0a] border-b border-[#3a3a3f]">
-                <tr className="micro-cap text-[#5a5a5f] font-bold">
-                  <th className="px-4 py-3">DESCRIPTION</th>
-                  <th className="px-4 py-3 text-center">QTY</th>
-                  <th className="px-4 py-3 text-right">RATE</th>
-                  <th className="px-4 py-3 text-right">TOTAL</th>
+              <thead className="bg-[#18181D] border-b border-[#27272F]">
+                <tr className="text-[10px] text-[#A1A1AA] font-bold uppercase tracking-wider">
+                  <th className="px-4 py-3">Description</th>
+                  <th className="px-4 py-3 text-center">Qty</th>
+                  <th className="px-4 py-3 text-right">Rate</th>
+                  <th className="px-4 py-3 text-right">Total</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#3a3a3f]">
+              <tbody className="divide-y divide-[#222228]">
                 {lineItems.length > 0 ? (
                   lineItems.map((item, index) => (
-                    <tr key={index} className="text-white text-xs">
-                      <td className="px-4 py-3.5 tracking-[0.32px]">{item.desc}</td>
-                      <td className="px-4 py-3.5 text-center tabular-nums">{item.qty}</td>
-                      <td className="px-4 py-3.5 text-right tabular-nums">{currency}{formatMoney(item.rate)}</td>
-                      <td className="px-4 py-3.5 text-right tabular-nums font-bold">{currency}{formatMoney(item.lineTotal)}</td>
+                    <tr key={index} className="text-white text-xs hover:bg-[#1C1C22]/60 transition-colors">
+                      <td className="px-4 py-3.5 text-white font-medium">{item.desc}</td>
+                      <td className="px-4 py-3.5 text-center tabular-nums text-[#A1A1AA] font-mono">{item.qty}</td>
+                      <td className="px-4 py-3.5 text-right tabular-nums text-[#A1A1AA] font-mono">{currency}{formatMoney(item.rate)}</td>
+                      <td className="px-4 py-3.5 text-right tabular-nums font-bold text-white font-mono">{currency}{formatMoney(item.lineTotal)}</td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={4} className="px-4 py-6 text-center micro-cap text-[#5a5a5f]">
+                    <td colSpan={4} className="px-4 py-6 text-center text-xs text-[#71717A]">
                       No line items specified.
                     </td>
                   </tr>
@@ -180,11 +180,11 @@ export default function ClientPortalModal({
           </div>
 
           {/* Total */}
-          <div className="flex items-center justify-between p-4 bg-black border border-[#3a3a3f] rounded-[4px]">
-            <span className="micro-cap text-[#5a5a5f] font-bold">
-              TOTAL AMOUNT DUE
+          <div className="flex items-center justify-between p-5 bg-[#16161A] border border-[#2E2E38] rounded-[18px]">
+            <span className="text-xs font-bold text-[#A1A1AA] uppercase tracking-wider">
+              Total Amount Due
             </span>
-            <span className="text-2xl font-bold text-white tabular-nums tracking-[1.2px]">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[#C4FC51] tabular-nums tracking-tight font-display">
               {currency}{formatMoney(total)}
             </span>
           </div>
@@ -192,32 +192,32 @@ export default function ClientPortalModal({
         </div>
 
         {/* Modal Footer */}
-        <div className="flex items-center justify-end gap-3 px-6 sm:px-8 py-5 border-t border-[#3a3a3f] bg-black">
+        <div className="flex items-center justify-end gap-3 px-6 sm:px-8 py-5 border-t border-[#2A2A32] bg-[#161619]">
           <button
             type="button"
             onClick={() => window.print()}
-            className="no-print button-ghost-sm text-xs py-2.5 px-4"
+            className="no-print px-4 py-2.5 rounded-full bg-[#26262B] hover:bg-[#32323A] text-white text-xs font-semibold flex items-center gap-2 transition"
           >
             <Printer className="w-3.5 h-3.5" />
-            <span>PRINT / PDF</span>
+            <span>Print / PDF</span>
           </button>
           {!isPaid && (
             <button
               type="button"
               onClick={handlePay}
               disabled={!onPay || isPaying}
-              className="no-print button-ghost-on-dark text-xs py-2.5 px-6 disabled:opacity-50"
+              className="no-print px-6 py-2.5 rounded-full bg-[#675DFC] hover:bg-[#786FFD] text-white text-xs font-bold tracking-wide shadow-md shadow-[#675DFC]/20 flex items-center gap-2 transition disabled:opacity-50"
             >
               <CreditCard className="w-3.5 h-3.5" />
-              <span>{isPaying ? 'PROCESSING SETTLEMENT…' : 'PAY NOW (ACH/WIRE/CARD)'}</span>
+              <span>{isPaying ? 'Processing Settlement…' : 'Pay Now (ACH/Wire/Card)'}</span>
             </button>
           )}
           <button
             type="button"
             onClick={onClose}
-            className="no-print button-ghost-sm text-xs py-2.5 px-4"
+            className="no-print px-4 py-2.5 rounded-full text-[#A1A1AA] hover:text-white hover:bg-white/5 text-xs font-medium transition"
           >
-            CLOSE
+            Close
           </button>
         </div>
 

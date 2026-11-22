@@ -1,4 +1,4 @@
-// Delinquency risk scoring for overdue invoices.
+// Delinquency risk scoring and recovery helpers for overdue invoices.
 //
 // score (0-100) = daysPastDue points + historical lag points + exposure points
 //   - days past due: up to 40 pts, linear, capped at 90 days
@@ -10,6 +10,35 @@
 const MAX_DAYS_PAST_DUE = 90;
 const MAX_AVG_DELAY_DAYS = 30;
 const MAX_EXPOSURE = 10000;
+
+export const RISK_TIER_CLASSES = {
+  Low: 'border-[#22c55e] text-[#22c55e]',
+  Moderate: 'border-[#eab308] text-[#eab308]',
+  High: 'border-[#f97316] text-[#f97316]',
+  Critical: 'border-[#ef4444] text-[#ef4444]',
+};
+
+// Recommended recovery strategy descriptions mapped to risk tier
+export const RECOVERY_STRATEGIES = {
+  Critical: 'Escalate: send a final notice with a firm payment deadline and pause new work until settled.',
+  High: 'Call the client directly, then follow up in writing with a firm payment date.',
+  Moderate: 'Send a friendly payment reminder with the payment link.',
+  Low: 'Send a courteous nudge; no escalation needed.',
+};
+
+const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
+const DAY_MS = 24 * 60 * 60 * 1000;
+
+export const todayUtcMs = (today = new Date()) =>
+  Date.parse(`${today.toISOString().split('T')[0]}T00:00:00Z`);
+
+export const daysPastDueOf = (inv, today) =>
+  DATE_PATTERN.test(inv?.due_date ?? '')
+    ? Math.round((todayUtcMs(today) - Date.parse(`${inv.due_date}T00:00:00Z`)) / DAY_MS)
+    : NaN;
+
+export const isOverdueUnpaid = (inv, today) =>
+  inv?.status !== 'paid' && daysPastDueOf(inv, today) > 0 && Number(inv?.amount) > 0;
 
 const nonNegative = (value) => {
   const n = Number(value);
