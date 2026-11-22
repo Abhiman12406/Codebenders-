@@ -40,7 +40,8 @@ router.post('/parse', (req, res) => {
 
 // Body: { invoiceId } or { invoiceNumber } (invoiceId wins if both are given).
 router.post('/recovery-copilot', (req, res) => {
-  const { invoiceId, invoiceNumber, customNotes } = req.body ?? {};
+  const { invoiceId, invoiceNumber, customNotes, discount, installments } = req.body ?? {};
+  const settlement = { discount: discount === true, installments: installments === true };
   const idValue = typeof invoiceId === 'string' ? invoiceId.trim() : '';
   const numberValue = typeof invoiceNumber === 'string' ? invoiceNumber.trim() : '';
   if (!idValue && !numberValue) return sendError(res, 400, 'invoiceId or invoiceNumber is required');
@@ -94,12 +95,14 @@ router.post('/recovery-copilot', (req, res) => {
   const escalations = buildEscalationDrafts({
     invoices: overdueInvoices,
     totalPrincipal,
-    daysPastDue,
+    // Statute gate uses the client's oldest overdue invoice, not just the selected one.
+    daysPastDue: Math.max(...overdueInvoices.map(daysPastDueOf)),
     money,
     clientName,
     portalLink,
     businessName: profile.business_name || '',
     customNotes: trimmedNotes,
+    settlement,
   });
 
   res.json({
@@ -114,8 +117,37 @@ router.post('/recovery-copilot', (req, res) => {
     },
     escalations,
     customNotes: trimmedNotes,
+    settlement,
     client: { name: clientName, phone: client?.phone || invoice.client_phone || '' },
   });
+});
+
+// Body: { invoiceId, strategyId, channel } where channel is 'whatsapp' or 'copy'.
+router.post('/outreach-log', (req, res) => {
+  const { invoiceId, strategyId, channel } = req.body ?? {};
+  if (typeof invoiceId !== 'string' || !invoiceId.trim()) return sendError(res, 400, 'invoiceId is required');
+  if (typeof strategyId !== 'string' || !strategyId.trim()) return sendError(res, 400, 'strategyId is required');
+  if (channel !== 'whatsapp' && channel !== 'copy') return sendError(res, 400, "channel must be 'whatsapp' or 'copy'");
+  const invoice = store.getInvoiceById(invoiceId.trim());
+  if (!invoice) return sendError(res, 404, 'Invoice not found');
+  if (!invoice.client_id) {
+    return sendError(res, 400, 'Invoice has no client; outreach cannot be logged to a debtor trail');
+  }
+
+  const entry = {
+    debtorId: invoice.client_id || null,
+    invoiceId: invoice.id,
+    strategyId: strategyId.trim(),
+    channel,
+    timestamp: new Date().toISOString(),
+  };
+  store.logOutreach(entry);
+  res.status(201).json({ entry });
+});
+
+// Per-debtor outreach audit trail, newest first.
+router.get('/outreach-log/:debtorId', (req, res) => {
+  res.json({ entries: store.getOutreachLog(req.params.debtorId) });
 });
 
 export default router;

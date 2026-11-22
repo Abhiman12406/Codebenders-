@@ -42,3 +42,4 @@ export const updateProfile = (data) => request('PUT', '/profile', data);
 
 export const parseNlp = async (prompt) => (await request('POST', '/ai/parse', { prompt })).parsed;
 export const recoveryCopilot = (body) => request('POST', '/ai/recovery-copilot', body);
+export const logOutreach = (body) => request('POST', '/ai/outreach-log', body);

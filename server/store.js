@@ -497,6 +497,20 @@ class Store {
     return record;
   }
 
+  // Outreach audit trail: { debtorId, invoiceId, strategyId, channel, timestamp }
+  logOutreach(entry) {
+    if (!this.data.outreach_log) this.data.outreach_log = [];
+    this.data.outreach_log.push(entry);
+    this.save();
+    return entry;
+  }
+
+  getOutreachLog(debtorId) {
+    return (this.data.outreach_log || [])
+      .filter((entry) => entry.debtorId === debtorId)
+      .sort((a, b) => Date.parse(b.timestamp) - Date.parse(a.timestamp));
+  }
+
   getTransactions() {
     return this.data.transactions;
   }

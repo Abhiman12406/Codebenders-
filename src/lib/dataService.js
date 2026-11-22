@@ -47,6 +47,7 @@ const STORAGE_KEYS = {
   INVOICES: 'studioflow_invoices',
   BILLS: 'studioflow_bills',
   FOLLOW_UPS: 'studioflow_follow_ups',
+  OUTREACH_LOG: 'studioflow_outreach_log',
 };
 
 const generateId = () => {
@@ -76,6 +77,9 @@ export const DEFAULT_PROFILE = {
   safety_buffer: 1500.00,
   created_at: new Date().toISOString(),
 };
+
+// Guest/demo mode: the cached profile has the guest id (DEFAULT_PROFILE / demo seed profile).
+export const isGuestProfile = () => storage.get(STORAGE_KEYS.PROFILE, null)?.id === DEFAULT_PROFILE.id;
 
 /**
  * Checks if Supabase client is connected and has an active authenticated user.
@@ -520,6 +524,31 @@ export async function logFollowUp(followUp) {
   }
 
   return record;
+}
+
+// ==========================================
+// 5b. Outreach Audit Trail
+// ==========================================
+// Local entries, appended in call order; returned newest first.
+export function getLocalOutreachLog(debtorId) {
+  return storage.get(STORAGE_KEYS.OUTREACH_LOG, [])
+    .filter((entry) => entry.debtorId === debtorId)
+    .reverse();
+}
+
+// Best-effort: never rejects. Guest profiles and failed server writes are kept locally.
+export async function recordOutreach({ debtorId, invoiceId, strategyId, channel }) {
+  if (!isGuestProfile()) {
+    try {
+      await api.logOutreach({ invoiceId, strategyId, channel });
+      return;
+    } catch {
+      // Server write failed: keep the entry locally below.
+    }
+  }
+
+  const entry = { debtorId, invoiceId, strategyId, channel, timestamp: new Date().toISOString() };
+  storage.set(STORAGE_KEYS.OUTREACH_LOG, [...storage.get(STORAGE_KEYS.OUTREACH_LOG, []), entry]);
 }
 
 // ==========================================

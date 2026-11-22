@@ -279,6 +279,92 @@ try {
     }
   });
 
+  await check('escalation: each tier has a distinct intro sentence', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const drafts = buildEscalationDrafts(escalationArgs());
+    // Line 0 is the greeting, line 1 is blank, line 2 is the tier's intro sentence.
+    const intros = drafts.map((d) => d.whatsapp.split('\n')[2]);
+    assert.equal(new Set(intros).size, 5);
+  });
+
+  await check('escalation: custom note reaches every draft whatsapp and email', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const note = 'Finance manager is away this week';
+    const drafts = buildEscalationDrafts(escalationArgs({ customNotes: note }));
+    assert.equal(drafts.length, 5);
+    for (const d of drafts) {
+      assert.ok(d.whatsapp.includes(note));
+      assert.ok(d.email.body.includes(note));
+    }
+  });
+
+  await check('escalation: statute gate uses days past due (60 includes, 10 omits, no 14-day wording)', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const overdue = buildEscalationDrafts(escalationArgs({ daysPastDue: 60 }))[4];
+    assert.ok(overdue.whatsapp.includes('Freelance Isn\'t Free Act'));
+    assert.ok(!overdue.whatsapp.includes('within 14 days'));
+    assert.ok(!overdue.email.body.includes('within 14 days'));
+    const early = buildEscalationDrafts(escalationArgs({ daysPastDue: 10 }))[4];
+    assert.ok(!early.whatsapp.includes('Freelance Isn\'t Free Act'));
+  });
+
+  await check('settlement: applyEarlyDiscount(1000) gives 980 total and 20 savings', async () => {
+    const { applyEarlyDiscount } = await import('./engine/settlement.js');
+    const r = applyEarlyDiscount(1000);
+    assert.equal(r.discountedTotal, 980);
+    assert.equal(r.savings, 20);
+  });
+
+  await check('settlement: splitInstallments(1001) gives 500.5 deposit and 500.5 balance', async () => {
+    const { splitInstallments } = await import('./engine/settlement.js');
+    const r = splitInstallments(1001);
+    assert.equal(r.deposit, 500.5);
+    assert.equal(r.balance, 500.5);
+  });
+
+  await check('escalation: discount flag adds discounted total line to every draft', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const { applyEarlyDiscount } = await import('./engine/settlement.js');
+    const today = new Date('2024-01-01T00:00:00Z');
+    const { discountedTotal, savings, expiresOn } = applyEarlyDiscount(100, { today });
+    const line = `Pay in full by ${expiresOn} and save $${savings.toFixed(2)}: $${discountedTotal.toFixed(2)} total.`;
+    const drafts = buildEscalationDrafts(escalationArgs({ settlement: { discount: true }, today }));
+    assert.equal(drafts.length, 5);
+    for (const d of drafts) {
+      assert.ok(d.whatsapp.includes(line));
+      assert.ok(d.email.body.includes(line));
+    }
+  });
+
+  await check('escalation: settlement flags both false match drafts without settlement', async () => {
+    const { buildEscalationDrafts } = await loadEscalation();
+    const plain = buildEscalationDrafts(escalationArgs());
+    const flagsOff = buildEscalationDrafts(escalationArgs({ settlement: { discount: false, installments: false } }));
+    assert.deepEqual(flagsOff, plain);
+    for (let i = 0; i < plain.length; i++) {
+      assert.equal(flagsOff[i].whatsapp, plain[i].whatsapp);
+      assert.equal(flagsOff[i].email.body, plain[i].email.body);
+    }
+  });
+
+  await check('outreach trail: POSTed entry appears in its debtor trail only', async () => {
+    const strategyId = `test-trail-${Date.now()}`;
+    const posted = await call('POST', '/ai/outreach-log', { invoiceId: 'inv_101', strategyId, channel: 'copy' });
+    assert.equal(posted.status, 201);
+
+    const acme = await call('GET', '/ai/outreach-log/client_acme');
+    assert.equal(acme.status, 200);
+    const entry = acme.body.entries.find((e) => e.strategyId === strategyId);
+    assert.ok(entry);
+    assert.equal(entry.debtorId, 'client_acme');
+    assert.equal(entry.strategyId, strategyId);
+    assert.equal(entry.channel, 'copy');
+    assert.equal(new Date(entry.timestamp).toISOString(), entry.timestamp);
+
+    const bloom = await call('GET', '/ai/outreach-log/client_bloom');
+    assert.equal(bloom.status, 200);
+    assert.ok(!bloom.body.entries.some((e) => e.strategyId === strategyId));
+  });
 
 } catch {
   failed = true;

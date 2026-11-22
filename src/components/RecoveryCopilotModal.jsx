@@ -1,32 +1,36 @@
 import React, { useEffect, useState } from 'react';
 import { X, Sparkles, Send, Copy, Check } from 'lucide-react';
-import { recoveryCopilot } from '../lib/api.js';
+import { recordOutreach as saveOutreach } from '../lib/dataService.js';
 import { RISK_TIER_CLASSES } from '../lib/recoveryRisk.js';
+import { fetchRecoveryCopilot } from '../lib/offlineCopilot.js';
 
 const NO_COPY = { key: null, result: 'idle' }; // result: idle | copied | failed
+const NO_SETTLEMENT = { discount: false, installments: false };
 
 export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
-  const [state, setState] = useState({ status: 'idle', data: null, error: '' });
+  const [state, setState] = useState({ status: 'idle', data: null, error: '', local: false });
   const [selectedTier, setSelectedTier] = useState('friendly_check_in');
   const [channel, setChannel] = useState('whatsapp'); // whatsapp | email
   const [notesInput, setNotesInput] = useState('');
+  const [settlement, setSettlement] = useState(NO_SETTLEMENT); // early discount / installment toggles
   const [copy, setCopy] = useState(NO_COPY); // which copy button was used and its result
   const invoiceId = invoice?.id;
 
   useEffect(() => {
     if (!isOpen || !invoiceId) return undefined;
     let cancelled = false;
-    setState({ status: 'loading', data: null, error: '' });
+    setState({ status: 'loading', data: null, error: '', local: false });
     setSelectedTier('friendly_check_in');
     setNotesInput('');
+    setSettlement(NO_SETTLEMENT);
     setCopy(NO_COPY);
-    recoveryCopilot({ invoiceId })
-      .then((data) => {
-        if (!cancelled) setState({ status: 'ready', data, error: '' });
+    fetchRecoveryCopilot({ invoice, settlement: NO_SETTLEMENT })
+      .then(({ data, local }) => {
+        if (!cancelled) setState({ status: 'ready', data, error: '', local });
       })
       .catch((err) => {
         if (!cancelled) {
-          setState({ status: 'error', data: null, error: err.message || 'Could not generate recovery draft' });
+          setState({ status: 'error', data: null, error: err.message || 'Could not generate recovery draft', local: false });
         }
       });
     return () => {
@@ -42,7 +46,7 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
 
   if (!isOpen || !invoice) return null;
 
-  const { data, error, status } = state;
+  const { data, error, status, local } = state;
   const escalations = data?.escalations || [];
   const activeTier = escalations.find((e) => e.id === selectedTier) || escalations[0];
   const whatsappText = activeTier?.whatsapp || '';
@@ -50,7 +54,18 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
   const emailBody = activeTier?.email?.body || '';
   const portalLink = data?.draft?.portalLink || '';
 
+  // Audit log is best-effort: a failure here must never block the user's action.
+  const recordOutreach = (logChannel) => {
+    saveOutreach({
+      debtorId: invoice.client_id,
+      invoiceId,
+      strategyId: activeTier?.id || selectedTier,
+      channel: logChannel,
+    }).catch(() => {});
+  };
+
   const handleSendViaWhatsApp = () => {
+    recordOutreach('whatsapp');
     const cleanPhone = (data?.client?.phone || '').replace(/\D/g, '');
     const encoded = encodeURIComponent(whatsappText);
     const url = cleanPhone
@@ -59,17 +74,30 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
     window.open(url, '_blank', 'noopener');
   };
 
-  const handleRegenerate = async () => {
+  const runCopilot = async (nextSettlement) => {
     setState((prev) => ({ ...prev, status: 'loading', error: '' }));
     try {
-      const next = await recoveryCopilot({ invoiceId, customNotes: notesInput.trim() });
-      setState({ status: 'ready', data: next, error: '' });
+      const { data: next, local } = await fetchRecoveryCopilot({
+        invoice,
+        customNotes: notesInput.trim(),
+        settlement: nextSettlement,
+      });
+      setState({ status: 'ready', data: next, error: '', local });
     } catch (err) {
-      setState({ status: 'error', data: null, error: err.message || 'Could not regenerate recovery draft' });
+      setState({ status: 'error', data: null, error: err.message || 'Could not regenerate recovery draft', local: false });
     }
   };
 
+  const handleRegenerate = () => runCopilot(settlement);
+
+  const toggleSettlement = (key) => {
+    const next = { ...settlement, [key]: !settlement[key] };
+    setSettlement(next);
+    runCopilot(next);
+  };
+
   const copyText = async (text, key) => {
+    recordOutreach('copy');
     try {
       if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
       await navigator.clipboard.writeText(text);
@@ -162,6 +190,10 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
 
           {status === 'ready' && data && (
             <>
+              {local && (
+                <p className="micro-cap text-[#5a5a5f] font-bold">Offline: drafts generated locally</p>
+              )}
+
               {/* Risk Tier & Strategy */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-black border border-[#3a3a3f] rounded-[4px]">
                 <div>
@@ -259,6 +291,28 @@ export default function RecoveryCopilotModal({ isOpen, invoice, onClose }) {
               )}
             </>
           )}
+
+          {/* Settlement Options */}
+          <div className="flex flex-wrap gap-5">
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={settlement.discount}
+                disabled={status === 'loading'}
+                onChange={() => toggleSettlement('discount')}
+              />
+              <span className="micro-cap text-[#f0f0fa] font-bold">2% early-settlement discount</span>
+            </label>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={settlement.installments}
+                disabled={status === 'loading'}
+                onChange={() => toggleSettlement('installments')}
+              />
+              <span className="micro-cap text-[#f0f0fa] font-bold">50/50 installment split</span>
+            </label>
+          </div>
 
           {/* Custom Notes & Regenerate */}
           <div className="space-y-1.5">

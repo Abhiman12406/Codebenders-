@@ -3,6 +3,8 @@
 // One draft per tier, in ESCALATION_TIERS order. Each draft has a whatsapp text and an
 // email { subject, body }. Tone escalates from a friendly reminder to a formal notice.
 
+import { applyEarlyDiscount, splitInstallments } from './settlement.js';
+
 export const ESCALATION_TIERS = [
   { id: 'friendly_check_in', label: 'Friendly Check-in' },
   { id: 'direct_status_inquiry', label: 'Direct Status Inquiry' },
@@ -34,7 +36,7 @@ const TIER_COPY = {
   },
   statutory_notice: {
     subject: (ref) => `Formal notice of overdue payment: ${ref}`,
-    intro: 'This is a formal notice that the invoice(s) below remain unpaid. Please arrange payment within 14 days of this notice.',
+    intro: 'This is a formal notice that the invoice(s) below remain unpaid. Please arrange payment promptly.',
   },
 };
 
@@ -47,10 +49,21 @@ export function buildEscalationDrafts({
   portalLink,
   businessName,
   customNotes,
+  settlement = {},
+  today,
 }) {
   const ref = invoices[0]?.invoice_number || 'your invoice';
   const invoiceLines = invoices.map((inv) => `- ${inv.invoice_number}: ${money(inv.amount)} (due ${inv.due_date})`);
   const trimmedNotes = (customNotes ?? '').trim();
+  const settlementLines = [];
+  if (settlement.discount === true) {
+    const { discountedTotal, savings, expiresOn } = applyEarlyDiscount(totalPrincipal, { today });
+    settlementLines.push(`Pay in full by ${expiresOn} and save ${money(savings)}: ${money(discountedTotal)} total.`);
+  }
+  if (settlement.installments === true) {
+    const { deposit, balance } = splitInstallments(totalPrincipal);
+    settlementLines.push(`Split option: ${money(deposit)} deposit now, ${money(balance)} on milestone completion.`);
+  }
 
   return ESCALATION_TIERS.map(({ id, label }) => {
     const copy = TIER_COPY[id];
@@ -63,6 +76,7 @@ export function buildEscalationDrafts({
       ...invoiceLines,
       '',
       `Total outstanding: ${money(totalPrincipal)}`,
+      ...settlementLines,
       `Pay securely here: ${portalLink}`,
       ...(includeStatute ? ['', STATUTE_LINE] : []),
       ...(trimmedNotes ? ['', `Note: ${trimmedNotes}`] : []),

@@ -7,7 +7,7 @@
     "dev": "concurrently -n server,client -c blue,green \"node server/index.js\" \"vite\"",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node server/test-api.js"
+    "test": "node server/test-api.js && node server/test-offline-copilot.js"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
